@@ -156,39 +156,31 @@ class TestFindBySourceId:
 class TestFindByExactName:
     def test_finds_by_exact_name_and_country(self, db_with_people):
         matcher = PersonMatcher(db_with_people)
-        candidates = matcher.find_by_exact_name("John Smith", "country-gbr")
-        assert len(candidates) == 1
-        assert candidates[0].person_id == "js-1"
-        assert candidates[0].confidence == 1.0
+        match = matcher.find_by_exact_name("John Smith", "country-gbr")
+        assert match is not None
+        assert match.person_id == "js-1"
+        assert match.confidence == 1.0
 
     def test_case_insensitive_matching(self, db_with_people):
         matcher = PersonMatcher(db_with_people)
-        candidates = matcher.find_by_exact_name("JOHN SMITH", "country-gbr")
-        assert len(candidates) == 1
-        assert candidates[0].person_id == "js-1"
-
-    def test_finds_by_alias(self, db_with_people):
-        matcher = PersonMatcher(db_with_people)
-        candidates = matcher.find_by_exact_name("J. Smith", "country-gbr")
-        assert len(candidates) == 1
-        assert candidates[0].person_id == "js-1"
-        assert candidates[0].confidence == 0.95
-        assert "Alias" in candidates[0].reason
+        match = matcher.find_by_exact_name("JOHN SMITH", "country-gbr")
+        assert match is not None
+        assert match.person_id == "js-1"
 
     def test_no_match_wrong_country(self, db_with_people):
         matcher = PersonMatcher(db_with_people)
-        candidates = matcher.find_by_exact_name("John Smith", "country-usa")
-        assert len(candidates) == 0
+        match = matcher.find_by_exact_name("John Smith", "country-usa")
+        assert match is None
 
     def test_no_match_unknown_name(self, db_with_people):
         matcher = PersonMatcher(db_with_people)
-        candidates = matcher.find_by_exact_name("Unknown Person", "country-gbr")
-        assert len(candidates) == 0
+        match = matcher.find_by_exact_name("Unknown Person", "country-gbr")
+        assert match is None
 
     def test_strips_whitespace(self, db_with_people):
         matcher = PersonMatcher(db_with_people)
-        candidates = matcher.find_by_exact_name("  John Smith  ", "country-gbr")
-        assert len(candidates) == 1
+        match = matcher.find_by_exact_name("  John Smith  ", "country-gbr")
+        assert match is not None
 
 
 class TestMatchOrCreate:
@@ -235,18 +227,6 @@ class TestMatchOrCreate:
         assert result.person_id == "js-1"
         assert result.confidence == 1.0
         assert "Exact name" in result.reason
-
-    def test_matches_by_alias(self, db_with_people):
-        matcher = PersonMatcher(db_with_people)
-        result = matcher.match_or_create(
-            name="J. Smith",
-            country_id="country-gbr",
-            source=Source.MEMO,
-        )
-        assert result.is_new is False
-        assert result.person_id == "js-1"
-        assert result.confidence == 0.95
-        assert "Alias" in result.reason
 
     def test_updates_source_id_on_name_match(self, db_with_people):
         matcher = PersonMatcher(db_with_people)
