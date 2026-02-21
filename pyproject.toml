@@ -1,0 +1,48 @@
+[project]
+name = "moresults"
+version = "0.1.0"
+description = "MOResults - Explore Consolidated Math Olympiad results"
+requires-python = ">=3.12"
+dependencies = [
+    "beautifulsoup4>=4.12",
+    "click>=8.1",
+    "httpx",
+    "pdfplumber>=0.10",
+    "pydantic>=2.0",
+    "requests>=2.31",
+    "unidecode>=1.3",
+    "xlrd>=2.0.2",
+]
+
+[project.scripts]
+sigma = "data_processing.cli:cli"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["data_processing"]
+
+[dependency-groups]
+dev = ["pytest>=8.0", "ruff>=0.8"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.ruff.lint]
+select = [
+    "E",      # pycodestyle errors
+    "W",      # pycodestyle warnings
+    "F",      # pyflakes
+    "I",      # isort
+    "B",      # flake8-bugbear
+    "UP",     # pyupgrade
+]
+ignore = [
+    "E501",   # line too long (handled by formatter)
+]
+
+[tool.ruff.format]
+quote-style = "double"
