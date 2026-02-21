@@ -22,7 +22,9 @@ def build_year_list(
 
 
 @click.command()
-@click.argument("source", type=click.Choice(["apmo", "bmo", "egmo", "imo", "memo", "pamo", "rmm"]))
+@click.argument(
+    "source", type=click.Choice(["apmo", "balticway", "bmo", "egmo", "imo", "memo", "pamo", "rmm"])
+)
 @click.option(
     "-d",
     "--data-dir",
