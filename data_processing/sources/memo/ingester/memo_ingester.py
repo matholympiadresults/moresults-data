@@ -9,11 +9,14 @@ from data_processing.matching import PersonMatcher
 from data_processing.schemas import (
     Award,
     Competition,
+    CompetitionType,
     Database,
     Participation,
     Source,
+    TeamParticipation,
 )
 from data_processing.sources.memo.parser.models import (
+    MEMOTeamYearResults,
     MEMOYearResults,
 )
 
@@ -240,5 +243,142 @@ def ingest_memo_data(
     print(f"  - {len(db.competitions)} competitions")
     print(f"  - {len(db.people)} people")
     print(f"  - {len(db.participations)} participations")
+
+    return db
+
+
+def create_team_competition(db: Database, year: int) -> Competition:
+    """Create a team competition entry."""
+    competition_id = f"memo-team-{year}"
+
+    if competition_id in db.competitions:
+        return db.competitions[competition_id]
+
+    competition = Competition(
+        id=competition_id,
+        source=Source.MEMO_TEAM,
+        year=year,
+        edition=memo_year_to_edition(year),
+        host_country_id=None,
+        competition_type=CompetitionType.TEAM,
+        num_problems=8,  # MEMO team has 8 problems
+        max_score_per_problem=8,
+    )
+    db.competitions[competition_id] = competition
+    return competition
+
+
+def ingest_team_year_results(db: Database, team_results: MEMOTeamYearResults) -> dict:
+    """
+    Ingest a single MEMO team year's results into the database.
+
+    Returns stats about the ingestion.
+    """
+    competition = create_team_competition(db, team_results.year)
+
+    for team in team_results.results:
+        # Normalize country
+        country_code = normalize_country_code(team.country)
+        country = get_or_create_country(db, country_code)
+
+        # Create team participation
+        participation_id = f"{competition.id}-{country.id}"
+        team_participation = TeamParticipation(
+            id=participation_id,
+            competition_id=competition.id,
+            country_id=country.id,
+            problem_scores=team.problem_scores,
+            total=team.total,
+            rank=team.rank,
+            award=convert_award(team.award),
+            extra_awards=None,
+        )
+        db.team_participations[participation_id] = team_participation
+
+    return {
+        "competition_id": competition.id,
+        "year": team_results.year,
+        "teams": len(team_results.results),
+    }
+
+
+def load_team_year_results_from_dir(parsed_dir: Path) -> MEMOTeamYearResults:
+    """Load MEMO team year results from a parsed directory."""
+    from data_processing.sources.memo.parser.memo_team_parser import (
+        get_team_parsed_filename,
+    )
+
+    json_file = parsed_dir / get_team_parsed_filename()
+    with open(json_file, encoding="utf-8") as f:
+        data = json.load(f)
+    return MEMOTeamYearResults.model_validate(data)
+
+
+def ingest_memo_team_data(
+    source_dir: Path,
+    db_path: Path | None = None,
+    years: list[int] | None = None,
+) -> Database:
+    """
+    Ingest MEMO team data from parsed directories into the normalized database.
+
+    Args:
+        source_dir: Base directory containing memo/parsed/{year}/team_scoreboard.json files
+        db_path: Path to the database file (will be created if doesn't exist)
+        years: Specific years to ingest (None = all available)
+
+    Returns:
+        The updated database
+    """
+    from data_processing.database import create_empty_database
+    from data_processing.sources.memo.parser.memo_team_parser import (
+        get_team_parsed_filename,
+    )
+
+    # Load or create database
+    if db_path and db_path.exists():
+        db = load_database(db_path)
+    else:
+        db = create_empty_database()
+
+    # Find all year directories with team_scoreboard.json
+    parsed_base = source_dir / "memo" / "parsed"
+    year_dirs = sorted(parsed_base.glob("*/"))
+
+    found_years = []
+    for year_dir in year_dirs:
+        if not year_dir.is_dir():
+            continue
+        team_file = year_dir / get_team_parsed_filename()
+        if team_file.exists():
+            try:
+                year = int(year_dir.name)
+                found_years.append((year, year_dir))
+            except ValueError:
+                continue
+
+    if not found_years:
+        print(f"No parsed MEMO team files found in {parsed_base}")
+        return db
+
+    results = []
+    for year, year_dir in found_years:
+        if years is not None and year not in years:
+            continue
+
+        team_results = load_team_year_results_from_dir(year_dir)
+        stats = ingest_team_year_results(db, team_results)
+        results.append(stats)
+        print(f"Ingested MEMO Team {stats['year']}: {stats['teams']} teams")
+
+    # Save database
+    if db_path:
+        save_database(db, db_path)
+
+    print(f"\nTotal: {len(results)} team competitions ingested")
+    print("Database contains:")
+    print(f"  - {len(db.countries)} countries")
+    print(f"  - {len(db.competitions)} competitions")
+    print(f"  - {len(db.team_participations)} team participations")
 
     return db

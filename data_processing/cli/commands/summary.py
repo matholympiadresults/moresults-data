@@ -74,10 +74,17 @@ def summary(database: Path):
         comp_id = p.get("competition_id", "")
         parts = comp_id.split("-")
         if len(parts) >= 2:
-            olympiad = parts[0].upper()
-            olympiad_counts[olympiad] += 1
-            if parts[-1].isdigit():
+            # Handle multi-part olympiad names like "memo-team-2024" or "balticway-2024"
+            # The year is always the last part if it's a 4-digit number
+            if parts[-1].isdigit() and len(parts[-1]) == 4:
                 year = int(parts[-1])
+                olympiad = "-".join(parts[:-1]).upper()
+            else:
+                olympiad = parts[0].upper()
+                year = None
+
+            olympiad_counts[olympiad] += 1
+            if year is not None:
                 if olympiad not in olympiad_years:
                     olympiad_years[olympiad] = set()
                 olympiad_years[olympiad].add(year)

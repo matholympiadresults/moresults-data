@@ -20,6 +20,9 @@ SPECIAL_URLS = {
 # Missing: 2012 (no data sources found yet)
 AVAILABLE_YEARS = list(range(2007, 2012)) + [2013, 2014] + list(range(2015, 2026))
 
+# Team competition data is only available for 2015+ (excluding 2020 - COVID online only)
+TEAM_AVAILABLE_YEARS = list(range(2015, 2020)) + list(range(2021, 2026))
+
 
 class DownloadError(Exception):
     """Raised when download fails."""
@@ -28,8 +31,13 @@ class DownloadError(Exception):
 
 
 def get_raw_filename() -> str:
-    """Get the filename for a raw HTML file."""
+    """Get the filename for individual results raw HTML file."""
     return "individual.html"
+
+
+def get_team_raw_filename() -> str:
+    """Get the filename for team results raw HTML file."""
+    return "team.html"
 
 
 def download_year(year: int, output_dir: Path, force: bool = False) -> Path:
@@ -80,6 +88,53 @@ def download_year(year: int, output_dir: Path, force: bool = False) -> Path:
 
     output_dir.mkdir(parents=True, exist_ok=True)
     # Use content bytes and decode as UTF-8 to avoid encoding detection issues
+    output_file.write_text(response.content.decode("utf-8"), encoding="utf-8")
+
+    return output_file
+
+
+def download_team_year(year: int, output_dir: Path, force: bool = False) -> Path:
+    """
+    Download the team results page HTML for a given year.
+
+    Team data is only available for 2015+.
+    For 2015, team data is on the same page as individual results.
+
+    Args:
+        year: The year to download
+        output_dir: Directory to save the raw HTML (year subdirectory)
+        force: If True, re-download even if file exists
+
+    Returns:
+        Path to the downloaded file
+
+    Raises:
+        DownloadError: If download fails
+        ValueError: If year doesn't have team data
+    """
+    if year not in TEAM_AVAILABLE_YEARS:
+        raise ValueError(f"Team data not available for year {year}")
+
+    output_file = output_dir / get_team_raw_filename()
+
+    if output_file.exists() and not force:
+        return output_file
+
+    # For 2015, team data is on the same page as individual results
+    if year == 2015:
+        url = SPECIAL_URLS[2015]
+        verify_ssl = False
+    else:
+        url = f"{BASE_URL}/{year}/team/"
+        verify_ssl = True
+
+    try:
+        response = requests.get(url, timeout=30, verify=verify_ssl)
+        response.raise_for_status()
+    except requests.RequestException as e:
+        raise DownloadError(f"Failed to download MEMO team {year}: {e}") from e
+
+    output_dir.mkdir(parents=True, exist_ok=True)
     output_file.write_text(response.content.decode("utf-8"), encoding="utf-8")
 
     return output_file
