@@ -3,6 +3,7 @@
 from pathlib import Path
 
 from .apmo import APMOAdapter
+from .balticway import BalticWayAdapter
 from .bmo import BMOAdapter
 from .egmo import EGMOAdapter
 from .imo import IMOAdapter
@@ -12,6 +13,7 @@ from .rmm import RMMAdapter
 
 SOURCES = {
     "apmo": APMOAdapter(),
+    "balticway": BalticWayAdapter(),
     "bmo": BMOAdapter(),
     "egmo": EGMOAdapter(),
     "imo": IMOAdapter(),

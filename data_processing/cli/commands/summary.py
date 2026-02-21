@@ -50,25 +50,27 @@ def summary(database: Path):
     competitions = db.get("competitions", {})
     people = db.get("people", {})
     participations = db.get("participations", {})
+    team_participations = db.get("team_participations", {})
 
     # Basic counts
     click.echo(f"Database: {database}")
     click.echo(f"Last updated: {db.get('last_updated', 'unknown')}")
     click.echo()
     click.echo("=== Entity Counts ===")
-    click.echo(f"Countries:      {len(countries):,}")
-    click.echo(f"Competitions:   {len(competitions):,}")
-    click.echo(f"People:         {len(people):,}")
-    click.echo(f"Participations: {len(participations):,}")
+    click.echo(f"Countries:            {len(countries):,}")
+    click.echo(f"Competitions:         {len(competitions):,}")
+    click.echo(f"People:               {len(people):,}")
+    click.echo(f"Participations:       {len(participations):,}")
+    click.echo(f"Team Participations:  {len(team_participations):,}")
 
-    if not participations:
+    if not participations and not team_participations:
         return
 
     # Participations by olympiad and years per olympiad
     olympiad_counts: Counter[str] = Counter()
     olympiad_years: dict[str, set[int]] = {}
 
-    for p in participations.values():
+    for p in (*participations.values(), *team_participations.values()):
         comp_id = p.get("competition_id", "")
         parts = comp_id.split("-")
         if len(parts) >= 2:

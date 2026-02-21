@@ -5,13 +5,15 @@ from pathlib import Path
 
 import click
 
-from data_processing.sources.egmo.ingester import ingest_egmo_data
-from data_processing.sources.egmo.scraper import (
+from data_processing.sources.egmo.downloader import (
     FIRST_EGMO_YEAR,
-    EGMOYearResults,
-    ScraperError,
+    DownloadError,
     download_raw,
     get_available_years,
+)
+from data_processing.sources.egmo.ingester import ingest_egmo_data
+from data_processing.sources.egmo.parser import (
+    EGMOYearResults,
     parse_raw,
     save_json,
 )
@@ -50,7 +52,7 @@ class EGMOAdapter(SourceAdapter):
                 download_raw(year, raw_base, force=force)
                 click.echo(f"  {year}: Downloaded")
                 time.sleep(0.5)  # Be nice to the server
-            except ScraperError as e:
+            except DownloadError as e:
                 click.echo(f"  {year}: {e}", err=True)
 
     def parse_raw(
