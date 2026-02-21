@@ -17,14 +17,11 @@ SPECIAL_URLS = {
 }
 
 # Available years - MEMO started in 2007
-# Missing: 2012 (no data sources found yet)
-AVAILABLE_YEARS = list(range(2007, 2012)) + [2013, 2014] + list(range(2015, 2026))
+AVAILABLE_YEARS = list(range(2007, 2015)) + list(range(2015, 2026))
 
-# Team competition data: 2007-2011 and 2013-2014 from skmo.sk, 2015+ from memo-official.org
-# Missing: 2012 (no data), 2020 (COVID online only)
-TEAM_AVAILABLE_YEARS = (
-    list(range(2007, 2012)) + [2013, 2014] + list(range(2015, 2020)) + list(range(2021, 2026))
-)
+# Team competition data: 2007-2014 from skmo.sk, 2015+ from memo-official.org
+# Missing: 2020 (COVID online only)
+TEAM_AVAILABLE_YEARS = list(range(2007, 2015)) + list(range(2015, 2020)) + list(range(2021, 2026))
 
 
 class DownloadError(Exception):
@@ -69,6 +66,14 @@ def download_year(year: int, output_dir: Path, force: bool = False) -> Path:
         from .memo_2011_downloader import download_2011
 
         return download_2011(output_dir, force=force)
+
+    # Use skmo downloader for 2012 (not on memo-official.org)
+    if year == 2012:
+        from data_processing.sources.memo.downloader.skmo_downloader import (
+            download_year as download_skmo_year,
+        )
+
+        return download_skmo_year(year, output_dir, force=force)
 
     # Use pass-through downloader for 2014 (local ODS file)
     if year == 2014:

@@ -327,6 +327,13 @@ def parse_year(year: int, raw_dir: Path, output_dir: Path, force: bool = False) 
 
         return parse_2011(raw_dir, output_dir, force=force)
 
+    if year == 2012:
+        from data_processing.sources.memo.parser.skmo_parser import (
+            parse_year as parse_skmo_year,
+        )
+
+        return parse_skmo_year(year, raw_dir, output_dir, force=force)
+
     if year == 2013:
         from data_processing.sources.memo.parser.memo_2013_parser import parse_2013
 
