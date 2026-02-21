@@ -4,18 +4,18 @@ IMO Data Source
 Pipeline: download -> parse -> ingest
 """
 
-from data_processing.sources.imo.download import (
+from data_processing.sources.imo.downloader import (
     DownloadError,
     download_year,
     download_years,
 )
-from data_processing.sources.imo.ingest import (
+from data_processing.sources.imo.ingester import (
     IngestError,
     ingest_year_results,
     ingest_years,
     load_year_results_from_file,
 )
-from data_processing.sources.imo.parse import (
+from data_processing.sources.imo.parser import (
     ContestantResult,
     IMOYearResults,
     ParseError,
