@@ -19,6 +19,7 @@ def create_empty_database() -> Database:
         competitions={},
         people={},
         participations={},
+        team_participations={},
     )
 
 

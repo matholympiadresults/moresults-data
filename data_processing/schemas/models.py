@@ -8,16 +8,25 @@ from pydantic import BaseModel
 from data_processing.country_codes import ISOCountryCode
 
 
+class CompetitionType(str, Enum):
+    """Whether a competition has individual or team-level results."""
+
+    INDIVIDUAL = "individual"
+    TEAM = "team"
+
+
 class Source(str, Enum):
     """Olympiad data sources."""
 
     IMO = "IMO"
     EGMO = "EGMO"
     MEMO = "MEMO"
+    MEMO_TEAM = "MEMO_TEAM"
     RMM = "RMM"
     APMO = "APMO"
     BMO = "BMO"
     PAMO = "PAMO"
+    BALTICWAY = "BALTICWAY"
 
 
 class Award(str, Enum):
@@ -45,6 +54,7 @@ class Competition(BaseModel):
     year: int
     edition: int | None = None  # Edition number (e.g., 65th IMO)
     host_country_id: str | None = None  # FK to countries
+    competition_type: CompetitionType = CompetitionType.INDIVIDUAL
     num_problems: int
     max_score_per_problem: int = 7
 
@@ -90,6 +100,19 @@ class Participation(BaseModel):
     source_contestant_id: str | None = None  # Original ID from source
 
 
+class TeamParticipation(BaseModel):
+    """A team/country's result at a team competition."""
+
+    id: str  # Format: {competition_id}-{country_id}
+    competition_id: str  # FK to competitions
+    country_id: str  # FK to countries
+    problem_scores: list[int | None]  # Array of scores (None for missing)
+    total: int
+    rank: int | None = None
+    award: Award | None = None
+    extra_awards: str | None = None  # Special prizes
+
+
 class Database(BaseModel):
     """The complete olympiad database."""
 
@@ -99,3 +122,4 @@ class Database(BaseModel):
     competitions: dict[str, Competition] = {}
     people: dict[str, Person] = {}
     participations: dict[str, Participation] = {}
+    team_participations: dict[str, TeamParticipation] = {}
