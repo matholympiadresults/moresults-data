@@ -13,7 +13,7 @@ from data_processing.schemas import (
     Participation,
     Source,
 )
-from data_processing.sources.rmm.parse.models import (
+from data_processing.sources.rmm.parser.models import (
     RMMYearResults,
 )
 

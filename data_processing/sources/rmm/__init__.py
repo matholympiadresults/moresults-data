@@ -6,9 +6,9 @@ Three-stage pipeline:
 - ingest: Ingests parsed data into the normalized database
 """
 
-from .download import AVAILABLE_YEARS, download_year, fetch_page
+from .downloader import AVAILABLE_YEARS, download_year, fetch_page
 from .ingester import ingest_rmm_data
-from .parse import ParseError, parse_html, parse_year
+from .parser import ParseError, parse_html, parse_year
 
 __all__ = [
     "download_year",
