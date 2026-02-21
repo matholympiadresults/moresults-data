@@ -79,6 +79,7 @@ class PersonMatcher:
     def __init__(self, db: Database):
         self.db = db
         self._next_person_id = self._compute_next_id()
+        self._build_indexes()
 
     def _compute_next_id(self) -> int:
         """Compute the next available person ID number."""
@@ -91,6 +92,21 @@ class PersonMatcher:
         )
         return max_id + 1
 
+    def _build_indexes(self):
+        """Build lookup indexes for O(1) matching."""
+        # (source_key, source_id) -> person_id
+        self._source_id_index: dict[tuple[str, str], str] = {}
+        # (normalized_name, country_id) -> person_id
+        self._name_country_index: dict[tuple[str, str], str] = {}
+
+        for person in self.db.people.values():
+            for source_key, source_id in person.source_ids.items():
+                if source_id is not None:
+                    self._source_id_index[(source_key, source_id)] = person.id
+            self._name_country_index[
+                (normalize_name(person.name), person.country_id)
+            ] = person.id
+
     def _generate_person_id(self) -> str:
         """Generate a new unique person ID."""
         person_id = f"person-{self._next_person_id:06d}"
@@ -100,48 +116,22 @@ class PersonMatcher:
     def find_by_source_id(self, source: Source, source_id: str) -> Person | None:
         """Find a person by their source-specific ID."""
         source_key = source.value.lower()
-        for person in self.db.people.values():
-            if person.source_ids.get(source_key) == source_id:
-                return person
+        person_id = self._source_id_index.get((source_key, source_id))
+        if person_id is not None:
+            return self.db.people[person_id]
         return None
 
-    def find_by_exact_name(self, name: str, country_id: str) -> list[MatchCandidate]:
-        """Find people with exact name match in the same country.
-
-        Uses normalized comparison (lowercase, accents stripped, whitespace normalized).
-        e.g., ė -> e, ü -> u, ž -> z
-        """
-        candidates = []
+    def find_by_exact_name(self, name: str, country_id: str) -> MatchCandidate | None:
+        """Find a person with exact name match in the same country."""
         name_normalized = normalize_name(name)
-
-        for person in self.db.people.values():
-            if person.country_id != country_id:
-                continue
-
-            # Check main name
-            if normalize_name(person.name) == name_normalized:
-                candidates.append(
-                    MatchCandidate(
-                        person_id=person.id,
-                        confidence=1.0,
-                        reason="Exact name + country match",
-                    )
-                )
-                continue
-
-            # Check aliases
-            for alias in person.aliases:
-                if normalize_name(alias) == name_normalized:
-                    candidates.append(
-                        MatchCandidate(
-                            person_id=person.id,
-                            confidence=0.95,
-                            reason=f"Alias match: {alias}",
-                        )
-                    )
-                    break
-
-        return candidates
+        person_id = self._name_country_index.get((name_normalized, country_id))
+        if person_id is not None:
+            return MatchCandidate(
+                person_id=person_id,
+                confidence=1.0,
+                reason="Exact name + country match",
+            )
+        return None
 
     def match_or_create(
         self,
@@ -174,18 +164,17 @@ class PersonMatcher:
                 )
 
         # Phase 2: Try exact name + country match
-        candidates = self.find_by_exact_name(name, country_id)
-        if candidates:
-            best = max(candidates, key=lambda c: c.confidence)
-            # Update source_ids for the matched person
-            person = self.db.people[best.person_id]
+        match = self.find_by_exact_name(name, country_id)
+        if match:
+            person = self.db.people[match.person_id]
             if source_contestant_id and not person.source_ids.get(source_key):
                 person.source_ids[source_key] = source_contestant_id
+                self._source_id_index[(source_key, source_contestant_id)] = person.id
             return MatchResult(
-                person_id=best.person_id,
+                person_id=match.person_id,
                 is_new=False,
-                confidence=best.confidence,
-                reason=best.reason,
+                confidence=match.confidence,
+                reason=match.reason,
             )
 
         # Phase 3: Create new person
@@ -215,6 +204,13 @@ class PersonMatcher:
             source_ids=source_ids,
         )
         self.db.people[person_id] = new_person
+
+        # Update indexes
+        if source_contestant_id:
+            self._source_id_index[(source_key, source_contestant_id)] = person_id
+        self._name_country_index[
+            (normalize_name(normalized_name), country_id)
+        ] = person_id
 
         return MatchResult(
             person_id=person_id,
