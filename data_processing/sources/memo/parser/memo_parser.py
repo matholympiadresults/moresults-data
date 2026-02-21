@@ -301,7 +301,7 @@ def parse_year(year: int, raw_dir: Path, output_dir: Path, force: bool = False) 
     """
     # Dispatch to specialized parsers for years with different formats
     if year == 2007:
-        from data_processing.sources.memo.legacy.memo_2007 import parse_2007
+        from .memo_2007_parser import parse_2007
 
         return parse_2007(raw_dir, output_dir, force=force)
 
@@ -323,7 +323,7 @@ def parse_year(year: int, raw_dir: Path, output_dir: Path, force: bool = False) 
         return parse_skmo_year(year, raw_dir, output_dir, force=force)
 
     if year == 2011:
-        from data_processing.sources.memo.legacy.memo_2011 import parse_2011
+        from .memo_2011_parser import parse_2011
 
         return parse_2011(raw_dir, output_dir, force=force)
 
