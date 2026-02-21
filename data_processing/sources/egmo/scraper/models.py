@@ -36,7 +36,6 @@ class EGMOYearResults(BaseModel):
 
     year: int
     edition: int  # EGMO edition number (e.g., 1 for 2012)
-    scraped_at: str
     source_url: str
     total_contestants: int
     num_problems: int

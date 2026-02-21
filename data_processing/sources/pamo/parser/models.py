@@ -27,7 +27,6 @@ class PAMOYearResults(BaseModel):
 
     year: int
     edition: int | None = None
-    parsed_at: str
     total_contestants: int
     results: list[ContestantResult]
     validation: ValidationResult

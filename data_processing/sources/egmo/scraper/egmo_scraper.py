@@ -12,7 +12,7 @@ Supports two modes:
 import csv
 import json
 import re
-from datetime import UTC, datetime
+from datetime import datetime
 from io import StringIO
 from pathlib import Path
 
@@ -194,7 +194,6 @@ def parse_raw(year: int, html_file: Path, csv_file: Path) -> EGMOYearResults:
     return EGMOYearResults(
         year=year,
         edition=edition,
-        scraped_at=datetime.now(UTC).isoformat(),
         source_url=f"https://www.egmo.org/egmos/egmo{edition}/scoreboard/",
         total_contestants=len(results),
         num_problems=num_problems,

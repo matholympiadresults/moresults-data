@@ -10,7 +10,6 @@ into structured Pydantic models.
 """
 
 import re
-from datetime import UTC, datetime
 from enum import Enum
 from pathlib import Path
 
@@ -45,7 +44,6 @@ class Contestant(BaseModel):
 
 class APMOScoreboard(BaseModel):
     year: int = Field(..., description="Competition year")
-    scraped_at: str = Field(..., description="ISO timestamp of when data was scraped")
     contestants: list[Contestant]
 
     @property
@@ -319,7 +317,6 @@ def parse_raw_year(year: int, raw_dir: Path, parsed_dir: Path, force: bool = Fal
 
     scoreboard = APMOScoreboard(
         year=year,
-        scraped_at=datetime.now(UTC).isoformat(),
         contestants=all_contestants,
     )
 
@@ -401,7 +398,6 @@ def download_apmo_year(year: int) -> APMOScoreboard:
 
     return APMOScoreboard(
         year=year,
-        scraped_at=datetime.now(UTC).isoformat(),
         contestants=all_contestants,
     )
 

@@ -7,7 +7,6 @@ Parses raw HTML pages from pamoofficial.org into structured data.
 
 import json
 import re
-from datetime import UTC, datetime
 from pathlib import Path
 
 from bs4 import BeautifulSoup
@@ -281,7 +280,6 @@ def parse_year(year: int, raw_dir: Path, output_dir: Path, force: bool = False) 
     year_results = PAMOYearResults(
         year=year,
         edition=pamo_year_to_edition(year),
-        parsed_at=datetime.now(UTC).isoformat(),
         total_contestants=len(results),
         results=results,
         validation=ValidationResult(

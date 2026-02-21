@@ -27,7 +27,6 @@ class RMMYearResults(BaseModel):
     """Complete results for a single RMM year."""
 
     year: int
-    parsed_at: str
     total_contestants: int
     results: list[ContestantResult]
     validation: ValidationResult

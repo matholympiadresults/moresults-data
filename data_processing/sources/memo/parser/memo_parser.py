@@ -6,7 +6,6 @@ Parses raw HTML pages from memo-official.org into structured data.
 """
 
 import json
-from datetime import UTC, datetime
 from pathlib import Path
 
 from bs4 import BeautifulSoup
@@ -286,11 +285,11 @@ def save_json(data: MEMOYearResults, filepath: Path) -> None:
 
 def parse_year(year: int, raw_dir: Path, output_dir: Path, force: bool = False) -> Path:
     """
-    Parse raw HTML for a single year and save as structured JSON.
+    Parse raw data for a single year and save as structured JSON.
 
     Args:
         year: The year to parse
-        raw_dir: Directory containing raw HTML file (year subdirectory)
+        raw_dir: Directory containing raw file (year subdirectory)
         output_dir: Directory to save parsed JSON (year subdirectory)
         force: If True, re-parse even if output file exists
 
@@ -299,14 +298,42 @@ def parse_year(year: int, raw_dir: Path, output_dir: Path, force: bool = False) 
 
     Raises:
         ParserError: If parsing fails
-        FileNotFoundError: If raw HTML file doesn't exist
+        FileNotFoundError: If raw file doesn't exist
     """
-    # Use legacy parser for 2007 (XLS file)
+    # Dispatch to specialized parsers for years with different formats
     if year == 2007:
         from data_processing.sources.memo.legacy.memo_2007 import parse_2007
 
         return parse_2007(raw_dir, output_dir, force=force)
 
+    if year == 2008:
+        from data_processing.sources.memo.parser.memo_2008_parser import parse_2008
+
+        return parse_2008(raw_dir, output_dir, force=force)
+
+    if year == 2009:
+        from data_processing.sources.memo.parser.memo_2009_parser import parse_2009
+
+        return parse_2009(raw_dir, output_dir, force=force)
+
+    if year == 2010:
+        from data_processing.sources.memo.parser.skmo_parser import (
+            parse_year as parse_skmo_year,
+        )
+
+        return parse_skmo_year(year, raw_dir, output_dir, force=force)
+
+    if year == 2011:
+        from data_processing.sources.memo.legacy.memo_2011 import parse_2011
+
+        return parse_2011(raw_dir, output_dir, force=force)
+
+    if year == 2013:
+        from data_processing.sources.memo.parser.memo_2013_parser import parse_2013
+
+        return parse_2013(raw_dir, output_dir, force=force)
+
+    # Standard parser for 2015+
     from data_processing.sources.memo.downloader.memo_downloader import get_raw_filename
 
     raw_file = raw_dir / get_raw_filename()
@@ -328,7 +355,6 @@ def parse_year(year: int, raw_dir: Path, output_dir: Path, force: bool = False) 
 
     year_results = MEMOYearResults(
         year=year,
-        parsed_at=datetime.now(UTC).isoformat(),
         total_contestants=len(results),
         results=results,
         validation=ValidationResult(

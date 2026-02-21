@@ -1,7 +1,6 @@
 """Tests for data_processing/sources/EGMO/ingester/egmo_ingester.py."""
 
 import json
-from datetime import UTC, datetime
 
 from data_processing.database import create_empty_database, get_or_create_country
 from data_processing.schemas import Award, Source
@@ -31,7 +30,6 @@ def make_year_results(
     return EGMOYearResults(
         year=year,
         edition=edition,
-        scraped_at=datetime.now(UTC).isoformat(),
         source_url=f"https://www.egmo.org/egmos/egmo{edition}/scoreboard/",
         total_contestants=len(results),
         num_problems=len(results[0].problem_scores) if results else 0,

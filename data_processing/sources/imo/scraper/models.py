@@ -38,7 +38,6 @@ class IMOYearResults(BaseModel):
     """Complete results for a single IMO year."""
 
     year: int
-    scraped_at: str
     total_contestants: int
     results: list[ContestantResult]
     validation: ValidationResult
