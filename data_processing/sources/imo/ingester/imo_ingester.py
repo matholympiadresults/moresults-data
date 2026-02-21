@@ -1,8 +1,15 @@
-"""IMO data ingester - transforms IMO source data into normalized database format."""
+"""
+IMO Ingest Module
+
+Ingests parsed data into the normalized database.
+This is the third stage of the data pipeline: download -> parse -> ingest.
+"""
 
 import json
 import re
 from pathlib import Path
+
+import click
 
 from data_processing.country_codes import VALID_ISO_CODES
 from data_processing.database import (
@@ -19,12 +26,10 @@ from data_processing.schemas import (
     Participation,
     Source,
 )
-from data_processing.sources.imo.scraper.imo_scraper import (
+from data_processing.sources.imo.parser import (
     MAX_SCORE_BY_YEAR,
     NUM_PROBLEMS_BY_YEAR,
     UNKNOWN_PERSON,
-)
-from data_processing.sources.imo.scraper.models import (
     ContestantResult,
     IMOYearResults,
 )
@@ -65,7 +70,6 @@ IMO_CODE_MAPPING: dict[str, str] = {
 }
 
 # Pattern for individual participant codes (C01-C99)
-# These are used for contestants not representing a country (e.g., Russia 2022+)
 INDIVIDUAL_PARTICIPANT_PATTERN = re.compile(r"^C\d{2}$")
 
 
@@ -107,8 +111,15 @@ def normalize_country_code(raw_code: str) -> str | None:
     raise ValueError(f"Unknown IMO country code: {raw_code!r}")
 
 
+class IngestError(Exception):
+    """Raised when ingestion fails."""
+
+    pass
+
+
 def imo_year_to_edition(year: int) -> int:
-    """Convert year to IMO edition number.
+    """
+    Convert year to IMO edition number.
 
     Note: IMO was not held in 1980 due to the Moscow Olympics boycott.
     """
@@ -184,9 +195,8 @@ def ingest_year_results(db: Database, year_results: IMOYearResults) -> dict:
             skipped_unknown += 1
             continue
 
-        # Normalize country code
-        raw_code = contestant.country_code
-        country_code = normalize_country_code(raw_code)
+        # Normalize country code (returns None for individual participants like C01-C99)
+        country_code = normalize_country_code(contestant.country_code)
 
         # Get country (may be None for individual participants)
         if country_code is not None:
@@ -242,16 +252,46 @@ def load_year_results_from_file(path: Path) -> IMOYearResults:
     return IMOYearResults.model_validate(data)
 
 
-def ingest_imo_data(
-    data_dir: Path,
+def get_year_dir(base_dir: Path, year: int) -> Path:
+    """Get the directory for a specific year."""
+    return base_dir / str(year)
+
+
+def get_parsed_json_path(base_dir: Path, year: int) -> Path:
+    """Get the path to the parsed JSON file for a specific year."""
+    return get_year_dir(base_dir, year) / "results.json"
+
+
+def discover_years(input_dir: Path) -> list[int]:
+    """
+    Discover available years from yearly directory structure.
+
+    Looks for directories like input_dir/2024/results.json
+    """
+    years = []
+    for year_dir in input_dir.iterdir():
+        if year_dir.is_dir() and year_dir.name.isdigit():
+            json_path = year_dir / "results.json"
+            if json_path.exists():
+                years.append(int(year_dir.name))
+    return sorted(years)
+
+
+def ingest_years(
+    input_dir: Path,
     db_path: Path | None = None,
     years: list[int] | None = None,
 ) -> Database:
     """
-    Ingest IMO data from JSON files into the normalized database.
+    Ingest parsed IMO data from JSON files into the normalized database.
+
+    Expects yearly directory structure:
+        imo/parsed/2024/results.json
+        imo/parsed/2023/results.json
+        ...
 
     Args:
-        data_dir: Directory containing imo_YYYY.json files
+        input_dir: Base directory containing yearly subdirectories with results.json
         db_path: Path to the database file (will be created if doesn't exist)
         years: Specific years to ingest (None = all available)
 
@@ -264,26 +304,26 @@ def ingest_imo_data(
     else:
         db = create_empty_database()
 
-    # Find all IMO files
-    imo_files = sorted(data_dir.glob("imo_*.json"))
+    # Discover available years
+    available_years = discover_years(input_dir)
 
-    if not imo_files:
-        raise ValueError(f"No IMO files found in {data_dir}")
+    if not available_years:
+        raise IngestError(f"No yearly directories with results.json found in {input_dir}")
+
+    # Filter to requested years
+    target_years = available_years
+    if years is not None:
+        target_years = [y for y in available_years if y in years]
 
     results = []
-    for file_path in imo_files:
-        # Extract year from filename (imo_2024.json -> 2024)
-        year = int(file_path.stem.replace("imo_", ""))
-
-        if years is not None and year not in years:
-            continue
-
-        year_results = load_year_results_from_file(file_path)
+    for year in target_years:
+        json_path = get_parsed_json_path(input_dir, year)
+        year_results = load_year_results_from_file(json_path)
         stats = ingest_year_results(db, year_results)
         results.append(stats)
         skipped_msg = f", {stats['skipped_unknown']} unknown" if stats["skipped_unknown"] else ""
-        print(
-            f"Ingested IMO {stats['year']}: "
+        click.echo(
+            f"  {stats['year']}: "
             f"{stats['contestants']} contestants "
             f"({stats['new_people']} new, {stats['matched_people']} matched{skipped_msg})"
         )
@@ -292,11 +332,14 @@ def ingest_imo_data(
     if db_path:
         save_database(db, db_path)
 
-    print(f"\nTotal: {len(results)} competitions ingested")
-    print("Database contains:")
-    print(f"  - {len(db.countries)} countries")
-    print(f"  - {len(db.competitions)} competitions")
-    print(f"  - {len(db.people)} people")
-    print(f"  - {len(db.participations)} participations")
-
     return db
+
+
+def print_database_stats(db: Database) -> None:
+    """Print database statistics."""
+    click.echo()
+    click.echo("Database contains:")
+    click.echo(f"  - {len(db.countries)} countries")
+    click.echo(f"  - {len(db.competitions)} competitions")
+    click.echo(f"  - {len(db.people)} people")
+    click.echo(f"  - {len(db.participations)} participations")

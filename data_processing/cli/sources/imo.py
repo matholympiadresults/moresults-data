@@ -4,9 +4,9 @@ from pathlib import Path
 
 import click
 
-from data_processing.sources.imo.download import download_years
-from data_processing.sources.imo.ingest import ingest_years, print_database_stats
-from data_processing.sources.imo.parse import parse_years
+from data_processing.sources.imo.downloader import download_years
+from data_processing.sources.imo.ingester import ingest_years, print_database_stats
+from data_processing.sources.imo.parser import parse_years
 
 from .base import SourceAdapter
 
