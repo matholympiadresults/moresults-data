@@ -4,13 +4,9 @@ from pathlib import Path
 
 import click
 
-from data_processing.sources.apmo.apmo_downloader import (
-    APMOScoreboard,
-    Award,
-    download_raw_year,
-    parse_raw_year,
-)
+from data_processing.sources.apmo.downloader import download_raw_year
 from data_processing.sources.apmo.ingester import ingest_apmo_data
+from data_processing.sources.apmo.parser import APMOScoreboard, Award, parse_raw_year, save_json
 
 from .base import SourceAdapter
 
@@ -66,14 +62,19 @@ class APMOAdapter(SourceAdapter):
                 click.echo(f"Skipping APMO {year}: raw data not found at {raw_dir}")
                 continue
 
+            output_path = parsed_dir / f"apmo_{year}.json"
+            if not force and output_path.exists():
+                click.echo(f"Parsing APMO {year}...")
+                click.echo("  Already exists (use --force to re-parse)")
+                continue
+
             click.echo(f"Parsing APMO {year}...")
+            parsed_dir.mkdir(parents=True, exist_ok=True)
 
             try:
-                result = parse_raw_year(year, raw_dir, parsed_dir, force=force)
-                if result:
-                    click.echo(f"  Parsed to {result}")
-                else:
-                    click.echo("  Already exists (use --force to re-parse)")
+                scoreboard = parse_raw_year(year, raw_dir)
+                save_json(scoreboard, output_path)
+                click.echo(f"  Parsed to {output_path}")
             except Exception as e:
                 click.echo(f"  Error: {e}", err=True)
 

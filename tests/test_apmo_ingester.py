@@ -1,22 +1,22 @@
-"""Tests for data_processing/sources/apmo/ingester.py."""
+"""Tests for data_processing/sources/apmo/ingester/apmo_ingester.py."""
 
 import json
 
 from data_processing.database import create_empty_database, get_or_create_country
 from data_processing.schemas import Award, Source
-from data_processing.sources.apmo.apmo_downloader import (
-    APMOScoreboard,
-    Contestant,
-)
-from data_processing.sources.apmo.apmo_downloader import (
-    Award as APMOAward,
-)
-from data_processing.sources.apmo.ingester import (
+from data_processing.sources.apmo.ingester.apmo_ingester import (
     apmo_year_to_edition,
     convert_award,
     create_competition,
     ingest_scoreboard,
     load_scoreboard_from_file,
+)
+from data_processing.sources.apmo.parser import (
+    APMOScoreboard,
+    Contestant,
+)
+from data_processing.sources.apmo.parser.models import (
+    Award as APMOAward,
 )
 
 
