@@ -9,7 +9,7 @@ from pathlib import Path
 
 import pytest
 
-from data_processing.cli.sources import SOURCES
+from data_processing.cli.sources import ingest_all_sources
 
 
 def get_data_dir() -> Path:
@@ -38,11 +38,8 @@ def test_ingest_regression(data_dir: Path, tmp_path: Path):
     expected_path = get_database_path()
     actual_path = tmp_path / "olympiad_data.json"
 
-    # Re-ingest all sources
-    for adapter in SOURCES.values():
-        parsed_years = adapter.find_available_parsed_years(data_dir)
-        if parsed_years:
-            adapter.ingest(data_dir, actual_path, parsed_years)
+    # Re-ingest all sources from scratch
+    ingest_all_sources(data_dir, actual_path, verbose=False)
 
     with open(expected_path) as f:
         expected_data = json.load(f)
