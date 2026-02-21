@@ -7,7 +7,6 @@ This site has a different structure than memo-official.org.
 """
 
 import json
-from datetime import UTC, datetime
 from pathlib import Path
 
 import requests
@@ -256,7 +255,6 @@ def parse_2011(raw_dir: Path, output_dir: Path, force: bool = False) -> Path:
 
     year_results = MEMOYearResults(
         year=YEAR,
-        parsed_at=datetime.now(UTC).isoformat(),
         total_contestants=len(results),
         results=results,
         validation=ValidationResult(

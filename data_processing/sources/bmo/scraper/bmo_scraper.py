@@ -6,7 +6,6 @@ Scrapes Balkan Mathematical Olympiad individual results from various sources.
 """
 
 import json
-from datetime import UTC, datetime
 from pathlib import Path
 
 from .models import BMOYearResults, ContestantResult, ValidationResult
@@ -118,7 +117,6 @@ def scrape_year(year: int, raw_data_dir: Path, force: bool = False) -> BMOYearRe
 
     return BMOYearResults(
         year=year,
-        scraped_at=datetime.now(UTC).isoformat(),
         source_url=parser.source_url,
         source_type=parser.source_type,
         total_contestants=len(results),

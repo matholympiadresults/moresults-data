@@ -7,7 +7,6 @@ This is the second stage of the data pipeline: download -> parse -> ingest.
 
 import json
 import re
-from datetime import UTC, datetime
 from pathlib import Path
 
 import click
@@ -50,7 +49,6 @@ class IMOYearResults(BaseModel):
     """Complete results for a single IMO year."""
 
     year: int
-    parsed_at: str
     total_contestants: int
     results: list[ContestantResult]
     validation: ValidationResult
@@ -387,7 +385,6 @@ def parse_year(html: str, year: int) -> IMOYearResults:
 
     return IMOYearResults(
         year=year,
-        parsed_at=datetime.now(UTC).isoformat(),
         total_contestants=len(results),
         results=results,
         validation=ValidationResult(

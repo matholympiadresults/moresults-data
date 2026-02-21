@@ -25,7 +25,6 @@ class BMOYearResults(BaseModel):
     """Complete results for a single BalcanMO year."""
 
     year: int
-    scraped_at: str
     source_url: str
     source_type: str  # "html" or "pdf"
     total_contestants: int

@@ -7,7 +7,6 @@ The data is stored in an XLS file on kag.upol.cz.
 """
 
 import json
-from datetime import UTC, datetime
 from pathlib import Path
 
 import requests
@@ -262,7 +261,6 @@ def parse_2007(raw_dir: Path, output_dir: Path, force: bool = False) -> Path:
 
     year_results = MEMOYearResults(
         year=YEAR,
-        parsed_at=datetime.now(UTC).isoformat(),
         total_contestants=len(results),
         results=results,
         validation=ValidationResult(

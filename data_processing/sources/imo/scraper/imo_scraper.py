@@ -7,7 +7,6 @@ Scrapes International Mathematical Olympiad individual results from imo-official
 
 import json
 import re
-from datetime import UTC, datetime
 
 import requests
 from bs4 import BeautifulSoup
@@ -352,7 +351,6 @@ def scrape_year(year: int) -> IMOYearResults:
 
     return IMOYearResults(
         year=year,
-        scraped_at=datetime.now(UTC).isoformat(),
         total_contestants=len(results),
         results=results,
         validation=ValidationResult(

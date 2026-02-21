@@ -8,7 +8,6 @@ Uses text-based parsing since table extraction can miss rows at page boundaries.
 
 import json
 import re
-from datetime import UTC, datetime
 from pathlib import Path
 
 import pdfplumber
@@ -208,7 +207,6 @@ def parse_2013(raw_dir: Path, output_dir: Path, force: bool = False) -> Path:
 
     year_results = MEMOYearResults(
         year=2013,
-        parsed_at=datetime.now(UTC).isoformat(),
         total_contestants=len(results),
         results=results,
         validation=ValidationResult(

@@ -6,7 +6,6 @@ Parses the MEMO 2008 (2nd edition) individual results XLS into structured data.
 """
 
 import json
-from datetime import UTC, datetime
 from pathlib import Path
 
 import xlrd
@@ -188,7 +187,6 @@ def parse_2008(raw_dir: Path, output_dir: Path, force: bool = False) -> Path:
 
     year_results = MEMOYearResults(
         year=2008,
-        parsed_at=datetime.now(UTC).isoformat(),
         total_contestants=len(results),
         results=results,
         validation=ValidationResult(

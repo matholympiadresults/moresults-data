@@ -71,7 +71,6 @@ sigma ingest bmo -d data/ -o data/olympiad_data.json
 ```json
 {
   "year": 2024,
-  "scraped_at": "2024-01-15T10:30:00+00:00",
   "source_url": "https://bmo2024.org/results/",
   "source_type": "html",
   "total_contestants": 137,

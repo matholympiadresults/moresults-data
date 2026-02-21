@@ -25,7 +25,6 @@ class MEMOYearResults(BaseModel):
     """Complete results for a single MEMO year (individual contest)."""
 
     year: int
-    parsed_at: str
     total_contestants: int
     results: list[ContestantResult]
     validation: ValidationResult

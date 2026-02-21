@@ -25,7 +25,10 @@ build-backend = "hatchling.build"
 packages = ["data_processing"]
 
 [dependency-groups]
-dev = ["pytest>=8.0", "ruff>=0.8"]
+dev = ["pytest>=8.0", "pytest-xdist>=3.5", "ruff>=0.8"]
+
+[tool.pytest.ini_options]
+addopts = "-n auto"
 
 [tool.ruff]
 target-version = "py312"
