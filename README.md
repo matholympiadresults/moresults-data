@@ -22,6 +22,8 @@ The data pipeline has three stages with different purposes:
 
 Raw data (`data/<source>/raw/`) is the source of truth and should never be modified. If a parser has bugs, fix the parser and re-run `parse` + `ingest`. This separation ensures we never lose original data even as our processing improves.
 
+**On ingestion:** Always rebuild the database from scratch using `sigma ingest-all`. Person and country IDs are assigned in encounter order, so partial or out-of-order ingestion produces different IDs. This ensures deterministic, reproducible output.
+
 **On storing data in git:** Yes, git isn't ideal for data storage - it increases bundle size and wasn't designed for this. But we're optimizing for simplicity and pragmatism over perfection. The data changes slowly (a few competitions per year), the total size is manageable (~50MB), and keeping everything in one repo means no external dependencies, no broken links, no expired cloud storage. Clone the repo and you have everything.
 
 ## Installation
@@ -83,14 +85,11 @@ sigma parse memo -d data/ --year 2022 --year 2023 --year 2024
 #### Ingest into database
 
 ```bash
-# Ingest a single source
-sigma ingest egmo -d data/ -o data/olympiad_data.json --year 2024
-
-# Ingest all data from a source
-sigma ingest imo -d data/ -o data/olympiad_data.json
-
-# Ingest all sources at once
+# Rebuild the full database (always use this for committing)
 sigma ingest-all -d data/ -o data/olympiad_data.json
+
+# Ingest a single source/year (for quick testing only)
+sigma ingest egmo -d data/ -o /tmp/test.json --year 2024
 ```
 
 #### View information
@@ -106,10 +105,12 @@ sigma summary data/olympiad_data.json
 ### Full Example
 
 ```bash
-# Process EGMO 2024 data end-to-end
+# Add new year of EGMO data
 sigma download egmo -d data/ --year 2024
 sigma parse egmo -d data/ --year 2024
-sigma ingest egmo -d data/ -o data/olympiad_data.json --year 2024
+
+# Rebuild the full database
+sigma ingest-all -d data/ -o data/olympiad_data.json
 sigma summary data/olympiad_data.json
 ```
 
