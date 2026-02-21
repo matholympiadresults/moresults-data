@@ -5,12 +5,24 @@ from datetime import UTC, datetime
 from data_processing.schemas import (
     Award,
     Competition,
+    CompetitionType,
     Country,
     Database,
     Participation,
     Person,
     Source,
+    TeamParticipation,
 )
+
+
+class TestCompetitionType:
+    def test_competition_type_values(self):
+        assert CompetitionType.INDIVIDUAL.value == "individual"
+        assert CompetitionType.TEAM.value == "team"
+
+    def test_competition_type_is_string_enum(self):
+        assert isinstance(CompetitionType.INDIVIDUAL, str)
+        assert CompetitionType.INDIVIDUAL == "individual"
 
 
 class TestSource:
@@ -18,6 +30,8 @@ class TestSource:
         assert Source.IMO.value == "IMO"
         assert Source.EGMO.value == "EGMO"
         assert Source.MEMO.value == "MEMO"
+        assert Source.MEMO_TEAM.value == "MEMO_TEAM"
+        assert Source.BALTICWAY.value == "BALTICWAY"
 
     def test_source_is_string_enum(self):
         assert isinstance(Source.IMO, str)
@@ -62,8 +76,20 @@ class TestCompetition:
         assert comp.year == 2024
         assert comp.num_problems == 6
         assert comp.max_score_per_problem == 7  # default
+        assert comp.competition_type == CompetitionType.INDIVIDUAL  # default
         assert comp.edition is None
         assert comp.host_country_id is None
+
+    def test_create_team_competition(self):
+        comp = Competition(
+            id="memo_team-2024",
+            source=Source.MEMO_TEAM,
+            year=2024,
+            competition_type=CompetitionType.TEAM,
+            num_problems=8,
+        )
+        assert comp.source == Source.MEMO_TEAM
+        assert comp.competition_type == CompetitionType.TEAM
 
     def test_create_competition_full(self):
         comp = Competition(
@@ -171,6 +197,50 @@ class TestParticipation:
         assert part.problem_scores[3] is None
 
 
+class TestTeamParticipation:
+    def test_create_team_participation_minimal(self):
+        tp = TeamParticipation(
+            id="memo_team-2024-country-aut",
+            competition_id="memo_team-2024",
+            country_id="country-aut",
+            problem_scores=[8, 8, 7, 8, 6, 8, 7, 8],
+            total=60,
+        )
+        assert tp.id == "memo_team-2024-country-aut"
+        assert tp.competition_id == "memo_team-2024"
+        assert tp.country_id == "country-aut"
+        assert tp.total == 60
+        assert tp.rank is None
+        assert tp.award is None
+        assert tp.extra_awards is None
+
+    def test_create_team_participation_full(self):
+        tp = TeamParticipation(
+            id="memo_team-2024-country-aut",
+            competition_id="memo_team-2024",
+            country_id="country-aut",
+            problem_scores=[8, 8, 7, 8, 6, 8, 7, 8],
+            total=60,
+            rank=1,
+            award=Award.GOLD,
+            extra_awards="Best team",
+        )
+        assert tp.rank == 1
+        assert tp.award == Award.GOLD
+        assert tp.extra_awards == "Best team"
+
+    def test_team_participation_with_none_scores(self):
+        tp = TeamParticipation(
+            id="test-tp",
+            competition_id="balticway-2024",
+            country_id="country-ltu",
+            problem_scores=[5, None, 3, None, 5],
+            total=13,
+        )
+        assert tp.problem_scores[1] is None
+        assert tp.problem_scores[3] is None
+
+
 class TestDatabase:
     def test_create_empty_database(self):
         db = Database(last_updated=datetime.now(UTC))
@@ -179,6 +249,7 @@ class TestDatabase:
         assert db.competitions == {}
         assert db.people == {}
         assert db.participations == {}
+        assert db.team_participations == {}
 
     def test_create_populated_database(self):
         country = Country(id="country-gbr", code="gbr", name="United Kingdom")
@@ -205,6 +276,31 @@ class TestDatabase:
         assert len(db.competitions) == 1
         assert len(db.people) == 1
         assert len(db.participations) == 1
+
+    def test_create_database_with_team_participations(self):
+        comp = Competition(
+            id="memo_team-2024",
+            source=Source.MEMO_TEAM,
+            year=2024,
+            competition_type=CompetitionType.TEAM,
+            num_problems=8,
+        )
+        tp = TeamParticipation(
+            id="memo_team-2024-country-aut",
+            competition_id="memo_team-2024",
+            country_id="country-aut",
+            problem_scores=[8, 8, 7, 8, 6, 8, 7, 8],
+            total=60,
+            rank=1,
+            award=Award.GOLD,
+        )
+        db = Database(
+            last_updated=datetime.now(UTC),
+            competitions={"memo_team-2024": comp},
+            team_participations={"memo_team-2024-country-aut": tp},
+        )
+        assert len(db.team_participations) == 1
+        assert db.team_participations["memo_team-2024-country-aut"].total == 60
 
     def test_database_serialization_roundtrip(self):
         db = Database(
