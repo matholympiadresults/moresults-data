@@ -7,11 +7,21 @@ import click
 
 from data_processing.sources.memo.downloader import (
     AVAILABLE_YEARS,
+    TEAM_AVAILABLE_YEARS,
     DownloadError,
+    download_team_year,
     download_year,
 )
-from data_processing.sources.memo.ingester.memo_ingester import ingest_memo_data
-from data_processing.sources.memo.parser import ParserError, parse_year
+from data_processing.sources.memo.ingester.memo_ingester import (
+    ingest_memo_data,
+    ingest_memo_team_data,
+)
+from data_processing.sources.memo.parser import (
+    ParserError,
+    TeamParserError,
+    parse_team_year,
+    parse_year,
+)
 
 from .base import SourceAdapter
 
@@ -44,7 +54,7 @@ class MEMOAdapter(SourceAdapter):
         years: list[int] | None,
         force: bool,
     ) -> None:
-        """Download raw HTML from memo-official.org."""
+        """Download raw HTML from memo-official.org (individual and team)."""
         if years is None:
             target_years = AVAILABLE_YEARS
         else:
@@ -55,9 +65,11 @@ class MEMOAdapter(SourceAdapter):
             click.echo(f"Available years: {AVAILABLE_YEARS[0]}-{AVAILABLE_YEARS[-1]}")
             return
 
-        success_count = 0
-        skip_count = 0
-        fail_count = 0
+        # Download individual results
+        click.echo("Downloading individual results:")
+        ind_success = 0
+        ind_skip = 0
+        ind_fail = 0
 
         for year in target_years:
             raw_dir = self.get_raw_dir(source_dir, year)
@@ -65,22 +77,47 @@ class MEMOAdapter(SourceAdapter):
 
             if raw_file.exists() and not force:
                 click.echo(f"  {year}: Skipped (already exists)")
-                skip_count += 1
+                ind_skip += 1
                 continue
 
             try:
                 download_year(year, raw_dir, force=force)
                 click.echo(f"  {year}: Downloaded")
-                success_count += 1
-
-                # Be polite to the server
+                ind_success += 1
                 time.sleep(1.0)
             except DownloadError as e:
                 click.echo(f"  {year}: {e}", err=True)
-                fail_count += 1
+                ind_fail += 1
 
-        click.echo()
-        click.echo(f"Done: {success_count} downloaded, {skip_count} skipped, {fail_count} failed")
+        click.echo(f"Individual: {ind_success} downloaded, {ind_skip} skipped, {ind_fail} failed")
+
+        # Download team results (only for years with team data)
+        team_years = [y for y in target_years if y in TEAM_AVAILABLE_YEARS]
+        if team_years:
+            click.echo("\nDownloading team results:")
+            team_success = 0
+            team_skip = 0
+            team_fail = 0
+
+            for year in team_years:
+                raw_dir = self.get_raw_dir(source_dir, year)
+                raw_file = raw_dir / "team.html"
+
+                if raw_file.exists() and not force:
+                    click.echo(f"  {year}: Skipped (already exists)")
+                    team_skip += 1
+                    continue
+
+                try:
+                    download_team_year(year, raw_dir, force=force)
+                    click.echo(f"  {year}: Downloaded")
+                    team_success += 1
+                    time.sleep(1.0)
+                except DownloadError as e:
+                    click.echo(f"  {year}: {e}", err=True)
+                    team_fail += 1
+
+            click.echo(f"Team: {team_success} downloaded, {team_skip} skipped, {team_fail} failed")
 
     def parse_raw(
         self,
@@ -88,7 +125,7 @@ class MEMOAdapter(SourceAdapter):
         years: list[int] | None,
         force: bool,
     ) -> None:
-        """Parse raw HTML into structured JSON."""
+        """Parse raw HTML into structured JSON (individual and team)."""
         if years is None:
             target_years = AVAILABLE_YEARS
         else:
@@ -99,9 +136,11 @@ class MEMOAdapter(SourceAdapter):
             click.echo(f"Available years: {AVAILABLE_YEARS[0]}-{AVAILABLE_YEARS[-1]}")
             return
 
-        success_count = 0
-        skip_count = 0
-        fail_count = 0
+        # Parse individual results
+        click.echo("Parsing individual results:")
+        ind_success = 0
+        ind_skip = 0
+        ind_fail = 0
 
         for year in target_years:
             raw_dir = self.get_raw_dir(source_dir, year)
@@ -110,22 +149,52 @@ class MEMOAdapter(SourceAdapter):
 
             if output_file.exists() and not force:
                 click.echo(f"  {year}: Skipped (already exists)")
-                skip_count += 1
+                ind_skip += 1
                 continue
 
             try:
                 parse_year(year, raw_dir, parsed_dir, force=force)
                 click.echo(f"  {year}: Parsed")
-                success_count += 1
+                ind_success += 1
             except FileNotFoundError:
                 click.echo(f"  {year}: Raw HTML not found (run download first)", err=True)
-                fail_count += 1
+                ind_fail += 1
             except ParserError as e:
                 click.echo(f"  {year}: {e}", err=True)
-                fail_count += 1
+                ind_fail += 1
 
-        click.echo()
-        click.echo(f"Done: {success_count} parsed, {skip_count} skipped, {fail_count} failed")
+        click.echo(f"Individual: {ind_success} parsed, {ind_skip} skipped, {ind_fail} failed")
+
+        # Parse team results (only for years with team data)
+        team_years = [y for y in target_years if y in TEAM_AVAILABLE_YEARS]
+        if team_years:
+            click.echo("\nParsing team results:")
+            team_success = 0
+            team_skip = 0
+            team_fail = 0
+
+            for year in team_years:
+                raw_dir = self.get_raw_dir(source_dir, year)
+                parsed_dir = self.get_parsed_dir(source_dir, year)
+                output_file = parsed_dir / "team_scoreboard.json"
+
+                if output_file.exists() and not force:
+                    click.echo(f"  {year}: Skipped (already exists)")
+                    team_skip += 1
+                    continue
+
+                try:
+                    parse_team_year(year, raw_dir, parsed_dir, force=force)
+                    click.echo(f"  {year}: Parsed")
+                    team_success += 1
+                except FileNotFoundError:
+                    click.echo(f"  {year}: Team raw HTML not found (run download first)", err=True)
+                    team_fail += 1
+                except TeamParserError as e:
+                    click.echo(f"  {year}: {e}", err=True)
+                    team_fail += 1
+
+            click.echo(f"Team: {team_success} parsed, {team_skip} skipped, {team_fail} failed")
 
     def ingest(
         self,
@@ -133,5 +202,11 @@ class MEMOAdapter(SourceAdapter):
         output_path: Path,
         years: list[int] | None,
     ) -> None:
-        """Ingest parsed MEMO data into the database."""
+        """Ingest parsed MEMO data (individual and team) into the database."""
+        # Ingest individual data
+        click.echo("Ingesting individual results:")
         ingest_memo_data(source_dir, output_path, years)
+
+        # Ingest team data
+        click.echo("\nIngesting team results:")
+        ingest_memo_team_data(source_dir, output_path, years)

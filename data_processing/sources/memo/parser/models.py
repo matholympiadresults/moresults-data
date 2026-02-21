@@ -28,3 +28,22 @@ class MEMOYearResults(BaseModel):
     total_contestants: int
     results: list[ContestantResult]
     validation: ValidationResult
+
+
+class TeamResult(BaseModel):
+    """Team/country result from MEMO team contest."""
+
+    country: str
+    problem_scores: list[int]  # T-1 through T-8 (8 problems, 8 points each)
+    total: int
+    rank: int | None  # Inferred from row order
+    award: str | None  # Gold, Silver, Bronze
+
+
+class MEMOTeamYearResults(BaseModel):
+    """Complete results for a single MEMO year (team contest)."""
+
+    year: int
+    total_teams: int
+    results: list[TeamResult]
+    validation: ValidationResult
