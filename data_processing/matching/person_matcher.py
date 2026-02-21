@@ -103,9 +103,7 @@ class PersonMatcher:
             for source_key, source_id in person.source_ids.items():
                 if source_id is not None:
                     self._source_id_index[(source_key, source_id)] = person.id
-            self._name_country_index[
-                (normalize_name(person.name), person.country_id)
-            ] = person.id
+            self._name_country_index[(normalize_name(person.name), person.country_id)] = person.id
 
     def _generate_person_id(self) -> str:
         """Generate a new unique person ID."""
@@ -208,9 +206,7 @@ class PersonMatcher:
         # Update indexes
         if source_contestant_id:
             self._source_id_index[(source_key, source_contestant_id)] = person_id
-        self._name_country_index[
-            (normalize_name(normalized_name), country_id)
-        ] = person_id
+        self._name_country_index[(normalize_name(normalized_name), country_id)] = person_id
 
         return MatchResult(
             person_id=person_id,
