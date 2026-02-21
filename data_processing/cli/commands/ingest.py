@@ -8,7 +8,9 @@ from ..sources import get_source, ingest_all_sources
 
 
 @click.command()
-@click.argument("source", type=click.Choice(["apmo", "bmo", "egmo", "imo", "memo", "pamo", "rmm"]))
+@click.argument(
+    "source", type=click.Choice(["apmo", "balticway", "bmo", "egmo", "imo", "memo", "pamo", "rmm"])
+)
 @click.option(
     "-d",
     "--data-dir",
