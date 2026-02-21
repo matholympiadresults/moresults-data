@@ -57,9 +57,15 @@ def download_year(year: int, output_dir: Path, force: bool = False) -> Path:
     """
     # Use legacy downloader for 2007 (XLS file)
     if year == 2007:
-        from data_processing.sources.memo.legacy.memo_2007 import download_2007
+        from .memo_2007_downloader import download_2007
 
         return download_2007(output_dir, force=force)
+
+    # Use legacy downloader for 2011 (HTML from memo2011.math.hr)
+    if year == 2011:
+        from .memo_2011_downloader import download_2011
+
+        return download_2011(output_dir, force=force)
 
     # Use pass-through downloader for 2014 (local ODS file)
     if year == 2014:
