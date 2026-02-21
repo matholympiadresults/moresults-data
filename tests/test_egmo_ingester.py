@@ -4,17 +4,17 @@ import json
 
 from data_processing.database import create_empty_database, get_or_create_country
 from data_processing.schemas import Award, Source
+from data_processing.sources.egmo.downloader import (
+    FIRST_EGMO_YEAR,
+    edition_to_year,
+)
 from data_processing.sources.egmo.ingester.egmo_ingester import (
     convert_award,
     create_competition,
     ingest_results,
     load_results_from_file,
 )
-from data_processing.sources.egmo.scraper import (
-    FIRST_EGMO_YEAR,
-    edition_to_year,
-)
-from data_processing.sources.egmo.scraper.models import (
+from data_processing.sources.egmo.parser.models import (
     ContestantResult,
     EGMOYearResults,
     ValidationResult,

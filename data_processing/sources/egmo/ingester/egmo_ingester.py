@@ -13,7 +13,7 @@ from data_processing.schemas import (
     Source,
 )
 
-from ..scraper.models import EGMOYearResults
+from ..parser.models import EGMOYearResults
 
 # EGMO B-team codes (4-letter codes ending in 'b')
 EGMO_B_TEAM_CODES = {
