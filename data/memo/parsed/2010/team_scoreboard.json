@@ -1,0 +1,170 @@
+{
+  "year": 2010,
+  "total_teams": 10,
+  "results": [
+    {
+      "country": "Hungary",
+      "problem_scores": [
+        8,
+        0,
+        8,
+        4,
+        8,
+        8,
+        8,
+        8
+      ],
+      "total": 52,
+      "rank": 1,
+      "award": null
+    },
+    {
+      "country": "Poland",
+      "problem_scores": [
+        1,
+        2,
+        8,
+        8,
+        8,
+        0,
+        8,
+        8
+      ],
+      "total": 43,
+      "rank": 2,
+      "award": null
+    },
+    {
+      "country": "Germany",
+      "problem_scores": [
+        7,
+        2,
+        1,
+        3,
+        8,
+        8,
+        8,
+        3
+      ],
+      "total": 40,
+      "rank": 3,
+      "award": null
+    },
+    {
+      "country": "Austria",
+      "problem_scores": [
+        2,
+        8,
+        1,
+        3,
+        8,
+        6,
+        8,
+        1
+      ],
+      "total": 37,
+      "rank": 4,
+      "award": null
+    },
+    {
+      "country": "Croatia",
+      "problem_scores": [
+        6,
+        0,
+        8,
+        3,
+        8,
+        0,
+        8,
+        2
+      ],
+      "total": 35,
+      "rank": 5,
+      "award": null
+    },
+    {
+      "country": "Lithuania",
+      "problem_scores": [
+        1,
+        2,
+        0,
+        3,
+        8,
+        8,
+        8,
+        0
+      ],
+      "total": 30,
+      "rank": 6,
+      "award": null
+    },
+    {
+      "country": "Slovenia",
+      "problem_scores": [
+        6,
+        0,
+        7,
+        2,
+        8,
+        0,
+        3,
+        1
+      ],
+      "total": 27,
+      "rank": 7,
+      "award": null
+    },
+    {
+      "country": "Czech Republic",
+      "problem_scores": [
+        1,
+        2,
+        3,
+        3,
+        8,
+        0,
+        8,
+        1
+      ],
+      "total": 26,
+      "rank": 8,
+      "award": null
+    },
+    {
+      "country": "Slovakia",
+      "problem_scores": [
+        2,
+        0,
+        3,
+        4,
+        8,
+        0,
+        5,
+        0
+      ],
+      "total": 22,
+      "rank": 9,
+      "award": null
+    },
+    {
+      "country": "Switzerland",
+      "problem_scores": [
+        0,
+        0,
+        1,
+        2,
+        0,
+        1,
+        0,
+        0
+      ],
+      "total": 4,
+      "rank": 10,
+      "award": null
+    }
+  ],
+  "validation": {
+    "all_totals_match": true,
+    "mismatches": []
+  }
+}

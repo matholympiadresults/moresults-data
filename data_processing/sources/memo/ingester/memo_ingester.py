@@ -247,7 +247,7 @@ def ingest_memo_data(
     return db
 
 
-def create_team_competition(db: Database, year: int) -> Competition:
+def create_team_competition(db: Database, year: int, num_problems: int = 8) -> Competition:
     """Create a team competition entry."""
     competition_id = f"memo-team-{year}"
 
@@ -261,7 +261,7 @@ def create_team_competition(db: Database, year: int) -> Competition:
         edition=memo_year_to_edition(year),
         host_country_id=None,
         competition_type=CompetitionType.TEAM,
-        num_problems=8,  # MEMO team has 8 problems
+        num_problems=num_problems,
         max_score_per_problem=8,
     )
     db.competitions[competition_id] = competition
@@ -274,7 +274,8 @@ def ingest_team_year_results(db: Database, team_results: MEMOTeamYearResults) ->
 
     Returns stats about the ingestion.
     """
-    competition = create_team_competition(db, team_results.year)
+    num_problems = len(team_results.results[0].problem_scores) if team_results.results else 8
+    competition = create_team_competition(db, team_results.year, num_problems=num_problems)
 
     for team in team_results.results:
         # Normalize country

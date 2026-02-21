@@ -1,0 +1,94 @@
+{
+  "year": 2007,
+  "total_teams": 7,
+  "results": [
+    {
+      "country": "Poland",
+      "problem_scores": [
+        8,
+        7,
+        8,
+        8
+      ],
+      "total": 31,
+      "rank": 1,
+      "award": "Gold"
+    },
+    {
+      "country": "Croatia",
+      "problem_scores": [
+        8,
+        6,
+        8,
+        3
+      ],
+      "total": 25,
+      "rank": 2,
+      "award": "Silver"
+    },
+    {
+      "country": "Czech Republic",
+      "problem_scores": [
+        3,
+        8,
+        8,
+        2
+      ],
+      "total": 21,
+      "rank": 3,
+      "award": "Bronze"
+    },
+    {
+      "country": "Slovakia",
+      "problem_scores": [
+        3,
+        7,
+        8,
+        3
+      ],
+      "total": 21,
+      "rank": 4,
+      "award": null
+    },
+    {
+      "country": "Austria",
+      "problem_scores": [
+        6,
+        4,
+        8,
+        3
+      ],
+      "total": 21,
+      "rank": 4,
+      "award": null
+    },
+    {
+      "country": "Switzerland",
+      "problem_scores": [
+        3,
+        3,
+        8,
+        5
+      ],
+      "total": 19,
+      "rank": 6,
+      "award": null
+    },
+    {
+      "country": "Slovenia",
+      "problem_scores": [
+        3,
+        6,
+        6,
+        3
+      ],
+      "total": 18,
+      "rank": 7,
+      "award": null
+    }
+  ],
+  "validation": {
+    "all_totals_match": true,
+    "mismatches": []
+  }
+}
