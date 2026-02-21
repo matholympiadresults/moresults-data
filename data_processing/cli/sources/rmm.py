@@ -5,10 +5,10 @@ from pathlib import Path
 
 import click
 
-from data_processing.sources.rmm.download import AVAILABLE_YEARS, download_year
-from data_processing.sources.rmm.download.downloader import DownloadError
-from data_processing.sources.rmm.parse import ParseError, parse_year
-from data_processing.sources.rmm.parse.parser import load_html, save_json
+from data_processing.sources.rmm.downloader import AVAILABLE_YEARS, download_year
+from data_processing.sources.rmm.downloader.rmm_downloader import DownloadError
+from data_processing.sources.rmm.parser import ParseError, parse_year
+from data_processing.sources.rmm.parser.rmm_parser import load_html, save_json
 
 from .base import SourceAdapter
 
@@ -187,7 +187,7 @@ class RMMAdapter(SourceAdapter):
 
     def info(self, year: int, source_dir: Path) -> None:
         """Show summary info for a specific RMM year."""
-        from data_processing.sources.rmm.parse.models import RMMYearResults
+        from data_processing.sources.rmm.parser.models import RMMYearResults
 
         json_file = self.get_parsed_dir(source_dir, year) / f"rmm_{year}.json"
 
