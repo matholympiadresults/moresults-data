@@ -4,14 +4,17 @@ from pathlib import Path
 
 import click
 
-from data_processing.sources.bmo.ingester.bmo_ingester import ingest_bmo_data
-from data_processing.sources.bmo.scraper.bmo_scraper import (
+from data_processing.sources.bmo.downloader import (
     AVAILABLE_YEARS,
-    get_parser,
-    save_json,
-    scrape_year,
+    download_raw,
+    get_raw_filename,
 )
-from data_processing.sources.bmo.scraper.models import BMOYearResults
+from data_processing.sources.bmo.ingester.bmo_ingester import ingest_bmo_data
+from data_processing.sources.bmo.parser import (
+    BMOYearResults,
+    parse_raw,
+    save_json,
+)
 
 from .base import SourceAdapter
 
@@ -57,8 +60,7 @@ class BMOAdapter(SourceAdapter):
             click.echo(f"Downloading BMO {year}...")
 
             try:
-                parser = get_parser(year, raw_dir)
-                raw_file = parser.download_raw(force=force)
+                raw_file = download_raw(year, raw_dir, force=force)
                 click.echo(f"  Downloaded to {raw_file}")
             except Exception as e:
                 click.echo(f"  Error: {e}", err=True)
@@ -90,8 +92,12 @@ class BMOAdapter(SourceAdapter):
             click.echo(f"Parsing BMO {year}...")
 
             try:
-                # Use scrape_year which handles download + parse, but raw is already there
-                result = scrape_year(year, raw_dir, force=False)
+                raw_file = raw_dir / get_raw_filename(year)
+                if not raw_file.exists():
+                    click.echo(f"  Skipping: raw file not found at {raw_file}", err=True)
+                    continue
+
+                result = parse_raw(year, raw_file)
                 save_json(result, str(output_file))
                 click.echo(f"  Parsed {result.total_contestants} contestants to {output_file}")
             except Exception as e:

@@ -1,1 +1,4 @@
-"""BalcanMO (Balkan Mathematical Olympiad) data source."""
+"""BalcanMO (Balkan Mathematical Olympiad) data source.
+
+Pipeline: downloader -> parser -> ingester
+"""

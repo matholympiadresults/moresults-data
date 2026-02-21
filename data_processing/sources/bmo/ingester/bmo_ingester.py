@@ -14,7 +14,7 @@ from data_processing.schemas import (
     Participation,
     Source,
 )
-from data_processing.sources.bmo.scraper.models import (
+from data_processing.sources.bmo.parser.models import (
     BMOYearResults,
 )
 
