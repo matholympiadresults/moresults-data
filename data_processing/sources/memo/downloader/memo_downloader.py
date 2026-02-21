@@ -17,8 +17,8 @@ SPECIAL_URLS = {
 }
 
 # Available years - MEMO started in 2007
-# Missing: 2012, 2014 (no data sources found yet)
-AVAILABLE_YEARS = list(range(2007, 2012)) + [2013] + list(range(2015, 2026))
+# Missing: 2012 (no data sources found yet)
+AVAILABLE_YEARS = list(range(2007, 2012)) + [2013, 2014] + list(range(2015, 2026))
 
 
 class DownloadError(Exception):
@@ -52,6 +52,14 @@ def download_year(year: int, output_dir: Path, force: bool = False) -> Path:
         from data_processing.sources.memo.legacy.memo_2007 import download_2007
 
         return download_2007(output_dir, force=force)
+
+    # Use pass-through downloader for 2014 (local ODS file)
+    if year == 2014:
+        from data_processing.sources.memo.downloader.memo_2014_downloader import (
+            download_2014,
+        )
+
+        return download_2014(output_dir, force=force)
 
     output_file = output_dir / get_raw_filename()
 

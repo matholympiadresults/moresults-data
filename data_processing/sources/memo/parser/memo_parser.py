@@ -333,6 +333,11 @@ def parse_year(year: int, raw_dir: Path, output_dir: Path, force: bool = False) 
 
         return parse_2013(raw_dir, output_dir, force=force)
 
+    if year == 2014:
+        from data_processing.sources.memo.parser.memo_2014_parser import parse_2014
+
+        return parse_2014(raw_dir, output_dir, force=force)
+
     # Standard parser for 2015+
     from data_processing.sources.memo.downloader.memo_downloader import get_raw_filename
 
