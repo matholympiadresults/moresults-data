@@ -72,8 +72,8 @@ class TestSaveAndLoadDatabase:
             host_country_id="country-gbr",
             num_problems=6,
         )
-        db1.people["person-000001"] = Person(
-            id="person-000001",
+        db1.people["js-1"] = Person(
+            id="js-1",
             name="John Smith",
             given_name="John",
             family_name="Smith",
@@ -81,10 +81,10 @@ class TestSaveAndLoadDatabase:
             aliases=["J. Smith"],
             source_ids={"imo": "12345", "egmo": None, "memo": None},
         )
-        db1.participations["imo-2024-person-000001"] = Participation(
-            id="imo-2024-person-000001",
+        db1.participations["imo-2024-js-1"] = Participation(
+            id="imo-2024-js-1",
             competition_id="imo-2024",
-            person_id="person-000001",
+            person_id="js-1",
             country_id="country-gbr",
             problem_scores=[7, 7, 1, 7, 7, 0],
             total=29,
@@ -106,14 +106,14 @@ class TestSaveAndLoadDatabase:
         assert db2.competitions["imo-2024"].edition == 65
 
         # Verify people
-        assert "person-000001" in db2.people
-        assert db2.people["person-000001"].name == "John Smith"
-        assert db2.people["person-000001"].aliases == ["J. Smith"]
-        assert db2.people["person-000001"].source_ids["imo"] == "12345"
+        assert "js-1" in db2.people
+        assert db2.people["js-1"].name == "John Smith"
+        assert db2.people["js-1"].aliases == ["J. Smith"]
+        assert db2.people["js-1"].source_ids["imo"] == "12345"
 
         # Verify participations
-        assert "imo-2024-person-000001" in db2.participations
-        part = db2.participations["imo-2024-person-000001"]
+        assert "imo-2024-js-1" in db2.participations
+        part = db2.participations["imo-2024-js-1"]
         assert part.problem_scores == [7, 7, 1, 7, 7, 0]
         assert part.total == 29
         assert part.award == Award.GOLD
