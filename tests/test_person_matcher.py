@@ -4,7 +4,7 @@ import pytest
 
 from data_processing.database import create_empty_database
 from data_processing.matching import PersonMatcher
-from data_processing.matching.person_matcher import capitalize_name
+from data_processing.matching.person_matcher import capitalize_name, compute_initials
 from data_processing.schemas import Country, Person, Source
 
 
@@ -41,6 +41,26 @@ class TestCapitalizeName:
         assert capitalize_name(None) is None
 
 
+class TestComputeInitials:
+    def test_two_word_name(self):
+        assert compute_initials("John Smith") == "js"
+
+    def test_single_name(self):
+        assert compute_initials("Jane") == "j"
+
+    def test_multi_word_name(self):
+        assert compute_initials("Johannes van der Berg") == "jvdb"
+
+    def test_accented_characters(self):
+        assert compute_initials("José García") == "jg"
+
+    def test_uppercase_name(self):
+        assert compute_initials("JANE DOE") == "jd"
+
+    def test_extra_whitespace(self):
+        assert compute_initials("  John   Smith  ") == "js"
+
+
 @pytest.fixture
 def db_with_countries():
     """Create a database with some countries."""
@@ -55,8 +75,8 @@ def db_with_countries():
 def db_with_people(db_with_countries):
     """Create a database with some people."""
     db = db_with_countries
-    db.people["person-000001"] = Person(
-        id="person-000001",
+    db.people["js-1"] = Person(
+        id="js-1",
         name="John Smith",
         given_name="John",
         family_name="Smith",
@@ -64,8 +84,8 @@ def db_with_people(db_with_countries):
         aliases=["J. Smith"],
         source_ids={"imo": "12345", "egmo": None, "memo": None},
     )
-    db.people["person-000002"] = Person(
-        id="person-000002",
+    db.people["jd-1"] = Person(
+        id="jd-1",
         name="Jane Doe",
         country_id="country-usa",
         aliases=[],
@@ -77,27 +97,34 @@ def db_with_people(db_with_countries):
 class TestPersonMatcherInit:
     def test_init_with_empty_db(self, db_with_countries):
         matcher = PersonMatcher(db_with_countries)
-        assert matcher._next_person_id == 1
+        assert matcher._next_person_ids == {}
 
     def test_init_with_existing_people(self, db_with_people):
         matcher = PersonMatcher(db_with_people)
-        assert matcher._next_person_id == 3  # Next after person-000002
+        assert matcher._next_person_ids == {"js": 2, "jd": 2}
 
 
 class TestGeneratePersonId:
-    def test_generates_sequential_ids(self, db_with_countries):
+    def test_generates_sequential_ids_same_initials(self, db_with_countries):
         matcher = PersonMatcher(db_with_countries)
-        id1 = matcher._generate_person_id()
-        id2 = matcher._generate_person_id()
-        id3 = matcher._generate_person_id()
-        assert id1 == "person-000001"
-        assert id2 == "person-000002"
-        assert id3 == "person-000003"
+        id1 = matcher._generate_person_id("John Smith")
+        id2 = matcher._generate_person_id("Jack Sparrow")
+        assert id1 == "js-1"
+        assert id2 == "js-2"
+
+    def test_generates_ids_per_initials(self, db_with_countries):
+        matcher = PersonMatcher(db_with_countries)
+        id1 = matcher._generate_person_id("John Smith")
+        id2 = matcher._generate_person_id("Jane Doe")
+        id3 = matcher._generate_person_id("Jack Sparrow")
+        assert id1 == "js-1"
+        assert id2 == "jd-1"
+        assert id3 == "js-2"
 
     def test_continues_from_existing(self, db_with_people):
         matcher = PersonMatcher(db_with_people)
-        new_id = matcher._generate_person_id()
-        assert new_id == "person-000003"
+        new_id = matcher._generate_person_id("John Smith")
+        assert new_id == "js-2"
 
 
 class TestFindBySourceId:
@@ -105,14 +132,14 @@ class TestFindBySourceId:
         matcher = PersonMatcher(db_with_people)
         person = matcher.find_by_source_id(Source.IMO, "12345")
         assert person is not None
-        assert person.id == "person-000001"
+        assert person.id == "js-1"
         assert person.name == "John Smith"
 
     def test_finds_existing_person_by_egmo_id(self, db_with_people):
         matcher = PersonMatcher(db_with_people)
         person = matcher.find_by_source_id(Source.EGMO, "67890")
         assert person is not None
-        assert person.id == "person-000002"
+        assert person.id == "jd-1"
         assert person.name == "Jane Doe"
 
     def test_returns_none_for_unknown_id(self, db_with_people):
@@ -131,20 +158,20 @@ class TestFindByExactName:
         matcher = PersonMatcher(db_with_people)
         candidates = matcher.find_by_exact_name("John Smith", "country-gbr")
         assert len(candidates) == 1
-        assert candidates[0].person_id == "person-000001"
+        assert candidates[0].person_id == "js-1"
         assert candidates[0].confidence == 1.0
 
     def test_case_insensitive_matching(self, db_with_people):
         matcher = PersonMatcher(db_with_people)
         candidates = matcher.find_by_exact_name("JOHN SMITH", "country-gbr")
         assert len(candidates) == 1
-        assert candidates[0].person_id == "person-000001"
+        assert candidates[0].person_id == "js-1"
 
     def test_finds_by_alias(self, db_with_people):
         matcher = PersonMatcher(db_with_people)
         candidates = matcher.find_by_exact_name("J. Smith", "country-gbr")
         assert len(candidates) == 1
-        assert candidates[0].person_id == "person-000001"
+        assert candidates[0].person_id == "js-1"
         assert candidates[0].confidence == 0.95
         assert "Alias" in candidates[0].reason
 
@@ -174,13 +201,13 @@ class TestMatchOrCreate:
             source_contestant_id="99999",
         )
         assert result.is_new is True
-        assert result.person_id == "person-000001"
+        assert result.person_id == "np-1"
         assert result.confidence == 1.0
         assert "New person created" in result.reason
 
         # Verify person was added to database
-        assert "person-000001" in db_with_countries.people
-        person = db_with_countries.people["person-000001"]
+        assert "np-1" in db_with_countries.people
+        person = db_with_countries.people["np-1"]
         assert person.name == "New Person"
         assert person.source_ids["imo"] == "99999"
 
@@ -190,10 +217,10 @@ class TestMatchOrCreate:
             name="Different Name",  # Name doesn't matter when source ID matches
             country_id="country-deu",  # Country doesn't matter either
             source=Source.IMO,
-            source_contestant_id="12345",  # This matches person-000001
+            source_contestant_id="12345",  # This matches js-1
         )
         assert result.is_new is False
-        assert result.person_id == "person-000001"
+        assert result.person_id == "js-1"
         assert result.confidence == 1.0
         assert "Source ID match" in result.reason
 
@@ -205,7 +232,7 @@ class TestMatchOrCreate:
             source=Source.MEMO,  # Different source, no source ID
         )
         assert result.is_new is False
-        assert result.person_id == "person-000001"
+        assert result.person_id == "js-1"
         assert result.confidence == 1.0
         assert "Exact name" in result.reason
 
@@ -217,13 +244,13 @@ class TestMatchOrCreate:
             source=Source.MEMO,
         )
         assert result.is_new is False
-        assert result.person_id == "person-000001"
+        assert result.person_id == "js-1"
         assert result.confidence == 0.95
         assert "Alias" in result.reason
 
     def test_updates_source_id_on_name_match(self, db_with_people):
         matcher = PersonMatcher(db_with_people)
-        # person-000001 has imo=12345, egmo=None
+        # js-1 has imo=12345, egmo=None
         result = matcher.match_or_create(
             name="John Smith",
             country_id="country-gbr",
@@ -232,7 +259,7 @@ class TestMatchOrCreate:
         )
         assert result.is_new is False
         # Should have updated the EGMO source ID
-        person = db_with_people.people["person-000001"]
+        person = db_with_people.people["js-1"]
         assert person.source_ids["egmo"] == "new-egmo-id"
 
     def test_creates_with_given_and_family_name(self, db_with_countries):
@@ -268,12 +295,12 @@ class TestMatchOrCreate:
         matcher = PersonMatcher(db_with_people)
         # Jane Doe has egmo=67890
         result = matcher.match_or_create(
-            name="John Smith",  # This name matches person-000001
+            name="John Smith",  # This name matches js-1
             country_id="country-gbr",
             source=Source.EGMO,
-            source_contestant_id="67890",  # But this ID matches person-000002
+            source_contestant_id="67890",  # But this ID matches jd-1
         )
-        assert result.person_id == "person-000002"  # Source ID wins
+        assert result.person_id == "jd-1"  # Source ID wins
 
     def test_no_source_id_match_without_id(self, db_with_people):
         """When no source_contestant_id is provided, should fall back to name matching."""
@@ -308,9 +335,9 @@ class TestMultipleCreations:
             source=Source.IMO,
         )
 
-        assert result1.person_id == "person-000001"
-        assert result2.person_id == "person-000002"
-        assert result3.person_id == "person-000003"
+        assert result1.person_id == "po-1"
+        assert result2.person_id == "pt-1"
+        assert result3.person_id == "pt-2"
         assert len(db_with_countries.people) == 3
 
     def test_same_name_different_countries(self, db_with_countries):

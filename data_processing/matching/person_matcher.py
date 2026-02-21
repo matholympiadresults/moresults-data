@@ -1,5 +1,6 @@
 """Person matching logic for cross-competition tracking."""
 
+import re
 from dataclasses import dataclass
 
 from unidecode import unidecode
@@ -10,6 +11,20 @@ from data_processing.schemas import Database, Person, Source
 def normalize_name(name: str) -> str:
     """Normalize a name for comparison: lowercase, strip accents, normalize whitespace."""
     return " ".join(unidecode(name).lower().strip().split())
+
+
+def compute_initials(name: str) -> str:
+    """Compute lowercase initials from a name, using unidecode for non-ASCII characters.
+
+    Examples:
+        "John Smith" → "js"
+        "Johannes van der Berg" → "jvdb"
+        "Jane" → "j"
+        "José García" → "jg"
+    """
+    transliterated = unidecode(name).strip()
+    words = transliterated.split()
+    return "".join(w[0].lower() for w in words if w)
 
 
 def capitalize_name(name: str) -> str:
@@ -76,25 +91,28 @@ class MatchResult:
 class PersonMatcher:
     """Matches incoming contestant data to existing people in the database."""
 
+    _ID_PATTERN = re.compile(r"^([a-z]+)-(\d+)$")
+
     def __init__(self, db: Database):
         self.db = db
-        self._next_person_id = self._compute_next_id()
+        self._next_person_ids = self._compute_next_ids()
 
-    def _compute_next_id(self) -> int:
-        """Compute the next available person ID number."""
-        if not self.db.people:
-            return 1
-        max_id = max(
-            int(pid.replace("person-", ""))
-            for pid in self.db.people.keys()
-            if pid.startswith("person-")
-        )
-        return max_id + 1
+    def _compute_next_ids(self) -> dict[str, int]:
+        """Compute the next available person ID number per initials group."""
+        next_ids: dict[str, int] = {}
+        for pid in self.db.people:
+            m = self._ID_PATTERN.match(pid)
+            if m:
+                initials, num = m.group(1), int(m.group(2))
+                next_ids[initials] = max(next_ids.get(initials, 0), num + 1)
+        return next_ids
 
-    def _generate_person_id(self) -> str:
-        """Generate a new unique person ID."""
-        person_id = f"person-{self._next_person_id:06d}"
-        self._next_person_id += 1
+    def _generate_person_id(self, name: str) -> str:
+        """Generate a new unique person ID based on name initials."""
+        initials = compute_initials(name)
+        num = self._next_person_ids.get(initials, 1)
+        person_id = f"{initials}-{num}"
+        self._next_person_ids[initials] = num + 1
         return person_id
 
     def find_by_source_id(self, source: Source, source_id: str) -> Person | None:
@@ -189,7 +207,9 @@ class PersonMatcher:
             )
 
         # Phase 3: Create new person
-        person_id = self._generate_person_id()
+        # Normalize name capitalization (e.g., "ROBERT DRAGOMIRESCU" -> "Robert Dragomirescu")
+        normalized_name = capitalize_name(name)
+        person_id = self._generate_person_id(normalized_name)
         source_ids = {
             "imo": None,
             "egmo": None,
@@ -200,8 +220,6 @@ class PersonMatcher:
         }
         source_ids[source_key] = source_contestant_id
 
-        # Normalize name capitalization (e.g., "ROBERT DRAGOMIRESCU" -> "Robert Dragomirescu")
-        normalized_name = capitalize_name(name)
         normalized_given_name = capitalize_name(given_name) if given_name else None
         normalized_family_name = capitalize_name(family_name) if family_name else None
 

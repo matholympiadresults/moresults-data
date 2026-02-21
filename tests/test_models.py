@@ -91,11 +91,11 @@ class TestCompetition:
 class TestPerson:
     def test_create_person_minimal(self):
         person = Person(
-            id="person-000001",
+            id="js-1",
             name="John Smith",
             country_id="country-gbr",
         )
-        assert person.id == "person-000001"
+        assert person.id == "js-1"
         assert person.name == "John Smith"
         assert person.country_id == "country-gbr"
         assert person.given_name is None
@@ -105,7 +105,7 @@ class TestPerson:
 
     def test_create_person_full(self):
         person = Person(
-            id="person-000001",
+            id="js-1",
             name="John Smith",
             given_name="John",
             family_name="Smith",
@@ -122,16 +122,16 @@ class TestPerson:
 class TestParticipation:
     def test_create_participation_minimal(self):
         part = Participation(
-            id="imo-2024-person-000001",
+            id="imo-2024-js-1",
             competition_id="imo-2024",
-            person_id="person-000001",
+            person_id="js-1",
             country_id="country-gbr",
             problem_scores=[7, 7, 1, 7, 7, 0],
             total=29,
         )
-        assert part.id == "imo-2024-person-000001"
+        assert part.id == "imo-2024-js-1"
         assert part.competition_id == "imo-2024"
-        assert part.person_id == "person-000001"
+        assert part.person_id == "js-1"
         assert part.problem_scores == [7, 7, 1, 7, 7, 0]
         assert part.total == 29
         assert part.rank is None
@@ -139,9 +139,9 @@ class TestParticipation:
 
     def test_create_participation_full(self):
         part = Participation(
-            id="imo-2024-person-000001",
+            id="imo-2024-js-1",
             competition_id="imo-2024",
-            person_id="person-000001",
+            person_id="js-1",
             country_id="country-gbr",
             problem_scores=[7, 7, 1, 7, 7, 0],
             total=29,
@@ -162,7 +162,7 @@ class TestParticipation:
         part = Participation(
             id="test-part",
             competition_id="imo-2024",
-            person_id="person-000001",
+            person_id="js-1",
             country_id="country-gbr",
             problem_scores=[7, None, 1, None, 7, 0],
             total=15,
@@ -183,11 +183,11 @@ class TestDatabase:
     def test_create_populated_database(self):
         country = Country(id="country-gbr", code="gbr", name="United Kingdom")
         comp = Competition(id="imo-2024", source=Source.IMO, year=2024, num_problems=6)
-        person = Person(id="person-000001", name="John Smith", country_id="country-gbr")
+        person = Person(id="js-1", name="John Smith", country_id="country-gbr")
         part = Participation(
-            id="imo-2024-person-000001",
+            id="imo-2024-js-1",
             competition_id="imo-2024",
-            person_id="person-000001",
+            person_id="js-1",
             country_id="country-gbr",
             problem_scores=[7, 7, 7, 7, 7, 7],
             total=42,
@@ -197,8 +197,8 @@ class TestDatabase:
             last_updated=datetime.now(UTC),
             countries={"country-gbr": country},
             competitions={"imo-2024": comp},
-            people={"person-000001": person},
-            participations={"imo-2024-person-000001": part},
+            people={"js-1": person},
+            participations={"imo-2024-js-1": part},
         )
 
         assert len(db.countries) == 1
