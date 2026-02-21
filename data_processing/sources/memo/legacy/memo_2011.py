@@ -6,7 +6,6 @@ Downloads and parses results from memo2011.math.hr (5th MEMO, Varaždin, Croatia
 This site has a different structure than memo-official.org.
 """
 
-import json
 from pathlib import Path
 
 import requests
@@ -265,6 +264,6 @@ def parse_2011(raw_dir: Path, output_dir: Path, force: bool = False) -> Path:
 
     output_dir.mkdir(parents=True, exist_ok=True)
     with open(output_file, "w", encoding="utf-8") as f:
-        json.dump(year_results.model_dump(), f, indent=2, ensure_ascii=False)
+        f.write(year_results.model_dump_json(indent=2))
 
     return output_file

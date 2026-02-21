@@ -5,7 +5,6 @@ PAMO Parser
 Parses raw HTML pages from pamoofficial.org into structured data.
 """
 
-import json
 import re
 from pathlib import Path
 
@@ -238,7 +237,7 @@ def validate_totals(results: list[ContestantResult]) -> list[dict]:
 def save_json(data: PAMOYearResults, filepath: Path) -> None:
     """Save results to JSON file."""
     with open(filepath, "w", encoding="utf-8") as f:
-        json.dump(data.model_dump(), f, indent=2, ensure_ascii=False)
+        f.write(data.model_dump_json(indent=2))
 
 
 def parse_year(year: int, raw_dir: Path, output_dir: Path, force: bool = False) -> Path:

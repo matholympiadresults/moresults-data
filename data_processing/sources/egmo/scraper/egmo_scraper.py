@@ -10,7 +10,6 @@ Supports two modes:
 """
 
 import csv
-import json
 import re
 from datetime import datetime
 from io import StringIO
@@ -227,7 +226,7 @@ def save_json(data: EGMOYearResults, filepath: Path) -> None:
     """Save results to JSON file."""
     filepath.parent.mkdir(parents=True, exist_ok=True)
     with open(filepath, "w", encoding="utf-8") as f:
-        json.dump(data.model_dump(), f, indent=2, ensure_ascii=False)
+        f.write(data.model_dump_json(indent=2))
 
 
 def scrape_year(year: int, raw_data_dir: Path, force: bool = False) -> EGMOYearResults:
