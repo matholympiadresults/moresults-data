@@ -1,0 +1,1716 @@
+{
+  "year": 2023,
+  "scraped_at": "2026-01-02T02:23:17.983988+00:00",
+  "source_url": "https://bmo2023.tubitak.gov.tr/results",
+  "source_type": "html",
+  "total_contestants": 131,
+  "results": [
+    {
+      "name": "David-Andrei Anghel",
+      "country": "ROU 1",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        10
+      ],
+      "total": 40,
+      "rank": 1,
+      "award": "Gold"
+    },
+    {
+      "name": "Davit Kldiashvili",
+      "country": "GEO 1",
+      "problem_scores": [
+        9,
+        10,
+        10,
+        6
+      ],
+      "total": 35,
+      "rank": 2,
+      "award": "Gold"
+    },
+    {
+      "name": "Vlad-Titus Spătaru",
+      "country": "ROU 4",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        5
+      ],
+      "total": 35,
+      "rank": 2,
+      "award": "Gold"
+    },
+    {
+      "name": "Mehmet Can Baştemir",
+      "country": "TUR 1",
+      "problem_scores": [
+        10,
+        10,
+        9,
+        5
+      ],
+      "total": 34,
+      "rank": 4,
+      "award": "Gold"
+    },
+    {
+      "name": "Nikola Spirovski",
+      "country": "MKD 2",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        2
+      ],
+      "total": 32,
+      "rank": 5,
+      "award": "Gold"
+    },
+    {
+      "name": "Wacyl Mohamed Meddour",
+      "country": "ALG 6",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        1
+      ],
+      "total": 31,
+      "rank": 6,
+      "award": "Silver"
+    },
+    {
+      "name": "Jalil Huseynov",
+      "country": "AZE 2",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        1
+      ],
+      "total": 31,
+      "rank": 6,
+      "award": "Silver"
+    },
+    {
+      "name": "Ivan Tagarev",
+      "country": "BGR 1",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        1
+      ],
+      "total": 31,
+      "rank": 6,
+      "award": "Silver"
+    },
+    {
+      "name": "Nicola Tsachev",
+      "country": "BGR 2",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        1
+      ],
+      "total": 31,
+      "rank": 6,
+      "award": "Silver"
+    },
+    {
+      "name": "Bozhidar Dimitrov",
+      "country": "BGR 3",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        1
+      ],
+      "total": 31,
+      "rank": 6,
+      "award": "Silver"
+    },
+    {
+      "name": "Marin Hristov",
+      "country": "BGR 6",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        1
+      ],
+      "total": 31,
+      "rank": 6,
+      "award": "Silver"
+    },
+    {
+      "name": "PANAGIOTIS LIAMPAS",
+      "country": "HEL 2",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        1
+      ],
+      "total": 31,
+      "rank": 6,
+      "award": "Silver"
+    },
+    {
+      "name": "ORESTIS LIGNOS",
+      "country": "HEL 3",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        1
+      ],
+      "total": 31,
+      "rank": 6,
+      "award": "Silver"
+    },
+    {
+      "name": "GEORGIOS TZACHRISTAS",
+      "country": "HEL 5",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        1
+      ],
+      "total": 31,
+      "rank": 6,
+      "award": "Silver"
+    },
+    {
+      "name": "Damjan Davkov",
+      "country": "MKD 6",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        1
+      ],
+      "total": 31,
+      "rank": 6,
+      "award": "Silver"
+    },
+    {
+      "name": "Dan Cernatinschi",
+      "country": "MDA 1",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        1
+      ],
+      "total": 31,
+      "rank": 6,
+      "award": "Silver"
+    },
+    {
+      "name": "Robert Dragomirescu",
+      "country": "ROU 2",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        1
+      ],
+      "total": 31,
+      "rank": 6,
+      "award": "Silver"
+    },
+    {
+      "name": "Andrei Moldovan",
+      "country": "ROU 3",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        1
+      ],
+      "total": 31,
+      "rank": 6,
+      "award": "Silver"
+    },
+    {
+      "name": "Edward Toma-Torac",
+      "country": "ROU 6",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        1
+      ],
+      "total": 31,
+      "rank": 6,
+      "award": "Silver"
+    },
+    {
+      "name": "Ali Alramadan",
+      "country": "SAU 2",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        1
+      ],
+      "total": 31,
+      "rank": 6,
+      "award": "Silver"
+    },
+    {
+      "name": "Mateja Vukelić",
+      "country": "SRB 1",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        1
+      ],
+      "total": 31,
+      "rank": 6,
+      "award": "Silver"
+    },
+    {
+      "name": "Gvozden Lapčević",
+      "country": "SRB 5",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        1
+      ],
+      "total": 31,
+      "rank": 6,
+      "award": "Silver"
+    },
+    {
+      "name": "Serdar Bozdağ",
+      "country": "TUR 2",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        1
+      ],
+      "total": 31,
+      "rank": 6,
+      "award": "Silver"
+    },
+    {
+      "name": "Hakan Gökdoğan",
+      "country": "TUR 3",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        1
+      ],
+      "total": 31,
+      "rank": 6,
+      "award": "Silver"
+    },
+    {
+      "name": "Barış Koyuncu",
+      "country": "TUR 5",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        1
+      ],
+      "total": 31,
+      "rank": 6,
+      "award": "Silver"
+    },
+    {
+      "name": "MEHMET BURAK GÖNÜL",
+      "country": "TURB 3",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        1
+      ],
+      "total": 31,
+      "rank": 6,
+      "award": "Silver"
+    },
+    {
+      "name": "DENİZ CAN KARAÇELEBİ",
+      "country": "TURB 4",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        1
+      ],
+      "total": 31,
+      "rank": 6,
+      "award": "Silver"
+    },
+    {
+      "name": "Maria Drencheva",
+      "country": "BGR 5",
+      "problem_scores": [
+        10,
+        10,
+        9,
+        1
+      ],
+      "total": 30,
+      "rank": 28,
+      "award": "Bronze"
+    },
+    {
+      "name": "PRODROMOS FOTIADIS",
+      "country": "HEL 1",
+      "problem_scores": [
+        10,
+        10,
+        9,
+        1
+      ],
+      "total": 30,
+      "rank": 28,
+      "award": "Bronze"
+    },
+    {
+      "name": "Miron Yurkevich",
+      "country": "KAZ 2",
+      "problem_scores": [
+        10,
+        10,
+        9,
+        1
+      ],
+      "total": 30,
+      "rank": 28,
+      "award": "Bronze"
+    },
+    {
+      "name": "Zhan Dautov",
+      "country": "KAZ 3",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        0
+      ],
+      "total": 30,
+      "rank": 28,
+      "award": "Bronze"
+    },
+    {
+      "name": "Jan Stojanovski",
+      "country": "MKD 3",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        0
+      ],
+      "total": 30,
+      "rank": 28,
+      "award": "Bronze"
+    },
+    {
+      "name": "Dragoș Port",
+      "country": "MDA 4",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        0
+      ],
+      "total": 30,
+      "rank": 28,
+      "award": "Bronze"
+    },
+    {
+      "name": "Andrei-Giovani Chiriță",
+      "country": "ROU 5",
+      "problem_scores": [
+        7,
+        10,
+        10,
+        3
+      ],
+      "total": 30,
+      "rank": 28,
+      "award": "Bronze"
+    },
+    {
+      "name": "Andrija Živadinović",
+      "country": "SRB 4",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        0
+      ],
+      "total": 30,
+      "rank": 28,
+      "award": "Bronze"
+    },
+    {
+      "name": "Şevket Onur Yılmaz",
+      "country": "TUR 6",
+      "problem_scores": [
+        10,
+        10,
+        9,
+        1
+      ],
+      "total": 30,
+      "rank": 28,
+      "award": "Bronze"
+    },
+    {
+      "name": "KAAN BİLGE",
+      "country": "TURB 2",
+      "problem_scores": [
+        10,
+        10,
+        9,
+        1
+      ],
+      "total": 30,
+      "rank": 28,
+      "award": "Bronze"
+    },
+    {
+      "name": "MUHAMMED KIZILKAYA",
+      "country": "TURB 5",
+      "problem_scores": [
+        10,
+        10,
+        9,
+        1
+      ],
+      "total": 30,
+      "rank": 28,
+      "award": "Bronze"
+    },
+    {
+      "name": "Andrea Nanni",
+      "country": "ITA 5",
+      "problem_scores": [
+        10,
+        10,
+        9,
+        0
+      ],
+      "total": 29,
+      "rank": 39,
+      "award": "Bronze"
+    },
+    {
+      "name": "Alin Popescu",
+      "country": "MDA 3",
+      "problem_scores": [
+        8,
+        10,
+        10,
+        1
+      ],
+      "total": 29,
+      "rank": 39,
+      "award": "Bronze"
+    },
+    {
+      "name": "Raffaele Botticella",
+      "country": "ITA 3",
+      "problem_scores": [
+        10,
+        10,
+        7,
+        1
+      ],
+      "total": 28,
+      "rank": 41,
+      "award": "Bronze"
+    },
+    {
+      "name": "Simone Foti",
+      "country": "ITA 4",
+      "problem_scores": [
+        10,
+        10,
+        7,
+        1
+      ],
+      "total": 28,
+      "rank": 41,
+      "award": "Bronze"
+    },
+    {
+      "name": "Aleksandre Korkotashvili",
+      "country": "GEO 4",
+      "problem_scores": [
+        10,
+        10,
+        6,
+        1
+      ],
+      "total": 27,
+      "rank": 43,
+      "award": "Bronze"
+    },
+    {
+      "name": "Melek Güngör",
+      "country": "TUR 4",
+      "problem_scores": [
+        10,
+        10,
+        5,
+        2
+      ],
+      "total": 27,
+      "rank": 43,
+      "award": "Bronze"
+    },
+    {
+      "name": "Gaëtan, Ronan Dautzenberg",
+      "country": "FRA 4",
+      "problem_scores": [
+        10,
+        5,
+        10,
+        1
+      ],
+      "total": 26,
+      "rank": 45,
+      "award": "Bronze"
+    },
+    {
+      "name": "Fidan Garayeva",
+      "country": "AZE 1",
+      "problem_scores": [
+        4,
+        10,
+        10,
+        1
+      ],
+      "total": 25,
+      "rank": 46,
+      "award": "Bronze"
+    },
+    {
+      "name": "Carlo Baronio",
+      "country": "ITA 2",
+      "problem_scores": [
+        10,
+        10,
+        4,
+        1
+      ],
+      "total": 25,
+      "rank": 46,
+      "award": "Bronze"
+    },
+    {
+      "name": "Marius Cerlat",
+      "country": "MDA 2",
+      "problem_scores": [
+        10,
+        10,
+        4,
+        1
+      ],
+      "total": 25,
+      "rank": 46,
+      "award": "Bronze"
+    },
+    {
+      "name": "Sirio Dafa",
+      "country": "ALB 2",
+      "problem_scores": [
+        10,
+        10,
+        3,
+        1
+      ],
+      "total": 24,
+      "rank": 49,
+      "award": "Bronze"
+    },
+    {
+      "name": "Youcef Kenane",
+      "country": "ALG 2",
+      "problem_scores": [
+        10,
+        10,
+        3,
+        1
+      ],
+      "total": 24,
+      "rank": 49,
+      "award": "Bronze"
+    },
+    {
+      "name": "Bilyana Dimitrova",
+      "country": "BGR 4",
+      "problem_scores": [
+        10,
+        10,
+        3,
+        1
+      ],
+      "total": 24,
+      "rank": 49,
+      "award": "Bronze"
+    },
+    {
+      "name": "Tamar Peikrishvili",
+      "country": "GEO 5",
+      "problem_scores": [
+        10,
+        10,
+        3,
+        1
+      ],
+      "total": 24,
+      "rank": 49,
+      "award": "Bronze"
+    },
+    {
+      "name": "Raiymbek Baishuak",
+      "country": "KAZ 1",
+      "problem_scores": [
+        10,
+        10,
+        3,
+        1
+      ],
+      "total": 24,
+      "rank": 49,
+      "award": "Bronze"
+    },
+    {
+      "name": "Vladimir Rogovskiy",
+      "country": "KAZ 6",
+      "problem_scores": [
+        10,
+        10,
+        4,
+        0
+      ],
+      "total": 24,
+      "rank": 49,
+      "award": "Bronze"
+    },
+    {
+      "name": "Eyad ALQatari",
+      "country": "SAU 5",
+      "problem_scores": [
+        10,
+        10,
+        3,
+        1
+      ],
+      "total": 24,
+      "rank": 49,
+      "award": "Bronze"
+    },
+    {
+      "name": "Chams Eddine Abd El Ali Derreche",
+      "country": "ALG 4",
+      "problem_scores": [
+        10,
+        3,
+        10,
+        0
+      ],
+      "total": 23,
+      "rank": 56,
+      "award": "Bronze"
+    },
+    {
+      "name": "Ervin Macić",
+      "country": "BIH 2",
+      "problem_scores": [
+        10,
+        10,
+        2,
+        1
+      ],
+      "total": 23,
+      "rank": 56,
+      "award": "Bronze"
+    },
+    {
+      "name": "Aleksij Tasikj",
+      "country": "MKD 5",
+      "problem_scores": [
+        10,
+        3,
+        9,
+        1
+      ],
+      "total": 23,
+      "rank": 56,
+      "award": "Bronze"
+    },
+    {
+      "name": "Abdulrahman Nassief",
+      "country": "SAU 6",
+      "problem_scores": [
+        10,
+        10,
+        2,
+        1
+      ],
+      "total": 23,
+      "rank": 56,
+      "award": "Bronze"
+    },
+    {
+      "name": "Benjamin Mujkić",
+      "country": "BIH 6",
+      "problem_scores": [
+        10,
+        10,
+        2,
+        0
+      ],
+      "total": 22,
+      "rank": 60,
+      "award": "Bronze"
+    },
+    {
+      "name": "Denis Tusca",
+      "country": "ITA 6",
+      "problem_scores": [
+        10,
+        10,
+        1,
+        1
+      ],
+      "total": 22,
+      "rank": 60,
+      "award": "Bronze"
+    },
+    {
+      "name": "Hadi Alaithan",
+      "country": "SAU 1",
+      "problem_scores": [
+        10,
+        10,
+        1,
+        1
+      ],
+      "total": 22,
+      "rank": 60,
+      "award": "Bronze"
+    },
+    {
+      "name": "Mahdi Albaik",
+      "country": "SAU 3",
+      "problem_scores": [
+        10,
+        3,
+        8,
+        1
+      ],
+      "total": 22,
+      "rank": 60,
+      "award": "Bronze"
+    },
+    {
+      "name": "Muath ALQahtani",
+      "country": "SAU 4",
+      "problem_scores": [
+        10,
+        10,
+        1,
+        1
+      ],
+      "total": 22,
+      "rank": 60,
+      "award": "Bronze"
+    },
+    {
+      "name": "Neil Prabhu",
+      "country": "UNK 4",
+      "problem_scores": [
+        10,
+        10,
+        2,
+        0
+      ],
+      "total": 22,
+      "rank": 60,
+      "award": "Bronze"
+    },
+    {
+      "name": "Filippos Athos Chatzichristofi",
+      "country": "CYP 3",
+      "problem_scores": [
+        10,
+        10,
+        0,
+        1
+      ],
+      "total": 21,
+      "rank": 66,
+      "award": "Bronze"
+    },
+    {
+      "name": "Charles Youcheng Maojin Dai",
+      "country": "FRA 3",
+      "problem_scores": [
+        10,
+        0,
+        10,
+        1
+      ],
+      "total": 21,
+      "rank": 66,
+      "award": "Bronze"
+    },
+    {
+      "name": "Mirza Shanidze",
+      "country": "GEO 6",
+      "problem_scores": [
+        10,
+        10,
+        0,
+        1
+      ],
+      "total": 21,
+      "rank": 66,
+      "award": "Bronze"
+    },
+    {
+      "name": "KYRIAKOS TSOUREKAS",
+      "country": "HEL 6",
+      "problem_scores": [
+        10,
+        10,
+        0,
+        1
+      ],
+      "total": 21,
+      "rank": 66,
+      "award": "Bronze"
+    },
+    {
+      "name": "Mukhammed Nagashbek",
+      "country": "KAZ 5",
+      "problem_scores": [
+        10,
+        10,
+        1,
+        0
+      ],
+      "total": 21,
+      "rank": 66,
+      "award": "Bronze"
+    },
+    {
+      "name": "Nikola Cvetanoski",
+      "country": "MKD 4",
+      "problem_scores": [
+        10,
+        10,
+        0,
+        1
+      ],
+      "total": 21,
+      "rank": 66,
+      "award": "Bronze"
+    },
+    {
+      "name": "Stefan Šebez",
+      "country": "SRB 3",
+      "problem_scores": [
+        10,
+        10,
+        0,
+        1
+      ],
+      "total": 21,
+      "rank": 66,
+      "award": "Bronze"
+    },
+    {
+      "name": "SENA BAŞARAN",
+      "country": "TURB 1",
+      "problem_scores": [
+        10,
+        4,
+        6,
+        1
+      ],
+      "total": 21,
+      "rank": 66,
+      "award": "Bronze"
+    },
+    {
+      "name": "Anthony Goncharov",
+      "country": "UNK 1",
+      "problem_scores": [
+        10,
+        7,
+        3,
+        1
+      ],
+      "total": 21,
+      "rank": 66,
+      "award": "Bronze"
+    },
+    {
+      "name": "Anatole Bouton",
+      "country": "FRA 1",
+      "problem_scores": [
+        10,
+        6,
+        3,
+        1
+      ],
+      "total": 20,
+      "rank": 75,
+      "award": "Bronze"
+    },
+    {
+      "name": "IOANNIS MAVRIKOS",
+      "country": "HEL 4",
+      "problem_scores": [
+        10,
+        10,
+        0,
+        0
+      ],
+      "total": 20,
+      "rank": 75,
+      "award": "Bronze"
+    },
+    {
+      "name": "Margulan Sharel",
+      "country": "KAZ 4",
+      "problem_scores": [
+        10,
+        10,
+        0,
+        0
+      ],
+      "total": 20,
+      "rank": 75,
+      "award": "Bronze"
+    },
+    {
+      "name": "Alek Tanaskoski",
+      "country": "MKD 1",
+      "problem_scores": [
+        10,
+        10,
+        0,
+        0
+      ],
+      "total": 20,
+      "rank": 75,
+      "award": "Bronze"
+    },
+    {
+      "name": "Vukašin Đinović",
+      "country": "SRB 6",
+      "problem_scores": [
+        10,
+        10,
+        0,
+        0
+      ],
+      "total": 20,
+      "rank": 75,
+      "award": "Bronze"
+    },
+    {
+      "name": "Samuel Griffiths",
+      "country": "UNK 2",
+      "problem_scores": [
+        10,
+        0,
+        2,
+        8
+      ],
+      "total": 20,
+      "rank": 75,
+      "award": "Bronze"
+    },
+    {
+      "name": "Anvarbek Sadulloev",
+      "country": "UZB 2",
+      "problem_scores": [
+        10,
+        10,
+        0,
+        0
+      ],
+      "total": 20,
+      "rank": 75,
+      "award": "Bronze"
+    },
+    {
+      "name": "Serge, Jean, Victor Bidallier",
+      "country": "FRA 2",
+      "problem_scores": [
+        10,
+        3,
+        4,
+        1
+      ],
+      "total": 18,
+      "rank": 82,
+      "award": "Bronze"
+    },
+    {
+      "name": "Auguste Ramondou",
+      "country": "FRA 6",
+      "problem_scores": [
+        10,
+        0,
+        7,
+        1
+      ],
+      "total": 18,
+      "rank": 82,
+      "award": "Bronze"
+    },
+    {
+      "name": "Aleksandar Višnjić",
+      "country": "SRB 2",
+      "problem_scores": [
+        10,
+        8,
+        0,
+        0
+      ],
+      "total": 18,
+      "rank": 82,
+      "award": "Bronze"
+    },
+    {
+      "name": "Mikaeel Shah",
+      "country": "UNK 5",
+      "problem_scores": [
+        10,
+        7,
+        0,
+        1
+      ],
+      "total": 18,
+      "rank": 82,
+      "award": "Bronze"
+    },
+    {
+      "name": "Behzod Maksudov",
+      "country": "UZB 3",
+      "problem_scores": [
+        9,
+        9,
+        0,
+        0
+      ],
+      "total": 18,
+      "rank": 82,
+      "award": "Bronze"
+    },
+    {
+      "name": "Anvarbek Rakhmatov",
+      "country": "UZB 1",
+      "problem_scores": [
+        10,
+        6,
+        0,
+        1
+      ],
+      "total": 17,
+      "rank": 87,
+      "award": "Bronze"
+    },
+    {
+      "name": "Ozodbek Akhtamov",
+      "country": "UZB 4",
+      "problem_scores": [
+        10,
+        0,
+        7,
+        0
+      ],
+      "total": 17,
+      "rank": 87,
+      "award": "Bronze"
+    },
+    {
+      "name": "Asja Ćatić",
+      "country": "BIH 4",
+      "problem_scores": [
+        9,
+        4,
+        2,
+        1
+      ],
+      "total": 16,
+      "rank": 89,
+      "award": null
+    },
+    {
+      "name": "Oscar Fischler",
+      "country": "FRA 5",
+      "problem_scores": [
+        10,
+        3,
+        2,
+        1
+      ],
+      "total": 16,
+      "rank": 89,
+      "award": "Honourable Mention"
+    },
+    {
+      "name": "Constantin Babuc",
+      "country": "MDA 5",
+      "problem_scores": [
+        10,
+        5,
+        0,
+        1
+      ],
+      "total": 16,
+      "rank": 89,
+      "award": "Honourable Mention"
+    },
+    {
+      "name": "Said Bakirov",
+      "country": "AZE 6",
+      "problem_scores": [
+        10,
+        4,
+        0,
+        1
+      ],
+      "total": 15,
+      "rank": 92,
+      "award": "Honourable Mention"
+    },
+    {
+      "name": "Guram Matcharashvili",
+      "country": "GEO 2",
+      "problem_scores": [
+        10,
+        4,
+        0,
+        1
+      ],
+      "total": 15,
+      "rank": 92,
+      "award": "Honourable Mention"
+    },
+    {
+      "name": "Sandro Bolkvadze",
+      "country": "GEO 3",
+      "problem_scores": [
+        9,
+        3,
+        2,
+        1
+      ],
+      "total": 15,
+      "rank": 92,
+      "award": null
+    },
+    {
+      "name": "Nazar Kirgizbaev",
+      "country": "KGZ 1",
+      "problem_scores": [
+        4,
+        10,
+        0,
+        1
+      ],
+      "total": 15,
+      "rank": 92,
+      "award": "Honourable Mention"
+    },
+    {
+      "name": "Omar Gadimli",
+      "country": "AZE 3",
+      "problem_scores": [
+        10,
+        4,
+        0,
+        0
+      ],
+      "total": 14,
+      "rank": 96,
+      "award": "Honourable Mention"
+    },
+    {
+      "name": "Telman Mammadov",
+      "country": "AZE 5",
+      "problem_scores": [
+        10,
+        4,
+        0,
+        0
+      ],
+      "total": 14,
+      "rank": 96,
+      "award": "Honourable Mention"
+    },
+    {
+      "name": "Fedor Korniiash",
+      "country": "KGZ 3",
+      "problem_scores": [
+        7,
+        7,
+        0,
+        0
+      ],
+      "total": 14,
+      "rank": 96,
+      "award": null
+    },
+    {
+      "name": "Meixiu Lin",
+      "country": "UNK 3",
+      "problem_scores": [
+        10,
+        1,
+        2,
+        1
+      ],
+      "total": 14,
+      "rank": 96,
+      "award": "Honourable Mention"
+    },
+    {
+      "name": "Nea Metohu",
+      "country": "ALB 1",
+      "problem_scores": [
+        2,
+        10,
+        0,
+        1
+      ],
+      "total": 13,
+      "rank": 100,
+      "award": "Honourable Mention"
+    },
+    {
+      "name": "Abdullah Fehratbegović",
+      "country": "BIH 3",
+      "problem_scores": [
+        10,
+        0,
+        2,
+        1
+      ],
+      "total": 13,
+      "rank": 100,
+      "award": "Honourable Mention"
+    },
+    {
+      "name": "Ahmed Spahić",
+      "country": "BIH 5",
+      "problem_scores": [
+        10,
+        3,
+        0,
+        0
+      ],
+      "total": 13,
+      "rank": 100,
+      "award": "Honourable Mention"
+    },
+    {
+      "name": "Theofanis Orfanou",
+      "country": "CYP 2",
+      "problem_scores": [
+        10,
+        1,
+        1,
+        1
+      ],
+      "total": 13,
+      "rank": 100,
+      "award": "Honourable Mention"
+    },
+    {
+      "name": "Edoardo Balistri",
+      "country": "ITA 1",
+      "problem_scores": [
+        7,
+        6,
+        0,
+        0
+      ],
+      "total": 13,
+      "rank": 100,
+      "award": null
+    },
+    {
+      "name": "AHMET KERİM RÜZGAR",
+      "country": "TURB 6",
+      "problem_scores": [
+        10,
+        0,
+        1,
+        1
+      ],
+      "total": 12,
+      "rank": 105,
+      "award": "Honourable Mention"
+    },
+    {
+      "name": "Rasulbek Gafforov",
+      "country": "UZB 6",
+      "problem_scores": [
+        10,
+        0,
+        2,
+        0
+      ],
+      "total": 12,
+      "rank": 105,
+      "award": "Honourable Mention"
+    },
+    {
+      "name": "Erik Kërçiku",
+      "country": "ALB 3",
+      "problem_scores": [
+        10,
+        0,
+        0,
+        1
+      ],
+      "total": 11,
+      "rank": 107,
+      "award": "Honourable Mention"
+    },
+    {
+      "name": "Ibrahim Karimli",
+      "country": "AZE 4",
+      "problem_scores": [
+        7,
+        3,
+        0,
+        1
+      ],
+      "total": 11,
+      "rank": 107,
+      "award": null
+    },
+    {
+      "name": "Harun Alibegović",
+      "country": "BIH 1",
+      "problem_scores": [
+        10,
+        0,
+        0,
+        1
+      ],
+      "total": 11,
+      "rank": 107,
+      "award": "Honourable Mention"
+    },
+    {
+      "name": "Yacine Dallil",
+      "country": "ALG 1",
+      "problem_scores": [
+        5,
+        5,
+        0,
+        0
+      ],
+      "total": 10,
+      "rank": 110,
+      "award": null
+    },
+    {
+      "name": "Said Kebir",
+      "country": "ALG 3",
+      "problem_scores": [
+        10,
+        0,
+        0,
+        0
+      ],
+      "total": 10,
+      "rank": 110,
+      "award": "Honourable Mention"
+    },
+    {
+      "name": "Julia Volovich",
+      "country": "UNK 6",
+      "problem_scores": [
+        8,
+        0,
+        1,
+        1
+      ],
+      "total": 10,
+      "rank": 110,
+      "award": null
+    },
+    {
+      "name": "Eshperov Nursultan",
+      "country": "KGZ 2",
+      "problem_scores": [
+        2,
+        5,
+        0,
+        0
+      ],
+      "total": 7,
+      "rank": 113,
+      "award": null
+    },
+    {
+      "name": "Aidin Asankadyrov",
+      "country": "KGZ 6",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "rank": 113,
+      "award": null
+    },
+    {
+      "name": "Ian Bobrus",
+      "country": "KGZ 5",
+      "problem_scores": [
+        3,
+        0,
+        1,
+        1
+      ],
+      "total": 5,
+      "rank": 115,
+      "award": null
+    },
+    {
+      "name": "Ted Qamo",
+      "country": "ALB 5",
+      "problem_scores": [
+        3,
+        0,
+        0,
+        1
+      ],
+      "total": 4,
+      "rank": 116,
+      "award": null
+    },
+    {
+      "name": "Željana Stamatović",
+      "country": "MNE 1",
+      "problem_scores": [
+        3,
+        1,
+        0,
+        0
+      ],
+      "total": 4,
+      "rank": 116,
+      "award": null
+    },
+    {
+      "name": "Nikola Popović",
+      "country": "MNE 5",
+      "problem_scores": [
+        3,
+        0,
+        0,
+        1
+      ],
+      "total": 4,
+      "rank": 116,
+      "award": null
+    },
+    {
+      "name": "Robert Barbuța",
+      "country": "MDA 6",
+      "problem_scores": [
+        3,
+        0,
+        0,
+        1
+      ],
+      "total": 4,
+      "rank": 116,
+      "award": null
+    },
+    {
+      "name": "Sukhrob Khalelov",
+      "country": "UZB 5",
+      "problem_scores": [
+        3,
+        0,
+        0,
+        1
+      ],
+      "total": 4,
+      "rank": 116,
+      "award": null
+    },
+    {
+      "name": "Alden Morja",
+      "country": "ALB 4",
+      "problem_scores": [
+        3,
+        0,
+        0,
+        0
+      ],
+      "total": 3,
+      "rank": 121,
+      "award": null
+    },
+    {
+      "name": "Kyriaki Assou",
+      "country": "CYP 1",
+      "problem_scores": [
+        2,
+        0,
+        0,
+        1
+      ],
+      "total": 3,
+      "rank": 121,
+      "award": null
+    },
+    {
+      "name": "Rafail Stylianou",
+      "country": "CYP 4",
+      "problem_scores": [
+        2,
+        0,
+        0,
+        1
+      ],
+      "total": 3,
+      "rank": 121,
+      "award": null
+    },
+    {
+      "name": "Michalis Paterianakis",
+      "country": "CYP 5",
+      "problem_scores": [
+        3,
+        0,
+        0,
+        0
+      ],
+      "total": 3,
+      "rank": 121,
+      "award": null
+    },
+    {
+      "name": "Đorđe Perišić",
+      "country": "MNE 2",
+      "problem_scores": [
+        2,
+        0,
+        0,
+        1
+      ],
+      "total": 3,
+      "rank": 121,
+      "award": null
+    },
+    {
+      "name": "Rassim Cherir",
+      "country": "ALG 5",
+      "problem_scores": [
+        2,
+        0,
+        0,
+        0
+      ],
+      "total": 2,
+      "rank": 126,
+      "award": null
+    },
+    {
+      "name": "Seiit Ryskulov",
+      "country": "KGZ 4",
+      "problem_scores": [
+        2,
+        0,
+        0,
+        0
+      ],
+      "total": 2,
+      "rank": 126,
+      "award": null
+    },
+    {
+      "name": "Egor Georgievskii",
+      "country": "MNE 4",
+      "problem_scores": [
+        2,
+        0,
+        0,
+        0
+      ],
+      "total": 2,
+      "rank": 126,
+      "award": null
+    },
+    {
+      "name": "Hejli Dedja",
+      "country": "ALB 6",
+      "problem_scores": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "total": 1,
+      "rank": 129,
+      "award": null
+    },
+    {
+      "name": "Mohammad Omar Ahmad Aldebbeh",
+      "country": "CYP 6",
+      "problem_scores": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "total": 1,
+      "rank": 129,
+      "award": null
+    },
+    {
+      "name": "Vladislav Serkizyuk",
+      "country": "MNE 3",
+      "problem_scores": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "total": 1,
+      "rank": 129,
+      "award": null
+    }
+  ],
+  "validation": {
+    "all_totals_match": true,
+    "mismatches": []
+  }
+}

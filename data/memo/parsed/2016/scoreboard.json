@@ -1,0 +1,791 @@
+{
+  "year": 2016,
+  "parsed_at": "2026-01-01T02:32:44.858550+00:00",
+  "total_contestants": 60,
+  "results": [
+    {
+      "name": "Maciej Dziuba",
+      "country": "Poland",
+      "problem_scores": [
+        8,
+        8,
+        8,
+        8
+      ],
+      "total": 32,
+      "rank": 1,
+      "award": "Gold"
+    },
+    {
+      "name": "Patrik Papac",
+      "country": "Croatia",
+      "problem_scores": [
+        7,
+        8,
+        8,
+        8
+      ],
+      "total": 31,
+      "rank": 2,
+      "award": "Gold"
+    },
+    {
+      "name": "David Popović",
+      "country": "Slovenia",
+      "problem_scores": [
+        6,
+        8,
+        8,
+        8
+      ],
+      "total": 30,
+      "rank": 3,
+      "award": "Gold"
+    },
+    {
+      "name": "Márton Borbényi",
+      "country": "Hungary",
+      "problem_scores": [
+        8,
+        8,
+        4,
+        8
+      ],
+      "total": 28,
+      "rank": 4,
+      "award": "Gold"
+    },
+    {
+      "name": "Petar Nizić-Nikolac",
+      "country": "Croatia",
+      "problem_scores": [
+        8,
+        8,
+        8,
+        4
+      ],
+      "total": 28,
+      "rank": 4,
+      "award": "Gold"
+    },
+    {
+      "name": "Viktor Tóth",
+      "country": "Hungary",
+      "problem_scores": [
+        8,
+        8,
+        4,
+        8
+      ],
+      "total": 28,
+      "rank": 4,
+      "award": "Gold"
+    },
+    {
+      "name": "Danil Koževnikov",
+      "country": "Czechia",
+      "problem_scores": [
+        8,
+        8,
+        3,
+        8
+      ],
+      "total": 27,
+      "rank": 7,
+      "award": "Silver"
+    },
+    {
+      "name": "Lukas Novak",
+      "country": "Croatia",
+      "problem_scores": [
+        8,
+        8,
+        3,
+        8
+      ],
+      "total": 27,
+      "rank": 7,
+      "award": "Silver"
+    },
+    {
+      "name": "Domen Vreš",
+      "country": "Slovenia",
+      "problem_scores": [
+        6,
+        8,
+        8,
+        4
+      ],
+      "total": 26,
+      "rank": 9,
+      "award": "Silver"
+    },
+    {
+      "name": "Jan Lebioda",
+      "country": "Poland",
+      "problem_scores": [
+        8,
+        8,
+        1,
+        8
+      ],
+      "total": 25,
+      "rank": 10,
+      "award": "Silver"
+    },
+    {
+      "name": "Silas Rathke",
+      "country": "Germany",
+      "problem_scores": [
+        8,
+        8,
+        1,
+        8
+      ],
+      "total": 25,
+      "rank": 10,
+      "award": "Silver"
+    },
+    {
+      "name": "Ákos Záhorský",
+      "country": "Slovakia",
+      "problem_scores": [
+        8,
+        8,
+        1,
+        8
+      ],
+      "total": 25,
+      "rank": 10,
+      "award": "Silver"
+    },
+    {
+      "name": "Benedek Váli",
+      "country": "Hungary",
+      "problem_scores": [
+        8,
+        8,
+        0,
+        8
+      ],
+      "total": 24,
+      "rank": 13,
+      "award": "Silver"
+    },
+    {
+      "name": "Jan Petr",
+      "country": "Czechia",
+      "problem_scores": [
+        8,
+        7,
+        3,
+        5
+      ],
+      "total": 23,
+      "rank": 14,
+      "award": "Silver"
+    },
+    {
+      "name": "Jozef Lipták",
+      "country": "Slovakia",
+      "problem_scores": [
+        8,
+        8,
+        0,
+        6
+      ],
+      "total": 22,
+      "rank": 15,
+      "award": "Silver"
+    },
+    {
+      "name": "David Opalič",
+      "country": "Slovenia",
+      "problem_scores": [
+        8,
+        8,
+        0,
+        5
+      ],
+      "total": 21,
+      "rank": 16,
+      "award": "Bronze"
+    },
+    {
+      "name": "Tadej Petar Tukara",
+      "country": "Croatia",
+      "problem_scores": [
+        4,
+        8,
+        8,
+        1
+      ],
+      "total": 21,
+      "rank": 16,
+      "award": "Bronze"
+    },
+    {
+      "name": "Jischai Wyler",
+      "country": "Switzerland",
+      "problem_scores": [
+        8,
+        8,
+        0,
+        5
+      ],
+      "total": 21,
+      "rank": 16,
+      "award": "Bronze"
+    },
+    {
+      "name": "Luka Banović",
+      "country": "Croatia",
+      "problem_scores": [
+        8,
+        2,
+        2,
+        8
+      ],
+      "total": 20,
+      "rank": 19,
+      "award": "Bronze"
+    },
+    {
+      "name": "Bartłomiej Bollin",
+      "country": "Poland",
+      "problem_scores": [
+        4,
+        8,
+        0,
+        8
+      ],
+      "total": 20,
+      "rank": 19,
+      "award": "Bronze"
+    },
+    {
+      "name": "Balázs Bukva",
+      "country": "Hungary",
+      "problem_scores": [
+        0,
+        8,
+        4,
+        8
+      ],
+      "total": 20,
+      "rank": 19,
+      "award": "Bronze"
+    },
+    {
+      "name": "Lukas Gehring",
+      "country": "Germany",
+      "problem_scores": [
+        0,
+        8,
+        4,
+        8
+      ],
+      "total": 20,
+      "rank": 19,
+      "award": "Bronze"
+    },
+    {
+      "name": "Aurimas Klimašauskas",
+      "country": "Lithuania",
+      "problem_scores": [
+        6,
+        8,
+        0,
+        6
+      ],
+      "total": 20,
+      "rank": 19,
+      "award": "Bronze"
+    },
+    {
+      "name": "Alan Marko",
+      "country": "Slovakia",
+      "problem_scores": [
+        4,
+        8,
+        0,
+        8
+      ],
+      "total": 20,
+      "rank": 19,
+      "award": "Bronze"
+    },
+    {
+      "name": "Tomasz Przybyłowski",
+      "country": "Poland",
+      "problem_scores": [
+        8,
+        8,
+        2,
+        2
+      ],
+      "total": 20,
+      "rank": 19,
+      "award": "Bronze"
+    },
+    {
+      "name": "Ivan Sinčić",
+      "country": "Croatia",
+      "problem_scores": [
+        8,
+        6,
+        2,
+        4
+      ],
+      "total": 20,
+      "rank": 19,
+      "award": "Bronze"
+    },
+    {
+      "name": "Artūras Jocas",
+      "country": "Lithuania",
+      "problem_scores": [
+        8,
+        8,
+        3,
+        0
+      ],
+      "total": 19,
+      "rank": 27,
+      "award": "Bronze"
+    },
+    {
+      "name": "Frieder Jäckel",
+      "country": "Switzerland",
+      "problem_scores": [
+        8,
+        2,
+        0,
+        8
+      ],
+      "total": 18,
+      "rank": 28,
+      "award": "Bronze"
+    },
+    {
+      "name": "Laurenz Kohlbach",
+      "country": "Austria",
+      "problem_scores": [
+        7,
+        0,
+        3,
+        8
+      ],
+      "total": 18,
+      "rank": 28,
+      "award": "Bronze"
+    },
+    {
+      "name": "Lenka Kopfová",
+      "country": "Czechia",
+      "problem_scores": [
+        5,
+        2,
+        3,
+        7
+      ],
+      "total": 17,
+      "rank": 30,
+      "award": "Bronze"
+    },
+    {
+      "name": "Timen Stepišnik Perdih",
+      "country": "Slovenia",
+      "problem_scores": [
+        0,
+        7,
+        8,
+        2
+      ],
+      "total": 17,
+      "rank": 30,
+      "award": "Bronze"
+    },
+    {
+      "name": "Jakub Brojacz",
+      "country": "Poland",
+      "problem_scores": [
+        0,
+        8,
+        0,
+        8
+      ],
+      "total": 16,
+      "rank": 32,
+      "award": "Hon. Men."
+    },
+    {
+      "name": "András Imolay",
+      "country": "Hungary",
+      "problem_scores": [
+        0,
+        6,
+        2,
+        8
+      ],
+      "total": 16,
+      "rank": 32,
+      "award": "Hon. Men."
+    },
+    {
+      "name": "Peter Ralbovský",
+      "country": "Slovakia",
+      "problem_scores": [
+        0,
+        8,
+        0,
+        8
+      ],
+      "total": 16,
+      "rank": 32,
+      "award": "Hon. Men."
+    },
+    {
+      "name": "Patrick Stalder",
+      "country": "Switzerland",
+      "problem_scores": [
+        8,
+        1,
+        0,
+        7
+      ],
+      "total": 16,
+      "rank": 32,
+      "award": "Hon. Men."
+    },
+    {
+      "name": "Szymon Stolarczyk",
+      "country": "Poland",
+      "problem_scores": [
+        0,
+        8,
+        0,
+        8
+      ],
+      "total": 16,
+      "rank": 32,
+      "award": "Hon. Men."
+    },
+    {
+      "name": "Fabian Maciy",
+      "country": "Germany",
+      "problem_scores": [
+        7,
+        1,
+        0,
+        7
+      ],
+      "total": 15,
+      "rank": 37,
+      "award": null
+    },
+    {
+      "name": "Elbrus Mayer",
+      "country": "Germany",
+      "problem_scores": [
+        0,
+        8,
+        2,
+        3
+      ],
+      "total": 13,
+      "rank": 38,
+      "award": "Hon. Men."
+    },
+    {
+      "name": "Marco Cavaleri",
+      "country": "Switzerland",
+      "problem_scores": [
+        2,
+        8,
+        0,
+        2
+      ],
+      "total": 12,
+      "rank": 39,
+      "award": "Hon. Men."
+    },
+    {
+      "name": "Ari Jordan",
+      "country": "Switzerland",
+      "problem_scores": [
+        0,
+        8,
+        2,
+        2
+      ],
+      "total": 12,
+      "rank": 39,
+      "award": "Hon. Men."
+    },
+    {
+      "name": "Karl Albrecht Hellig",
+      "country": "Germany",
+      "problem_scores": [
+        4,
+        2,
+        3,
+        2
+      ],
+      "total": 11,
+      "rank": 41,
+      "award": null
+    },
+    {
+      "name": "Juraj Halabrín",
+      "country": "Slovakia",
+      "problem_scores": [
+        7,
+        1,
+        0,
+        2
+      ],
+      "total": 10,
+      "rank": 42,
+      "award": null
+    },
+    {
+      "name": "Soma Hansel",
+      "country": "Hungary",
+      "problem_scores": [
+        8,
+        1,
+        1,
+        0
+      ],
+      "total": 10,
+      "rank": 42,
+      "award": "Hon. Men."
+    },
+    {
+      "name": "Maximilian Hofer",
+      "country": "Austria",
+      "problem_scores": [
+        4,
+        0,
+        4,
+        2
+      ],
+      "total": 10,
+      "rank": 42,
+      "award": null
+    },
+    {
+      "name": "Justas Janickas",
+      "country": "Lithuania",
+      "problem_scores": [
+        0,
+        8,
+        0,
+        2
+      ],
+      "total": 10,
+      "rank": 42,
+      "award": "Hon. Men."
+    },
+    {
+      "name": "Zigmas Bitinas",
+      "country": "Lithuania",
+      "problem_scores": [
+        0,
+        1,
+        0,
+        8
+      ],
+      "total": 9,
+      "rank": 46,
+      "award": "Hon. Men."
+    },
+    {
+      "name": "Gilbertas Umbražūnas",
+      "country": "Lithuania",
+      "problem_scores": [
+        8,
+        0,
+        0,
+        1
+      ],
+      "total": 9,
+      "rank": 46,
+      "award": "Hon. Men."
+    },
+    {
+      "name": "Konstantin Andritsch",
+      "country": "Austria",
+      "problem_scores": [
+        6,
+        1,
+        0,
+        1
+      ],
+      "total": 8,
+      "rank": 48,
+      "award": null
+    },
+    {
+      "name": "Ondřej Motlíček",
+      "country": "Czechia",
+      "problem_scores": [
+        0,
+        2,
+        1,
+        5
+      ],
+      "total": 8,
+      "rank": 48,
+      "award": null
+    },
+    {
+      "name": "Jakub Mach",
+      "country": "Slovakia",
+      "problem_scores": [
+        4,
+        1,
+        0,
+        2
+      ],
+      "total": 7,
+      "rank": 50,
+      "award": null
+    },
+    {
+      "name": "Nikola Negovanovic",
+      "country": "Austria",
+      "problem_scores": [
+        0,
+        1,
+        3,
+        2
+      ],
+      "total": 6,
+      "rank": 51,
+      "award": null
+    },
+    {
+      "name": "Martin Raška",
+      "country": "Czechia",
+      "problem_scores": [
+        0,
+        2,
+        0,
+        4
+      ],
+      "total": 6,
+      "rank": 51,
+      "award": null
+    },
+    {
+      "name": "Lukas Letuha",
+      "country": "Austria",
+      "problem_scores": [
+        4,
+        1,
+        0,
+        0
+      ],
+      "total": 5,
+      "rank": 53,
+      "award": null
+    },
+    {
+      "name": "Nejc Zajc",
+      "country": "Slovenia",
+      "problem_scores": [
+        0,
+        0,
+        4,
+        1
+      ],
+      "total": 5,
+      "rank": 53,
+      "award": null
+    },
+    {
+      "name": "Gerrit Heuermann",
+      "country": "Germany",
+      "problem_scores": [
+        0,
+        1,
+        0,
+        2
+      ],
+      "total": 3,
+      "rank": 55,
+      "award": null
+    },
+    {
+      "name": "Tanish Patil",
+      "country": "Switzerland",
+      "problem_scores": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "total": 3,
+      "rank": 55,
+      "award": null
+    },
+    {
+      "name": "Andraž Maier",
+      "country": "Slovenia",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        2
+      ],
+      "total": 2,
+      "rank": 57,
+      "award": null
+    },
+    {
+      "name": "Ondřej Svoboda",
+      "country": "Czechia",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        2
+      ],
+      "total": 2,
+      "rank": 57,
+      "award": null
+    },
+    {
+      "name": "Justas Tamulis",
+      "country": "Lithuania",
+      "problem_scores": [
+        0,
+        0,
+        2,
+        0
+      ],
+      "total": 2,
+      "rank": 57,
+      "award": null
+    },
+    {
+      "name": "Benedikt Buchecker",
+      "country": "Austria",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "total": 1,
+      "rank": 60,
+      "award": null
+    }
+  ],
+  "validation": {
+    "all_totals_match": true,
+    "mismatches": []
+  }
+}

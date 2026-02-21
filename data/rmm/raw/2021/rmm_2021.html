@@ -1,0 +1,2375 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
+<head>
+	<title>RMM 2021 - Romanian Master of Mathematics 2021</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name = "description" content = "RMM - 13th Romanian Master of Mathematics 2021"/>
+	<meta name = "keywords" content = "rmm,rmms, math contest, concurs de mate, international contest, romanian contest, concurs international, colegiul national de informatica tudor vianu, vianu, romania"/>
+	<meta name = "author" content = "Silviu Vasile"/>
+	<meta name = "copyright" content = "CNITV"/>
+	<meta name = "robots" content = "all"/>
+	<meta name = "language" content = "eng"/>
+	<link rel="Shortcut icon" href="fav.png">
+	<link rel="image_src" href="https://rmm.lbi.ro/fav.png" />
+	<script type="text/javascript" src="js/prototype.js"></script>
+<script type="text/javascript" src="js/scriptaculous.js?load=effects,builder"></script>
+<script type="text/javascript" src="js/lightbox.js"></script>
+
+	<link rel="stylesheet" href="css/lightbox.css" type="text/css" media="screen" />
+	
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script type="text/javascript" src="_js/s3Slider.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#slider1').s3Slider({
+				timeOut: 4000 
+			});
+		});
+
+	</script>
+<script type="text/javascript">
+function toggle_conf(id) {
+
+		if(document.getElementById(id).style.display=='block')
+			{
+			document.getElementById(id).style.display='none';
+			document.getElementById(id).style.visibility='hidden';
+			}
+		else 
+			{
+			document.getElementById(id).style.display='block';
+			document.getElementById(id).style.visibility='visible';
+                     }
+    
+	}
+function genereaza_cod(form) {
+	var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
+	var string_length = 8;
+	var randomstring = "";
+	for (var i=0; i<string_length; i++) {
+		var rnum = Math.floor(Math.random() * chars.length);
+		randomstring += chars.substring(rnum,rnum+1);
+	}
+		
+	form.cod_mail.value=randomstring;
+	
+	return true;
+}
+</script>
+	<!--<link rel = "shortcut icon" href ="" type = "image/bmp"/>
+	<link rel = "home" href = "" title = "RMM - website"/> !-->
+</head>
+<body>
+	<link rel = "stylesheet" type = "text/css" href = "_style/style_banner.css" />
+	<link rel = "stylesheet" type = "text/css" href = "_style/style.css" />
+	<script type = "text/javascript" src = "_javascript/javascript.js"></script>
+	
+	
+	<table id = "header" align = "center" cellpadding = "5px" cellspacing = "0px">
+	<tr>
+		<td id = "banner_header">
+		</td>
+	</tr>
+	<tr>
+		<td align = "right">	
+		<a class = "link" href = "index.php?id=contact">Contact</a> | 
+<a class= "link" > Last editions :</a>
+<a class = "link" href = "https://rmms.lbi.ro/rmm">1st</a> | 
+<a class = "link" href = "https://rmms.lbi.ro/rmm2">2nd</a> | 
+<a class = "link" href = "https://rmms.lbi.ro/rms">3rd</a> | 
+<a class = "link" href = "https://rmms.lbi.ro/rmm2011">4th</a> | 
+<a class = "link" href = "https://rmms.lbi.ro/rmm2012">5th</a> |  
+<a class = "link" href = "https://rmms.lbi.ro/rmm2013">6th</a> | 
+<a class = "link" href = "https://rmms.lbi.ro/rmm2015">7th</a> | 
+<a class = "link" href = "https://rmms.lbi.ro/rmm2016">8th</a> | 
+<a class = "link" href = "https://rmms.lbi.ro/rmm2017">9th</a> | 
+<a class = "link" href = "https://rmms.lbi.ro/rmm2018">10th</a> | 
+<a class = "link" href = "https://rmms.lbi.ro/rmm2019">11th</a> | 
+<a class = "link" href = "https://rmms.lbi.ro/rmm2020">12th</a>  
+		</td>
+	</tr>
+</table>	<div id="tot">
+	<div id="slider1">
+        <ul id="slider1Content">
+             <li class="slider1Image">
+                <a href=""><img src="_banner/img1.jpg" alt="1" /></a>
+                <span class="left"></span></li>
+            <li class="slider1Image">
+                <a href=""><img src="_banner/img2.jpg" alt="2" /></a>
+                <span class="right"></span></li>
+            <li class="slider1Image">
+                <a href=""><img src="_banner/img3.jpg" alt="3" /></a>
+                <span class="right"></span></li>
+            <li class="slider1Image">
+                <a href=""><img src="_banner/img4.jpg" alt="4" /></a>
+                <span class="right"></span></li>
+			<div class="clear slider1Image"></div>	
+        </ul>
+    </div>
+	</div>
+	
+	
+	<table id = "middle" align = "center" cellpadding = "0px" cellspacing = "0px" valign = "top">
+		<tr>
+			<td valign = "top" align = "left">	
+				
+				<!--continutul din stanga-->
+				<table id = "left_content" cellpadding = "0px" cellspacing = "0px">
+					<tr>
+						<td>
+							<table class = "tab" cellpadding = "0px" cellspacing = "0px">
+								<tr>
+									<td>
+										<h2 class = "title_tab">Partner</h2>
+										<p class = "text" style="padding:10px;">The official partner in organizing and conducting competition</p>
+										<a href="http://imar.ro/"><img src="images/imar.png" width="160px" height="160px" border="0"></img></a>
+									</td>
+								</tr>	
+							</table>
+						
+							<table class = "tab" cellpadding = "0px" cellspacing = "0px">
+								<tr>
+									<td>
+										<h2 class = "title_tab"> RMM 2021 </h2>
+									</td>
+								</tr>
+								<tr><td class = "tab_link"><a class = "cell_link" href="/rmm2021/index.php?id=home" title = "RMM Home">Home</a></td></tr><tr><td class = "tab_link"><a class = "cell_link" href="/rmm2021/index.php?id=important" title = "RMM Important News">Important News</a></td></tr>			
+							</table>
+							
+							<table class = "tab" cellpadding = "0px" cellspacing = "0px">
+								<tr>
+									<td>
+										<h2 class = "title_tab"> RMM Organization </h2>
+									</td>
+								</tr>
+								<tr><td class = "tab_link"><a class = "cell_link" style="color:#FF0000;" href="/rmm2021/index.php?id=generalinformation" title = "RMM General Information">General Information</a></td></tr><tr><td class = "tab_link"><a class = "cell_link" href="/rmm2021/index.php?id=video" title = "RMM Video">Video</a></td></tr><tr><td class = "tab_link"><a class = "cell_link" href="/rmm2021/index.php?id=regulation" title = "RMM Regulation">Regulation</a></td></tr><tr><td class = "tab_link"><a class = "cell_link" href="/rmm2021/index.php?id=committee" title = "RMM Committees">Committees</a></td></tr>			
+							</table>
+							
+							<table class = "tab" cellpadding = "0px" cellspacing = "0px">
+								<tr>
+									<td>
+										<h2 class = "title_tab"> RMM Contest </h2>
+									</td>
+								</tr>
+								<tr><td class = "tab_link"><a class = "cell_link" href="/rmm2021/index.php?id=participants_math" title = "RMM Participants">Participants</a></td></tr><tr><td class = "tab_link"><a class = "cell_link" href="/rmm2021/index.php?id=problems_math" title = "RMM Problems">Problems</a></td></tr><tr><td class = "tab_link"><a class = "cell_link" style="color:#FF0000;" href="/rmm2021/index.php?id=results_math" title = "RMM Results"><span class="blink">Results</span></a></td></tr><tr><td class = "tab_link"><a class = "cell_link" href="/rmm2021/index.php?id=submission" title = "RMM Registration">Registration</a></td></tr>			
+							</table>
+							
+							
+							<table class = "tab" cellpadding = "0px" cellspacing = "0px">
+								<tr>
+									<td>
+										<h2 class = "title_tab"> General Information </h2>
+									</td>
+								</tr>
+								<tr>
+									<td class = "tab_link">
+										<a class = "cell_link" href = "https://en.wikipedia.org/wiki/Romania" target = "_blank" title = "RMM About Romania">About Romania</a>
+									</td>
+								</tr>
+								<tr>
+									<td class = "tab_link">
+										<a class = "cell_link" href = "https://en.wikipedia.org/wiki/Bucharest" target = "_blank" title = "RMM About Bucharest">About Bucharest</a>
+									</td>
+								</tr>
+								<tr>
+									<td class = "tab_link">
+										<a class = "cell_link" href = "https://www.romaniatourism.com/" target = "_blank" title = "RMM Tourist Guide">Tourist Guide</a>
+									</td>
+								</tr>
+							</table>						
+						</td>
+					</tr>
+				</table>
+				
+			</td>
+			
+			<td valign = "top" align = "right">
+				<!--continutul din mijloc-->
+				<table id = "right_content" cellpadding = "0px" cellspacing = "0px">
+					<tr>
+						<td>
+							<table id = "content" cellpadding = "0px" cellspacing = "0px">
+	<tr>
+		<td>
+			<h2 class = "title_content">Mathematics - Individual Results (<i>Provisional</i>)</h2>
+		</td>
+	</tr>
+	<tr>
+<!--	
+	<tr>
+		<td>
+			<p class = "text">
+			<br/>
+				Results will be posted after the last Jury meeting.
+			<br/>	
+		</td>
+	</tr>
+-->	
+	<tr>
+
+		<td id = "inside_content">		
+		<table width = "100%" cellpadding = "3px" cellspacing = "0px">
+				<tr>
+					<td class = "text"><b>Pos.</b></td>
+					<td class = "text"><b>Name (*official team)</b></td>
+					<td class = "text"><b>Country</b></td>
+					<td class = "text"><b>P1</b></td>
+					<td class = "text"><b>P2</b></td>
+					<td class = "text"><b>P3</b></td>
+					<td class = "text"><b>P4</b></td>
+					<td class = "text"><b>P5</b></td>
+					<td class = "text"><b>P6</b></td>
+					<td class = "text"><b>Total</b></td>
+					<td class = "text"><b>Medal</b></td>
+				</tr>
+<tr style="background-color:#F0F0F0;">								
+					<td class = "text">1</td>
+					<td class = "text">DAI JIANGQI*</td>
+					<td class = "text">CHN 2</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">5</td>
+					<td class = "text">40</td>
+					<td class = "text"><font color = gold>GOLD</font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">2</td>
+					<td class = "text">FOURRÉ AURÉLIEN*</td>
+					<td class = "text">FRA 3</td>
+					<td class = "text">7</td>
+					<td class = "text">5</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">40</td>
+					<td class = "text"><font color = gold>GOLD</font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">3</td>
+					<td class = "text">TUREVSKII MAKSIM*</td>
+					<td class = "text">RUS 4</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">4</td>
+					<td class = "text">39</td>
+					<td class = "text"><font color = gold>GOLD</font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">4</td>
+					<td class = "text">GU ANDREW*</td>
+					<td class = "text">USA 3</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">3</td>
+					<td class = "text">38</td>
+					<td class = "text"><font color = gold>GOLD</font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">5</td>
+					<td class = "text">ORSKI ŁUKASZ</td>
+					<td class = "text">POL 5</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">35</td>
+					<td class = "text"><font color = gold>GOLD</font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">6</td>
+					<td class = "text">BURACZEWSKI ANTONI*</td>
+					<td class = "text">POL 2</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">6</td>
+					<td class = "text">1</td>
+					<td class = "text">35</td>
+					<td class = "text"><font color = gold>GOLD</font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">7</td>
+					<td class = "text">DAMIANO MATTEO*</td>
+					<td class = "text">ITA 2</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">5</td>
+					<td class = "text">1</td>
+					<td class = "text">34</td>
+					<td class = "text"><font color = gold>GOLD</font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">8</td>
+					<td class = "text">KASPRZAK KOSMA*</td>
+					<td class = "text">POL 4</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">4</td>
+					<td class = "text">2</td>
+					<td class = "text">34</td>
+					<td class = "text"><font color = gold>GOLD</font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">9</td>
+					<td class = "text">BAKHAREV IVAN*</td>
+					<td class = "text">RUS 1</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">1</td>
+					<td class = "text">4</td>
+					<td class = "text">33</td>
+					<td class = "text"><font color = gold>GOLD</font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">10</td>
+					<td class = "text">FENG CHENXU*</td>
+					<td class = "text">CHN 1</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">2</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">3</td>
+					<td class = "text">33</td>
+					<td class = "text"><font color = gold>GOLD</font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">11</td>
+					<td class = "text">XU ZIJIAN</td>
+					<td class = "text">CHN 5</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">3</td>
+					<td class = "text">31</td>
+					<td class = "text"><font color = silver>SILVER</font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">12</td>
+					<td class = "text">DAS RISHABH</td>
+					<td class = "text">USA 6</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">3</td>
+					<td class = "text">7</td>
+					<td class = "text">6</td>
+					<td class = "text">1</td>
+					<td class = "text">31</td>
+					<td class = "text"><font color = silver>SILVER</font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">13</td>
+					<td class = "text">FRIEDMAN SHAHAR*</td>
+					<td class = "text">ISR 4</td>
+					<td class = "text">7</td>
+					<td class = "text">5</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">6</td>
+					<td class = "text">6</td>
+					<td class = "text">31</td>
+					<td class = "text"><font color = silver>SILVER</font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">14</td>
+					<td class = "text">FOSCHI MASSIMILIANO*</td>
+					<td class = "text">ITA 1</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">2</td>
+					<td class = "text">30</td>
+					<td class = "text"><font color = silver>SILVER</font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">15</td>
+					<td class = "text">YUWAN SEO*</td>
+					<td class = "text">KOR 2</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">2</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">30</td>
+					<td class = "text"><font color = silver>SILVER</font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">16</td>
+					<td class = "text">SIBGATULLIN DANIL*</td>
+					<td class = "text">RUS 3</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">1</td>
+					<td class = "text">1</td>
+					<td class = "text">30</td>
+					<td class = "text"><font color = silver>SILVER</font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">17</td>
+					<td class = "text">IBRAGIMOV AIDAR*</td>
+					<td class = "text">RUS 2</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">3</td>
+					<td class = "text">7</td>
+					<td class = "text">6</td>
+					<td class = "text">0</td>
+					<td class = "text">30</td>
+					<td class = "text"><font color = silver>SILVER</font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">18</td>
+					<td class = "text">LU YUAN</td>
+					<td class = "text">CHN 6</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">2</td>
+					<td class = "text">7</td>
+					<td class = "text">6</td>
+					<td class = "text">1</td>
+					<td class = "text">30</td>
+					<td class = "text"><font color = silver>SILVER</font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">19</td>
+					<td class = "text">WEN WENJIE*</td>
+					<td class = "text">CHN 3</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">2</td>
+					<td class = "text">7</td>
+					<td class = "text">6</td>
+					<td class = "text">0</td>
+					<td class = "text">29</td>
+					<td class = "text"><font color = silver>SILVER</font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">20</td>
+					<td class = "text">BANECKI JULIUSZ*</td>
+					<td class = "text">POL 1</td>
+					<td class = "text">6</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">6</td>
+					<td class = "text">3</td>
+					<td class = "text">29</td>
+					<td class = "text"><font color = silver>SILVER</font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">21</td>
+					<td class = "text">YUCHAN JUNG</td>
+					<td class = "text">KOR 5</td>
+					<td class = "text">7</td>
+					<td class = "text">4</td>
+					<td class = "text">2</td>
+					<td class = "text">7</td>
+					<td class = "text">6</td>
+					<td class = "text">3</td>
+					<td class = "text">29</td>
+					<td class = "text"><font color = silver>SILVER</font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">22</td>
+					<td class = "text">PYLAIEV IHOR*</td>
+					<td class = "text">UKR 1</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">28</td>
+					<td class = "text"><font color = silver>SILVER</font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">23</td>
+					<td class = "text">NOMAN ILIYAS*</td>
+					<td class = "text">BGR 4</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">6</td>
+					<td class = "text">1</td>
+					<td class = "text">28</td>
+					<td class = "text"><font color = silver>SILVER</font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">24</td>
+					<td class = "text">DAEJUN LEE*</td>
+					<td class = "text">KOR 4</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">6</td>
+					<td class = "text">1</td>
+					<td class = "text">28</td>
+					<td class = "text"><font color = silver>SILVER</font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">25</td>
+					<td class = "text">WHYTE JAEDON*</td>
+					<td class = "text">USA 1</td>
+					<td class = "text">7</td>
+					<td class = "text">2</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">5</td>
+					<td class = "text">0</td>
+					<td class = "text">28</td>
+					<td class = "text"><font color = silver>SILVER</font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">26</td>
+					<td class = "text">MACHADO LAGE MARCELO*</td>
+					<td class = "text">BRA 1</td>
+					<td class = "text">7</td>
+					<td class = "text">2</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">4</td>
+					<td class = "text">0</td>
+					<td class = "text">27</td>
+					<td class = "text"><font color = silver>SILVER</font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">27</td>
+					<td class = "text">SHOHAM YAIR</td>
+					<td class = "text">ISR 8</td>
+					<td class = "text">7</td>
+					<td class = "text">6</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">5</td>
+					<td class = "text">2</td>
+					<td class = "text">27</td>
+					<td class = "text"><font color = silver>SILVER</font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">28</td>
+					<td class = "text">ŻAK RADOSŁAW</td>
+					<td class = "text">POL 7</td>
+					<td class = "text">7</td>
+					<td class = "text">6</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">6</td>
+					<td class = "text">26</td>
+					<td class = "text"><font color = silver>SILVER</font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">29</td>
+					<td class = "text">XIA DANIEL*</td>
+					<td class = "text">USA 2</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">1</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">3</td>
+					<td class = "text">25</td>
+					<td class = "text"><font color = silver>SILVER</font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">30</td>
+					<td class = "text">ALBERG ANDREAS*</td>
+					<td class = "text">TND 3</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">3</td>
+					<td class = "text">4</td>
+					<td class = "text">0</td>
+					<td class = "text">4</td>
+					<td class = "text">25</td>
+					<td class = "text"><font color = silver>SILVER</font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">31</td>
+					<td class = "text">KIRILOV BORISLAV*</td>
+					<td class = "text">BGR 1</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">1</td>
+					<td class = "text">7</td>
+					<td class = "text">1</td>
+					<td class = "text">1</td>
+					<td class = "text">24</td>
+					<td class = "text"><font color = silver>SILVER</font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">32</td>
+					<td class = "text">ANGHEL DAVID-ANDREI*</td>
+					<td class = "text">ROU 2</td>
+					<td class = "text">7</td>
+					<td class = "text">4</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">5</td>
+					<td class = "text">1</td>
+					<td class = "text">24</td>
+					<td class = "text"><font color = silver>SILVER</font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">33</td>
+					<td class = "text">YADOLLAHI MATIN*</td>
+					<td class = "text">IRN 3</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">2</td>
+					<td class = "text">23</td>
+					<td class = "text"><font color = sienna>BRONZE</font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">34</td>
+					<td class = "text">SAYAG ELAD</td>
+					<td class = "text">ISR 6</td>
+					<td class = "text">1</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">1</td>
+					<td class = "text">23</td>
+					<td class = "text"><font color = sienna>BRONZE</font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">35</td>
+					<td class = "text">MANOR YAHEL*</td>
+					<td class = "text">ISR 1</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">6</td>
+					<td class = "text">3</td>
+					<td class = "text">23</td>
+					<td class = "text"><font color = sienna>BRONZE</font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">36</td>
+					<td class = "text">JOSÉ ALEJANDRO  REYES GONZÁLEZ</td>
+					<td class = "text">MEX 5</td>
+					<td class = "text">7</td>
+					<td class = "text">2</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">6</td>
+					<td class = "text">1</td>
+					<td class = "text">23</td>
+					<td class = "text"><font color = sienna>BRONZE</font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">37</td>
+					<td class = "text">DIMITROV BOZHIDAR</td>
+					<td class = "text">BGR 5</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">1</td>
+					<td class = "text">22</td>
+					<td class = "text"><font color = sienna>BRONZE</font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">38</td>
+					<td class = "text">PASCHOAL LONGO OLAVO*</td>
+					<td class = "text">BRA 4</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">1</td>
+					<td class = "text">22</td>
+					<td class = "text"><font color = sienna>BRONZE</font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">39</td>
+					<td class = "text">DENYSKOV SVIATOSLAV*</td>
+					<td class = "text">UKR 2</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">1</td>
+					<td class = "text">22</td>
+					<td class = "text"><font color = sienna>BRONZE</font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">40</td>
+					<td class = "text">CONSTANTINESCU  IUSTINIAN CRISTIAN*</td>
+					<td class = "text">ROUB 1</td>
+					<td class = "text">7</td>
+					<td class = "text">2</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">6</td>
+					<td class = "text">0</td>
+					<td class = "text">22</td>
+					<td class = "text"><font color = sienna>BRONZE</font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">41</td>
+					<td class = "text">IVANOV VLADIMIR*</td>
+					<td class = "text">FRA 4</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">21</td>
+					<td class = "text"><font color = sienna>BRONZE</font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">42</td>
+					<td class = "text">HYUNBOK WI*</td>
+					<td class = "text">KOR 3</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">21</td>
+					<td class = "text"><font color = sienna>BRONZE</font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">43</td>
+					<td class = "text">ZBYSIŃSKI MAREK</td>
+					<td class = "text">POL 6</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">21</td>
+					<td class = "text"><font color = sienna>BRONZE</font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">44</td>
+					<td class = "text">MOLDOVAN ANDREI*</td>
+					<td class = "text">ROU 1</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">21</td>
+					<td class = "text"><font color = sienna>BRONZE</font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">45</td>
+					<td class = "text">DROFENIK LOVRO*</td>
+					<td class = "text">SVN 2</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">21</td>
+					<td class = "text"><font color = sienna>BRONZE</font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">46</td>
+					<td class = "text">WANG SAMUEL</td>
+					<td class = "text">USA 5</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">21</td>
+					<td class = "text"><font color = sienna>BRONZE</font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">47</td>
+					<td class = "text">SHU WEIJIE*</td>
+					<td class = "text">CHN 4</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">6</td>
+					<td class = "text">1</td>
+					<td class = "text">21</td>
+					<td class = "text"><font color = sienna>BRONZE</font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">48</td>
+					<td class = "text">AMIR YOTAM</td>
+					<td class = "text">ISR 7</td>
+					<td class = "text">4</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">3</td>
+					<td class = "text">21</td>
+					<td class = "text"><font color = sienna>BRONZE</font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">49</td>
+					<td class = "text">GUERRA JOAQUIN</td>
+					<td class = "text">PER 5</td>
+					<td class = "text">7</td>
+					<td class = "text">6</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">20</td>
+					<td class = "text"><font color = sienna>BRONZE</font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">50</td>
+					<td class = "text">KOVÁCS TAMÁS*</td>
+					<td class = "text">HUN 4</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">5</td>
+					<td class = "text">0</td>
+					<td class = "text">19</td>
+					<td class = "text"><font color = sienna>BRONZE</font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">51</td>
+					<td class = "text">GUTIERREZ MIJAIL*</td>
+					<td class = "text">PER 2</td>
+					<td class = "text">7</td>
+					<td class = "text">5</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">19</td>
+					<td class = "text"><font color = sienna>BRONZE</font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">52</td>
+					<td class = "text">LE HELLOCO ALEC</td>
+					<td class = "text">FRA 5</td>
+					<td class = "text">7</td>
+					<td class = "text">3</td>
+					<td class = "text">2</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">19</td>
+					<td class = "text"><font color = sienna>BRONZE</font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">53</td>
+					<td class = "text">MOLNÁR-SZABÓ VILMOS</td>
+					<td class = "text">HUN 5</td>
+					<td class = "text">7</td>
+					<td class = "text">3</td>
+					<td class = "text">0</td>
+					<td class = "text">2</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">19</td>
+					<td class = "text"><font color = sienna>BRONZE</font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">54</td>
+					<td class = "text">RÖNNGREN MANJA*</td>
+					<td class = "text">TND 4</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">3</td>
+					<td class = "text">1</td>
+					<td class = "text">0</td>
+					<td class = "text">18</td>
+					<td class = "text"><font color = sienna>BRONZE</font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">55</td>
+					<td class = "text">WAN JESSICA*</td>
+					<td class = "text">USA 4</td>
+					<td class = "text">2</td>
+					<td class = "text">1</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">1</td>
+					<td class = "text">18</td>
+					<td class = "text"><font color = sienna>BRONZE</font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">56</td>
+					<td class = "text">VOGEL MATTHIEU</td>
+					<td class = "text">FRA 6</td>
+					<td class = "text">3</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">17</td>
+					<td class = "text"><font color = sienna>BRONZE</font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">57</td>
+					<td class = "text">TÖRÖK ÁGOSTON</td>
+					<td class = "text">HUN 6</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">3</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">17</td>
+					<td class = "text"><font color = sienna>BRONZE</font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">58</td>
+					<td class = "text">AZIZEDDIN  SINA*</td>
+					<td class = "text">IRN 1</td>
+					<td class = "text">7</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">3</td>
+					<td class = "text">17</td>
+					<td class = "text"><font color = sienna>BRONZE</font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">59</td>
+					<td class = "text">ZEMER OMRI*</td>
+					<td class = "text">ISR 2</td>
+					<td class = "text">7</td>
+					<td class = "text">2</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">1</td>
+					<td class = "text">17</td>
+					<td class = "text"><font color = sienna>BRONZE</font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">60</td>
+					<td class = "text">CHIRIȚĂ ANDREI GIOVANI*</td>
+					<td class = "text">ROU 4</td>
+					<td class = "text">7</td>
+					<td class = "text">2</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">1</td>
+					<td class = "text">17</td>
+					<td class = "text"><font color = sienna>BRONZE</font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">61</td>
+					<td class = "text">NEVES DA CRUZ GUSTAVO*</td>
+					<td class = "text">BRA 3</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">2</td>
+					<td class = "text">0</td>
+					<td class = "text">16</td>
+					<td class = "text"><font color = sienna>BRONZE</font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">62</td>
+					<td class = "text">ONOPRISHVILI ANA*</td>
+					<td class = "text">GEO 1</td>
+					<td class = "text">7</td>
+					<td class = "text">2</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">16</td>
+					<td class = "text"><font color = sienna>BRONZE</font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">63</td>
+					<td class = "text">DRAGOMIRESCU ROBERT</td>
+					<td class = "text">ROU 6</td>
+					<td class = "text">7</td>
+					<td class = "text">2</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">16</td>
+					<td class = "text"><font color = sienna>BRONZE</font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">64</td>
+					<td class = "text">ANDRIIETS SEMEN*</td>
+					<td class = "text">UKR 4</td>
+					<td class = "text">7</td>
+					<td class = "text">2</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">16</td>
+					<td class = "text"><font color = sienna>BRONZE</font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">65</td>
+					<td class = "text">KAMINSKYI ANTON</td>
+					<td class = "text">UKR 6</td>
+					<td class = "text">2</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">16</td>
+					<td class = "text"><font color = sienna>BRONZE</font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">66</td>
+					<td class = "text">ZLATINOV GEORGI*</td>
+					<td class = "text">BGR 2</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">1</td>
+					<td class = "text">1</td>
+					<td class = "text">16</td>
+					<td class = "text"><font color = sienna>BRONZE</font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">67</td>
+					<td class = "text">AREFNIA MATIN*</td>
+					<td class = "text">IRN 4</td>
+					<td class = "text">1</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">1</td>
+					<td class = "text">16</td>
+					<td class = "text"><font color = sienna>BRONZE</font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">68</td>
+					<td class = "text">FRID DROR*</td>
+					<td class = "text">ISR 3</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">1</td>
+					<td class = "text">7</td>
+					<td class = "text">1</td>
+					<td class = "text">16</td>
+					<td class = "text"><font color = sienna>BRONZE</font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">69</td>
+					<td class = "text">TULCEANU  CEZAR ALEXANDRU</td>
+					<td class = "text">ROUB 7</td>
+					<td class = "text">1</td>
+					<td class = "text">2</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">6</td>
+					<td class = "text">0</td>
+					<td class = "text">16</td>
+					<td class = "text"><font color = sienna>BRONZE</font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">70</td>
+					<td class = "text">JÁNOSIK MÁTÉ*</td>
+					<td class = "text">HUN 3</td>
+					<td class = "text">1</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">15</td>
+					<td class = "text"><font color = #B6D462>HON. MEN. </font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">71</td>
+					<td class = "text">DANIEL ALEJANDRO  OCHOA  QUINTERO*</td>
+					<td class = "text">MEX 2</td>
+					<td class = "text">1</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">15</td>
+					<td class = "text"><font color = #B6D462>HON. MEN. </font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">72</td>
+					<td class = "text">PANA  LUCA*</td>
+					<td class = "text">ROUB 4</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">1</td>
+					<td class = "text">15</td>
+					<td class = "text"><font color = #B6D462>HON. MEN. </font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">73</td>
+					<td class = "text">VRHOVNIK JAKA</td>
+					<td class = "text">SVN 6</td>
+					<td class = "text">1</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">15</td>
+					<td class = "text"><font color = #B6D462>HON. MEN. </font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">74</td>
+					<td class = "text">OLSEN MAGNUS*</td>
+					<td class = "text">TND 1</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">1</td>
+					<td class = "text">15</td>
+					<td class = "text"><font color = #B6D462>HON. MEN. </font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">75</td>
+					<td class = "text">RAYCHEV ANGEL*</td>
+					<td class = "text">BGR 3</td>
+					<td class = "text">2</td>
+					<td class = "text">3</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">1</td>
+					<td class = "text">2</td>
+					<td class = "text">15</td>
+					<td class = "text"><font color = #B6D462>HON. MEN. </font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">76</td>
+					<td class = "text">ANDRADE CARVALHO BARROS  PABLO</td>
+					<td class = "text">BRA 6</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">14</td>
+					<td class = "text"><font color = #B6D462>HON. MEN. </font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">77</td>
+					<td class = "text">MIN YOHAN*</td>
+					<td class = "text">PER 1</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">14</td>
+					<td class = "text"><font color = #B6D462>HON. MEN. </font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">78</td>
+					<td class = "text">FERMIN CARLA*</td>
+					<td class = "text">PER 3</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">14</td>
+					<td class = "text"><font color = #B6D462>HON. MEN. </font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">79</td>
+					<td class = "text">HASSIEIEV VADYM</td>
+					<td class = "text">UKR 8</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">14</td>
+					<td class = "text"><font color = #B6D462>HON. MEN. </font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">80</td>
+					<td class = "text">BORTNOVSKYI IVAN</td>
+					<td class = "text">UKR 0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">14</td>
+					<td class = "text"><font color = #B6D462>HON. MEN. </font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">81</td>
+					<td class = "text">MIALIK ARTSIOM*</td>
+					<td class = "text">BLR 1</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">1</td>
+					<td class = "text">6</td>
+					<td class = "text">0</td>
+					<td class = "text">14</td>
+					<td class = "text"><font color = #B6D462>HON. MEN. </font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">82</td>
+					<td class = "text">GADZIŃSKI PAWEŁ*</td>
+					<td class = "text">POL 3</td>
+					<td class = "text">7</td>
+					<td class = "text">5</td>
+					<td class = "text">0</td>
+					<td class = "text">1</td>
+					<td class = "text">0</td>
+					<td class = "text">1</td>
+					<td class = "text">14</td>
+					<td class = "text"><font color = #B6D462>HON. MEN. </font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">83</td>
+					<td class = "text">FLEINER ZSIGMOND*</td>
+					<td class = "text">HUN 2</td>
+					<td class = "text">2</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">2</td>
+					<td class = "text">0</td>
+					<td class = "text">2</td>
+					<td class = "text">13</td>
+					<td class = "text"><font color = #B6D462>HON. MEN. </font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">84</td>
+					<td class = "text">DOMINGOS PORTO RODRIGO SALGADO*</td>
+					<td class = "text">BRA 2</td>
+					<td class = "text">2</td>
+					<td class = "text">2</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">1</td>
+					<td class = "text">12</td>
+					<td class = "text"><font color = #B6D462>HON. MEN. </font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">85</td>
+					<td class = "text">DE PIETRI DANIELE*</td>
+					<td class = "text">ITA 3</td>
+					<td class = "text">2</td>
+					<td class = "text">2</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">1</td>
+					<td class = "text">12</td>
+					<td class = "text"><font color = #B6D462>HON. MEN. </font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">86</td>
+					<td class = "text">GASPARINI MASSIMO*</td>
+					<td class = "text">ITA 4</td>
+					<td class = "text">1</td>
+					<td class = "text">2</td>
+					<td class = "text">7</td>
+					<td class = "text">1</td>
+					<td class = "text">0</td>
+					<td class = "text">1</td>
+					<td class = "text">12</td>
+					<td class = "text"><font color = #B6D462>HON. MEN. </font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">87</td>
+					<td class = "text">LECOIU RADU-ANDREI *</td>
+					<td class = "text">ROU 3</td>
+					<td class = "text">2</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">2</td>
+					<td class = "text">11</td>
+					<td class = "text"><font color = #B6D462>HON. MEN. </font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">88</td>
+					<td class = "text">HAVRYLIUK ANTON*</td>
+					<td class = "text">UKR 3</td>
+					<td class = "text">2</td>
+					<td class = "text">2</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">11</td>
+					<td class = "text"><font color = #B6D462>HON. MEN. </font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">89</td>
+					<td class = "text">SLANINA IULIA*</td>
+					<td class = "text">VIANU 1</td>
+					<td class = "text">2</td>
+					<td class = "text">2</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">11</td>
+					<td class = "text"><font color = #B6D462>HON. MEN. </font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">90</td>
+					<td class = "text">KOVAL HEORHII</td>
+					<td class = "text">UKR 7</td>
+					<td class = "text">3</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">10</td>
+					<td class = "text"><font color = #B6D462>HON. MEN. </font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">91</td>
+					<td class = "text">ZORKA MATSVEI*</td>
+					<td class = "text">BLR 3</td>
+					<td class = "text">2</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">1</td>
+					<td class = "text">10</td>
+					<td class = "text"><font color = #B6D462>HON. MEN. </font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">92</td>
+					<td class = "text">DE CARVALHO OLIVEIRA MIGUEL</td>
+					<td class = "text">BRA 5</td>
+					<td class = "text">0</td>
+					<td class = "text">2</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">1</td>
+					<td class = "text">10</td>
+					<td class = "text"><font color = #B6D462>HON. MEN. </font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">93</td>
+					<td class = "text">ÉTILÉ - ZÉPHORIS MANO*</td>
+					<td class = "text">FRA 1</td>
+					<td class = "text">1</td>
+					<td class = "text">2</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">10</td>
+					<td class = "text"><font color = #B6D462>HON. MEN. </font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">94</td>
+					<td class = "text">CAHUZAC JUSTIN*</td>
+					<td class = "text">FRA 2</td>
+					<td class = "text">2</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">1</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">10</td>
+					<td class = "text"><font color = #B6D462>HON. MEN. </font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">95</td>
+					<td class = "text">CALOGERO GIACOMO</td>
+					<td class = "text">ITA 6</td>
+					<td class = "text">1</td>
+					<td class = "text">2</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">10</td>
+					<td class = "text"><font color = #B6D462>HON. MEN. </font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">96</td>
+					<td class = "text">CARLOS EMILIO RAMOS  AGUILAR*</td>
+					<td class = "text">MEX 4</td>
+					<td class = "text">1</td>
+					<td class = "text">2</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">10</td>
+					<td class = "text"><font color = #B6D462>HON. MEN. </font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">97</td>
+					<td class = "text">RISNOVEANU LUCIA</td>
+					<td class = "text">ROUB 5</td>
+					<td class = "text">2</td>
+					<td class = "text">1</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">10</td>
+					<td class = "text"><font color = #B6D462>HON. MEN. </font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">98</td>
+					<td class = "text">PRIJON LANA</td>
+					<td class = "text">SVN 5</td>
+					<td class = "text">7</td>
+					<td class = "text">2</td>
+					<td class = "text">0</td>
+					<td class = "text">1</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">10</td>
+					<td class = "text"><font color = #B6D462>HON. MEN. </font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">99</td>
+					<td class = "text">PIRVULESCU GABRIELA MADALINA*</td>
+					<td class = "text">ROUB 2</td>
+					<td class = "text">2</td>
+					<td class = "text">3</td>
+					<td class = "text">0</td>
+					<td class = "text">5</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">10</td>
+					<td class = "text"></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">100</td>
+					<td class = "text">MASLIONCHANKA DZMITRY*</td>
+					<td class = "text">BLR 2</td>
+					<td class = "text">2</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">9</td>
+					<td class = "text"><font color = #B6D462>HON. MEN. </font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">101</td>
+					<td class = "text">KVINIKADZE MIKHEILI*</td>
+					<td class = "text">GEO 3</td>
+					<td class = "text">7</td>
+					<td class = "text">2</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">9</td>
+					<td class = "text"><font color = #B6D462>HON. MEN. </font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">102</td>
+					<td class = "text">YUNSEO CHOI</td>
+					<td class = "text">KOR 6</td>
+					<td class = "text">2</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">9</td>
+					<td class = "text"><font color = #B6D462>HON. MEN. </font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">103</td>
+					<td class = "text">ȚOLU DIANA</td>
+					<td class = "text">ROU 5</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">2</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">9</td>
+					<td class = "text"><font color = #B6D462>HON. MEN. </font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">104</td>
+					<td class = "text">IOSIFESCU DINU ALEXANDRU*</td>
+					<td class = "text">ROUB 3</td>
+					<td class = "text">0</td>
+					<td class = "text">2</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">9</td>
+					<td class = "text"><font color = #B6D462>HON. MEN. </font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">105</td>
+					<td class = "text">PAHASIAN MILANNA</td>
+					<td class = "text">BLR 5</td>
+					<td class = "text">1</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">8</td>
+					<td class = "text"><font color = #B6D462>HON. MEN. </font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">106</td>
+					<td class = "text">BOKELAVADZE ZAURI*</td>
+					<td class = "text">GEO 4</td>
+					<td class = "text">1</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">8</td>
+					<td class = "text"><font color = #B6D462>HON. MEN. </font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">107</td>
+					<td class = "text">FRIEDMAN NOGAH</td>
+					<td class = "text">ISR 5</td>
+					<td class = "text">1</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">8</td>
+					<td class = "text"><font color = #B6D462>HON. MEN. </font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">108</td>
+					<td class = "text">SARTORI LUCA</td>
+					<td class = "text">ITA 5</td>
+					<td class = "text">1</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">8</td>
+					<td class = "text"><font color = #B6D462>HON. MEN. </font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">109</td>
+					<td class = "text">ASTUDILLO MARBÁN OMAR FARID*</td>
+					<td class = "text">MEX 3</td>
+					<td class = "text">1</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">8</td>
+					<td class = "text"><font color = #B6D462>HON. MEN. </font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">110</td>
+					<td class = "text">ERIC RANSOM TREVIÑO</td>
+					<td class = "text">MEX 6</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">1</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">8</td>
+					<td class = "text"><font color = #B6D462>HON. MEN. </font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">111</td>
+					<td class = "text">ARALA JUHO*</td>
+					<td class = "text">TND 2</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">1</td>
+					<td class = "text">8</td>
+					<td class = "text"><font color = #B6D462>HON. MEN. </font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">112</td>
+					<td class = "text">TALAEI KHAJEROSHANAEI MEHRAN*</td>
+					<td class = "text">IRN 2</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text"><font color = #B6D462>HON. MEN. </font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">113</td>
+					<td class = "text">BALBUENA EDUARDO*</td>
+					<td class = "text">PER 4</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text"><font color = #B6D462>HON. MEN. </font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">114</td>
+					<td class = "text">LUNA SEBASTIAN</td>
+					<td class = "text">PER 6</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text"><font color = #B6D462>HON. MEN. </font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">115</td>
+					<td class = "text">HOROKH YELYZAVETA</td>
+					<td class = "text">UKR 5</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">7</td>
+					<td class = "text"><font color = #B6D462>HON. MEN. </font></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">116</td>
+					<td class = "text">VALERIANO QUIROZ PABLO ALHUI*</td>
+					<td class = "text">MEX 1</td>
+					<td class = "text">0</td>
+					<td class = "text">2</td>
+					<td class = "text">0</td>
+					<td class = "text">4</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">6</td>
+					<td class = "text"></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">117</td>
+					<td class = "text">MONEA DRAGOS GABRIEL</td>
+					<td class = "text">ROUB 6</td>
+					<td class = "text">1</td>
+					<td class = "text">2</td>
+					<td class = "text">0</td>
+					<td class = "text">3</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">6</td>
+					<td class = "text"></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">118</td>
+					<td class = "text">PASHKOVSKYI VADYM</td>
+					<td class = "text">UKR 9</td>
+					<td class = "text">2</td>
+					<td class = "text">2</td>
+					<td class = "text">0</td>
+					<td class = "text">2</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">6</td>
+					<td class = "text"></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">119</td>
+					<td class = "text">TAGAREV IVAN</td>
+					<td class = "text">BGR 6</td>
+					<td class = "text">2</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">2</td>
+					<td class = "text">1</td>
+					<td class = "text">1</td>
+					<td class = "text">6</td>
+					<td class = "text"></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">120</td>
+					<td class = "text">MERCAN HORIA</td>
+					<td class = "text">VIANU 5</td>
+					<td class = "text">0</td>
+					<td class = "text">2</td>
+					<td class = "text">0</td>
+					<td class = "text">3</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">5</td>
+					<td class = "text"></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">121</td>
+					<td class = "text">ONIANI ALEKSANDRE*</td>
+					<td class = "text">GEO 2</td>
+					<td class = "text">0</td>
+					<td class = "text">2</td>
+					<td class = "text">0</td>
+					<td class = "text">2</td>
+					<td class = "text">1</td>
+					<td class = "text">0</td>
+					<td class = "text">5</td>
+					<td class = "text"></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">122</td>
+					<td class = "text">KOCUTAR JUŠ*</td>
+					<td class = "text">SVN 3</td>
+					<td class = "text">2</td>
+					<td class = "text">2</td>
+					<td class = "text">0</td>
+					<td class = "text">1</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">5</td>
+					<td class = "text"></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">123</td>
+					<td class = "text">SHUTRO NIKITA*</td>
+					<td class = "text">BLR 4</td>
+					<td class = "text">1</td>
+					<td class = "text">2</td>
+					<td class = "text">0</td>
+					<td class = "text">1</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">4</td>
+					<td class = "text"></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">124</td>
+					<td class = "text">AMBOKADZE GIORGI</td>
+					<td class = "text">GEO 5</td>
+					<td class = "text">1</td>
+					<td class = "text">2</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">3</td>
+					<td class = "text"></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">125</td>
+					<td class = "text">PANTNER JAN*</td>
+					<td class = "text">SVN 4</td>
+					<td class = "text">2</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">1</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">3</td>
+					<td class = "text"></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">126</td>
+					<td class = "text">UDROIU MIHNEA*</td>
+					<td class = "text">VIANU 3</td>
+					<td class = "text">2</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">1</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">3</td>
+					<td class = "text"></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">127</td>
+					<td class = "text">DUBOVIK VIKTAR</td>
+					<td class = "text">BLR 6</td>
+					<td class = "text">0</td>
+					<td class = "text">2</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">2</td>
+					<td class = "text"></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">128</td>
+					<td class = "text">YUMI KIM*</td>
+					<td class = "text">KOR 1</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">2</td>
+					<td class = "text">0</td>
+					<td class = "text">2</td>
+					<td class = "text"></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">129</td>
+					<td class = "text">BUKOVŠEK SIMON*</td>
+					<td class = "text">SVN 1</td>
+					<td class = "text">2</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">2</td>
+					<td class = "text"></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">130</td>
+					<td class = "text">AXENIE RAISA*</td>
+					<td class = "text">VIANU 4</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">2</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">2</td>
+					<td class = "text"></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">131</td>
+					<td class = "text">MATCHARASHVILI AKAKI</td>
+					<td class = "text">GEO 6</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">1</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">1</td>
+					<td class = "text"></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">132</td>
+					<td class = "text">MIKHNOVSKA MARIIA</td>
+					<td class = "text">UKR 1</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">1</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">1</td>
+					<td class = "text"></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">133</td>
+					<td class = "text">DANCIU ANA CEZARA*</td>
+					<td class = "text">VIANU 2</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">1</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">1</td>
+					<td class = "text"></td>
+				</tr>
+				
+				<tr>								
+					<td class = "text">134</td>
+					<td class = "text">JOIȚA OCTAVIAN</td>
+					<td class = "text">VIANU 6</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">1</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">1</td>
+					<td class = "text"></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">								
+					<td class = "text">135</td>
+					<td class = "text">BÁN-SZABÓ ÁRON*</td>
+					<td class = "text">HUN 1</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text">0</td>
+					<td class = "text"></td>
+				</tr>
+				
+								<tr>
+					<td class = "text"></td>
+					<td class = "text">Grand Total</td>
+					<td class = "text"></td>
+					<td class = "text">580</td>
+					<td class = "text">465</td>
+					<td class = "text">135</td>
+					<td class = "text">740</td>
+					<td class = "text">218</td>
+					<td class = "text">115</td>
+					<td class = "text">2253</td>
+					</tr>
+					<tr>
+				
+					<td class = "text"></td>
+					<td class = "text">Average</td>
+					<td class = "text"></td>
+					<td class = "text">4.3</td>
+					<td class = "text">3.44</td>
+					<td class = "text">1</td>
+					<td class = "text">5.48</td>
+					<td class = "text">1.61</td>
+					<td class = "text">0.85</td>
+					<td class = "text">16.69</td>
+					<td class = "text"></td>
+				
+				</tr>				
+</table><br/>				
+
+		</td>
+	</tr>
+<tr>
+		<td>
+			<h2 class = "title_content">Mathematics - Teams Results </h2>
+		</td>
+	</tr>
+	<tr>
+	
+		<td id = "inside_content">
+			<table width = "50%" cellpadding = "3px" cellspacing = "0px">
+				<tr>
+					<td class = "text"><b>Pos</b></td>
+					<td class = "text"><b></b></td>
+					<td class = "text"><b>Country</b></td>
+					<td class = "text"><b>Total</b></td>
+					<td class = "text"><b>Prize</b></td>
+				</tr>
+				<tr style="background-color:#F0F0F0;">					<td class = "text">1</td>
+					<td class = "text"><img src="_images/_flags/RUS.gif" width="55" height="32"></td>
+					<td class = "text">RUS</td>
+					<td class = "text">102</td>
+					<td class = "text"><font color = gold>First + Trophy</font></td>
+				</tr>
+				
+				<tr>					<td class = "text">2</td>
+					<td class = "text"><img src="_images/_flags/CHN.gif" width="55" height="32"></td>
+					<td class = "text">CHN</td>
+					<td class = "text">102</td>
+					<td class = "text"><font color = gold>First + Trophy</font></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">					<td class = "text">3</td>
+					<td class = "text"><img src="_images/_flags/POL.gif" width="55" height="32"></td>
+					<td class = "text">POL</td>
+					<td class = "text">98</td>
+					<td class = "text"><font color = sienna>Third</font></td>
+				</tr>
+				
+				<tr>					<td class = "text">4</td>
+					<td class = "text"><img src="_images/_flags/USA.gif" width="55" height="32"></td>
+					<td class = "text">USA</td>
+					<td class = "text">91</td>
+					<td class = "text"></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">					<td class = "text">5</td>
+					<td class = "text"><img src="_images/_flags/KOR.gif" width="55" height="32"></td>
+					<td class = "text">KOR</td>
+					<td class = "text">79</td>
+					<td class = "text"></td>
+				</tr>
+				
+				<tr>					<td class = "text">6</td>
+					<td class = "text"><img src="_images/_flags/ITA.gif" width="55" height="32"></td>
+					<td class = "text">ITA</td>
+					<td class = "text">76</td>
+					<td class = "text"></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">					<td class = "text">7</td>
+					<td class = "text"><img src="_images/_flags/ISR.gif" width="55" height="32"></td>
+					<td class = "text">ISR</td>
+					<td class = "text">71</td>
+					<td class = "text"></td>
+				</tr>
+				
+				<tr>					<td class = "text">8</td>
+					<td class = "text"><img src="_images/_flags/FRA.gif" width="55" height="32"></td>
+					<td class = "text">FRA</td>
+					<td class = "text">71</td>
+					<td class = "text"></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">					<td class = "text">9</td>
+					<td class = "text"><img src="_images/_flags/BGR.gif" width="55" height="32"></td>
+					<td class = "text">BGR</td>
+					<td class = "text">68</td>
+					<td class = "text"></td>
+				</tr>
+				
+				<tr>					<td class = "text">10</td>
+					<td class = "text"><img src="_images/_flags/UKR.gif" width="55" height="32"></td>
+					<td class = "text">UKR</td>
+					<td class = "text">66</td>
+					<td class = "text"></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">					<td class = "text">11</td>
+					<td class = "text"><img src="_images/_flags/BRA.gif" width="55" height="32"></td>
+					<td class = "text">BRA</td>
+					<td class = "text">65</td>
+					<td class = "text"></td>
+				</tr>
+				
+				<tr>					<td class = "text">12</td>
+					<td class = "text"><img src="_images/_flags/ROU.gif" width="55" height="32"></td>
+					<td class = "text">ROU</td>
+					<td class = "text">62</td>
+					<td class = "text"></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">					<td class = "text">13</td>
+					<td class = "text"><img src="_images/_flags/TND.gif" width="55" height="32"></td>
+					<td class = "text">TND</td>
+					<td class = "text">58</td>
+					<td class = "text"></td>
+				</tr>
+				
+				<tr>					<td class = "text">14</td>
+					<td class = "text"><img src="_images/_flags/IRN.gif" width="55" height="32"></td>
+					<td class = "text">IRN</td>
+					<td class = "text">56</td>
+					<td class = "text"></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">					<td class = "text">15</td>
+					<td class = "text"><img src="_images/_flags/HUN.gif" width="55" height="32"></td>
+					<td class = "text">HUN</td>
+					<td class = "text">47</td>
+					<td class = "text"></td>
+				</tr>
+				
+				<tr>					<td class = "text">16</td>
+					<td class = "text"><img src="_images/_flags/ROUB.gif" width="55" height="32"></td>
+					<td class = "text">ROUB</td>
+					<td class = "text">47</td>
+					<td class = "text"></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">					<td class = "text">17</td>
+					<td class = "text"><img src="_images/_flags/PER.gif" width="55" height="32"></td>
+					<td class = "text">PER</td>
+					<td class = "text">47</td>
+					<td class = "text"></td>
+				</tr>
+				
+				<tr>					<td class = "text">18</td>
+					<td class = "text"><img src="_images/_flags/MEX.gif" width="55" height="32"></td>
+					<td class = "text">MEX</td>
+					<td class = "text">33</td>
+					<td class = "text"></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">					<td class = "text">19</td>
+					<td class = "text"><img src="_images/_flags/GEO.gif" width="55" height="32"></td>
+					<td class = "text">GEO</td>
+					<td class = "text">33</td>
+					<td class = "text"></td>
+				</tr>
+				
+				<tr>					<td class = "text">20</td>
+					<td class = "text"><img src="_images/_flags/BLR.gif" width="55" height="32"></td>
+					<td class = "text">BLR</td>
+					<td class = "text">33</td>
+					<td class = "text"></td>
+				</tr>
+				
+				<tr style="background-color:#F0F0F0;">					<td class = "text">21</td>
+					<td class = "text"><img src="_images/_flags/SVN.gif" width="55" height="32"></td>
+					<td class = "text">SVN</td>
+					<td class = "text">29</td>
+					<td class = "text"></td>
+				</tr>
+				
+				<tr>					<td class = "text">22</td>
+					<td class = "text"><img src="_images/_flags/VIANU.gif" width="55" height="32"></td>
+					<td class = "text">VIANU</td>
+					<td class = "text">16</td>
+					<td class = "text"></td>
+				</tr>
+				
+									<tr>
+					<td class = "text"></td>
+					<td class = "text"></td>
+					<td class = "text">Grand Total</td>
+					
+					
+					<td class = "text">1350</td>
+					</tr>
+					<tr>
+					<td class = "text"></td>
+				<td class = "text"></td>
+					<td class = "text">Average</td>
+					
+					<td class = "text">61.36</td>
+					<td class = "text"></td>
+				
+				</tr> 
+				
+			</table>
+			
+			
+		</td>
+	</tr>
+</table>
+						</td>
+					</tr>
+				</table>					
+				
+			</td>		
+		</tr>
+	</table>
+	
+	
+<table id = "footer" align = "center" cellpadding = "5px" cellspacing = "0px">
+	<tr>
+		<td id = "banner_footer" align = "center">
+			<div id = "copyright">&copy; Copyright 2008 - 2026 RMM<br><a href="https://lbi.ro/">www.lbi.ro</a></div>
+		</td>
+	</tr>
+</table>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28634819-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>	
+
+</body>
+</html>

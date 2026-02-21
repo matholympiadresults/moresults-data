@@ -1,0 +1,5510 @@
+{
+  "year": 2021,
+  "scraped_at": "2026-01-02T02:23:10.078579+00:00",
+  "contestants": [
+    {
+      "country_name": "United States of America",
+      "country_code": "USA",
+      "given_name": "Maxim",
+      "family_name": "Li",
+      "problem_scores": [
+        7,
+        7,
+        7,
+        7,
+        7
+      ],
+      "total": 35,
+      "award": "Gold Medal",
+      "rank": 1
+    },
+    {
+      "country_name": "Republic of Korea",
+      "country_code": "KOR",
+      "given_name": "Woojin",
+      "family_name": "Choi",
+      "problem_scores": [
+        7,
+        5,
+        7,
+        7,
+        5
+      ],
+      "total": 31,
+      "award": "Gold Medal",
+      "rank": 2
+    },
+    {
+      "country_name": "United States of America",
+      "country_code": "USA",
+      "given_name": "Noah",
+      "family_name": "Walsh",
+      "problem_scores": [
+        7,
+        7,
+        7,
+        2,
+        7
+      ],
+      "total": 30,
+      "award": "Silver Medal",
+      "rank": 3
+    },
+    {
+      "country_name": "United States of America",
+      "country_code": "USA",
+      "given_name": "Zifan",
+      "family_name": "Wang",
+      "problem_scores": [
+        7,
+        7,
+        7,
+        2,
+        6
+      ],
+      "total": 29,
+      "award": "Silver Medal",
+      "rank": 4
+    },
+    {
+      "country_name": "Canada",
+      "country_code": "CAN",
+      "given_name": "Zixiang",
+      "family_name": "Zhou",
+      "problem_scores": [
+        7,
+        7,
+        7,
+        7,
+        1
+      ],
+      "total": 29,
+      "award": "Gold Medal",
+      "rank": 4
+    },
+    {
+      "country_name": "Republic of Korea",
+      "country_code": "KOR",
+      "given_name": "Yuchan",
+      "family_name": "Jung",
+      "problem_scores": [
+        7,
+        5,
+        7,
+        2,
+        7
+      ],
+      "total": 28,
+      "award": "Silver Medal",
+      "rank": 6
+    },
+    {
+      "country_name": "Republic of Korea",
+      "country_code": "KOR",
+      "given_name": "Jimin",
+      "family_name": "Kim",
+      "problem_scores": [
+        7,
+        7,
+        7,
+        7,
+        0
+      ],
+      "total": 28,
+      "award": "Silver Medal",
+      "rank": 6
+    },
+    {
+      "country_name": "Canada",
+      "country_code": "CAN",
+      "given_name": "Arvin",
+      "family_name": "Sahami",
+      "problem_scores": [
+        7,
+        7,
+        7,
+        0,
+        7
+      ],
+      "total": 28,
+      "award": "Silver Medal",
+      "rank": 6
+    },
+    {
+      "country_name": "United States of America",
+      "country_code": "USA",
+      "given_name": "Jaedon",
+      "family_name": "Whyte",
+      "problem_scores": [
+        7,
+        7,
+        7,
+        7,
+        0
+      ],
+      "total": 28,
+      "award": "Bronze Medal",
+      "rank": 6
+    },
+    {
+      "country_name": "Japan",
+      "country_code": "JPN",
+      "given_name": "Kamio",
+      "family_name": "Yuhi",
+      "problem_scores": [
+        7,
+        7,
+        7,
+        7,
+        0
+      ],
+      "total": 28,
+      "award": "Gold Medal",
+      "rank": 6
+    },
+    {
+      "country_name": "United States of America",
+      "country_code": "USA",
+      "given_name": "Xinyang",
+      "family_name": "Chen",
+      "problem_scores": [
+        7,
+        6,
+        7,
+        7,
+        0
+      ],
+      "total": 27,
+      "award": "Bronze Medal",
+      "rank": 11
+    },
+    {
+      "country_name": "United States of America",
+      "country_code": "USA",
+      "given_name": "Rishabh",
+      "family_name": "Das",
+      "problem_scores": [
+        7,
+        7,
+        7,
+        0,
+        6
+      ],
+      "total": 27,
+      "award": "Bronze Medal",
+      "rank": 11
+    },
+    {
+      "country_name": "United States of America",
+      "country_code": "USA",
+      "given_name": "Luke",
+      "family_name": "Robitaille",
+      "problem_scores": [
+        7,
+        6,
+        7,
+        0,
+        7
+      ],
+      "total": 27,
+      "award": "Bronze Medal",
+      "rank": 11
+    },
+    {
+      "country_name": "United States of America",
+      "country_code": "USA",
+      "given_name": "Quanlin",
+      "family_name": "Chen",
+      "problem_scores": [
+        7,
+        7,
+        7,
+        1,
+        4
+      ],
+      "total": 26,
+      "award": "Honourable Mention",
+      "rank": 14
+    },
+    {
+      "country_name": "Republic of Korea",
+      "country_code": "KOR",
+      "given_name": "Hyunwoo",
+      "family_name": "Choi",
+      "problem_scores": [
+        7,
+        7,
+        7,
+        5,
+        0
+      ],
+      "total": 26,
+      "award": "Bronze Medal",
+      "rank": 14
+    },
+    {
+      "country_name": "United States of America",
+      "country_code": "USA",
+      "given_name": "Andrew",
+      "family_name": "Gu",
+      "problem_scores": [
+        6,
+        7,
+        7,
+        6,
+        0
+      ],
+      "total": 26,
+      "award": "Honourable Mention",
+      "rank": 14
+    },
+    {
+      "country_name": "Indonesia",
+      "country_code": "IDN",
+      "given_name": "Widjaja",
+      "family_name": "Stanve Avrilium",
+      "problem_scores": [
+        5,
+        7,
+        0,
+        7,
+        7
+      ],
+      "total": 26,
+      "award": "Gold Medal",
+      "rank": 14
+    },
+    {
+      "country_name": "United States of America",
+      "country_code": "USA",
+      "given_name": "Daniel",
+      "family_name": "Xia",
+      "problem_scores": [
+        7,
+        6,
+        7,
+        0,
+        6
+      ],
+      "total": 26,
+      "award": "Honourable Mention",
+      "rank": 14
+    },
+    {
+      "country_name": "Argentina",
+      "country_code": "ARG",
+      "given_name": "Julián Máximo",
+      "family_name": "CABRERA",
+      "problem_scores": [
+        7,
+        7,
+        7,
+        0,
+        4
+      ],
+      "total": 25,
+      "award": "Gold Medal",
+      "rank": 19
+    },
+    {
+      "country_name": "Republic of Korea",
+      "country_code": "KOR",
+      "given_name": "SeungHwan",
+      "family_name": "Lee",
+      "problem_scores": [
+        7,
+        5,
+        7,
+        6,
+        0
+      ],
+      "total": 25,
+      "award": "Bronze Medal",
+      "rank": 19
+    },
+    {
+      "country_name": "Thailand",
+      "country_code": "THA",
+      "given_name": "Nithid",
+      "family_name": "Anchaleenukoon",
+      "problem_scores": [
+        7,
+        7,
+        7,
+        3,
+        0
+      ],
+      "total": 24,
+      "award": "Gold Medal",
+      "rank": 21
+    },
+    {
+      "country_name": "Singapore",
+      "country_code": "SGP",
+      "given_name": "Tse Yang, Lucas",
+      "family_name": "Boo",
+      "problem_scores": [
+        7,
+        7,
+        7,
+        2,
+        1
+      ],
+      "total": 24,
+      "award": "Gold Medal",
+      "rank": 21
+    },
+    {
+      "country_name": "Hong Kong",
+      "country_code": "HKG",
+      "given_name": "Ching Yan Timothy",
+      "family_name": "Yau",
+      "problem_scores": [
+        7,
+        7,
+        7,
+        0,
+        3
+      ],
+      "total": 24,
+      "award": "Gold Medal",
+      "rank": 21
+    },
+    {
+      "country_name": "Taiwan",
+      "country_code": "TWN",
+      "given_name": "PAI-LI",
+      "family_name": "CHENG",
+      "problem_scores": [
+        7,
+        7,
+        7,
+        2,
+        0
+      ],
+      "total": 23,
+      "award": "Gold Medal",
+      "rank": 24
+    },
+    {
+      "country_name": "Hong Kong",
+      "country_code": "HKG",
+      "given_name": "Cheuk Hei",
+      "family_name": "Chu",
+      "problem_scores": [
+        7,
+        7,
+        7,
+        2,
+        0
+      ],
+      "total": 23,
+      "award": "Silver Medal",
+      "rank": 24
+    },
+    {
+      "country_name": "Hong Kong",
+      "country_code": "HKG",
+      "given_name": "Tsz Fung",
+      "family_name": "Chui",
+      "problem_scores": [
+        7,
+        7,
+        7,
+        2,
+        0
+      ],
+      "total": 23,
+      "award": "Silver Medal",
+      "rank": 24
+    },
+    {
+      "country_name": "Malaysia",
+      "country_code": "MYS",
+      "given_name": "WONG",
+      "family_name": "JER REN",
+      "problem_scores": [
+        7,
+        7,
+        7,
+        2,
+        0
+      ],
+      "total": 23,
+      "award": "Gold Medal",
+      "rank": 24
+    },
+    {
+      "country_name": "Islamic Republic of Iran",
+      "country_code": "IRN",
+      "given_name": "Sina",
+      "family_name": "Azizeddin",
+      "problem_scores": [
+        7,
+        7,
+        7,
+        0,
+        1
+      ],
+      "total": 22,
+      "award": "Gold Medal",
+      "rank": 28
+    },
+    {
+      "country_name": "Australia",
+      "country_code": "AUS",
+      "given_name": "Andres",
+      "family_name": "Buritica",
+      "problem_scores": [
+        7,
+        3,
+        7,
+        5,
+        0
+      ],
+      "total": 22,
+      "award": "Gold Medal",
+      "rank": 28
+    },
+    {
+      "country_name": "Russia",
+      "country_code": "RUS",
+      "given_name": "Andrej",
+      "family_name": "Goguadze",
+      "problem_scores": [
+        7,
+        0,
+        3,
+        5,
+        7
+      ],
+      "total": 22,
+      "award": "Gold Medal",
+      "rank": 28
+    },
+    {
+      "country_name": "Canada",
+      "country_code": "CAN",
+      "given_name": "Eric",
+      "family_name": "Shen",
+      "problem_scores": [
+        7,
+        6,
+        7,
+        2,
+        0
+      ],
+      "total": 22,
+      "award": "Silver Medal",
+      "rank": 28
+    },
+    {
+      "country_name": "Argentina",
+      "country_code": "ARG",
+      "given_name": "Bruno Martín",
+      "family_name": "ZIGER",
+      "problem_scores": [
+        7,
+        7,
+        7,
+        0,
+        1
+      ],
+      "total": 22,
+      "award": "Silver Medal",
+      "rank": 28
+    },
+    {
+      "country_name": "Taiwan",
+      "country_code": "TWN",
+      "given_name": "YI-HSIANG",
+      "family_name": "CHIAO",
+      "problem_scores": [
+        7,
+        7,
+        7,
+        0,
+        0
+      ],
+      "total": 21,
+      "award": "Silver Medal",
+      "rank": 33
+    },
+    {
+      "country_name": "Republic of Korea",
+      "country_code": "KOR",
+      "given_name": "MIN KYU",
+      "family_name": "CHOI",
+      "problem_scores": [
+        7,
+        7,
+        7,
+        0,
+        0
+      ],
+      "total": 21,
+      "award": "Honourable Mention",
+      "rank": 33
+    },
+    {
+      "country_name": "Russia",
+      "country_code": "RUS",
+      "given_name": "Samvel",
+      "family_name": "Chobanyan",
+      "problem_scores": [
+        7,
+        7,
+        7,
+        0,
+        0
+      ],
+      "total": 21,
+      "award": "Silver Medal",
+      "rank": 33
+    },
+    {
+      "country_name": "Islamic Republic of Iran",
+      "country_code": "IRN",
+      "given_name": "Amir Mohammad",
+      "family_name": "Ghavi",
+      "problem_scores": [
+        7,
+        5,
+        7,
+        0,
+        2
+      ],
+      "total": 21,
+      "award": "Silver Medal",
+      "rank": 33
+    },
+    {
+      "country_name": "Taiwan",
+      "country_code": "TWN",
+      "given_name": "WEI-HSUAN",
+      "family_name": "HSIN",
+      "problem_scores": [
+        7,
+        0,
+        7,
+        0,
+        7
+      ],
+      "total": 21,
+      "award": "Silver Medal",
+      "rank": 33
+    },
+    {
+      "country_name": "Republic of Korea",
+      "country_code": "KOR",
+      "given_name": "Minjun",
+      "family_name": "Kim",
+      "problem_scores": [
+        7,
+        7,
+        7,
+        0,
+        0
+      ],
+      "total": 21,
+      "award": "Bronze Medal",
+      "rank": 33
+    },
+    {
+      "country_name": "Republic of Korea",
+      "country_code": "KOR",
+      "given_name": "Gyudong",
+      "family_name": "Lee",
+      "problem_scores": [
+        7,
+        5,
+        7,
+        2,
+        0
+      ],
+      "total": 21,
+      "award": "Honourable Mention",
+      "rank": 33
+    },
+    {
+      "country_name": "Peru",
+      "country_code": "PER",
+      "given_name": "YOHAN",
+      "family_name": "MIN LEE",
+      "problem_scores": [
+        7,
+        7,
+        7,
+        0,
+        0
+      ],
+      "total": 21,
+      "award": "Gold Medal",
+      "rank": 33
+    },
+    {
+      "country_name": "Islamic Republic of Iran",
+      "country_code": "IRN",
+      "given_name": "Ilia",
+      "family_name": "Mahroughi",
+      "problem_scores": [
+        7,
+        7,
+        7,
+        0,
+        0
+      ],
+      "total": 21,
+      "award": "Silver Medal",
+      "rank": 33
+    },
+    {
+      "country_name": "Thailand",
+      "country_code": "THA",
+      "given_name": "Gongphop",
+      "family_name": "Piyakamalanon",
+      "problem_scores": [
+        6,
+        5,
+        7,
+        3,
+        0
+      ],
+      "total": 21,
+      "award": "Silver Medal",
+      "rank": 33
+    },
+    {
+      "country_name": "Brazil",
+      "country_code": "BRA",
+      "given_name": "João Pedro",
+      "family_name": "Ramos Viana Costa",
+      "problem_scores": [
+        7,
+        7,
+        7,
+        0,
+        0
+      ],
+      "total": 21,
+      "award": "Gold Medal",
+      "rank": 33
+    },
+    {
+      "country_name": "Republic of Korea",
+      "country_code": "KOR",
+      "given_name": "Jaehoon",
+      "family_name": "Shin",
+      "problem_scores": [
+        7,
+        7,
+        0,
+        0,
+        7
+      ],
+      "total": 21,
+      "award": "Honourable Mention",
+      "rank": 33
+    },
+    {
+      "country_name": "Malaysia",
+      "country_code": "MYS",
+      "given_name": "CHAANG TZE SHEN",
+      "family_name": "TRISTAN",
+      "problem_scores": [
+        7,
+        7,
+        7,
+        0,
+        0
+      ],
+      "total": 21,
+      "award": "Silver Medal",
+      "rank": 33
+    },
+    {
+      "country_name": "Japan",
+      "country_code": "JPN",
+      "given_name": "Sannomiya",
+      "family_name": "Takumi",
+      "problem_scores": [
+        7,
+        5,
+        7,
+        2,
+        0
+      ],
+      "total": 21,
+      "award": "Silver Medal",
+      "rank": 33
+    },
+    {
+      "country_name": "Australia",
+      "country_code": "AUS",
+      "given_name": "Hadyn",
+      "family_name": "Tang",
+      "problem_scores": [
+        7,
+        7,
+        0,
+        7,
+        0
+      ],
+      "total": 21,
+      "award": "Silver Medal",
+      "rank": 33
+    },
+    {
+      "country_name": "Russia",
+      "country_code": "RUS",
+      "given_name": "Kirill",
+      "family_name": "Troshkin",
+      "problem_scores": [
+        7,
+        7,
+        7,
+        0,
+        0
+      ],
+      "total": 21,
+      "award": "Silver Medal",
+      "rank": 33
+    },
+    {
+      "country_name": "Republic of Korea",
+      "country_code": "KOR",
+      "given_name": "SANGYEOP",
+      "family_name": "WOO",
+      "problem_scores": [
+        7,
+        5,
+        7,
+        2,
+        0
+      ],
+      "total": 21,
+      "award": "Bronze Medal",
+      "rank": 33
+    },
+    {
+      "country_name": "Mexico",
+      "country_code": "MEX",
+      "given_name": "Omar Farid",
+      "family_name": "Astudillo Marbán",
+      "problem_scores": [
+        7,
+        7,
+        6,
+        0,
+        0
+      ],
+      "total": 20,
+      "award": "Gold Medal",
+      "rank": 50
+    },
+    {
+      "country_name": "Islamic Republic of Iran",
+      "country_code": "IRN",
+      "given_name": "Amir Mohammad",
+      "family_name": "Bandari",
+      "problem_scores": [
+        7,
+        0,
+        6,
+        7,
+        0
+      ],
+      "total": 20,
+      "award": "Bronze Medal",
+      "rank": 50
+    },
+    {
+      "country_name": "Canada",
+      "country_code": "CAN",
+      "given_name": "Warren",
+      "family_name": "Bei",
+      "problem_scores": [
+        7,
+        1,
+        7,
+        5,
+        0
+      ],
+      "total": 20,
+      "award": "Bronze Medal",
+      "rank": 50
+    },
+    {
+      "country_name": "Peru",
+      "country_code": "PER",
+      "given_name": "DIEGO ALONSO",
+      "family_name": "CORONADO ALCALA",
+      "problem_scores": [
+        6,
+        7,
+        7,
+        0,
+        0
+      ],
+      "total": 20,
+      "award": "Silver Medal",
+      "rank": 50
+    },
+    {
+      "country_name": "Peru",
+      "country_code": "PER",
+      "given_name": "MIJAIL LEONEL",
+      "family_name": "GUTIERREZ BUSTAMANTE",
+      "problem_scores": [
+        7,
+        5,
+        7,
+        1,
+        0
+      ],
+      "total": 20,
+      "award": "Silver Medal",
+      "rank": 50
+    },
+    {
+      "country_name": "Singapore",
+      "country_code": "SGP",
+      "given_name": "Xinghui",
+      "family_name": "Hu",
+      "problem_scores": [
+        7,
+        4,
+        7,
+        2,
+        0
+      ],
+      "total": 20,
+      "award": "Silver Medal",
+      "rank": 50
+    },
+    {
+      "country_name": "Hong Kong",
+      "country_code": "HKG",
+      "given_name": "Harris",
+      "family_name": "Leung",
+      "problem_scores": [
+        7,
+        6,
+        0,
+        7,
+        0
+      ],
+      "total": 20,
+      "award": "Bronze Medal",
+      "rank": 50
+    },
+    {
+      "country_name": "Singapore",
+      "country_code": "SGP",
+      "given_name": "Choo Ray",
+      "family_name": "Low",
+      "problem_scores": [
+        7,
+        6,
+        7,
+        0,
+        0
+      ],
+      "total": 20,
+      "award": "Silver Medal",
+      "rank": 50
+    },
+    {
+      "country_name": "Islamic Republic of Iran",
+      "country_code": "IRN",
+      "given_name": "Pourya",
+      "family_name": "Mahmoudkhan",
+      "problem_scores": [
+        6,
+        7,
+        7,
+        0,
+        0
+      ],
+      "total": 20,
+      "award": "Bronze Medal",
+      "rank": 50
+    },
+    {
+      "country_name": "Thailand",
+      "country_code": "THA",
+      "given_name": "Vorapas",
+      "family_name": "Meejitpaisarn",
+      "problem_scores": [
+        6,
+        0,
+        7,
+        0,
+        7
+      ],
+      "total": 20,
+      "award": "Silver Medal",
+      "rank": 50
+    },
+    {
+      "country_name": "Tajikistan",
+      "country_code": "TJK",
+      "given_name": "Usmonali",
+      "family_name": "Pakhavonov",
+      "problem_scores": [
+        7,
+        6,
+        7,
+        0,
+        0
+      ],
+      "total": 20,
+      "award": "Gold Medal",
+      "rank": 50
+    },
+    {
+      "country_name": "Mexico",
+      "country_code": "MEX",
+      "given_name": "Carlos Emilio",
+      "family_name": "Ramos Aguilar",
+      "problem_scores": [
+        7,
+        7,
+        6,
+        0,
+        0
+      ],
+      "total": 20,
+      "award": "Silver Medal",
+      "rank": 50
+    },
+    {
+      "country_name": "Thailand",
+      "country_code": "THA",
+      "given_name": "Vasawat",
+      "family_name": "Rawangwong",
+      "problem_scores": [
+        6,
+        7,
+        7,
+        0,
+        0
+      ],
+      "total": 20,
+      "award": "Bronze Medal",
+      "rank": 50
+    },
+    {
+      "country_name": "Bangladesh",
+      "country_code": "BGD",
+      "given_name": "Md. Maruf Hasan",
+      "family_name": "Rubab",
+      "problem_scores": [
+        7,
+        6,
+        7,
+        0,
+        0
+      ],
+      "total": 20,
+      "award": "Gold Medal",
+      "rank": 50
+    },
+    {
+      "country_name": "Canada",
+      "country_code": "CAN",
+      "given_name": "Kaixin",
+      "family_name": "Wang",
+      "problem_scores": [
+        7,
+        7,
+        0,
+        1,
+        5
+      ],
+      "total": 20,
+      "award": "Bronze Medal",
+      "rank": 50
+    },
+    {
+      "country_name": "Islamic Republic of Iran",
+      "country_code": "IRN",
+      "given_name": "Matin",
+      "family_name": "Yadollahi",
+      "problem_scores": [
+        7,
+        4,
+        7,
+        2,
+        0
+      ],
+      "total": 20,
+      "award": "Bronze Medal",
+      "rank": 50
+    },
+    {
+      "country_name": "Japan",
+      "country_code": "JPN",
+      "given_name": "Oki",
+      "family_name": "Yuya",
+      "problem_scores": [
+        7,
+        7,
+        0,
+        6,
+        0
+      ],
+      "total": 20,
+      "award": "Silver Medal",
+      "rank": 50
+    },
+    {
+      "country_name": "Indonesia",
+      "country_code": "IDN",
+      "given_name": "Julistiono",
+      "family_name": "Aaron Alvarado",
+      "problem_scores": [
+        7,
+        5,
+        7,
+        0,
+        0
+      ],
+      "total": 19,
+      "award": "Silver Medal",
+      "rank": 67
+    },
+    {
+      "country_name": "Taiwan",
+      "country_code": "TWN",
+      "given_name": "HSIN-JUI",
+      "family_name": "CHEN",
+      "problem_scores": [
+        7,
+        5,
+        7,
+        0,
+        0
+      ],
+      "total": 19,
+      "award": "Bronze Medal",
+      "rank": 67
+    },
+    {
+      "country_name": "Mexico",
+      "country_code": "MEX",
+      "given_name": "Tomás Francisco",
+      "family_name": "Cantú Rodríguez",
+      "problem_scores": [
+        7,
+        5,
+        7,
+        0,
+        0
+      ],
+      "total": 19,
+      "award": "Silver Medal",
+      "rank": 67
+    },
+    {
+      "country_name": "Japan",
+      "country_code": "JPN",
+      "given_name": "Imoto",
+      "family_name": "Tasuku",
+      "problem_scores": [
+        7,
+        5,
+        0,
+        7,
+        0
+      ],
+      "total": 19,
+      "award": "Bronze Medal",
+      "rank": 67
+    },
+    {
+      "country_name": "Japan",
+      "country_code": "JPN",
+      "given_name": "Yoshida",
+      "family_name": "Tomoki",
+      "problem_scores": [
+        7,
+        5,
+        7,
+        0,
+        0
+      ],
+      "total": 19,
+      "award": "Bronze Medal",
+      "rank": 67
+    },
+    {
+      "country_name": "Brazil",
+      "country_code": "BRA",
+      "given_name": "Pablo",
+      "family_name": "Andrade Carvalho Barros",
+      "problem_scores": [
+        7,
+        5,
+        0,
+        0,
+        6
+      ],
+      "total": 18,
+      "award": "Silver Medal",
+      "rank": 72
+    },
+    {
+      "country_name": "Kazakhstan",
+      "country_code": "KAZ",
+      "given_name": "Danat",
+      "family_name": "Duisenbekov",
+      "problem_scores": [
+        7,
+        6,
+        0,
+        0,
+        5
+      ],
+      "total": 18,
+      "award": "Silver Medal",
+      "rank": 72
+    },
+    {
+      "country_name": "Peru",
+      "country_code": "PER",
+      "given_name": "JOAQUIN ERNESTO",
+      "family_name": "GUERRA CAMANA",
+      "problem_scores": [
+        6,
+        5,
+        7,
+        0,
+        0
+      ],
+      "total": 18,
+      "award": "Bronze Medal",
+      "rank": 72
+    },
+    {
+      "country_name": "Canada",
+      "country_code": "CAN",
+      "given_name": "Thomas",
+      "family_name": "Guo",
+      "problem_scores": [
+        7,
+        7,
+        0,
+        2,
+        2
+      ],
+      "total": 18,
+      "award": "Bronze Medal",
+      "rank": 72
+    },
+    {
+      "country_name": "Japan",
+      "country_code": "JPN",
+      "given_name": "Kobayashi",
+      "family_name": "Koichiro",
+      "problem_scores": [
+        6,
+        5,
+        7,
+        0,
+        0
+      ],
+      "total": 18,
+      "award": "Bronze Medal",
+      "rank": 72
+    },
+    {
+      "country_name": "Mexico",
+      "country_code": "MEX",
+      "given_name": "Daniel Alejandro",
+      "family_name": "Ochoa Quintero",
+      "problem_scores": [
+        7,
+        4,
+        6,
+        1,
+        0
+      ],
+      "total": 18,
+      "award": "Bronze Medal",
+      "rank": 72
+    },
+    {
+      "country_name": "Brazil",
+      "country_code": "BRA",
+      "given_name": "Olavo",
+      "family_name": "Paschoal Longo",
+      "problem_scores": [
+        7,
+        7,
+        0,
+        2,
+        2
+      ],
+      "total": 18,
+      "award": "Silver Medal",
+      "rank": 72
+    },
+    {
+      "country_name": "Taiwan",
+      "country_code": "TWN",
+      "given_name": "PO-HAN",
+      "family_name": "WU",
+      "problem_scores": [
+        7,
+        7,
+        0,
+        2,
+        2
+      ],
+      "total": 18,
+      "award": "Bronze Medal",
+      "rank": 72
+    },
+    {
+      "country_name": "Islamic Republic of Iran",
+      "country_code": "IRN",
+      "given_name": "Matin",
+      "family_name": "Arefnia",
+      "problem_scores": [
+        5,
+        0,
+        7,
+        0,
+        5
+      ],
+      "total": 17,
+      "award": "Bronze Medal",
+      "rank": 80
+    },
+    {
+      "country_name": "Philippines",
+      "country_code": "PHL",
+      "given_name": "Immanuel Josiah",
+      "family_name": "BALETE",
+      "problem_scores": [
+        7,
+        5,
+        0,
+        5,
+        0
+      ],
+      "total": 17,
+      "award": "Silver Medal",
+      "rank": 80
+    },
+    {
+      "country_name": "Taiwan",
+      "country_code": "TWN",
+      "given_name": "CHIH-KAI",
+      "family_name": "LIAO",
+      "problem_scores": [
+        5,
+        5,
+        7,
+        0,
+        0
+      ],
+      "total": 17,
+      "award": "Bronze Medal",
+      "rank": 80
+    },
+    {
+      "country_name": "Islamic Republic of Iran",
+      "country_code": "IRN",
+      "given_name": "Ashkan",
+      "family_name": "Majidi",
+      "problem_scores": [
+        5,
+        4,
+        6,
+        2,
+        0
+      ],
+      "total": 17,
+      "award": null,
+      "rank": 80
+    },
+    {
+      "country_name": "Kazakhstan",
+      "country_code": "KAZ",
+      "given_name": "Marlen",
+      "family_name": "Raushanov",
+      "problem_scores": [
+        7,
+        5,
+        5,
+        0,
+        0
+      ],
+      "total": 17,
+      "award": "Silver Medal",
+      "rank": 80
+    },
+    {
+      "country_name": "Islamic Republic of Iran",
+      "country_code": "IRN",
+      "given_name": "Ali Reza",
+      "family_name": "Rezaei",
+      "problem_scores": [
+        7,
+        0,
+        7,
+        2,
+        1
+      ],
+      "total": 17,
+      "award": "Honourable Mention",
+      "rank": 80
+    },
+    {
+      "country_name": "Thailand",
+      "country_code": "THA",
+      "given_name": "Sarunyu",
+      "family_name": "Thongjarast",
+      "problem_scores": [
+        5,
+        0,
+        7,
+        5,
+        0
+      ],
+      "total": 17,
+      "award": "Bronze Medal",
+      "rank": 80
+    },
+    {
+      "country_name": "Peru",
+      "country_code": "PER",
+      "given_name": "CARLA SOFIA",
+      "family_name": "FERMIN JIMENEZ",
+      "problem_scores": [
+        7,
+        7,
+        2,
+        0,
+        0
+      ],
+      "total": 16,
+      "award": "Bronze Medal",
+      "rank": 87
+    },
+    {
+      "country_name": "Hong Kong",
+      "country_code": "HKG",
+      "given_name": "Wai Lok",
+      "family_name": "Lai",
+      "problem_scores": [
+        7,
+        7,
+        2,
+        0,
+        0
+      ],
+      "total": 16,
+      "award": "Bronze Medal",
+      "rank": 87
+    },
+    {
+      "country_name": "Canada",
+      "country_code": "CAN",
+      "given_name": "Kevin",
+      "family_name": "Min",
+      "problem_scores": [
+        7,
+        7,
+        2,
+        0,
+        0
+      ],
+      "total": 16,
+      "award": "Bronze Medal",
+      "rank": 87
+    },
+    {
+      "country_name": "Thailand",
+      "country_code": "THA",
+      "given_name": "Worrawat",
+      "family_name": "Rungaramsin",
+      "problem_scores": [
+        7,
+        2,
+        7,
+        0,
+        0
+      ],
+      "total": 16,
+      "award": "Bronze Medal",
+      "rank": 87
+    },
+    {
+      "country_name": "Brazil",
+      "country_code": "BRA",
+      "given_name": "Rodrigo",
+      "family_name": "Salgado Domingues Porto",
+      "problem_scores": [
+        7,
+        2,
+        7,
+        0,
+        0
+      ],
+      "total": 16,
+      "award": "Bronze Medal",
+      "rank": 87
+    },
+    {
+      "country_name": "Taiwan",
+      "country_code": "TWN",
+      "given_name": "WEI-FU",
+      "family_name": "TSENG",
+      "problem_scores": [
+        7,
+        0,
+        7,
+        2,
+        0
+      ],
+      "total": 16,
+      "award": "Bronze Medal",
+      "rank": 87
+    },
+    {
+      "country_name": "Kazakhstan",
+      "country_code": "KAZ",
+      "given_name": "Yuriy",
+      "family_name": "Ten",
+      "problem_scores": [
+        7,
+        0,
+        7,
+        2,
+        0
+      ],
+      "total": 16,
+      "award": "Silver Medal",
+      "rank": 87
+    },
+    {
+      "country_name": "Ecuador",
+      "country_code": "ECU",
+      "given_name": "Jiamao",
+      "family_name": "Yu",
+      "problem_scores": [
+        7,
+        0,
+        7,
+        2,
+        0
+      ],
+      "total": 16,
+      "award": "Silver Medal",
+      "rank": 87
+    },
+    {
+      "country_name": "Japan",
+      "country_code": "JPN",
+      "given_name": "Tokita",
+      "family_name": "Yui",
+      "problem_scores": [
+        7,
+        0,
+        5,
+        4,
+        0
+      ],
+      "total": 16,
+      "award": "Bronze Medal",
+      "rank": 87
+    },
+    {
+      "country_name": "Russia",
+      "country_code": "RUS",
+      "given_name": "Aleksandr",
+      "family_name": "Artem'ev",
+      "problem_scores": [
+        7,
+        0,
+        7,
+        0,
+        1
+      ],
+      "total": 15,
+      "award": "Bronze Medal",
+      "rank": 96
+    },
+    {
+      "country_name": "Macedonia",
+      "country_code": "MKD",
+      "given_name": "Luka",
+      "family_name": "Grashkoski",
+      "problem_scores": [
+        7,
+        0,
+        7,
+        0,
+        1
+      ],
+      "total": 15,
+      "award": "Silver Medal",
+      "rank": 96
+    },
+    {
+      "country_name": "Japan",
+      "country_code": "JPN",
+      "given_name": "Takayama",
+      "family_name": "Hiroto",
+      "problem_scores": [
+        7,
+        0,
+        7,
+        1,
+        0
+      ],
+      "total": 15,
+      "award": "Honourable Mention",
+      "rank": 96
+    },
+    {
+      "country_name": "Malaysia",
+      "country_code": "MYS",
+      "given_name": "TAN",
+      "family_name": "LI XUAN",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        7,
+        1
+      ],
+      "total": 15,
+      "award": "Silver Medal",
+      "rank": 96
+    },
+    {
+      "country_name": "Thailand",
+      "country_code": "THA",
+      "given_name": "Kitti",
+      "family_name": "Opasmetikul",
+      "problem_scores": [
+        7,
+        0,
+        7,
+        1,
+        0
+      ],
+      "total": 15,
+      "award": "Bronze Medal",
+      "rank": 96
+    },
+    {
+      "country_name": "Brazil",
+      "country_code": "BRA",
+      "given_name": "Gabriel",
+      "family_name": "Ribeiro Paiva",
+      "problem_scores": [
+        7,
+        0,
+        7,
+        0,
+        1
+      ],
+      "total": 15,
+      "award": "Bronze Medal",
+      "rank": 96
+    },
+    {
+      "country_name": "Mexico",
+      "country_code": "MEX",
+      "given_name": "Samantha",
+      "family_name": "Ruelas Valtierra",
+      "problem_scores": [
+        7,
+        0,
+        7,
+        1,
+        0
+      ],
+      "total": 15,
+      "award": "Bronze Medal",
+      "rank": 96
+    },
+    {
+      "country_name": "Thailand",
+      "country_code": "THA",
+      "given_name": "Pipitchaya",
+      "family_name": "Sridam",
+      "problem_scores": [
+        7,
+        7,
+        0,
+        1,
+        0
+      ],
+      "total": 15,
+      "award": "Honourable Mention",
+      "rank": 96
+    },
+    {
+      "country_name": "Kazakhstan",
+      "country_code": "KAZ",
+      "given_name": "Nurassyl",
+      "family_name": "Abdirazak",
+      "problem_scores": [
+        7,
+        0,
+        7,
+        0,
+        0
+      ],
+      "total": 14,
+      "award": "Honourable Mention",
+      "rank": 104
+    },
+    {
+      "country_name": "Tajikistan",
+      "country_code": "TJK",
+      "given_name": "Usmon",
+      "family_name": "Aliev",
+      "problem_scores": [
+        7,
+        0,
+        7,
+        0,
+        0
+      ],
+      "total": 14,
+      "award": "Bronze Medal",
+      "rank": 104
+    },
+    {
+      "country_name": "Kazakhstan",
+      "country_code": "KAZ",
+      "given_name": "Alikhan",
+      "family_name": "Alpysbekov",
+      "problem_scores": [
+        7,
+        0,
+        7,
+        0,
+        0
+      ],
+      "total": 14,
+      "award": "Honourable Mention",
+      "rank": 104
+    },
+    {
+      "country_name": "Colombia",
+      "country_code": "COL",
+      "given_name": "Esteban",
+      "family_name": "Aparicio",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        7,
+        0
+      ],
+      "total": 14,
+      "award": "Bronze Medal",
+      "rank": 104
+    },
+    {
+      "country_name": "Peru",
+      "country_code": "PER",
+      "given_name": "EDUARDO JOSUE",
+      "family_name": "BALBUENA VELASQUEZ",
+      "problem_scores": [
+        7,
+        0,
+        7,
+        0,
+        0
+      ],
+      "total": 14,
+      "award": "Honourable Mention",
+      "rank": 104
+    },
+    {
+      "country_name": "Syria",
+      "country_code": "SYR",
+      "given_name": "Ali",
+      "family_name": "Backour",
+      "problem_scores": [
+        7,
+        6,
+        0,
+        0,
+        1
+      ],
+      "total": 14,
+      "award": "Bronze Medal",
+      "rank": 104
+    },
+    {
+      "country_name": "Kazakhstan",
+      "country_code": "KAZ",
+      "given_name": "Kazybek",
+      "family_name": "Bektemir",
+      "problem_scores": [
+        7,
+        0,
+        7,
+        0,
+        0
+      ],
+      "total": 14,
+      "award": "Bronze Medal",
+      "rank": 104
+    },
+    {
+      "country_name": "Taiwan",
+      "country_code": "TWN",
+      "given_name": "HUNG-YU",
+      "family_name": "CHEN",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        7,
+        0
+      ],
+      "total": 14,
+      "award": "Honourable Mention",
+      "rank": 104
+    },
+    {
+      "country_name": "Taiwan",
+      "country_code": "TWN",
+      "given_name": "WEI-CHUNG",
+      "family_name": "CHEN",
+      "problem_scores": [
+        7,
+        7,
+        0,
+        0,
+        0
+      ],
+      "total": 14,
+      "award": "Honourable Mention",
+      "rank": 104
+    },
+    {
+      "country_name": "Philippines",
+      "country_code": "PHL",
+      "given_name": "Shawn Darren",
+      "family_name": "CHUA",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        7,
+        0
+      ],
+      "total": 14,
+      "award": "Bronze Medal",
+      "rank": 104
+    },
+    {
+      "country_name": "Australia",
+      "country_code": "AUS",
+      "given_name": "William",
+      "family_name": "Cheah",
+      "problem_scores": [
+        7,
+        7,
+        0,
+        0,
+        0
+      ],
+      "total": 14,
+      "award": "Bronze Medal",
+      "rank": 104
+    },
+    {
+      "country_name": "Philippines",
+      "country_code": "PHL",
+      "given_name": "Raphael Dylan",
+      "family_name": "DALIDA",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        7,
+        0
+      ],
+      "total": 14,
+      "award": "Bronze Medal",
+      "rank": 104
+    },
+    {
+      "country_name": "Philippines",
+      "country_code": "PHL",
+      "given_name": "Vincent",
+      "family_name": "DELA CRUZ",
+      "problem_scores": [
+        7,
+        7,
+        0,
+        0,
+        0
+      ],
+      "total": 14,
+      "award": "Bronze Medal",
+      "rank": 104
+    },
+    {
+      "country_name": "Kazakhstan",
+      "country_code": "KAZ",
+      "given_name": "Abylay",
+      "family_name": "Dalabay",
+      "problem_scores": [
+        7,
+        0,
+        7,
+        0,
+        0
+      ],
+      "total": 14,
+      "award": "Honourable Mention",
+      "rank": 104
+    },
+    {
+      "country_name": "Bangladesh",
+      "country_code": "BGD",
+      "given_name": "Nujhat Ahmed",
+      "family_name": "Disha",
+      "problem_scores": [
+        7,
+        0,
+        7,
+        0,
+        0
+      ],
+      "total": 14,
+      "award": "Bronze Medal",
+      "rank": 104
+    },
+    {
+      "country_name": "Kazakhstan",
+      "country_code": "KAZ",
+      "given_name": "Kozykorpesh",
+      "family_name": "Dyussenbayev",
+      "problem_scores": [
+        7,
+        0,
+        7,
+        0,
+        0
+      ],
+      "total": 14,
+      "award": "Bronze Medal",
+      "rank": 104
+    },
+    {
+      "country_name": "Russia",
+      "country_code": "RUS",
+      "given_name": "Artem",
+      "family_name": "Efimov",
+      "problem_scores": [
+        7,
+        0,
+        7,
+        0,
+        0
+      ],
+      "total": 14,
+      "award": "Bronze Medal",
+      "rank": 104
+    },
+    {
+      "country_name": "Russia",
+      "country_code": "RUS",
+      "given_name": "Aleksandr",
+      "family_name": "Eliseev",
+      "problem_scores": [
+        7,
+        0,
+        7,
+        0,
+        0
+      ],
+      "total": 14,
+      "award": "Bronze Medal",
+      "rank": 104
+    },
+    {
+      "country_name": "Peru",
+      "country_code": "PER",
+      "given_name": "ANGELO D'STEFFANO",
+      "family_name": "FARFAN ORE",
+      "problem_scores": [
+        7,
+        0,
+        7,
+        0,
+        0
+      ],
+      "total": 14,
+      "award": "Bronze Medal",
+      "rank": 104
+    },
+    {
+      "country_name": "Indonesia",
+      "country_code": "IDN",
+      "given_name": "Salim",
+      "family_name": "Farrel Dwireswara",
+      "problem_scores": [
+        4,
+        4,
+        6,
+        0,
+        0
+      ],
+      "total": 14,
+      "award": "Bronze Medal",
+      "rank": 104
+    },
+    {
+      "country_name": "Nicaragua",
+      "country_code": "NIC",
+      "given_name": "Richard Antonio",
+      "family_name": "González Rugama",
+      "problem_scores": [
+        7,
+        7,
+        0,
+        0,
+        0
+      ],
+      "total": 14,
+      "award": "Bronze Medal",
+      "rank": 104
+    },
+    {
+      "country_name": "Taiwan",
+      "country_code": "TWN",
+      "given_name": "CHUNG-CHUN",
+      "family_name": "HUANG",
+      "problem_scores": [
+        7,
+        5,
+        0,
+        2,
+        0
+      ],
+      "total": 14,
+      "award": "Honourable Mention",
+      "rank": 104
+    },
+    {
+      "country_name": "Thailand",
+      "country_code": "THA",
+      "given_name": "Siravit",
+      "family_name": "Hengsuvanich",
+      "problem_scores": [
+        7,
+        0,
+        7,
+        0,
+        0
+      ],
+      "total": 14,
+      "award": "Honourable Mention",
+      "rank": 104
+    },
+    {
+      "country_name": "Hong Kong",
+      "country_code": "HKG",
+      "given_name": "Tsz Oi",
+      "family_name": "Ip",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        7,
+        0
+      ],
+      "total": 14,
+      "award": "Bronze Medal",
+      "rank": 104
+    },
+    {
+      "country_name": "Syria",
+      "country_code": "SYR",
+      "given_name": "Al Hussein",
+      "family_name": "Khalil",
+      "problem_scores": [
+        7,
+        7,
+        0,
+        0,
+        0
+      ],
+      "total": 14,
+      "award": "Bronze Medal",
+      "rank": 104
+    },
+    {
+      "country_name": "Tajikistan",
+      "country_code": "TJK",
+      "given_name": "Sino",
+      "family_name": "Khayridinov",
+      "problem_scores": [
+        7,
+        0,
+        7,
+        0,
+        0
+      ],
+      "total": 14,
+      "award": "Bronze Medal",
+      "rank": 104
+    },
+    {
+      "country_name": "Canada",
+      "country_code": "CAN",
+      "given_name": "Antoine",
+      "family_name": "Labelle",
+      "problem_scores": [
+        6,
+        7,
+        0,
+        0,
+        1
+      ],
+      "total": 14,
+      "award": "Honourable Mention",
+      "rank": 104
+    },
+    {
+      "country_name": "Saudi Arabia",
+      "country_code": "SAU",
+      "given_name": "Alkhayat",
+      "family_name": "Marwan",
+      "problem_scores": [
+        7,
+        7,
+        0,
+        0,
+        0
+      ],
+      "total": 14,
+      "award": "Bronze Medal",
+      "rank": 104
+    },
+    {
+      "country_name": "Brazil",
+      "country_code": "BRA",
+      "given_name": "Gustavo",
+      "family_name": "Neves da Cruz",
+      "problem_scores": [
+        7,
+        7,
+        0,
+        0,
+        0
+      ],
+      "total": 14,
+      "award": "Bronze Medal",
+      "rank": 104
+    },
+    {
+      "country_name": "Kazakhstan",
+      "country_code": "KAZ",
+      "given_name": "Makhmut",
+      "family_name": "Omar",
+      "problem_scores": [
+        7,
+        0,
+        7,
+        0,
+        0
+      ],
+      "total": 14,
+      "award": "Bronze Medal",
+      "rank": 104
+    },
+    {
+      "country_name": "Singapore",
+      "country_code": "SGP",
+      "given_name": "Ee Shua, Etienne",
+      "family_name": "Ong",
+      "problem_scores": [
+        7,
+        0,
+        7,
+        0,
+        0
+      ],
+      "total": 14,
+      "award": "Bronze Medal",
+      "rank": 104
+    },
+    {
+      "country_name": "Tajikistan",
+      "country_code": "TJK",
+      "given_name": "Vazirdzhon",
+      "family_name": "Pirov",
+      "problem_scores": [
+        7,
+        0,
+        7,
+        0,
+        0
+      ],
+      "total": 14,
+      "award": "Bronze Medal",
+      "rank": 104
+    },
+    {
+      "country_name": "Brazil",
+      "country_code": "BRA",
+      "given_name": "Enzo",
+      "family_name": "Pontes Saraiva de Moraes",
+      "problem_scores": [
+        7,
+        0,
+        7,
+        0,
+        0
+      ],
+      "total": 14,
+      "award": "Honourable Mention",
+      "rank": 104
+    },
+    {
+      "country_name": "Brazil",
+      "country_code": "BRA",
+      "given_name": "Yvens Ian",
+      "family_name": "Prado Porto",
+      "problem_scores": [
+        7,
+        0,
+        7,
+        0,
+        0
+      ],
+      "total": 14,
+      "award": "Bronze Medal",
+      "rank": 104
+    },
+    {
+      "country_name": "Argentina",
+      "country_code": "ARG",
+      "given_name": "Matías Ezequiel",
+      "family_name": "RAIMUNDEZ",
+      "problem_scores": [
+        7,
+        7,
+        0,
+        0,
+        0
+      ],
+      "total": 14,
+      "award": "Bronze Medal",
+      "rank": 104
+    },
+    {
+      "country_name": "Tajikistan",
+      "country_code": "TJK",
+      "given_name": "Furuzonfar",
+      "family_name": "Rakhmonov",
+      "problem_scores": [
+        7,
+        0,
+        7,
+        0,
+        0
+      ],
+      "total": 14,
+      "award": "Bronze Medal",
+      "rank": 104
+    },
+    {
+      "country_name": "Mexico",
+      "country_code": "MEX",
+      "given_name": "José Alejandro",
+      "family_name": "Reyes González",
+      "problem_scores": [
+        7,
+        0,
+        7,
+        0,
+        0
+      ],
+      "total": 14,
+      "award": "Bronze Medal",
+      "rank": 104
+    },
+    {
+      "country_name": "Tajikistan",
+      "country_code": "TJK",
+      "given_name": "Jamshed",
+      "family_name": "Rustamov",
+      "problem_scores": [
+        7,
+        0,
+        7,
+        0,
+        0
+      ],
+      "total": 14,
+      "award": "Bronze Medal",
+      "rank": 104
+    },
+    {
+      "country_name": "Japan",
+      "country_code": "JPN",
+      "given_name": "Sugai",
+      "family_name": "Ryomei",
+      "problem_scores": [
+        7,
+        7,
+        0,
+        0,
+        0
+      ],
+      "total": 14,
+      "award": "Honourable Mention",
+      "rank": 104
+    },
+    {
+      "country_name": "Peru",
+      "country_code": "PER",
+      "given_name": "LUNA RODRIGUEZ",
+      "family_name": "SEBASTIAN HECTOR",
+      "problem_scores": [
+        7,
+        0,
+        7,
+        0,
+        0
+      ],
+      "total": 14,
+      "award": "Bronze Medal",
+      "rank": 104
+    },
+    {
+      "country_name": "Macedonia",
+      "country_code": "MKD",
+      "given_name": "Nikola",
+      "family_name": "Spirovski",
+      "problem_scores": [
+        7,
+        0,
+        7,
+        0,
+        0
+      ],
+      "total": 14,
+      "award": "Bronze Medal",
+      "rank": 104
+    },
+    {
+      "country_name": "Macedonia",
+      "country_code": "MKD",
+      "given_name": "Blazhe",
+      "family_name": "Sukleski",
+      "problem_scores": [
+        7,
+        0,
+        7,
+        0,
+        0
+      ],
+      "total": 14,
+      "award": "Bronze Medal",
+      "rank": 104
+    },
+    {
+      "country_name": "Mexico",
+      "country_code": "MEX",
+      "given_name": "Pablo Alhui",
+      "family_name": "Valeriano Quiroz",
+      "problem_scores": [
+        7,
+        0,
+        7,
+        0,
+        0
+      ],
+      "total": 14,
+      "award": "Bronze Medal",
+      "rank": 104
+    },
+    {
+      "country_name": "Canada",
+      "country_code": "CAN",
+      "given_name": "Andrew",
+      "family_name": "Wen",
+      "problem_scores": [
+        5,
+        2,
+        7,
+        0,
+        0
+      ],
+      "total": 14,
+      "award": "Honourable Mention",
+      "rank": 104
+    },
+    {
+      "country_name": "Japan",
+      "country_code": "JPN",
+      "given_name": "Hamaguchi",
+      "family_name": "Yuma",
+      "problem_scores": [
+        7,
+        0,
+        7,
+        0,
+        0
+      ],
+      "total": 14,
+      "award": "Honourable Mention",
+      "rank": 104
+    },
+    {
+      "country_name": "Kazakhstan",
+      "country_code": "KAZ",
+      "given_name": "Miron",
+      "family_name": "Yurkevich",
+      "problem_scores": [
+        7,
+        0,
+        7,
+        0,
+        0
+      ],
+      "total": 14,
+      "award": "Bronze Medal",
+      "rank": 104
+    },
+    {
+      "country_name": "Philippines",
+      "country_code": "PHL",
+      "given_name": "Sarji Elijah",
+      "family_name": "BONA",
+      "problem_scores": [
+        6,
+        7,
+        0,
+        0,
+        0
+      ],
+      "total": 13,
+      "award": "Bronze Medal",
+      "rank": 150
+    },
+    {
+      "country_name": "Australia",
+      "country_code": "AUS",
+      "given_name": "Xiaoyu",
+      "family_name": "Chen",
+      "problem_scores": [
+        7,
+        0,
+        6,
+        0,
+        0
+      ],
+      "total": 13,
+      "award": "Bronze Medal",
+      "rank": 150
+    },
+    {
+      "country_name": "Singapore",
+      "country_code": "SGP",
+      "given_name": "Eason",
+      "family_name": "Cheong",
+      "problem_scores": [
+        7,
+        0,
+        6,
+        0,
+        0
+      ],
+      "total": 13,
+      "award": "Bronze Medal",
+      "rank": 150
+    },
+    {
+      "country_name": "Russia",
+      "country_code": "RUS",
+      "given_name": "Dmitrij",
+      "family_name": "Cherepanov",
+      "problem_scores": [
+        7,
+        6,
+        0,
+        0,
+        0
+      ],
+      "total": 13,
+      "award": "Honourable Mention",
+      "rank": 150
+    },
+    {
+      "country_name": "Saudi Arabia",
+      "country_code": "SAU",
+      "given_name": "AlShaikhi",
+      "family_name": "Hamza",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        6,
+        0
+      ],
+      "total": 13,
+      "award": "Bronze Medal",
+      "rank": 150
+    },
+    {
+      "country_name": "Russia",
+      "country_code": "RUS",
+      "given_name": "Aleksandr",
+      "family_name": "Karpov",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        2,
+        4
+      ],
+      "total": 13,
+      "award": "Bronze Medal",
+      "rank": 150
+    },
+    {
+      "country_name": "Islamic Republic of Iran",
+      "country_code": "IRN",
+      "given_name": "Mohammad Reza",
+      "family_name": "Khosravian",
+      "problem_scores": [
+        7,
+        0,
+        6,
+        0,
+        0
+      ],
+      "total": 13,
+      "award": "Honourable Mention",
+      "rank": 150
+    },
+    {
+      "country_name": "Singapore",
+      "country_code": "SGP",
+      "given_name": "Zihan",
+      "family_name": "Liu",
+      "problem_scores": [
+        6,
+        0,
+        0,
+        7,
+        0
+      ],
+      "total": 13,
+      "award": "Bronze Medal",
+      "rank": 150
+    },
+    {
+      "country_name": "Brazil",
+      "country_code": "BRA",
+      "given_name": "Marcelo",
+      "family_name": "Machado Lage",
+      "problem_scores": [
+        7,
+        6,
+        0,
+        0,
+        0
+      ],
+      "total": 13,
+      "award": "Honourable Mention",
+      "rank": 150
+    },
+    {
+      "country_name": "Peru",
+      "country_code": "PER",
+      "given_name": "JUAN MATHIUS",
+      "family_name": "TASAYCO PACHAS",
+      "problem_scores": [
+        7,
+        0,
+        6,
+        0,
+        0
+      ],
+      "total": 13,
+      "award": "Honourable Mention",
+      "rank": 150
+    },
+    {
+      "country_name": "Malaysia",
+      "country_code": "MYS",
+      "given_name": "IAN GEORGE",
+      "family_name": "TAYE CHENG EAN",
+      "problem_scores": [
+        7,
+        0,
+        6,
+        0,
+        0
+      ],
+      "total": 13,
+      "award": "Bronze Medal",
+      "rank": 150
+    },
+    {
+      "country_name": "Thailand",
+      "country_code": "THA",
+      "given_name": "Sitta",
+      "family_name": "Tantikul",
+      "problem_scores": [
+        6,
+        0,
+        7,
+        0,
+        0
+      ],
+      "total": 13,
+      "award": "Honourable Mention",
+      "rank": 150
+    },
+    {
+      "country_name": "Singapore",
+      "country_code": "SGP",
+      "given_name": "Wern Jieh, Ryan",
+      "family_name": "Wong",
+      "problem_scores": [
+        7,
+        0,
+        6,
+        0,
+        0
+      ],
+      "total": 13,
+      "award": "Bronze Medal",
+      "rank": 150
+    },
+    {
+      "country_name": "Canada",
+      "country_code": "CAN",
+      "given_name": "James",
+      "family_name": "Yang",
+      "problem_scores": [
+        7,
+        6,
+        0,
+        0,
+        0
+      ],
+      "total": 13,
+      "award": "Honourable Mention",
+      "rank": 150
+    },
+    {
+      "country_name": "Hong Kong",
+      "country_code": "HKG",
+      "given_name": "Chun Hei",
+      "family_name": "Yiu",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        6
+      ],
+      "total": 13,
+      "award": "Bronze Medal",
+      "rank": 150
+    },
+    {
+      "country_name": "Singapore",
+      "country_code": "SGP",
+      "given_name": "Keyn-Hantz, Edden",
+      "family_name": "Chew",
+      "problem_scores": [
+        7,
+        5,
+        0,
+        0,
+        0
+      ],
+      "total": 12,
+      "award": "Honourable Mention",
+      "rank": 165
+    },
+    {
+      "country_name": "Hong Kong",
+      "country_code": "HKG",
+      "given_name": "Hon Tsun Hanks",
+      "family_name": "Chong",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        5,
+        0
+      ],
+      "total": 12,
+      "award": "Honourable Mention",
+      "rank": 165
+    },
+    {
+      "country_name": "Singapore",
+      "country_code": "SGP",
+      "given_name": "Jin Tao",
+      "family_name": "Lim",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        5,
+        0
+      ],
+      "total": 12,
+      "award": "Honourable Mention",
+      "rank": 165
+    },
+    {
+      "country_name": "Malaysia",
+      "country_code": "MYS",
+      "given_name": "TAN",
+      "family_name": "MING HENG",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        5,
+        0
+      ],
+      "total": 12,
+      "award": "Bronze Medal",
+      "rank": 165
+    },
+    {
+      "country_name": "Russia",
+      "country_code": "RUS",
+      "given_name": "Vladimir",
+      "family_name": "Ovsyannikov",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        4,
+        1
+      ],
+      "total": 12,
+      "award": "Honourable Mention",
+      "rank": 165
+    },
+    {
+      "country_name": "Singapore",
+      "country_code": "SGP",
+      "given_name": "Yan Xi",
+      "family_name": "Peh",
+      "problem_scores": [
+        5,
+        0,
+        7,
+        0,
+        0
+      ],
+      "total": 12,
+      "award": "Honourable Mention",
+      "rank": 165
+    },
+    {
+      "country_name": "Argentina",
+      "country_code": "ARG",
+      "given_name": "Lorenzo",
+      "family_name": "RUIZ DÍAZ",
+      "problem_scores": [
+        7,
+        5,
+        0,
+        0,
+        0
+      ],
+      "total": 12,
+      "award": "Bronze Medal",
+      "rank": 165
+    },
+    {
+      "country_name": "Philippines",
+      "country_code": "PHL",
+      "given_name": "Bryce Ainsley",
+      "family_name": "SANCHEZ",
+      "problem_scores": [
+        7,
+        4,
+        0,
+        1,
+        0
+      ],
+      "total": 12,
+      "award": "Bronze Medal",
+      "rank": 165
+    },
+    {
+      "country_name": "Bangladesh",
+      "country_code": "BGD",
+      "given_name": "Adnan",
+      "family_name": "Sadik",
+      "problem_scores": [
+        7,
+        5,
+        0,
+        0,
+        0
+      ],
+      "total": 12,
+      "award": "Bronze Medal",
+      "rank": 165
+    },
+    {
+      "country_name": "Mexico",
+      "country_code": "MEX",
+      "given_name": "Diego Alfonso",
+      "family_name": "Villarreal Grimaldo",
+      "problem_scores": [
+        7,
+        5,
+        0,
+        0,
+        0
+      ],
+      "total": 12,
+      "award": "Honourable Mention",
+      "rank": 165
+    },
+    {
+      "country_name": "Brazil",
+      "country_code": "BRA",
+      "given_name": "Miguel",
+      "family_name": "de Carvalho Oliveira",
+      "problem_scores": [
+        7,
+        3,
+        0,
+        2,
+        0
+      ],
+      "total": 12,
+      "award": "Honourable Mention",
+      "rank": 165
+    },
+    {
+      "country_name": "Philippines",
+      "country_code": "PHL",
+      "given_name": "Jose Lorenzo",
+      "family_name": "ABAD",
+      "problem_scores": [
+        5,
+        0,
+        6,
+        0,
+        0
+      ],
+      "total": 11,
+      "award": "Bronze Medal",
+      "rank": 176
+    },
+    {
+      "country_name": "Indonesia",
+      "country_code": "IDN",
+      "given_name": "Lianto",
+      "family_name": "Evelyn",
+      "problem_scores": [
+        6,
+        5,
+        0,
+        0,
+        0
+      ],
+      "total": 11,
+      "award": "Bronze Medal",
+      "rank": 176
+    },
+    {
+      "country_name": "Peru",
+      "country_code": "PER",
+      "given_name": "KRISTHIANO JOEL",
+      "family_name": "MUNGI MOZO",
+      "problem_scores": [
+        5,
+        0,
+        6,
+        0,
+        0
+      ],
+      "total": 11,
+      "award": null,
+      "rank": 176
+    },
+    {
+      "country_name": "Panama",
+      "country_code": "PAN",
+      "given_name": "Luis",
+      "family_name": "Modes",
+      "problem_scores": [
+        3,
+        5,
+        3,
+        0,
+        0
+      ],
+      "total": 11,
+      "award": "Bronze Medal",
+      "rank": 176
+    },
+    {
+      "country_name": "Saudi Arabia",
+      "country_code": "SAU",
+      "given_name": "Aldubaisi",
+      "family_name": "Mohammad",
+      "problem_scores": [
+        7,
+        4,
+        0,
+        0,
+        0
+      ],
+      "total": 11,
+      "award": "Bronze Medal",
+      "rank": 176
+    },
+    {
+      "country_name": "Mexico",
+      "country_code": "MEX",
+      "given_name": "Eric",
+      "family_name": "Ransom Treviño",
+      "problem_scores": [
+        5,
+        0,
+        6,
+        0,
+        0
+      ],
+      "total": 11,
+      "award": null,
+      "rank": 176
+    },
+    {
+      "country_name": "Morocco",
+      "country_code": "MAR",
+      "given_name": "Aguerjout",
+      "family_name": "Aya",
+      "problem_scores": [
+        6,
+        0,
+        4,
+        0,
+        0
+      ],
+      "total": 10,
+      "award": "Bronze Medal",
+      "rank": 182
+    },
+    {
+      "country_name": "Australia",
+      "country_code": "AUS",
+      "given_name": "Jason",
+      "family_name": "Chi",
+      "problem_scores": [
+        5,
+        5,
+        0,
+        0,
+        0
+      ],
+      "total": 10,
+      "award": "Bronze Medal",
+      "rank": 182
+    },
+    {
+      "country_name": "Malaysia",
+      "country_code": "MYS",
+      "given_name": "VEE",
+      "family_name": "HUA ZHI",
+      "problem_scores": [
+        7,
+        3,
+        0,
+        0,
+        0
+      ],
+      "total": 10,
+      "award": "Bronze Medal",
+      "rank": 182
+    },
+    {
+      "country_name": "Mexico",
+      "country_code": "MEX",
+      "given_name": "Ana",
+      "family_name": "Illanes Martínez de la Vega",
+      "problem_scores": [
+        7,
+        0,
+        2,
+        0,
+        1
+      ],
+      "total": 10,
+      "award": "Honourable Mention",
+      "rank": 182
+    },
+    {
+      "country_name": "Uruguay",
+      "country_code": "URY",
+      "given_name": "Hernán",
+      "family_name": "Puschiasis",
+      "problem_scores": [
+        7,
+        0,
+        3,
+        0,
+        0
+      ],
+      "total": 10,
+      "award": "Bronze Medal",
+      "rank": 182
+    },
+    {
+      "country_name": "Colombia",
+      "country_code": "COL",
+      "given_name": "Juan Esteban",
+      "family_name": "Reyes",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        2,
+        1
+      ],
+      "total": 10,
+      "award": "Bronze Medal",
+      "rank": 182
+    },
+    {
+      "country_name": "Hong Kong",
+      "country_code": "HKG",
+      "given_name": "Nick Hang",
+      "family_name": "Cheng",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        2,
+        0
+      ],
+      "total": 9,
+      "award": "Honourable Mention",
+      "rank": 188
+    },
+    {
+      "country_name": "New Zealand",
+      "country_code": "NZL",
+      "given_name": "Ning",
+      "family_name": "Chin",
+      "problem_scores": [
+        2,
+        0,
+        7,
+        0,
+        0
+      ],
+      "total": 9,
+      "award": "Honourable Mention",
+      "rank": 188
+    },
+    {
+      "country_name": "El Salvador",
+      "country_code": "SLV",
+      "given_name": "Fernado Daniel",
+      "family_name": "Domínguez Castaneda",
+      "problem_scores": [
+        7,
+        2,
+        0,
+        0,
+        0
+      ],
+      "total": 9,
+      "award": "Honourable Mention",
+      "rank": 188
+    },
+    {
+      "country_name": "Kyrgyzstan",
+      "country_code": "KGZ",
+      "given_name": "Erbol",
+      "family_name": "Esengulov",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        2
+      ],
+      "total": 9,
+      "award": "Honourable Mention",
+      "rank": 188
+    },
+    {
+      "country_name": "Bangladesh",
+      "country_code": "BGD",
+      "given_name": "Dewan Saadman",
+      "family_name": "Hasan",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        2,
+        0
+      ],
+      "total": 9,
+      "award": "Honourable Mention",
+      "rank": 188
+    },
+    {
+      "country_name": "Saudi Arabia",
+      "country_code": "SAU",
+      "given_name": "Alghamdi",
+      "family_name": "Muath",
+      "problem_scores": [
+        7,
+        2,
+        0,
+        0,
+        0
+      ],
+      "total": 9,
+      "award": "Honourable Mention",
+      "rank": 188
+    },
+    {
+      "country_name": "Nicaragua",
+      "country_code": "NIC",
+      "given_name": "Marcos Ulises",
+      "family_name": "Sánchez",
+      "problem_scores": [
+        7,
+        2,
+        0,
+        0,
+        0
+      ],
+      "total": 9,
+      "award": "Honourable Mention",
+      "rank": 188
+    },
+    {
+      "country_name": "Indonesia",
+      "country_code": "IDN",
+      "given_name": "Bendatu",
+      "family_name": "Vanya Priscillia",
+      "problem_scores": [
+        7,
+        2,
+        0,
+        0,
+        0
+      ],
+      "total": 9,
+      "award": "Honourable Mention",
+      "rank": 188
+    },
+    {
+      "country_name": "Hong Kong",
+      "country_code": "HKG",
+      "given_name": "Lingrui",
+      "family_name": "Xie",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        2,
+        0
+      ],
+      "total": 9,
+      "award": "Honourable Mention",
+      "rank": 188
+    },
+    {
+      "country_name": "Australia",
+      "country_code": "AUS",
+      "given_name": "Zirui (Harry)",
+      "family_name": "Zhang",
+      "problem_scores": [
+        7,
+        2,
+        0,
+        0,
+        0
+      ],
+      "total": 9,
+      "award": "Honourable Mention",
+      "rank": 188
+    },
+    {
+      "country_name": "Costa Rica",
+      "country_code": "CRI",
+      "given_name": "José Javier",
+      "family_name": "Álvarez Pacheco",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        2,
+        0
+      ],
+      "total": 9,
+      "award": "Honourable Mention",
+      "rank": 188
+    },
+    {
+      "country_name": "Saudi Arabia",
+      "country_code": "SAU",
+      "given_name": "Nassief",
+      "family_name": "Abdulrahman",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        1
+      ],
+      "total": 8,
+      "award": "Honourable Mention",
+      "rank": 199
+    },
+    {
+      "country_name": "Indonesia",
+      "country_code": "IDN",
+      "given_name": "Al Ghiffary",
+      "family_name": "Ahmad Faqih",
+      "problem_scores": [
+        6,
+        0,
+        0,
+        2,
+        0
+      ],
+      "total": 8,
+      "award": null,
+      "rank": 199
+    },
+    {
+      "country_name": "Costa Rica",
+      "country_code": "CRI",
+      "given_name": "Alejandro",
+      "family_name": "Campos Rojas",
+      "problem_scores": [
+        7,
+        0,
+        1,
+        0,
+        0
+      ],
+      "total": 8,
+      "award": "Honourable Mention",
+      "rank": 199
+    },
+    {
+      "country_name": "Indonesia",
+      "country_code": "IDN",
+      "given_name": "Benedict",
+      "family_name": "Elbert",
+      "problem_scores": [
+        1,
+        7,
+        0,
+        0,
+        0
+      ],
+      "total": 8,
+      "award": "Honourable Mention",
+      "rank": 199
+    },
+    {
+      "country_name": "Saudi Arabia",
+      "country_code": "SAU",
+      "given_name": "Al Aithan",
+      "family_name": "Hadi",
+      "problem_scores": [
+        7,
+        1,
+        0,
+        0,
+        0
+      ],
+      "total": 8,
+      "award": "Honourable Mention",
+      "rank": 199
+    },
+    {
+      "country_name": "New Zealand",
+      "country_code": "NZL",
+      "given_name": "Harry",
+      "family_name": "Harrison",
+      "problem_scores": [
+        3,
+        5,
+        0,
+        0,
+        0
+      ],
+      "total": 8,
+      "award": null,
+      "rank": 199
+    },
+    {
+      "country_name": "Malaysia",
+      "country_code": "MYS",
+      "given_name": "WOON",
+      "family_name": "JIAN XIANG",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        1
+      ],
+      "total": 8,
+      "award": "Honourable Mention",
+      "rank": 199
+    },
+    {
+      "country_name": "Saudi Arabia",
+      "country_code": "SAU",
+      "given_name": "AlJabri",
+      "family_name": "Khalid",
+      "problem_scores": [
+        7,
+        1,
+        0,
+        0,
+        0
+      ],
+      "total": 8,
+      "award": "Honourable Mention",
+      "rank": 199
+    },
+    {
+      "country_name": "Argentina",
+      "country_code": "ARG",
+      "given_name": "Francesco",
+      "family_name": "MOZZATTI",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        1
+      ],
+      "total": 8,
+      "award": "Honourable Mention",
+      "rank": 199
+    },
+    {
+      "country_name": "Turkmenistan",
+      "country_code": "TKM",
+      "given_name": "Dovlet",
+      "family_name": "Nurmyradov",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        1
+      ],
+      "total": 8,
+      "award": "Honourable Mention",
+      "rank": 199
+    },
+    {
+      "country_name": "Bolivia",
+      "country_code": "BOL",
+      "given_name": "Carlos Andrés",
+      "family_name": "Pozo Vargas",
+      "problem_scores": [
+        1,
+        0,
+        7,
+        0,
+        0
+      ],
+      "total": 8,
+      "award": "Honourable Mention",
+      "rank": 199
+    },
+    {
+      "country_name": "Philippines",
+      "country_code": "PHL",
+      "given_name": "Steven",
+      "family_name": "REYES",
+      "problem_scores": [
+        7,
+        1,
+        0,
+        0,
+        0
+      ],
+      "total": 8,
+      "award": "Honourable Mention",
+      "rank": 199
+    },
+    {
+      "country_name": "Russia",
+      "country_code": "RUS",
+      "given_name": "Artemij",
+      "family_name": "Rubcov",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        1
+      ],
+      "total": 8,
+      "award": "Honourable Mention",
+      "rank": 199
+    },
+    {
+      "country_name": "Philippines",
+      "country_code": "PHL",
+      "given_name": "Stephen James",
+      "family_name": "TY",
+      "problem_scores": [
+        7,
+        0,
+        1,
+        0,
+        0
+      ],
+      "total": 8,
+      "award": "Honourable Mention",
+      "rank": 199
+    },
+    {
+      "country_name": "Turkmenistan",
+      "country_code": "TKM",
+      "given_name": "Emir",
+      "family_name": "Vellekov",
+      "problem_scores": [
+        1,
+        0,
+        7,
+        0,
+        0
+      ],
+      "total": 8,
+      "award": "Honourable Mention",
+      "rank": 199
+    },
+    {
+      "country_name": "Philippines",
+      "country_code": "PHL",
+      "given_name": "Filbert Ephraim",
+      "family_name": "WU",
+      "problem_scores": [
+        7,
+        1,
+        0,
+        0,
+        0
+      ],
+      "total": 8,
+      "award": "Honourable Mention",
+      "rank": 199
+    },
+    {
+      "country_name": "Australia",
+      "country_code": "AUS",
+      "given_name": "Haibing",
+      "family_name": "Wang",
+      "problem_scores": [
+        7,
+        1,
+        0,
+        0,
+        0
+      ],
+      "total": 8,
+      "award": "Honourable Mention",
+      "rank": 199
+    },
+    {
+      "country_name": "Australia",
+      "country_code": "AUS",
+      "given_name": "Yuzheng (Tony)",
+      "family_name": "Wu",
+      "problem_scores": [
+        1,
+        7,
+        0,
+        0,
+        0
+      ],
+      "total": 8,
+      "award": "Honourable Mention",
+      "rank": 199
+    },
+    {
+      "country_name": "Australia",
+      "country_code": "AUS",
+      "given_name": "Cloris",
+      "family_name": "Xu",
+      "problem_scores": [
+        7,
+        0,
+        1,
+        0,
+        0
+      ],
+      "total": 8,
+      "award": "Honourable Mention",
+      "rank": 199
+    },
+    {
+      "country_name": "Australia",
+      "country_code": "AUS",
+      "given_name": "Chenxiao (Kevin)",
+      "family_name": "Zhou",
+      "problem_scores": [
+        7,
+        1,
+        0,
+        0,
+        0
+      ],
+      "total": 8,
+      "award": "Honourable Mention",
+      "rank": 199
+    },
+    {
+      "country_name": "Bangladesh",
+      "country_code": "BGD",
+      "given_name": "Fahim Faiaz",
+      "family_name": "Adib",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "Panama",
+      "country_code": "PAN",
+      "given_name": "Alejandro",
+      "family_name": "Aguilar",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "Syria",
+      "country_code": "SYR",
+      "given_name": "M. Fouad",
+      "family_name": "AlMouine",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "Bangladesh",
+      "country_code": "BGD",
+      "given_name": "Md. Fuad Al",
+      "family_name": "Alam",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "Saudi Arabia",
+      "country_code": "SAU",
+      "given_name": "Alramadhan",
+      "family_name": "Ali",
+      "problem_scores": [
+        6,
+        0,
+        0,
+        0,
+        1
+      ],
+      "total": 7,
+      "award": null,
+      "rank": 219
+    },
+    {
+      "country_name": "Indonesia",
+      "country_code": "IDN",
+      "given_name": "Janong",
+      "family_name": "Andrew Daniel",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "Kyrgyzstan",
+      "country_code": "KGZ",
+      "given_name": "Erdan",
+      "family_name": "Apiev",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "Bolivia",
+      "country_code": "BOL",
+      "given_name": "Jaime Esteban",
+      "family_name": "Araujo Saenz",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "Kyrgyzstan",
+      "country_code": "KGZ",
+      "given_name": "Tilek",
+      "family_name": "Askerbekov",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "Turkmenistan",
+      "country_code": "TKM",
+      "given_name": "Hajymuhammet",
+      "family_name": "Atayev",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "Argentina",
+      "country_code": "ARG",
+      "given_name": "Franco",
+      "family_name": "BOTTAZZI",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "New Zealand",
+      "country_code": "NZL",
+      "given_name": "Hamish",
+      "family_name": "Baguley",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "Kyrgyzstan",
+      "country_code": "KGZ",
+      "given_name": "Myrzabek",
+      "family_name": "Belekov",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "Argentina",
+      "country_code": "ARG",
+      "given_name": "Francisco",
+      "family_name": "CIRELLI",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "El Salvador",
+      "country_code": "SLV",
+      "given_name": "José Manuel",
+      "family_name": "Cabrera Guardado",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "El Salvador",
+      "country_code": "SLV",
+      "given_name": "José Miguel",
+      "family_name": "Carranza Escobar",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "Bangladesh",
+      "country_code": "BGD",
+      "given_name": "Muttakin Ahmed",
+      "family_name": "Chowdhury",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "Tajikistan",
+      "country_code": "TJK",
+      "given_name": "Raufdzhon",
+      "family_name": "Dadabaev",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "Macedonia",
+      "country_code": "MKD",
+      "given_name": "Damjan",
+      "family_name": "Davkov",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "Costa Rica",
+      "country_code": "CRI",
+      "given_name": "Ernesto Mariano",
+      "family_name": "Delgado Páez",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "New Zealand",
+      "country_code": "NZL",
+      "given_name": "Tobias",
+      "family_name": "Devereux",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "El Salvador",
+      "country_code": "SLV",
+      "given_name": "César Esaú",
+      "family_name": "Flores Martínez",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "Indonesia",
+      "country_code": "IDN",
+      "given_name": "Mariangel",
+      "family_name": "Gabriela Erin",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "Turkmenistan",
+      "country_code": "TKM",
+      "given_name": "Aydyn",
+      "family_name": "Garlyyev",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "Turkmenistan",
+      "country_code": "TKM",
+      "given_name": "Didar",
+      "family_name": "Gayypov",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "Turkmenistan",
+      "country_code": "TKM",
+      "given_name": "Muhammetmyrat",
+      "family_name": "Gochmyradov",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "Nicaragua",
+      "country_code": "NIC",
+      "given_name": "Néstor Daniel",
+      "family_name": "González Trujillo",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "Sri Lanka",
+      "country_code": "LKA",
+      "given_name": "Pulitha Thiyasara",
+      "family_name": "Gunawardana",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "Turkmenistan",
+      "country_code": "TKM",
+      "given_name": "Dovletgeldi",
+      "family_name": "Isayev",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "Malaysia",
+      "country_code": "MYS",
+      "given_name": "TEE",
+      "family_name": "JIN SENG",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "Turkmenistan",
+      "country_code": "TKM",
+      "given_name": "Akgurban",
+      "family_name": "Jumayev",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "Argentina",
+      "country_code": "ARG",
+      "given_name": "Felipe Bautista",
+      "family_name": "KLIR",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "Tajikistan",
+      "country_code": "TJK",
+      "given_name": "Abdurauf",
+      "family_name": "Khatamov",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "Macedonia",
+      "country_code": "MKD",
+      "given_name": "Stefanija",
+      "family_name": "Kuzmanovska",
+      "problem_scores": [
+        0,
+        0,
+        7,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "Malaysia",
+      "country_code": "MYS",
+      "given_name": "BRYAN",
+      "family_name": "LEE SHI YANG",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "New Zealand",
+      "country_code": "NZL",
+      "given_name": "Eric",
+      "family_name": "Lee",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "Costa Rica",
+      "country_code": "CRI",
+      "given_name": "Nicole",
+      "family_name": "Lipschitz Kesselman",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "Costa Rica",
+      "country_code": "CRI",
+      "given_name": "Leonardo",
+      "family_name": "Loría Vinueza",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "New Zealand",
+      "country_code": "NZL",
+      "given_name": "Ethan",
+      "family_name": "Lu",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "Saudi Arabia",
+      "country_code": "SAU",
+      "given_name": "Albaik",
+      "family_name": "Mahdi",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "Bolivia",
+      "country_code": "BOL",
+      "given_name": "Marvin Mario",
+      "family_name": "Martinez Nuñez",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "New Zealand",
+      "country_code": "NZL",
+      "given_name": "Brena",
+      "family_name": "Merz",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "Morocco",
+      "country_code": "MAR",
+      "given_name": "Enoua",
+      "family_name": "Mouad",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "Tajikistan",
+      "country_code": "TJK",
+      "given_name": "Emomalijon",
+      "family_name": "Murodzoda",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "Argentina",
+      "country_code": "ARG",
+      "given_name": "Ignacio Javier",
+      "family_name": "NAGUIL",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "Bangladesh",
+      "country_code": "BGD",
+      "given_name": "Muhaiminul Islam",
+      "family_name": "Ninad",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "Colombia",
+      "country_code": "COL",
+      "given_name": "Nicolás",
+      "family_name": "Palencia",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "El Salvador",
+      "country_code": "SLV",
+      "given_name": "Jaime Sebastián",
+      "family_name": "Punyed González",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "Saudi Arabia",
+      "country_code": "SAU",
+      "given_name": "Qanash",
+      "family_name": "Rafaa",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "Nicaragua",
+      "country_code": "NIC",
+      "given_name": "Isaac Dahir",
+      "family_name": "Rodríguez Gutiérrez",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "Argentina",
+      "country_code": "ARG",
+      "given_name": "Lucas",
+      "family_name": "SANDLERIS",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "Indonesia",
+      "country_code": "IDN",
+      "given_name": "Waluyo",
+      "family_name": "Sandy Kristian",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "Colombia",
+      "country_code": "COL",
+      "given_name": "Lorenzo",
+      "family_name": "Sarria",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "Costa Rica",
+      "country_code": "CRI",
+      "given_name": "Carlos Felipe",
+      "family_name": "Shum Apuy",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "Nicaragua",
+      "country_code": "NIC",
+      "given_name": "Carlos Alberto",
+      "family_name": "Solórzano García",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "Turkmenistan",
+      "country_code": "TKM",
+      "given_name": "Nagym",
+      "family_name": "Tanrygulyyev",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "Tajikistan",
+      "country_code": "TJK",
+      "given_name": "Timur",
+      "family_name": "Usmonov",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "Colombia",
+      "country_code": "COL",
+      "given_name": "Juan Felipe",
+      "family_name": "Vargas",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "Sri Lanka",
+      "country_code": "LKA",
+      "given_name": "Thidas Bandara",
+      "family_name": "Wanasinghe",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "Malaysia",
+      "country_code": "MYS",
+      "given_name": "ANG",
+      "family_name": "XING YI",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "New Zealand",
+      "country_code": "NZL",
+      "given_name": "James",
+      "family_name": "Xu",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "Morocco",
+      "country_code": "MAR",
+      "given_name": "Bouhtouch",
+      "family_name": "Youssef",
+      "problem_scores": [
+        6,
+        1,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": null,
+      "rank": 219
+    },
+    {
+      "country_name": "Bangladesh",
+      "country_code": "BGD",
+      "given_name": "Thamim Nur",
+      "family_name": "Zahin",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "Turkmenistan",
+      "country_code": "TKM",
+      "given_name": "Jennet",
+      "family_name": "Zamanova",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "award": "Honourable Mention",
+      "rank": 219
+    },
+    {
+      "country_name": "New Zealand",
+      "country_code": "NZL",
+      "given_name": "Brian",
+      "family_name": "Zhao",
+      "problem_scores": [
+        5,
+        0,
+        0,
+        2,
+        0
+      ],
+      "total": 7,
+      "award": null,
+      "rank": 219
+    },
+    {
+      "country_name": "Morocco",
+      "country_code": "MAR",
+      "given_name": "Al Kharraz",
+      "family_name": "Adam",
+      "problem_scores": [
+        6,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 6,
+      "award": null,
+      "rank": 284
+    },
+    {
+      "country_name": "Morocco",
+      "country_code": "MAR",
+      "given_name": "Motii",
+      "family_name": "Ayman",
+      "problem_scores": [
+        6,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 6,
+      "award": null,
+      "rank": 284
+    },
+    {
+      "country_name": "Bangladesh",
+      "country_code": "BGD",
+      "given_name": "Tahmid Hameem",
+      "family_name": "Chowdhury",
+      "problem_scores": [
+        6,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 6,
+      "award": null,
+      "rank": 284
+    },
+    {
+      "country_name": "New Zealand",
+      "country_code": "NZL",
+      "given_name": "Phillip",
+      "family_name": "Han",
+      "problem_scores": [
+        6,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 6,
+      "award": null,
+      "rank": 284
+    },
+    {
+      "country_name": "Morocco",
+      "country_code": "MAR",
+      "given_name": "Guennoun",
+      "family_name": "Ismail",
+      "problem_scores": [
+        5,
+        1,
+        0,
+        0,
+        0
+      ],
+      "total": 6,
+      "award": null,
+      "rank": 284
+    },
+    {
+      "country_name": "Morocco",
+      "country_code": "MAR",
+      "given_name": "Kaddouri",
+      "family_name": "Abdelkayoum",
+      "problem_scores": [
+        5,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 5,
+      "award": null,
+      "rank": 289
+    },
+    {
+      "country_name": "Syria",
+      "country_code": "SYR",
+      "given_name": "Hussein",
+      "family_name": "Bousbet",
+      "problem_scores": [
+        5,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 5,
+      "award": null,
+      "rank": 289
+    },
+    {
+      "country_name": "Morocco",
+      "country_code": "MAR",
+      "given_name": "Benabbou",
+      "family_name": "Hiba",
+      "problem_scores": [
+        4,
+        0,
+        0,
+        0,
+        1
+      ],
+      "total": 5,
+      "award": null,
+      "rank": 289
+    },
+    {
+      "country_name": "Syria",
+      "country_code": "SYR",
+      "given_name": "Khalid",
+      "family_name": "Rajjoub",
+      "problem_scores": [
+        5,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 5,
+      "award": null,
+      "rank": 289
+    },
+    {
+      "country_name": "Costa Rica",
+      "country_code": "CRI",
+      "given_name": "Maricruz",
+      "family_name": "Vásquez Sandí",
+      "problem_scores": [
+        5,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 5,
+      "award": null,
+      "rank": 289
+    },
+    {
+      "country_name": "Morocco",
+      "country_code": "MAR",
+      "given_name": "Hatim",
+      "family_name": "Adam",
+      "problem_scores": [
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 4,
+      "award": null,
+      "rank": 294
+    },
+    {
+      "country_name": "Syria",
+      "country_code": "SYR",
+      "given_name": "Alaa Aldeen",
+      "family_name": "Ahmad",
+      "problem_scores": [
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 4,
+      "award": null,
+      "rank": 294
+    },
+    {
+      "country_name": "Nicaragua",
+      "country_code": "NIC",
+      "given_name": "Dayton Josue",
+      "family_name": "Baldizón Molina",
+      "problem_scores": [
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 4,
+      "award": null,
+      "rank": 294
+    },
+    {
+      "country_name": "Colombia",
+      "country_code": "COL",
+      "given_name": "Alejandro",
+      "family_name": "Escorcia",
+      "problem_scores": [
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 4,
+      "award": null,
+      "rank": 294
+    },
+    {
+      "country_name": "Morocco",
+      "country_code": "MAR",
+      "given_name": "Mohieddine",
+      "family_name": "Farid",
+      "problem_scores": [
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 4,
+      "award": null,
+      "rank": 294
+    },
+    {
+      "country_name": "Syria",
+      "country_code": "SYR",
+      "given_name": "Mouhammad Ali",
+      "family_name": "Hourieh",
+      "problem_scores": [
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 4,
+      "award": null,
+      "rank": 294
+    },
+    {
+      "country_name": "Macedonia",
+      "country_code": "MKD",
+      "given_name": "David",
+      "family_name": "Stavrov",
+      "problem_scores": [
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 4,
+      "award": null,
+      "rank": 294
+    },
+    {
+      "country_name": "Colombia",
+      "country_code": "COL",
+      "given_name": "Pablo",
+      "family_name": "Torres",
+      "problem_scores": [
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 4,
+      "award": null,
+      "rank": 294
+    },
+    {
+      "country_name": "Costa Rica",
+      "country_code": "CRI",
+      "given_name": "Kristel Fiorella",
+      "family_name": "Acuña García",
+      "problem_scores": [
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 3,
+      "award": null,
+      "rank": 302
+    },
+    {
+      "country_name": "Ecuador",
+      "country_code": "ECU",
+      "given_name": "Jahir Manuel",
+      "family_name": "Cajas Toapanta",
+      "problem_scores": [
+        2,
+        0,
+        1,
+        0,
+        0
+      ],
+      "total": 3,
+      "award": null,
+      "rank": 302
+    },
+    {
+      "country_name": "Panama",
+      "country_code": "PAN",
+      "given_name": "Adrian",
+      "family_name": "Frauca",
+      "problem_scores": [
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 3,
+      "award": null,
+      "rank": 302
+    },
+    {
+      "country_name": "Colombia",
+      "country_code": "COL",
+      "given_name": "Mateo",
+      "family_name": "Lizcano",
+      "problem_scores": [
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 3,
+      "award": null,
+      "rank": 302
+    },
+    {
+      "country_name": "Panama",
+      "country_code": "PAN",
+      "given_name": "Temistocles",
+      "family_name": "Zeballos",
+      "problem_scores": [
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 3,
+      "award": null,
+      "rank": 302
+    },
+    {
+      "country_name": "Nicaragua",
+      "country_code": "NIC",
+      "given_name": "Adrian Alexander",
+      "family_name": "Calero Cordero",
+      "problem_scores": [
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 2,
+      "award": null,
+      "rank": 307
+    },
+    {
+      "country_name": "Panama",
+      "country_code": "PAN",
+      "given_name": "Leonardo",
+      "family_name": "Marciaga",
+      "problem_scores": [
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 2,
+      "award": null,
+      "rank": 307
+    },
+    {
+      "country_name": "Sri Lanka",
+      "country_code": "LKA",
+      "given_name": "Luchitha Disal",
+      "family_name": "Pathirana",
+      "problem_scores": [
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 2,
+      "award": null,
+      "rank": 307
+    },
+    {
+      "country_name": "Macedonia",
+      "country_code": "MKD",
+      "given_name": "Aleksij",
+      "family_name": "Tasikj",
+      "problem_scores": [
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 2,
+      "award": null,
+      "rank": 307
+    },
+    {
+      "country_name": "Costa Rica",
+      "country_code": "CRI",
+      "given_name": "Isaac",
+      "family_name": "Aguirre Guido",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "total": 1,
+      "award": null,
+      "rank": 311
+    },
+    {
+      "country_name": "Uruguay",
+      "country_code": "URY",
+      "given_name": "Mauro",
+      "family_name": "Akerman",
+      "problem_scores": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 1,
+      "award": null,
+      "rank": 311
+    },
+    {
+      "country_name": "El Salvador",
+      "country_code": "SLV",
+      "given_name": "Maryorie Damaris",
+      "family_name": "Cabrera Silvas",
+      "problem_scores": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 1,
+      "award": null,
+      "rank": 311
+    },
+    {
+      "country_name": "Costa Rica",
+      "country_code": "CRI",
+      "given_name": "Guillermo",
+      "family_name": "Escobar Arrieta",
+      "problem_scores": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 1,
+      "award": null,
+      "rank": 311
+    },
+    {
+      "country_name": "Colombia",
+      "country_code": "COL",
+      "given_name": "Juanita",
+      "family_name": "Giraldo",
+      "problem_scores": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 1,
+      "award": null,
+      "rank": 311
+    },
+    {
+      "country_name": "Ecuador",
+      "country_code": "ECU",
+      "given_name": "Miguel Ángel",
+      "family_name": "Guzmán Chang",
+      "problem_scores": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 1,
+      "award": null,
+      "rank": 311
+    },
+    {
+      "country_name": "Kyrgyzstan",
+      "country_code": "KGZ",
+      "given_name": "Eldar",
+      "family_name": "Iskanderov",
+      "problem_scores": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 1,
+      "award": null,
+      "rank": 311
+    },
+    {
+      "country_name": "Colombia",
+      "country_code": "COL",
+      "given_name": "Ana Maria",
+      "family_name": "Jara",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "total": 1,
+      "award": null,
+      "rank": 311
+    },
+    {
+      "country_name": "Syria",
+      "country_code": "SYR",
+      "given_name": "Haidara",
+      "family_name": "Khaddour",
+      "problem_scores": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 1,
+      "award": null,
+      "rank": 311
+    },
+    {
+      "country_name": "Uruguay",
+      "country_code": "URY",
+      "given_name": "Tobias",
+      "family_name": "Rodríguez",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "total": 1,
+      "award": null,
+      "rank": 311
+    },
+    {
+      "country_name": "Syria",
+      "country_code": "SYR",
+      "given_name": "Marie Noel",
+      "family_name": "Seif Askar",
+      "problem_scores": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 1,
+      "award": null,
+      "rank": 311
+    },
+    {
+      "country_name": "Syria",
+      "country_code": "SYR",
+      "given_name": "Mohammed Lwais",
+      "family_name": "Shalan",
+      "problem_scores": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 1,
+      "award": null,
+      "rank": 311
+    },
+    {
+      "country_name": "Kyrgyzstan",
+      "country_code": "KGZ",
+      "given_name": "Elnura",
+      "family_name": "Anarbai kyzy",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 0,
+      "award": null,
+      "rank": 323
+    },
+    {
+      "country_name": "Kyrgyzstan",
+      "country_code": "KGZ",
+      "given_name": "Arabidin",
+      "family_name": "Atalov",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 0,
+      "award": null,
+      "rank": 323
+    },
+    {
+      "country_name": "Kyrgyzstan",
+      "country_code": "KGZ",
+      "given_name": "Talgat",
+      "family_name": "Baktybekov",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 0,
+      "award": null,
+      "rank": 323
+    },
+    {
+      "country_name": "Ecuador",
+      "country_code": "ECU",
+      "given_name": "Keny Ezaú",
+      "family_name": "Carlosama Morales",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 0,
+      "award": null,
+      "rank": 323
+    },
+    {
+      "country_name": "Ecuador",
+      "country_code": "ECU",
+      "given_name": "Mauricio Andrés",
+      "family_name": "Cevallos Robles",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 0,
+      "award": null,
+      "rank": 323
+    },
+    {
+      "country_name": "Macedonia",
+      "country_code": "MKD",
+      "given_name": "Nikola",
+      "family_name": "Cvetanovski",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 0,
+      "award": null,
+      "rank": 323
+    },
+    {
+      "country_name": "Nicaragua",
+      "country_code": "NIC",
+      "given_name": "Oscar Yamil",
+      "family_name": "Espinoza Olivares",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 0,
+      "award": null,
+      "rank": 323
+    },
+    {
+      "country_name": "Ecuador",
+      "country_code": "ECU",
+      "given_name": "Ilidio Samuel",
+      "family_name": "García Casanova",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 0,
+      "award": null,
+      "rank": 323
+    },
+    {
+      "country_name": "Ecuador",
+      "country_code": "ECU",
+      "given_name": "María Cristina",
+      "family_name": "García Naranjo",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 0,
+      "award": null,
+      "rank": 323
+    },
+    {
+      "country_name": "Macedonia",
+      "country_code": "MKD",
+      "given_name": "Matej",
+      "family_name": "Gelev",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 0,
+      "award": null,
+      "rank": 323
+    },
+    {
+      "country_name": "Ecuador",
+      "country_code": "ECU",
+      "given_name": "María José",
+      "family_name": "Indacochea Rosado",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 0,
+      "award": null,
+      "rank": 323
+    },
+    {
+      "country_name": "Kyrgyzstan",
+      "country_code": "KGZ",
+      "given_name": "Fedor",
+      "family_name": "Korniyash",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 0,
+      "award": null,
+      "rank": 323
+    },
+    {
+      "country_name": "Panama",
+      "country_code": "PAN",
+      "given_name": "Jorge",
+      "family_name": "Liu",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 0,
+      "award": null,
+      "rank": 323
+    },
+    {
+      "country_name": "Panama",
+      "country_code": "PAN",
+      "given_name": "Ana Lucia",
+      "family_name": "Maza",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 0,
+      "award": null,
+      "rank": 323
+    },
+    {
+      "country_name": "Ecuador",
+      "country_code": "ECU",
+      "given_name": "Ingrid Micaela",
+      "family_name": "Parrales Santana",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 0,
+      "award": null,
+      "rank": 323
+    },
+    {
+      "country_name": "Nicaragua",
+      "country_code": "NIC",
+      "given_name": "Mario Alejandro",
+      "family_name": "Rodríguez Galeano",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 0,
+      "award": null,
+      "rank": 323
+    },
+    {
+      "country_name": "Sri Lanka",
+      "country_code": "LKA",
+      "given_name": "Theiventhiran",
+      "family_name": "Thirukkumaran",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 0,
+      "award": null,
+      "rank": 323
+    },
+    {
+      "country_name": "Sri Lanka",
+      "country_code": "LKA",
+      "given_name": "Jayachandran",
+      "family_name": "Thuwaragesh",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 0,
+      "award": null,
+      "rank": 323
+    },
+    {
+      "country_name": "Nicaragua",
+      "country_code": "NIC",
+      "given_name": "Kenny Jordan",
+      "family_name": "Tinoco Cerda",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 0,
+      "award": null,
+      "rank": 323
+    },
+    {
+      "country_name": "Kyrgyzstan",
+      "country_code": "KGZ",
+      "given_name": "Abdumalik",
+      "family_name": "Tursunov",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 0,
+      "award": null,
+      "rank": 323
+    },
+    {
+      "country_name": "Ecuador",
+      "country_code": "ECU",
+      "given_name": "Natasha Fernanda",
+      "family_name": "Valarezo Oyola",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 0,
+      "award": null,
+      "rank": 323
+    },
+    {
+      "country_name": "Macedonia",
+      "country_code": "MKD",
+      "given_name": "Ivona",
+      "family_name": "Zikova",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 0,
+      "award": null,
+      "rank": 323
+    }
+  ]
+}

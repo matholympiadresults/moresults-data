@@ -1,0 +1,2636 @@
+{
+  "year": 2023,
+  "edition": 37,
+  "parsed_at": "2026-01-01T02:45:40.214478+00:00",
+  "total_contestants": 164,
+  "results": [
+    {
+      "name": "Youcef Kenane",
+      "country": "ALG",
+      "problem_scores": [
+        7,
+        7,
+        7,
+        4,
+        7,
+        7
+      ],
+      "total": 39,
+      "rank": 1,
+      "award": "GOLD",
+      "pamo_g_award": null
+    },
+    {
+      "name": "Husam Abdelhady Zaid",
+      "country": "EGY",
+      "problem_scores": [
+        7,
+        7,
+        7,
+        3,
+        7,
+        5
+      ],
+      "total": 36,
+      "rank": 2,
+      "award": "GOLD",
+      "pamo_g_award": null
+    },
+    {
+      "name": "Chams Eddine Abdali Derreche",
+      "country": "ALG",
+      "problem_scores": [
+        7,
+        7,
+        7,
+        0,
+        7,
+        7
+      ],
+      "total": 35,
+      "rank": 3,
+      "award": "GOLD",
+      "pamo_g_award": null
+    },
+    {
+      "name": "Hiba el Farchioui",
+      "country": "MOR",
+      "problem_scores": [
+        7,
+        7,
+        7,
+        1,
+        6,
+        7
+      ],
+      "total": 35,
+      "rank": 3,
+      "award": "GOLD",
+      "pamo_g_award": "GOLD"
+    },
+    {
+      "name": "Adem BIZID",
+      "country": "TUN",
+      "problem_scores": [
+        7,
+        7,
+        7,
+        3,
+        7,
+        0
+      ],
+      "total": 31,
+      "rank": 5,
+      "award": "GOLD",
+      "pamo_g_award": null
+    },
+    {
+      "name": "HAJIFI AYMEN",
+      "country": "MOR",
+      "problem_scores": [
+        6,
+        7,
+        7,
+        0,
+        6,
+        4
+      ],
+      "total": 30,
+      "rank": 6,
+      "award": "GOLD",
+      "pamo_g_award": null
+    },
+    {
+      "name": "Esemitodje Oghenerukevwe Patrick",
+      "country": "NGA",
+      "problem_scores": [
+        7,
+        7,
+        7,
+        2,
+        7,
+        0
+      ],
+      "total": 30,
+      "rank": 6,
+      "award": "GOLD",
+      "pamo_g_award": null
+    },
+    {
+      "name": "Uwakmfon Unwana Jacob",
+      "country": "NGA",
+      "problem_scores": [
+        7,
+        7,
+        7,
+        2,
+        7,
+        0
+      ],
+      "total": 30,
+      "rank": 6,
+      "award": "GOLD",
+      "pamo_g_award": null
+    },
+    {
+      "name": "Derro Zakariyae",
+      "country": "MOR",
+      "problem_scores": [
+        7,
+        7,
+        7,
+        1,
+        7,
+        0
+      ],
+      "total": 29,
+      "rank": 9,
+      "award": "SILVER",
+      "pamo_g_award": null
+    },
+    {
+      "name": "Yasser Abouseir",
+      "country": "MOR",
+      "problem_scores": [
+        1,
+        7,
+        7,
+        3,
+        7,
+        4
+      ],
+      "total": 29,
+      "rank": 9,
+      "award": "SILVER",
+      "pamo_g_award": null
+    },
+    {
+      "name": "Desire Joseph Abayo",
+      "country": "RWA",
+      "problem_scores": [
+        7,
+        7,
+        0,
+        6,
+        1,
+        3
+      ],
+      "total": 24,
+      "rank": 11,
+      "award": "SILVER",
+      "pamo_g_award": null
+    },
+    {
+      "name": "Salvi Mucyo",
+      "country": "RWA",
+      "problem_scores": [
+        3,
+        7,
+        0,
+        7,
+        7,
+        0
+      ],
+      "total": 24,
+      "rank": 11,
+      "award": "SILVER",
+      "pamo_g_award": null
+    },
+    {
+      "name": "Youssef Mejri",
+      "country": "TUN",
+      "problem_scores": [
+        7,
+        6,
+        7,
+        3,
+        1,
+        0
+      ],
+      "total": 24,
+      "rank": 11,
+      "award": "SILVER",
+      "pamo_g_award": null
+    },
+    {
+      "name": "Zineb Cherki",
+      "country": "MOR",
+      "problem_scores": [
+        7,
+        6,
+        2,
+        1,
+        7,
+        0
+      ],
+      "total": 23,
+      "rank": 14,
+      "award": "SILVER",
+      "pamo_g_award": "GOLD"
+    },
+    {
+      "name": "Erika Mutheu Oduor",
+      "country": "KEN",
+      "problem_scores": [
+        7,
+        6,
+        1,
+        2,
+        5,
+        0
+      ],
+      "total": 21,
+      "rank": 15,
+      "award": "SILVER",
+      "pamo_g_award": "GOLD"
+    },
+    {
+      "name": "Hugo Bruwer",
+      "country": "SAF",
+      "problem_scores": [
+        1,
+        6,
+        0,
+        7,
+        7,
+        0
+      ],
+      "total": 21,
+      "rank": 15,
+      "award": "SILVER",
+      "pamo_g_award": null
+    },
+    {
+      "name": "Eli Williams",
+      "country": "SAF",
+      "problem_scores": [
+        2,
+        7,
+        1,
+        7,
+        4,
+        0
+      ],
+      "total": 21,
+      "rank": 15,
+      "award": "SILVER",
+      "pamo_g_award": null
+    },
+    {
+      "name": "NOOR MOHAMED Yaasiin",
+      "country": "MTS",
+      "problem_scores": [
+        6,
+        1,
+        7,
+        2,
+        4,
+        0
+      ],
+      "total": 20,
+      "rank": 18,
+      "award": "SILVER",
+      "pamo_g_award": null
+    },
+    {
+      "name": "Tony Rotich Odhiambo",
+      "country": "KEN",
+      "problem_scores": [
+        1,
+        6,
+        1,
+        7,
+        3,
+        0
+      ],
+      "total": 18,
+      "rank": 19,
+      "award": "SILVER",
+      "pamo_g_award": null
+    },
+    {
+      "name": "GBANZAÏ Esmonne Marie Andréa",
+      "country": "IVC",
+      "problem_scores": [
+        7,
+        2,
+        1,
+        0,
+        7,
+        0
+      ],
+      "total": 17,
+      "rank": 20,
+      "award": "SILVER",
+      "pamo_g_award": "SILVER"
+    },
+    {
+      "name": "KOFFI Yohannel Marie-Fodié",
+      "country": "IVC",
+      "problem_scores": [
+        7,
+        7,
+        0,
+        0,
+        3,
+        0
+      ],
+      "total": 17,
+      "rank": 20,
+      "award": "SILVER",
+      "pamo_g_award": null
+    },
+    {
+      "name": "Yian Xu",
+      "country": "SAF",
+      "problem_scores": [
+        1,
+        7,
+        3,
+        4,
+        2,
+        0
+      ],
+      "total": 17,
+      "rank": 20,
+      "award": "SILVER",
+      "pamo_g_award": "SILVER"
+    },
+    {
+      "name": "Ellen Grant-Smith",
+      "country": "SAF",
+      "problem_scores": [
+        7,
+        3,
+        0,
+        5,
+        2,
+        0
+      ],
+      "total": 17,
+      "rank": 20,
+      "award": "SILVER",
+      "pamo_g_award": "SILVER"
+    },
+    {
+      "name": "Jonathan Benoni Mukalazi",
+      "country": "UGA",
+      "problem_scores": [
+        3,
+        7,
+        0,
+        3,
+        4,
+        0
+      ],
+      "total": 17,
+      "rank": 20,
+      "award": "SILVER",
+      "pamo_g_award": null
+    },
+    {
+      "name": "Nadine Akimana",
+      "country": "RWA",
+      "problem_scores": [
+        4,
+        3,
+        0,
+        1,
+        7,
+        0
+      ],
+      "total": 15,
+      "rank": 26,
+      "award": "SILVER",
+      "pamo_g_award": "SILVER"
+    },
+    {
+      "name": "Samuella Kwizera",
+      "country": "RWA",
+      "problem_scores": [
+        4,
+        3,
+        1,
+        0,
+        7,
+        0
+      ],
+      "total": 15,
+      "rank": 26,
+      "award": "SILVER",
+      "pamo_g_award": "SILVER"
+    },
+    {
+      "name": "Jana Rossouw",
+      "country": "SAF",
+      "problem_scores": [
+        3,
+        7,
+        0,
+        2,
+        3,
+        0
+      ],
+      "total": 15,
+      "rank": 26,
+      "award": "SILVER",
+      "pamo_g_award": "SILVER"
+    },
+    {
+      "name": "Emna Kharrat",
+      "country": "TUN",
+      "problem_scores": [
+        2,
+        7,
+        0,
+        2,
+        4,
+        0
+      ],
+      "total": 15,
+      "rank": 26,
+      "award": "SILVER",
+      "pamo_g_award": "SILVER"
+    },
+    {
+      "name": "Lina Selma Ouadah",
+      "country": "ALG",
+      "problem_scores": [
+        7,
+        4,
+        0,
+        0,
+        3,
+        0
+      ],
+      "total": 14,
+      "rank": 29,
+      "award": "BRONZE",
+      "pamo_g_award": "SILVER"
+    },
+    {
+      "name": "Moied Baleg",
+      "country": "SAF",
+      "problem_scores": [
+        1,
+        6,
+        0,
+        4,
+        3,
+        0
+      ],
+      "total": 14,
+      "rank": 29,
+      "award": "BRONZE",
+      "pamo_g_award": null
+    },
+    {
+      "name": "Cheikh THIOUB",
+      "country": "SEN",
+      "problem_scores": [
+        2,
+        0,
+        7,
+        2,
+        3,
+        0
+      ],
+      "total": 14,
+      "rank": 29,
+      "award": "BRONZE",
+      "pamo_g_award": null
+    },
+    {
+      "name": "Excell Kumah Awusi",
+      "country": "GHA",
+      "problem_scores": [
+        1,
+        4,
+        1,
+        1,
+        7,
+        0
+      ],
+      "total": 14,
+      "rank": 29,
+      "award": "BRONZE",
+      "pamo_g_award": null
+    },
+    {
+      "name": "KOBON Kobon Yann Samuel",
+      "country": "IVC",
+      "problem_scores": [
+        2,
+        7,
+        1,
+        0,
+        3,
+        0
+      ],
+      "total": 13,
+      "rank": 33,
+      "award": "BRONZE",
+      "pamo_g_award": null
+    },
+    {
+      "name": "Zaidoui Maroua",
+      "country": "MOR",
+      "problem_scores": [
+        1,
+        4,
+        0,
+        1,
+        7,
+        0
+      ],
+      "total": 13,
+      "rank": 33,
+      "award": "BRONZE",
+      "pamo_g_award": "BRONZE"
+    },
+    {
+      "name": "Arnold Bana",
+      "country": "RWA",
+      "problem_scores": [
+        1,
+        6,
+        0,
+        2,
+        4,
+        0
+      ],
+      "total": 13,
+      "rank": 33,
+      "award": "BRONZE",
+      "pamo_g_award": null
+    },
+    {
+      "name": "Elvis Chiedozie Ekwelem",
+      "country": "GHA",
+      "problem_scores": [
+        7,
+        3,
+        2,
+        0,
+        1,
+        0
+      ],
+      "total": 13,
+      "rank": 33,
+      "award": "BRONZE",
+      "pamo_g_award": null
+    },
+    {
+      "name": "Fatima Zahra Kihel",
+      "country": "ALG",
+      "problem_scores": [
+        7,
+        4,
+        0,
+        1,
+        0,
+        0
+      ],
+      "total": 12,
+      "rank": 37,
+      "award": "BRONZE",
+      "pamo_g_award": "BRONZE"
+    },
+    {
+      "name": "Lina YAHYAOUI",
+      "country": "TUN",
+      "problem_scores": [
+        2,
+        7,
+        2,
+        1,
+        0,
+        0
+      ],
+      "total": 12,
+      "rank": 37,
+      "award": "BRONZE",
+      "pamo_g_award": "BRONZE"
+    },
+    {
+      "name": "KRAH N’DRI ANGE VICTORIA",
+      "country": "IVC",
+      "problem_scores": [
+        7,
+        4,
+        0,
+        1,
+        0,
+        0
+      ],
+      "total": 12,
+      "rank": 37,
+      "award": "BRONZE",
+      "pamo_g_award": "BRONZE"
+    },
+    {
+      "name": "Meriem Nour El Yakine Doume",
+      "country": "ALG",
+      "problem_scores": [
+        5,
+        5,
+        0,
+        0,
+        1,
+        0
+      ],
+      "total": 11,
+      "rank": 40,
+      "award": "BRONZE",
+      "pamo_g_award": "BRONZE"
+    },
+    {
+      "name": "Mangui Ankoumbel Miguel",
+      "country": "CAM",
+      "problem_scores": [
+        1,
+        1,
+        6,
+        0,
+        3,
+        0
+      ],
+      "total": 11,
+      "rank": 40,
+      "award": "BRONZE",
+      "pamo_g_award": null
+    },
+    {
+      "name": "Mohamed Babe Oumar",
+      "country": "MTN",
+      "problem_scores": [
+        7,
+        0,
+        3,
+        0,
+        1,
+        0
+      ],
+      "total": 11,
+      "rank": 40,
+      "award": "BRONZE",
+      "pamo_g_award": null
+    },
+    {
+      "name": "Fatou Bintou FALL",
+      "country": "SEN",
+      "problem_scores": [
+        6,
+        1,
+        0,
+        0,
+        3,
+        0
+      ],
+      "total": 10,
+      "rank": 43,
+      "award": "BRONZE",
+      "pamo_g_award": "BRONZE"
+    },
+    {
+      "name": "Ahmed Mallek",
+      "country": "TUN",
+      "problem_scores": [
+        1,
+        4,
+        0,
+        1,
+        4,
+        0
+      ],
+      "total": 10,
+      "rank": 43,
+      "award": "BRONZE",
+      "pamo_g_award": null
+    },
+    {
+      "name": "Mugagga Antonio Muganzi",
+      "country": "UGA",
+      "problem_scores": [
+        2,
+        3,
+        2,
+        1,
+        2,
+        0
+      ],
+      "total": 10,
+      "rank": 43,
+      "award": "BRONZE",
+      "pamo_g_award": null
+    },
+    {
+      "name": "YAO Apo Laurianne Aude Ornella",
+      "country": "IVC",
+      "problem_scores": [
+        7,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "total": 9,
+      "rank": 46,
+      "award": "BRONZE",
+      "pamo_g_award": "BRONZE"
+    },
+    {
+      "name": "Yahya Abdellahi Mohamed Beye",
+      "country": "MTN",
+      "problem_scores": [
+        7,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "total": 9,
+      "rank": 46,
+      "award": "BRONZE",
+      "pamo_g_award": null
+    },
+    {
+      "name": "Oummoukelthoum Mohamed Lemin",
+      "country": "MTN",
+      "problem_scores": [
+        5,
+        1,
+        2,
+        0,
+        1,
+        0
+      ],
+      "total": 9,
+      "rank": 46,
+      "award": "BRONZE",
+      "pamo_g_award": "BRONZE"
+    },
+    {
+      "name": "Marième Hayaty Salem Taleb",
+      "country": "MTN",
+      "problem_scores": [
+        5,
+        3,
+        0,
+        1,
+        0,
+        0
+      ],
+      "total": 9,
+      "rank": 46,
+      "award": "BRONZE",
+      "pamo_g_award": "BRONZE"
+    },
+    {
+      "name": "Dantio Dountsop Jordan",
+      "country": "CAM",
+      "problem_scores": [
+        1,
+        0,
+        4,
+        0,
+        3,
+        0
+      ],
+      "total": 8,
+      "rank": 50,
+      "award": "BRONZE",
+      "pamo_g_award": null
+    },
+    {
+      "name": "Mouhamet SECK",
+      "country": "SEN",
+      "problem_scores": [
+        0,
+        6,
+        0,
+        1,
+        1,
+        0
+      ],
+      "total": 8,
+      "rank": 50,
+      "award": "BRONZE",
+      "pamo_g_award": null
+    },
+    {
+      "name": "Rufaro Peace Hove",
+      "country": "ZIM",
+      "problem_scores": [
+        1,
+        0,
+        0,
+        0,
+        7,
+        0
+      ],
+      "total": 8,
+      "rank": 50,
+      "award": "BRONZE",
+      "pamo_g_award": null
+    },
+    {
+      "name": "Mohamed Al Ghazali Meghabber",
+      "country": "ALG",
+      "problem_scores": [
+        0,
+        6,
+        0,
+        0,
+        1,
+        0
+      ],
+      "total": 7,
+      "rank": 53,
+      "award": "BRONZE",
+      "pamo_g_award": null
+    },
+    {
+      "name": "KOUASSI Serge Yvan Gilles-Cédric",
+      "country": "IVC",
+      "problem_scores": [
+        2,
+        3,
+        0,
+        0,
+        2,
+        0
+      ],
+      "total": 7,
+      "rank": 53,
+      "award": "BRONZE",
+      "pamo_g_award": null
+    },
+    {
+      "name": "Lois Niyikiza Biranejeje",
+      "country": "RWA",
+      "problem_scores": [
+        1,
+        5,
+        0,
+        1,
+        0,
+        0
+      ],
+      "total": 7,
+      "rank": 53,
+      "award": "BRONZE",
+      "pamo_g_award": "BRONZE"
+    },
+    {
+      "name": "Funmi Peniel Sylvain AGOLI-AGBO",
+      "country": "BEN",
+      "problem_scores": [
+        1,
+        2,
+        0,
+        1,
+        2,
+        0
+      ],
+      "total": 6,
+      "rank": 56,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Guitang Passi Franck Crespo",
+      "country": "CAM",
+      "problem_scores": [
+        1,
+        1,
+        0,
+        1,
+        3,
+        0
+      ],
+      "total": 6,
+      "rank": 56,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Dame GUEYE",
+      "country": "SEN",
+      "problem_scores": [
+        0,
+        3,
+        1,
+        1,
+        1,
+        0
+      ],
+      "total": 6,
+      "rank": 56,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Alfarouq Yousuf Mohammed Ali Alshukri",
+      "country": "LBY",
+      "problem_scores": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        0
+      ],
+      "total": 6,
+      "rank": 56,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "BAPPOO Ojash",
+      "country": "MTS",
+      "problem_scores": [
+        1,
+        2,
+        0,
+        2,
+        1,
+        0
+      ],
+      "total": 6,
+      "rank": 56,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Ameouho Jean-Christian Vaillant DAHO",
+      "country": "BEN",
+      "problem_scores": [
+        0,
+        2,
+        0,
+        0,
+        3,
+        0
+      ],
+      "total": 5,
+      "rank": 61,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Ermiyas Misganaw Yayeh",
+      "country": "ETH",
+      "problem_scores": [
+        1,
+        0,
+        0,
+        1,
+        3,
+        0
+      ],
+      "total": 5,
+      "rank": 61,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "PAUL MAINA",
+      "country": "KEN",
+      "problem_scores": [
+        1,
+        1,
+        0,
+        1,
+        2,
+        0
+      ],
+      "total": 5,
+      "rank": 61,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Ahmed Mohamed Lemine Limam",
+      "country": "MTN",
+      "problem_scores": [
+        2,
+        2,
+        0,
+        0,
+        1,
+        0
+      ],
+      "total": 5,
+      "rank": 61,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Juvercy Nasri NKOUANDZI",
+      "country": "CON",
+      "problem_scores": [
+        4,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "total": 5,
+      "rank": 61,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Asma Marrakchi",
+      "country": "TUN",
+      "problem_scores": [
+        2,
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 5,
+      "rank": 61,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Isaac Matsiko",
+      "country": "UGA",
+      "problem_scores": [
+        0,
+        5,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 5,
+      "rank": 61,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Nidhaavi RAMJHEETUN",
+      "country": "MTS",
+      "problem_scores": [
+        1,
+        2,
+        0,
+        1,
+        1,
+        0
+      ],
+      "total": 5,
+      "rank": 61,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Ihlam Olaitan Alice ADELEKE",
+      "country": "BEN",
+      "problem_scores": [
+        0,
+        2,
+        0,
+        0,
+        2,
+        0
+      ],
+      "total": 4,
+      "rank": 69,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Ivy Cherono",
+      "country": "KEN",
+      "problem_scores": [
+        1,
+        2,
+        0,
+        0,
+        1,
+        0
+      ],
+      "total": 4,
+      "rank": 69,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "KEITA Samba",
+      "country": "MLI",
+      "problem_scores": [
+        1,
+        2,
+        0,
+        0,
+        1,
+        0
+      ],
+      "total": 4,
+      "rank": 69,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "MOUNKAILA MOROU Khalifa",
+      "country": "NGR",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        4,
+        0,
+        0
+      ],
+      "total": 4,
+      "rank": 69,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Nispha Idylle",
+      "country": "CON",
+      "problem_scores": [
+        0,
+        3,
+        0,
+        0,
+        1,
+        0
+      ],
+      "total": 4,
+      "rank": 69,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Andrina Asingura",
+      "country": "UGA",
+      "problem_scores": [
+        2,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "total": 4,
+      "rank": 69,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Rungano Tedious Jorgen Maya",
+      "country": "ZIM",
+      "problem_scores": [
+        0,
+        1,
+        0,
+        1,
+        2,
+        0
+      ],
+      "total": 4,
+      "rank": 69,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Naana Ekua Adokua Annan",
+      "country": "GHA",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        1,
+        3,
+        0
+      ],
+      "total": 4,
+      "rank": 69,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Fadia Tiara BUTONKEE",
+      "country": "MTS",
+      "problem_scores": [
+        1,
+        0,
+        0,
+        1,
+        2,
+        0
+      ],
+      "total": 4,
+      "rank": 69,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "DON DU CARMEL DUHEZAGIRE",
+      "country": "BDI",
+      "problem_scores": [
+        0,
+        2,
+        0,
+        0,
+        1,
+        0
+      ],
+      "total": 3,
+      "rank": 78,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "COLOMBE SEPHORA NIMWIZA",
+      "country": "BDI",
+      "problem_scores": [
+        0,
+        2,
+        0,
+        0,
+        1,
+        0
+      ],
+      "total": 3,
+      "rank": 78,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Funmilayo Grace Stella BOKO",
+      "country": "BEN",
+      "problem_scores": [
+        2,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "total": 3,
+      "rank": 78,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "EMMANUEL MAMBO",
+      "country": "DRC",
+      "problem_scores": [
+        0,
+        2,
+        0,
+        0,
+        1,
+        0
+      ],
+      "total": 3,
+      "rank": 78,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "IRAGI BINJA Gédéon",
+      "country": "DRC",
+      "problem_scores": [
+        0,
+        1,
+        0,
+        0,
+        2,
+        0
+      ],
+      "total": 3,
+      "rank": 78,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "WANI RUGAMIKA Bénédict",
+      "country": "DRC",
+      "problem_scores": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "total": 3,
+      "rank": 78,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Emnet Habtamu Tsegaye",
+      "country": "ETH",
+      "problem_scores": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "total": 3,
+      "rank": 78,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Meron Guadu Shibeshi",
+      "country": "ETH",
+      "problem_scores": [
+        2,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "total": 3,
+      "rank": 78,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Barok Yeshiber Assefa",
+      "country": "ETH",
+      "problem_scores": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "total": 3,
+      "rank": 78,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Duncan Kiprotich",
+      "country": "KEN",
+      "problem_scores": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "total": 3,
+      "rank": 78,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Leovegildo António Uamba",
+      "country": "MOZ",
+      "problem_scores": [
+        2,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "total": 3,
+      "rank": 78,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Nameya N. AMUNDJINDI",
+      "country": "NAM",
+      "problem_scores": [
+        2,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "total": 3,
+      "rank": 78,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Mahmoud Isaac KAMARA",
+      "country": "SIE",
+      "problem_scores": [
+        0,
+        2,
+        0,
+        0,
+        1,
+        0
+      ],
+      "total": 3,
+      "rank": 78,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "BLESSING EDWARD MASANGA",
+      "country": "TAN",
+      "problem_scores": [
+        2,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 3,
+      "rank": 78,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "INNOCENT DASTAN JOSEPH",
+      "country": "TAN",
+      "problem_scores": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "total": 3,
+      "rank": 78,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Kristiana Babirye Sengonzi",
+      "country": "UGA",
+      "problem_scores": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "total": 3,
+      "rank": 78,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Tofara Denzel Chimoto",
+      "country": "ZIM",
+      "problem_scores": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "total": 3,
+      "rank": 78,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Rufaro Chizu",
+      "country": "ZIM",
+      "problem_scores": [
+        0,
+        1,
+        0,
+        0,
+        2,
+        0
+      ],
+      "total": 3,
+      "rank": 78,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Shima Rajab Mohamed Idris",
+      "country": "LBY",
+      "problem_scores": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "total": 3,
+      "rank": 78,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Daniel Kur Ayor",
+      "country": "SSD",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        2,
+        1,
+        0
+      ],
+      "total": 3,
+      "rank": 78,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "SAMUEL NDAGIJIMANA",
+      "country": "BDI",
+      "problem_scores": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "total": 2,
+      "rank": 98,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "ZAWADI KATULA Daniella",
+      "country": "DRC",
+      "problem_scores": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "total": 2,
+      "rank": 98,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "NASTIC NAOMI MASAYI",
+      "country": "KEN",
+      "problem_scores": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 2,
+      "rank": 98,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "DICKO Fatoumata Azahara",
+      "country": "MLI",
+      "problem_scores": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "total": 2,
+      "rank": 98,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "DOUMBIA Abdoul Salam",
+      "country": "MLI",
+      "problem_scores": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "total": 2,
+      "rank": 98,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Zeinebou Mohamed Mohamed Salem",
+      "country": "MTN",
+      "problem_scores": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "total": 2,
+      "rank": 98,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Fortune F. SHIMHANDA",
+      "country": "NAM",
+      "problem_scores": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "total": 2,
+      "rank": 98,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Lasarus SHIYELEKENI",
+      "country": "NAM",
+      "problem_scores": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "total": 2,
+      "rank": 98,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Idi Bizo Rachida",
+      "country": "NGR",
+      "problem_scores": [
+        0,
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      "total": 2,
+      "rank": 98,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Saminou Alassan Soumaya",
+      "country": "NGR",
+      "problem_scores": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 2,
+      "rank": 98,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Gemina Arize AMPION",
+      "country": "CON",
+      "problem_scores": [
+        0,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 2,
+      "rank": 98,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Princesse Celina NZIHOU NDOMBI",
+      "country": "CON",
+      "problem_scores": [
+        0,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 2,
+      "rank": 98,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "LANCE HUMPHREY MONGI",
+      "country": "TAN",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "total": 2,
+      "rank": 98,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Tadiwanashe Celeste Muromba",
+      "country": "ZIM",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        2,
+        0
+      ],
+      "total": 2,
+      "rank": 98,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Senam Awushie Gbedema",
+      "country": "GHA",
+      "problem_scores": [
+        0,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 2,
+      "rank": 98,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Ameerah Khalifa Altouhami",
+      "country": "LBY",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "total": 2,
+      "rank": 98,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Khadiga Aboalqasim Masoud Alqat",
+      "country": "LBY",
+      "problem_scores": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "total": 2,
+      "rank": 98,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Anas Alasiddeeq Mohammed Alanqar",
+      "country": "LBY",
+      "problem_scores": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "total": 2,
+      "rank": 98,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Malik Mabrouk Abd Alati Alfirjani",
+      "country": "LBY",
+      "problem_scores": [
+        0,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 2,
+      "rank": 98,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Ariik Chol Ariik",
+      "country": "SSD",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "total": 2,
+      "rank": 98,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "BACHUN Anas",
+      "country": "MTS",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "total": 2,
+      "rank": 98,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Faïda Samira Kissilla",
+      "country": "CAM",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "total": 1,
+      "rank": 119,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Dlamini Bandzile",
+      "country": "ESW",
+      "problem_scores": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 1,
+      "rank": 119,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Hikma Ibrahim Ahmed",
+      "country": "ETH",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "total": 1,
+      "rank": 119,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Yonathan Abaineh Munshea",
+      "country": "ETH",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "total": 1,
+      "rank": 119,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "TRAORÉ Aïcha",
+      "country": "MLI",
+      "problem_scores": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 1,
+      "rank": 119,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "KEITA Fatoumata Lamine",
+      "country": "MLI",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "total": 1,
+      "rank": 119,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "TRAORÉ Bourama",
+      "country": "MLI",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "total": 1,
+      "rank": 119,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Hamidou Makaou Ibrahim",
+      "country": "NGR",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "total": 1,
+      "rank": 119,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Filon Divin MVOUMBI DIANANA",
+      "country": "CON",
+      "problem_scores": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 1,
+      "rank": 119,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "HUSNA HUSEIN KONDO",
+      "country": "TAN",
+      "problem_scores": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 1,
+      "rank": 119,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "GEORGE FRANK MGANGA",
+      "country": "TAN",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "total": 1,
+      "rank": 119,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Pearl Nassiwa",
+      "country": "UGA",
+      "problem_scores": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 1,
+      "rank": 119,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Abena Mintaa Nyarko",
+      "country": "GHA",
+      "problem_scores": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 1,
+      "rank": 119,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Ajak Simon Mathiang",
+      "country": "SSD",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "total": 1,
+      "rank": 119,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Carlos Tumaeletse",
+      "country": "BOT",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "total": 1,
+      "rank": 119,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Musa Khumo",
+      "country": "BOT",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "total": 1,
+      "rank": 119,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Nomsa Charles",
+      "country": "BOT",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "total": 1,
+      "rank": 119,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Ali Malikongwa",
+      "country": "BOT",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "total": 1,
+      "rank": 119,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Tsafack Danielle",
+      "country": "CAM",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 0,
+      "rank": 138,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "TCHOMGUI CHRISTELLE SERENA",
+      "country": "CAM",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 0,
+      "rank": 138,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "NONDINE BARHUKENGE Israël",
+      "country": "DRC",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 0,
+      "rank": 138,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "BURUME AKONKWA Maria",
+      "country": "DRC",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 0,
+      "rank": 138,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Kapendula Lucky",
+      "country": "ESW",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 0,
+      "rank": 138,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Fakudze Siphamandla Given",
+      "country": "ESW",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 0,
+      "rank": 138,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Dlamini Silindokuhle Sandziswa Banele",
+      "country": "ESW",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 0,
+      "rank": 138,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Divuna Maria Lucas",
+      "country": "MOZ",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 0,
+      "rank": 138,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Lukeny I.C. PEQUENINO",
+      "country": "NAM",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 0,
+      "rank": 138,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Esther N.T. NUUYOMA",
+      "country": "NAM",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 0,
+      "rank": 138,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Kotjii H. HERUNGA",
+      "country": "NAM",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 0,
+      "rank": 138,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Ogbodo Ekenedilichukwu Grace",
+      "country": "NGA",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 0,
+      "rank": 138,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Ibrahim Garba Nazirou",
+      "country": "NGR",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 0,
+      "rank": 138,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Mahamadou Dodo Jennah",
+      "country": "NGR",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 0,
+      "rank": 138,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Ragid Omdala DZOULOU",
+      "country": "CON",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 0,
+      "rank": 138,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Samuella Margaret SESAY",
+      "country": "SIE",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 0,
+      "rank": 138,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Samuel Dominique KARGBO",
+      "country": "SIE",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 0,
+      "rank": 138,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Yayah FOMOLO",
+      "country": "SIE",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 0,
+      "rank": 138,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Augusta Hawanatu DARAMY",
+      "country": "SIE",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 0,
+      "rank": 138,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Rose Marie SESAY",
+      "country": "SIE",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 0,
+      "rank": 138,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "MWANAMISI MASHAURI HALIDI",
+      "country": "TAN",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 0,
+      "rank": 138,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Mufarowashe Kimberly Musodza",
+      "country": "ZIM",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 0,
+      "rank": 138,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Inyaa Jemme",
+      "country": "SSD",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 0,
+      "rank": 138,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Monica Yuol Manyok",
+      "country": "SSD",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 0,
+      "rank": 138,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Salama Cipriano Colombo",
+      "country": "SSD",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 0,
+      "rank": 138,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Stéphanie CHAN CHONG",
+      "country": "MTS",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 0,
+      "rank": 138,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Thamang Tshenyego",
+      "country": "BOT",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 0,
+      "rank": 138,
+      "award": null,
+      "pamo_g_award": null
+    },
+    {
+      "name": "Ipeleng Chimbalanga",
+      "country": "BOT",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 0,
+      "rank": 138,
+      "award": null,
+      "pamo_g_award": null
+    }
+  ],
+  "validation": {
+    "all_totals_match": true,
+    "mismatches": []
+  }
+}

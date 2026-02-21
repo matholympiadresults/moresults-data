@@ -1,0 +1,1966 @@
+{
+  "year": 1971,
+  "parsed_at": "2026-01-02T02:47:16.994499+00:00",
+  "total_contestants": 115,
+  "results": [
+    {
+      "contestant_id": 10160,
+      "name": "Imre Ruzsa",
+      "country_code": "HUN",
+      "scores": {
+        "p1": 5,
+        "p2": 7,
+        "p3": 9,
+        "p4": 6,
+        "p5": 7,
+        "p6": 8,
+        "p7": null
+      },
+      "total": 42,
+      "rank": 1,
+      "award": "Gold medal, Special prize (2)"
+    },
+    {
+      "contestant_id": 10209,
+      "name": "Ferenc Göndöcs",
+      "country_code": "HUN",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 39,
+      "rank": 2,
+      "award": "Gold medal"
+    },
+    {
+      "contestant_id": 10024,
+      "name": "Wolfgang Burmeister",
+      "country_code": "GDR",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 38,
+      "rank": 3,
+      "award": "Gold medal, Special prize"
+    },
+    {
+      "contestant_id": 10210,
+      "name": "Péter Komjáth",
+      "country_code": "HUN",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 38,
+      "rank": 3,
+      "award": "Gold medal"
+    },
+    {
+      "contestant_id": 15942,
+      "name": "Stanisław Szarek",
+      "country_code": "POL",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 38,
+      "rank": 3,
+      "award": "Gold medal"
+    },
+    {
+      "contestant_id": 10211,
+      "name": "Péter Frankl",
+      "country_code": "HUN",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 37,
+      "rank": 6,
+      "award": "Gold medal"
+    },
+    {
+      "contestant_id": 10219,
+      "name": "Sergei Gashkhov",
+      "country_code": "USS",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 35,
+      "rank": 7,
+      "award": "Gold medal"
+    },
+    {
+      "contestant_id": 10217,
+      "name": "Vasiliy Erokhin",
+      "country_code": "USS",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 32,
+      "rank": 8,
+      "award": "Silver medal"
+    },
+    {
+      "contestant_id": 10220,
+      "name": "Mikhail Cfasman",
+      "country_code": "USS",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 31,
+      "rank": 9,
+      "award": "Silver medal"
+    },
+    {
+      "contestant_id": 10154,
+      "name": "Ervin Bajmóczy",
+      "country_code": "HUN",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 27,
+      "rank": 10,
+      "award": "Silver medal"
+    },
+    {
+      "contestant_id": 12967,
+      "name": "Radu Gologan",
+      "country_code": "ROU",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 27,
+      "rank": 10,
+      "award": "Silver medal"
+    },
+    {
+      "contestant_id": 10193,
+      "name": "Aleksei Aleksandrov",
+      "country_code": "USS",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 27,
+      "rank": 10,
+      "award": "Silver medal"
+    },
+    {
+      "contestant_id": 10214,
+      "name": "Dimitriy Logachev",
+      "country_code": "USS",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 26,
+      "rank": 13,
+      "award": "Silver medal"
+    },
+    {
+      "contestant_id": 12721,
+      "name": "Tamás Móri",
+      "country_code": "HUN",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 25,
+      "rank": 14,
+      "award": "Silver medal"
+    },
+    {
+      "contestant_id": 11044,
+      "name": "David John Jackson",
+      "country_code": "UNK",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 25,
+      "rank": 14,
+      "award": "Silver medal"
+    },
+    {
+      "contestant_id": 10233,
+      "name": "Zoltán Füredi",
+      "country_code": "HUN",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 24,
+      "rank": 16,
+      "award": "Silver medal"
+    },
+    {
+      "contestant_id": 10215,
+      "name": "Oleg Lyashko",
+      "country_code": "USS",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 24,
+      "rank": 16,
+      "award": "Silver medal"
+    },
+    {
+      "contestant_id": 12809,
+      "name": "Harald Englisch",
+      "country_code": "GDR",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 23,
+      "rank": 18,
+      "award": "Silver medal"
+    },
+    {
+      "contestant_id": 12722,
+      "name": "András Nagy",
+      "country_code": "HUN",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 23,
+      "rank": 18,
+      "award": "Silver medal"
+    },
+    {
+      "contestant_id": 12812,
+      "name": "Arnulf Möbius",
+      "country_code": "GDR",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 21,
+      "rank": 20,
+      "award": "Bronze medal"
+    },
+    {
+      "contestant_id": null,
+      "name": "UNKNOWN_PERSON",
+      "country_code": "ROU",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 21,
+      "rank": 20,
+      "award": "Bronze medal"
+    },
+    {
+      "contestant_id": 10204,
+      "name": "Lazar Milin",
+      "country_code": "YUG",
+      "scores": {
+        "p1": 5,
+        "p2": 0,
+        "p3": 1,
+        "p4": 6,
+        "p5": 7,
+        "p6": 2,
+        "p7": null
+      },
+      "total": 21,
+      "rank": 20,
+      "award": "Bronze medal"
+    },
+    {
+      "contestant_id": 10212,
+      "name": "Chris Jacobs",
+      "country_code": "NLD",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 20,
+      "rank": 23,
+      "award": "Bronze medal"
+    },
+    {
+      "contestant_id": null,
+      "name": "UNKNOWN_PERSON",
+      "country_code": "UNK",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 20,
+      "rank": 23,
+      "award": "Bronze medal"
+    },
+    {
+      "contestant_id": 16357,
+      "name": "Johann Hackl",
+      "country_code": "AUT",
+      "scores": {
+        "p1": 1,
+        "p2": 6,
+        "p3": 0,
+        "p4": 4,
+        "p5": 7,
+        "p6": 1,
+        "p7": null
+      },
+      "total": 19,
+      "rank": 25,
+      "award": "Bronze medal"
+    },
+    {
+      "contestant_id": 12803,
+      "name": "Thomas Jentsch",
+      "country_code": "GDR",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 18,
+      "rank": 26,
+      "award": "Bronze medal"
+    },
+    {
+      "contestant_id": 15939,
+      "name": "Józef Przytycki",
+      "country_code": "POL",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 18,
+      "rank": 26,
+      "award": "Bronze medal"
+    },
+    {
+      "contestant_id": 10216,
+      "name": "Aleksander Chistov",
+      "country_code": "USS",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 18,
+      "rank": 26,
+      "award": "Bronze medal"
+    },
+    {
+      "contestant_id": 15947,
+      "name": "Zdzisław Otwinowski",
+      "country_code": "POL",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 17,
+      "rank": 29,
+      "award": "Bronze medal"
+    },
+    {
+      "contestant_id": null,
+      "name": "UNKNOWN_PERSON",
+      "country_code": "UNK",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 17,
+      "rank": 29,
+      "award": "Bronze medal"
+    },
+    {
+      "contestant_id": null,
+      "name": "UNKNOWN_PERSON",
+      "country_code": "UNK",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 17,
+      "rank": 29,
+      "award": "Bronze medal"
+    },
+    {
+      "contestant_id": 12814,
+      "name": "Reinhard Wobst",
+      "country_code": "GDR",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 16,
+      "rank": 32,
+      "award": "Bronze medal"
+    },
+    {
+      "contestant_id": null,
+      "name": "UNKNOWN_PERSON",
+      "country_code": "ROU",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 16,
+      "rank": 32,
+      "award": "Bronze medal"
+    },
+    {
+      "contestant_id": 15951,
+      "name": "Aleksander Ustaszewski",
+      "country_code": "POL",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 15,
+      "rank": 34,
+      "award": "Bronze medal"
+    },
+    {
+      "contestant_id": null,
+      "name": "UNKNOWN_PERSON",
+      "country_code": "ROU",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 15,
+      "rank": 34,
+      "award": "Bronze medal"
+    },
+    {
+      "contestant_id": 16387,
+      "name": "Otto Probst",
+      "country_code": "AUT",
+      "scores": {
+        "p1": 5,
+        "p2": 3,
+        "p3": 0,
+        "p4": 5,
+        "p5": 0,
+        "p6": 1,
+        "p7": null
+      },
+      "total": 14,
+      "rank": 36,
+      "award": "Bronze medal"
+    },
+    {
+      "contestant_id": 16388,
+      "name": "Heinrich Rolletschek",
+      "country_code": "AUT",
+      "scores": {
+        "p1": 2,
+        "p2": 2,
+        "p3": 9,
+        "p4": 0,
+        "p5": 0,
+        "p6": 0,
+        "p7": null
+      },
+      "total": 13,
+      "rank": 37,
+      "award": "Bronze medal"
+    },
+    {
+      "contestant_id": 10213,
+      "name": "Gerard Renardel de Lavalette",
+      "country_code": "NLD",
+      "scores": {
+        "p1": 2,
+        "p2": 7,
+        "p3": 0,
+        "p4": 3,
+        "p5": 1,
+        "p6": 0,
+        "p7": null
+      },
+      "total": 13,
+      "rank": 37,
+      "award": "Bronze medal"
+    },
+    {
+      "contestant_id": null,
+      "name": "UNKNOWN_PERSON",
+      "country_code": "ROU",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 13,
+      "rank": 37,
+      "award": "Bronze medal"
+    },
+    {
+      "contestant_id": 16408,
+      "name": "Per-Göran Andermo",
+      "country_code": "SWE",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 12,
+      "rank": 40,
+      "award": "Bronze medal"
+    },
+    {
+      "contestant_id": 16350,
+      "name": "Christian Gottlieb",
+      "country_code": "SWE",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 12,
+      "rank": 40,
+      "award": "Bronze medal"
+    },
+    {
+      "contestant_id": 10221,
+      "name": "Evgeniy Salinen",
+      "country_code": "USS",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 12,
+      "rank": 40,
+      "award": "Bronze medal"
+    },
+    {
+      "contestant_id": null,
+      "name": "UNKNOWN_PERSON",
+      "country_code": "UNK",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 12,
+      "rank": 40,
+      "award": "Bronze medal"
+    },
+    {
+      "contestant_id": 10229,
+      "name": "Aleksandar Zavaljevski",
+      "country_code": "YUG",
+      "scores": {
+        "p1": 2,
+        "p2": 2,
+        "p3": 0,
+        "p4": 1,
+        "p5": 7,
+        "p6": 0,
+        "p7": null
+      },
+      "total": 12,
+      "rank": 40,
+      "award": "Bronze medal"
+    },
+    {
+      "contestant_id": 16389,
+      "name": "Heinz Engl",
+      "country_code": "AUT",
+      "scores": {
+        "p1": 2,
+        "p2": 3,
+        "p3": 1,
+        "p4": 5,
+        "p5": 0,
+        "p6": 0,
+        "p7": null
+      },
+      "total": 11,
+      "rank": 45,
+      "award": "Bronze medal"
+    },
+    {
+      "contestant_id": 16394,
+      "name": "Jan Brychta",
+      "country_code": "CZS",
+      "scores": {
+        "p1": 4,
+        "p2": 3,
+        "p3": 0,
+        "p4": 3,
+        "p5": 0,
+        "p6": 1,
+        "p7": null
+      },
+      "total": 11,
+      "rank": 45,
+      "award": "Bronze medal"
+    },
+    {
+      "contestant_id": 12813,
+      "name": "Gerhard Spens",
+      "country_code": "GDR",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 11,
+      "rank": 45,
+      "award": "Bronze medal"
+    },
+    {
+      "contestant_id": 15950,
+      "name": "Paweł Traczyk",
+      "country_code": "POL",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 11,
+      "rank": 45,
+      "award": "Bronze medal"
+    },
+    {
+      "contestant_id": 16363,
+      "name": "Herbert Tobisch",
+      "country_code": "AUT",
+      "scores": {
+        "p1": 2,
+        "p2": 4,
+        "p3": 0,
+        "p4": 0,
+        "p5": 3,
+        "p6": 1,
+        "p7": null
+      },
+      "total": 10,
+      "rank": 49,
+      "award": null
+    },
+    {
+      "contestant_id": null,
+      "name": "UNKNOWN_PERSON",
+      "country_code": "BGR",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 10,
+      "rank": 49,
+      "award": null
+    },
+    {
+      "contestant_id": 15945,
+      "name": "Roger Krupiński",
+      "country_code": "POL",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 10,
+      "rank": 49,
+      "award": null
+    },
+    {
+      "contestant_id": 10226,
+      "name": "Milan Milin",
+      "country_code": "YUG",
+      "scores": {
+        "p1": 1,
+        "p2": 6,
+        "p3": 1,
+        "p4": 0,
+        "p5": 2,
+        "p6": 0,
+        "p7": null
+      },
+      "total": 10,
+      "rank": 49,
+      "award": null
+    },
+    {
+      "contestant_id": 10228,
+      "name": "Marko Tadić",
+      "country_code": "YUG",
+      "scores": {
+        "p1": 2,
+        "p2": 2,
+        "p3": 1,
+        "p4": 5,
+        "p5": 0,
+        "p6": 0,
+        "p7": null
+      },
+      "total": 10,
+      "rank": 49,
+      "award": null
+    },
+    {
+      "contestant_id": 16395,
+      "name": "Jan Franců",
+      "country_code": "CZS",
+      "scores": {
+        "p1": 3,
+        "p2": 1,
+        "p3": 0,
+        "p4": 5,
+        "p5": 0,
+        "p6": 0,
+        "p7": null
+      },
+      "total": 9,
+      "rank": 54,
+      "award": null
+    },
+    {
+      "contestant_id": null,
+      "name": "UNKNOWN_PERSON",
+      "country_code": "FRA",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 9,
+      "rank": 54,
+      "award": null
+    },
+    {
+      "contestant_id": null,
+      "name": "UNKNOWN_PERSON",
+      "country_code": "MNG",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 9,
+      "rank": 54,
+      "award": null
+    },
+    {
+      "contestant_id": null,
+      "name": "UNKNOWN_PERSON",
+      "country_code": "ROU",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 9,
+      "rank": 54,
+      "award": null
+    },
+    {
+      "contestant_id": 10224,
+      "name": "Karel Markelj",
+      "country_code": "YUG",
+      "scores": {
+        "p1": 1,
+        "p2": 6,
+        "p3": 0,
+        "p4": 2,
+        "p5": 0,
+        "p6": 0,
+        "p7": null
+      },
+      "total": 9,
+      "rank": 54,
+      "award": null
+    },
+    {
+      "contestant_id": null,
+      "name": "UNKNOWN_PERSON",
+      "country_code": "BGR",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 8,
+      "rank": 59,
+      "award": null
+    },
+    {
+      "contestant_id": 16338,
+      "name": "Anton Černý",
+      "country_code": "CZS",
+      "scores": {
+        "p1": 3,
+        "p2": 0,
+        "p3": 0,
+        "p4": 4,
+        "p5": 1,
+        "p6": 0,
+        "p7": null
+      },
+      "total": 8,
+      "rank": 59,
+      "award": null
+    },
+    {
+      "contestant_id": 16334,
+      "name": "Štefan Sakáloš",
+      "country_code": "CZS",
+      "scores": {
+        "p1": 2,
+        "p2": 0,
+        "p3": 0,
+        "p4": 6,
+        "p5": 0,
+        "p6": 0,
+        "p7": null
+      },
+      "total": 8,
+      "rank": 59,
+      "award": null
+    },
+    {
+      "contestant_id": null,
+      "name": "UNKNOWN_PERSON",
+      "country_code": "GDR",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 8,
+      "rank": 59,
+      "award": null
+    },
+    {
+      "contestant_id": 16410,
+      "name": "Gunnar Mossberg",
+      "country_code": "SWE",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 8,
+      "rank": 59,
+      "award": null
+    },
+    {
+      "contestant_id": 16398,
+      "name": "Miroslav Kmošek",
+      "country_code": "CZS",
+      "scores": {
+        "p1": 2,
+        "p2": 0,
+        "p3": 0,
+        "p4": 5,
+        "p5": 0,
+        "p6": 0,
+        "p7": null
+      },
+      "total": 7,
+      "rank": 64,
+      "award": null
+    },
+    {
+      "contestant_id": null,
+      "name": "UNKNOWN_PERSON",
+      "country_code": "FRA",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 7,
+      "rank": 64,
+      "award": null
+    },
+    {
+      "contestant_id": null,
+      "name": "UNKNOWN_PERSON",
+      "country_code": "GDR",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 7,
+      "rank": 64,
+      "award": null
+    },
+    {
+      "contestant_id": null,
+      "name": "UNKNOWN_PERSON",
+      "country_code": "ROU",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 7,
+      "rank": 64,
+      "award": null
+    },
+    {
+      "contestant_id": null,
+      "name": "UNKNOWN_PERSON",
+      "country_code": "UNK",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 7,
+      "rank": 64,
+      "award": null
+    },
+    {
+      "contestant_id": 16362,
+      "name": "Erich Steinbauer",
+      "country_code": "AUT",
+      "scores": {
+        "p1": 2,
+        "p2": 0,
+        "p3": 0,
+        "p4": 4,
+        "p5": 0,
+        "p6": 0,
+        "p7": null
+      },
+      "total": 6,
+      "rank": 69,
+      "award": null
+    },
+    {
+      "contestant_id": null,
+      "name": "UNKNOWN_PERSON",
+      "country_code": "BGR",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 6,
+      "rank": 69,
+      "award": null
+    },
+    {
+      "contestant_id": 16399,
+      "name": "Karel Horák",
+      "country_code": "CZS",
+      "scores": {
+        "p1": 4,
+        "p2": 0,
+        "p3": 0,
+        "p4": 2,
+        "p5": 0,
+        "p6": 0,
+        "p7": null
+      },
+      "total": 6,
+      "rank": 69,
+      "award": null
+    },
+    {
+      "contestant_id": null,
+      "name": "UNKNOWN_PERSON",
+      "country_code": "FRA",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 6,
+      "rank": 69,
+      "award": null
+    },
+    {
+      "contestant_id": null,
+      "name": "UNKNOWN_PERSON",
+      "country_code": "FRA",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 6,
+      "rank": 69,
+      "award": null
+    },
+    {
+      "contestant_id": 10242,
+      "name": "Grzegorz Andrzejczak",
+      "country_code": "POL",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 6,
+      "rank": 69,
+      "award": null
+    },
+    {
+      "contestant_id": null,
+      "name": "UNKNOWN_PERSON",
+      "country_code": "UNK",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 6,
+      "rank": 69,
+      "award": null
+    },
+    {
+      "contestant_id": null,
+      "name": "UNKNOWN_PERSON",
+      "country_code": "UNK",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 6,
+      "rank": 69,
+      "award": null
+    },
+    {
+      "contestant_id": 16360,
+      "name": "Franz Hofbauer",
+      "country_code": "AUT",
+      "scores": {
+        "p1": 5,
+        "p2": 0,
+        "p3": 0,
+        "p4": 0,
+        "p5": 0,
+        "p6": 0,
+        "p7": null
+      },
+      "total": 5,
+      "rank": 77,
+      "award": null
+    },
+    {
+      "contestant_id": null,
+      "name": "UNKNOWN_PERSON",
+      "country_code": "FRA",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 5,
+      "rank": 77,
+      "award": null
+    },
+    {
+      "contestant_id": null,
+      "name": "UNKNOWN_PERSON",
+      "country_code": "MNG",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 5,
+      "rank": 77,
+      "award": null
+    },
+    {
+      "contestant_id": null,
+      "name": "UNKNOWN_PERSON",
+      "country_code": "NLD",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 5,
+      "rank": 77,
+      "award": null
+    },
+    {
+      "contestant_id": 16411,
+      "name": "Mikael Torenfält",
+      "country_code": "SWE",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 5,
+      "rank": 77,
+      "award": null
+    },
+    {
+      "contestant_id": 16393,
+      "name": "Dietmar Bader",
+      "country_code": "AUT",
+      "scores": {
+        "p1": 1,
+        "p2": 0,
+        "p3": 0,
+        "p4": 3,
+        "p5": 0,
+        "p6": 0,
+        "p7": null
+      },
+      "total": 4,
+      "rank": 82,
+      "award": null
+    },
+    {
+      "contestant_id": null,
+      "name": "UNKNOWN_PERSON",
+      "country_code": "BGR",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 4,
+      "rank": 82,
+      "award": null
+    },
+    {
+      "contestant_id": null,
+      "name": "UNKNOWN_PERSON",
+      "country_code": "BGR",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 4,
+      "rank": 82,
+      "award": null
+    },
+    {
+      "contestant_id": null,
+      "name": "UNKNOWN_PERSON",
+      "country_code": "CUB",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 4,
+      "rank": 82,
+      "award": null
+    },
+    {
+      "contestant_id": 16335,
+      "name": "Helena Husová",
+      "country_code": "CZS",
+      "scores": {
+        "p1": 2,
+        "p2": 1,
+        "p3": 0,
+        "p4": 0,
+        "p5": 1,
+        "p6": 0,
+        "p7": null
+      },
+      "total": 4,
+      "rank": 82,
+      "award": null
+    },
+    {
+      "contestant_id": null,
+      "name": "UNKNOWN_PERSON",
+      "country_code": "NLD",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 4,
+      "rank": 82,
+      "award": null
+    },
+    {
+      "contestant_id": 15946,
+      "name": "Ryszard Krupiński",
+      "country_code": "POL",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 4,
+      "rank": 82,
+      "award": null
+    },
+    {
+      "contestant_id": 10227,
+      "name": "Ljubodrag Stević",
+      "country_code": "YUG",
+      "scores": {
+        "p1": 3,
+        "p2": 0,
+        "p3": 0,
+        "p4": 1,
+        "p5": 0,
+        "p6": 0,
+        "p7": null
+      },
+      "total": 4,
+      "rank": 82,
+      "award": null
+    },
+    {
+      "contestant_id": null,
+      "name": "UNKNOWN_PERSON",
+      "country_code": "BGR",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 3,
+      "rank": 90,
+      "award": null
+    },
+    {
+      "contestant_id": null,
+      "name": "UNKNOWN_PERSON",
+      "country_code": "BGR",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 3,
+      "rank": 90,
+      "award": null
+    },
+    {
+      "contestant_id": null,
+      "name": "UNKNOWN_PERSON",
+      "country_code": "CUB",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 3,
+      "rank": 90,
+      "award": null
+    },
+    {
+      "contestant_id": null,
+      "name": "UNKNOWN_PERSON",
+      "country_code": "FRA",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 3,
+      "rank": 90,
+      "award": null
+    },
+    {
+      "contestant_id": null,
+      "name": "UNKNOWN_PERSON",
+      "country_code": "MNG",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 3,
+      "rank": 90,
+      "award": null
+    },
+    {
+      "contestant_id": null,
+      "name": "UNKNOWN_PERSON",
+      "country_code": "MNG",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 3,
+      "rank": 90,
+      "award": null
+    },
+    {
+      "contestant_id": null,
+      "name": "UNKNOWN_PERSON",
+      "country_code": "MNG",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 3,
+      "rank": 90,
+      "award": null
+    },
+    {
+      "contestant_id": 16412,
+      "name": "Helén Jonsson",
+      "country_code": "SWE",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 3,
+      "rank": 90,
+      "award": null
+    },
+    {
+      "contestant_id": 16413,
+      "name": "Ann-Marie Mårtensson",
+      "country_code": "SWE",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 3,
+      "rank": 90,
+      "award": null
+    },
+    {
+      "contestant_id": 10222,
+      "name": "Janez Cerar",
+      "country_code": "YUG",
+      "scores": {
+        "p1": 1,
+        "p2": 0,
+        "p3": 0,
+        "p4": 0,
+        "p5": 2,
+        "p6": 0,
+        "p7": null
+      },
+      "total": 3,
+      "rank": 90,
+      "award": null
+    },
+    {
+      "contestant_id": 16401,
+      "name": "Imrich Vrťo",
+      "country_code": "CZS",
+      "scores": {
+        "p1": 1,
+        "p2": 0,
+        "p3": 0,
+        "p4": 0,
+        "p5": 1,
+        "p6": 0,
+        "p7": null
+      },
+      "total": 2,
+      "rank": 100,
+      "award": null
+    },
+    {
+      "contestant_id": null,
+      "name": "UNKNOWN_PERSON",
+      "country_code": "MNG",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 2,
+      "rank": 100,
+      "award": null
+    },
+    {
+      "contestant_id": null,
+      "name": "UNKNOWN_PERSON",
+      "country_code": "NLD",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 2,
+      "rank": 100,
+      "award": null
+    },
+    {
+      "contestant_id": null,
+      "name": "UNKNOWN_PERSON",
+      "country_code": "NLD",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 2,
+      "rank": 100,
+      "award": null
+    },
+    {
+      "contestant_id": null,
+      "name": "UNKNOWN_PERSON",
+      "country_code": "ROU",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 2,
+      "rank": 100,
+      "award": null
+    },
+    {
+      "contestant_id": 10223,
+      "name": "Zoran Majkić",
+      "country_code": "YUG",
+      "scores": {
+        "p1": 2,
+        "p2": 0,
+        "p3": 0,
+        "p4": 0,
+        "p5": 0,
+        "p6": 0,
+        "p7": null
+      },
+      "total": 2,
+      "rank": 100,
+      "award": null
+    },
+    {
+      "contestant_id": null,
+      "name": "UNKNOWN_PERSON",
+      "country_code": "BGR",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 1,
+      "rank": 106,
+      "award": null
+    },
+    {
+      "contestant_id": null,
+      "name": "UNKNOWN_PERSON",
+      "country_code": "CUB",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 1,
+      "rank": 106,
+      "award": null
+    },
+    {
+      "contestant_id": null,
+      "name": "UNKNOWN_PERSON",
+      "country_code": "CUB",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 1,
+      "rank": 106,
+      "award": null
+    },
+    {
+      "contestant_id": null,
+      "name": "UNKNOWN_PERSON",
+      "country_code": "FRA",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 1,
+      "rank": 106,
+      "award": null
+    },
+    {
+      "contestant_id": null,
+      "name": "UNKNOWN_PERSON",
+      "country_code": "FRA",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 1,
+      "rank": 106,
+      "award": null
+    },
+    {
+      "contestant_id": null,
+      "name": "UNKNOWN_PERSON",
+      "country_code": "MNG",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 1,
+      "rank": 106,
+      "award": null
+    },
+    {
+      "contestant_id": 16404,
+      "name": "Steven Dijk",
+      "country_code": "NLD",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 1,
+      "rank": 106,
+      "award": null
+    },
+    {
+      "contestant_id": null,
+      "name": "UNKNOWN_PERSON",
+      "country_code": "NLD",
+      "scores": {
+        "p1": null,
+        "p2": null,
+        "p3": null,
+        "p4": null,
+        "p5": null,
+        "p6": null,
+        "p7": null
+      },
+      "total": 1,
+      "rank": 106,
+      "award": null
+    },
+    {
+      "contestant_id": null,
+      "name": "UNKNOWN_PERSON",
+      "country_code": "MNG",
+      "scores": {
+        "p1": 0,
+        "p2": 0,
+        "p3": 0,
+        "p4": 0,
+        "p5": 0,
+        "p6": 0,
+        "p7": null
+      },
+      "total": 0,
+      "rank": 114,
+      "award": null
+    },
+    {
+      "contestant_id": 16414,
+      "name": "Hans Alberg",
+      "country_code": "SWE",
+      "scores": {
+        "p1": 0,
+        "p2": 0,
+        "p3": 0,
+        "p4": 0,
+        "p5": 0,
+        "p6": 0,
+        "p7": null
+      },
+      "total": 0,
+      "rank": 114,
+      "award": null
+    }
+  ],
+  "validation": {
+    "all_totals_match": true,
+    "mismatches": []
+  }
+}

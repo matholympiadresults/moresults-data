@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Asian Pacific Mathematical Olympiad</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="shortcut icon" href="/static/favicon.gif">
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+    });
+    </script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XKFFSLXEVB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-XKFFSLXEVB');
+  </script>
+
+
+    <!-- Social Media Tags -->
+    <meta name="description" content="The APMO is a mathematics competition for the Pacific-Rim Region" />
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@leoimartinez">
+    <meta name="twitter:title" content="APMO - Asian Pacific Mathematics Olympiad">
+    <meta name="twitter:description" content="The APMO is a mathematics competition for the Pacific-Rim Region">
+    <meta name="twitter:creator" content="@leoimartinez">
+    <!-- Twitter summary card with large image must be at least 280x150px -->
+    <meta name="twitter:image:src" content="http://www.apmo-official.org/static/apmologo.gif">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="APMO - Asian Pacific Mathematics Olympiad" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://www.apmo-official.org" />
+    <meta property="og:image" content="http://www.apmo-official.org/static/apmologo.gif" />
+    <meta property="og:description" content="The APMO is a mathematics competition for the Pacific-Rim Region" />
+    <meta property="og:site_name" content="APMO Official Website" />
+</head>
+<body>
+
+  <header class="container text-center mt-4">
+      <a href='/'><img src="/static/apmologo.gif"></a>
+      <h2>Asian Pacific Mathematics Olympiad</h2>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+          <button class="navbar-toggler mx-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mx-auto">
+              <li id="menu-0" class="nav-item">
+                    <a class="nav-link" href="/">About <span class="sr-only">(current)</span></a>
+                </li>
+              <li id="menu-0" class="nav-item">
+                  <a class="nav-link" href="/regulations">Regulations </span></a>
+              </li>
+              <li id="menu-1" class="nav-item">
+                  <a class="nav-link" href="/timeline">Timeline</a>
+              </li>
+              <li id="menu-3" class="nav-item">
+                  <a class="nav-link" href="/countries">Countries</a>
+              </li>
+              <li id="menu-2" class="nav-item">
+                  <a class="nav-link" href="/problems">Problems</a>
+              </li>
+              <li id="menu-3" class="nav-item">
+                  <a class="nav-link" href="/results">Results</a>
+              </li>
+              </ul>   
+          </div>
+      </nav>
+  </header>
+  
+<div class="container text-center ">    
+  <div class="row content">
+      
+    <div class="col text-center main-body mt-3 pb-4"> 
+      <h3> Report for APMO 2025  </h3>
+
+      
+      <div class="alert alert-info" role="alert">
+        The results for APMO 2025 are now official!
+        <!-- These results for 2026 are preliminary! They will soon be considered official. -->
+      </div>
+      
+
+      <hr>
+
+      <h4> General information</h4>
+
+      <hr>
+
+      <div class="row">
+        <div class="col-md-5 col-lg-6">
+          <div class="d-flex">
+            <ul class="list-group list-aims mx-auto justify-content-center">
+              <li class='list-group-item'> 37 participating countries </li>
+              <li class='list-group-item'> 335 participating students </li>
+              <li class='list-group-item'> Mean score $\mu=14.84$</li>
+              <li class='list-group-item'> Standard deviation $\sigma=8.51$</li>
+              <li class='list-group-item'> Gold cut-off $24$</li>
+              <li class='list-group-item'> Silver cut-off $18$</li>
+              <li class='list-group-item'> Bronze cut-off $12$</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-7 col-lg-6">
+            
+            <img class="w-100" src="/static/data/histogram_2025.png">
+            
+        </div>
+      </div>
+
+      <hr>
+
+      <h4> Country ranking  </h4>
+
+      <hr>
+
+      <p class="small">Click on a country name to see detailed results</p>
+
+      <table border="0" class="dataframe d-none d-lg-table table table-striped table-sm">
+  <thead>
+    <tr style="text-align: center;">
+      <th>Rank</th>
+      <th>Country</th>
+      <th># of Contestants</th>
+      <th>Total Score</th>
+      <th>Gold Awards</th>
+      <th>Silver Awards</th>
+      <th>Bronze Awards</th>
+      <th>Honorable Mentions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td><a href="/country_report/USA/2025">United States of America</a></td>
+      <td>10</td>
+      <td>296</td>
+      <td>1</td>
+      <td>2</td>
+      <td>4</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td><a href="/country_report/KOR/2025">Republic of Korea</a></td>
+      <td>10</td>
+      <td>264</td>
+      <td>1</td>
+      <td>2</td>
+      <td>4</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td><a href="/country_report/SGP/2025">Singapore</a></td>
+      <td>10</td>
+      <td>234</td>
+      <td>1</td>
+      <td>2</td>
+      <td>4</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td><a href="/country_report/IRN/2025">Islamic Republic of Iran</a></td>
+      <td>10</td>
+      <td>229</td>
+      <td>1</td>
+      <td>2</td>
+      <td>4</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td><a href="/country_report/JPN/2025">Japan</a></td>
+      <td>10</td>
+      <td>224</td>
+      <td>1</td>
+      <td>2</td>
+      <td>4</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td><a href="/country_report/CAN/2025">Canada</a></td>
+      <td>10</td>
+      <td>222</td>
+      <td>1</td>
+      <td>2</td>
+      <td>4</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td><a href="/country_report/AUS/2025">Australia</a></td>
+      <td>10</td>
+      <td>216</td>
+      <td>1</td>
+      <td>2</td>
+      <td>4</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td><a href="/country_report/BRA/2025">Brazil</a></td>
+      <td>10</td>
+      <td>214</td>
+      <td>1</td>
+      <td>2</td>
+      <td>4</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td><a href="/country_report/IND/2025">India</a></td>
+      <td>10</td>
+      <td>214</td>
+      <td>1</td>
+      <td>2</td>
+      <td>4</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td><a href="/country_report/HKG/2025">Hong Kong</a></td>
+      <td>10</td>
+      <td>207</td>
+      <td>1</td>
+      <td>2</td>
+      <td>4</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td><a href="/country_report/THA/2025">Thailand</a></td>
+      <td>10</td>
+      <td>195</td>
+      <td>0</td>
+      <td>3</td>
+      <td>4</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td><a href="/country_report/KAZ/2025">Kazakhstan</a></td>
+      <td>10</td>
+      <td>195</td>
+      <td>1</td>
+      <td>2</td>
+      <td>4</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td><a href="/country_report/MYS/2025">Malaysia</a></td>
+      <td>10</td>
+      <td>186</td>
+      <td>1</td>
+      <td>2</td>
+      <td>4</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td><a href="/country_report/TWN/2025">Taiwan</a></td>
+      <td>10</td>
+      <td>179</td>
+      <td>0</td>
+      <td>3</td>
+      <td>4</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td><a href="/country_report/BGR/2025">Bulgaria</a></td>
+      <td>10</td>
+      <td>166</td>
+      <td>1</td>
+      <td>2</td>
+      <td>4</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td><a href="/country_report/PER/2025">Peru</a></td>
+      <td>10</td>
+      <td>160</td>
+      <td>0</td>
+      <td>3</td>
+      <td>4</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td><a href="/country_report/UZB/2025">Uzbekistan</a></td>
+      <td>10</td>
+      <td>156</td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td><a href="/country_report/MNG/2025">Mongolia</a></td>
+      <td>10</td>
+      <td>154</td>
+      <td>0</td>
+      <td>2</td>
+      <td>5</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td><a href="/country_report/MEX/2025">Mexico</a></td>
+      <td>10</td>
+      <td>152</td>
+      <td>1</td>
+      <td>2</td>
+      <td>4</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td><a href="/country_report/SAU/2025">Saudi Arabia</a></td>
+      <td>10</td>
+      <td>120</td>
+      <td>0</td>
+      <td>0</td>
+      <td>6</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td><a href="/country_report/KGZ/2025">Kyrgyzstan</a></td>
+      <td>10</td>
+      <td>116</td>
+      <td>1</td>
+      <td>0</td>
+      <td>3</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td><a href="/country_report/NZL/2025">New Zealand</a></td>
+      <td>10</td>
+      <td>105</td>
+      <td>0</td>
+      <td>2</td>
+      <td>1</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>23</td>
+      <td><a href="/country_report/ARG/2025">Argentina</a></td>
+      <td>10</td>
+      <td>100</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td><a href="/country_report/TKM/2025">Turkmenistan</a></td>
+      <td>10</td>
+      <td>100</td>
+      <td>0</td>
+      <td>0</td>
+      <td>3</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td><a href="/country_report/COL/2025">Colombia</a></td>
+      <td>10</td>
+      <td>100</td>
+      <td>0</td>
+      <td>1</td>
+      <td>3</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>26</td>
+      <td><a href="/country_report/PHL/2025">Philippines</a></td>
+      <td>10</td>
+      <td>94</td>
+      <td>0</td>
+      <td>2</td>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>27</td>
+      <td><a href="/country_report/SYR/2025">Syria</a></td>
+      <td>10</td>
+      <td>83</td>
+      <td>0</td>
+      <td>0</td>
+      <td>3</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>28</td>
+      <td><a href="/country_report/MAC/2025">Macau</a></td>
+      <td>10</td>
+      <td>71</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>29</td>
+      <td><a href="/country_report/MAR/2025">Morocco</a></td>
+      <td>10</td>
+      <td>70</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>30</td>
+      <td><a href="/country_report/TJK/2025">Tajikistan</a></td>
+      <td>9</td>
+      <td>61</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>31</td>
+      <td><a href="/country_report/BOL/2025">Bolivia</a></td>
+      <td>1</td>
+      <td>22</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>32</td>
+      <td><a href="/country_report/MKD/2025">Macedonia</a></td>
+      <td>4</td>
+      <td>22</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>33</td>
+      <td><a href="/country_report/RWA/2025">Rwanda</a></td>
+      <td>10</td>
+      <td>19</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>34</td>
+      <td><a href="/country_report/URY/2025">Uruguay</a></td>
+      <td>5</td>
+      <td>15</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>35</td>
+      <td><a href="/country_report/ECU/2025">Ecuador</a></td>
+      <td>10</td>
+      <td>4</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>36</td>
+      <td><a href="/country_report/SLV/2025">El Salvador</a></td>
+      <td>4</td>
+      <td>4</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>37</td>
+      <td><a href="/country_report/PAN/2025">Panama</a></td>
+      <td>2</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+      <table border="0" class="dataframe d-table d-lg-none table table-striped table-sm">
+  <thead>
+    <tr style="text-align: center;">
+      <th>Rank</th>
+      <th>Country</th>
+      <th>Con.*</th>
+      <th>Score</th>
+      <th>Awards (G,S,B,HM)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td><a href="/country_report/USA/2025">United States of America</a></td>
+      <td>10</td>
+      <td>296</td>
+      <td>1, 2, 4, 3</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td><a href="/country_report/KOR/2025">Republic of Korea</a></td>
+      <td>10</td>
+      <td>264</td>
+      <td>1, 2, 4, 3</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td><a href="/country_report/SGP/2025">Singapore</a></td>
+      <td>10</td>
+      <td>234</td>
+      <td>1, 2, 4, 3</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td><a href="/country_report/IRN/2025">Islamic Republic of Iran</a></td>
+      <td>10</td>
+      <td>229</td>
+      <td>1, 2, 4, 3</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td><a href="/country_report/JPN/2025">Japan</a></td>
+      <td>10</td>
+      <td>224</td>
+      <td>1, 2, 4, 3</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td><a href="/country_report/CAN/2025">Canada</a></td>
+      <td>10</td>
+      <td>222</td>
+      <td>1, 2, 4, 3</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td><a href="/country_report/AUS/2025">Australia</a></td>
+      <td>10</td>
+      <td>216</td>
+      <td>1, 2, 4, 3</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td><a href="/country_report/BRA/2025">Brazil</a></td>
+      <td>10</td>
+      <td>214</td>
+      <td>1, 2, 4, 3</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td><a href="/country_report/IND/2025">India</a></td>
+      <td>10</td>
+      <td>214</td>
+      <td>1, 2, 4, 3</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td><a href="/country_report/HKG/2025">Hong Kong</a></td>
+      <td>10</td>
+      <td>207</td>
+      <td>1, 2, 4, 3</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td><a href="/country_report/THA/2025">Thailand</a></td>
+      <td>10</td>
+      <td>195</td>
+      <td>0, 3, 4, 3</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td><a href="/country_report/KAZ/2025">Kazakhstan</a></td>
+      <td>10</td>
+      <td>195</td>
+      <td>1, 2, 4, 3</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td><a href="/country_report/MYS/2025">Malaysia</a></td>
+      <td>10</td>
+      <td>186</td>
+      <td>1, 2, 4, 3</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td><a href="/country_report/TWN/2025">Taiwan</a></td>
+      <td>10</td>
+      <td>179</td>
+      <td>0, 3, 4, 3</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td><a href="/country_report/BGR/2025">Bulgaria</a></td>
+      <td>10</td>
+      <td>166</td>
+      <td>1, 2, 4, 3</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td><a href="/country_report/PER/2025">Peru</a></td>
+      <td>10</td>
+      <td>160</td>
+      <td>0, 3, 4, 3</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td><a href="/country_report/UZB/2025">Uzbekistan</a></td>
+      <td>10</td>
+      <td>156</td>
+      <td>1, 2, 3, 4</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td><a href="/country_report/MNG/2025">Mongolia</a></td>
+      <td>10</td>
+      <td>154</td>
+      <td>0, 2, 5, 3</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td><a href="/country_report/MEX/2025">Mexico</a></td>
+      <td>10</td>
+      <td>152</td>
+      <td>1, 2, 4, 3</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td><a href="/country_report/SAU/2025">Saudi Arabia</a></td>
+      <td>10</td>
+      <td>120</td>
+      <td>0, 0, 6, 4</td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td><a href="/country_report/KGZ/2025">Kyrgyzstan</a></td>
+      <td>10</td>
+      <td>116</td>
+      <td>1, 0, 3, 6</td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td><a href="/country_report/NZL/2025">New Zealand</a></td>
+      <td>10</td>
+      <td>105</td>
+      <td>0, 2, 1, 3</td>
+    </tr>
+    <tr>
+      <td>23</td>
+      <td><a href="/country_report/ARG/2025">Argentina</a></td>
+      <td>10</td>
+      <td>100</td>
+      <td>0, 1, 1, 5</td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td><a href="/country_report/TKM/2025">Turkmenistan</a></td>
+      <td>10</td>
+      <td>100</td>
+      <td>0, 0, 3, 7</td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td><a href="/country_report/COL/2025">Colombia</a></td>
+      <td>10</td>
+      <td>100</td>
+      <td>0, 1, 3, 2</td>
+    </tr>
+    <tr>
+      <td>26</td>
+      <td><a href="/country_report/PHL/2025">Philippines</a></td>
+      <td>10</td>
+      <td>94</td>
+      <td>0, 2, 1, 2</td>
+    </tr>
+    <tr>
+      <td>27</td>
+      <td><a href="/country_report/SYR/2025">Syria</a></td>
+      <td>10</td>
+      <td>83</td>
+      <td>0, 0, 3, 5</td>
+    </tr>
+    <tr>
+      <td>28</td>
+      <td><a href="/country_report/MAC/2025">Macau</a></td>
+      <td>10</td>
+      <td>71</td>
+      <td>0, 0, 1, 5</td>
+    </tr>
+    <tr>
+      <td>29</td>
+      <td><a href="/country_report/MAR/2025">Morocco</a></td>
+      <td>10</td>
+      <td>70</td>
+      <td>0, 1, 1, 3</td>
+    </tr>
+    <tr>
+      <td>30</td>
+      <td><a href="/country_report/TJK/2025">Tajikistan</a></td>
+      <td>9</td>
+      <td>61</td>
+      <td>0, 1, 0, 5</td>
+    </tr>
+    <tr>
+      <td>31</td>
+      <td><a href="/country_report/BOL/2025">Bolivia</a></td>
+      <td>1</td>
+      <td>22</td>
+      <td>0, 1, 0, 0</td>
+    </tr>
+    <tr>
+      <td>32</td>
+      <td><a href="/country_report/MKD/2025">Macedonia</a></td>
+      <td>4</td>
+      <td>22</td>
+      <td>0, 1, 0, 0</td>
+    </tr>
+    <tr>
+      <td>33</td>
+      <td><a href="/country_report/RWA/2025">Rwanda</a></td>
+      <td>10</td>
+      <td>19</td>
+      <td>0, 0, 0, 0</td>
+    </tr>
+    <tr>
+      <td>34</td>
+      <td><a href="/country_report/URY/2025">Uruguay</a></td>
+      <td>5</td>
+      <td>15</td>
+      <td>0, 0, 0, 0</td>
+    </tr>
+    <tr>
+      <td>35</td>
+      <td><a href="/country_report/ECU/2025">Ecuador</a></td>
+      <td>10</td>
+      <td>4</td>
+      <td>0, 0, 0, 0</td>
+    </tr>
+    <tr>
+      <td>36</td>
+      <td><a href="/country_report/SLV/2025">El Salvador</a></td>
+      <td>4</td>
+      <td>4</td>
+      <td>0, 0, 0, 0</td>
+    </tr>
+    <tr>
+      <td>37</td>
+      <td><a href="/country_report/PAN/2025">Panama</a></td>
+      <td>2</td>
+      <td>1</td>
+      <td>0, 0, 0, 0</td>
+    </tr>
+  </tbody>
+</table>
+
+      <p class="d-inline d-lg-none"> * Con. - Number of contestants </p>
+
+      <hr>
+
+      <h4> Awards </h4>
+
+      <hr>
+
+      <details>
+        <summary> Show Gold Awards</summary> 
+         Jayden Pan (Australia) <br>  Angel Hristov (Bulgaria) <br>  Matheus Alencar De Moraes (Brazil) <br>  Warren Bei (Canada) <br>  Zi Jie Xu (Hong Kong) <br>  Kanav Talwar (India) <br>  Attaranzadeh Mohammadreza (Islamic Republic of Iran) <br>  Satoshi Kano (Japan) <br>  Sharel Margulan (Kazakhstan) <br>  Ian Bobrus  (Kyrgyzstan) <br>  Kyungjun Park (Republic of Korea) <br>  Héctor Juan Villarreal Corona (Mexico) <br>  Ho Janson (Malaysia) <br>  Wenyuan Sun (Singapore) <br>  Rohan Bodke (United States of America) <br>  Asadbek  Bobokulov (Uzbekistan) <br> 
+      </details>
+
+      <details>
+        <summary> Show Silver Awards</summary>
+       Emiliano Sosa (Argentina) <br>  William Cheah (Australia) <br>  Justin Tran (Australia) <br>  Lazar D Todorov (Bulgaria) <br>  George Nikolov (Bulgaria) <br>  Luis André Villán Gabriel (Bolivia) <br>  Levi Magalhães Pereira Castello Branco (Brazil) <br>  João Pedro Bandeira Lemos (Brazil) <br>  Ming Yang (Canada) <br>  Tiger Li (Canada) <br>  Felipe Caicedo (Colombia) <br>  Tsz Sing Chong (Hong Kong) <br>  Yung Ho Kwan (Hong Kong) <br>  Abhinav Khetan (India) <br>  Arnav Nanal (India) <br>  Mazloum Aliakbar  (Islamic Republic of Iran) <br>  Aghajanloo Mahdi  (Islamic Republic of Iran) <br>  Takemasa Suzuki (Japan) <br>  Kiryu Shinohara (Japan) <br>  Miron Yurkevich (Kazakhstan) <br>  Amirlan Amanzholov (Kazakhstan) <br>  Yeomin Kim (Republic of Korea) <br>  Chanwook Park (Republic of Korea) <br>  Yacine Gmouh (Morocco) <br>  Takumi Higashida Martínez (Mexico) <br>  Sebastian Montemayor Trujillo (Mexico) <br>  Tasikj Aleksij (Macedonia) <br>  Manlai Sonor (Mongolia) <br>  Iveel Arvis (Mongolia) <br>  Gabriel Lee (Malaysia) <br>  Ivan Chan Guan Yu (Malaysia) <br>  Haotian Wang (New Zealand) <br>  Jay Zhao (New Zealand) <br>  Abraham Fajardo Incio (Peru) <br>  Sebastián Lozada Galvez (Peru) <br>  José Rojas Carlos (Peru) <br>  Ervin Joshua Bautista (Philippines) <br>  Mohammad Nur Casib (Philippines) <br>  Boyang Brian Xiao (Singapore) <br>  Yihan Yang (Singapore) <br>  Patanasang Pinijpichitkul (Thailand) <br>  Napon Apintanaphong (Thailand) <br>  Natakorn Koomman (Thailand) <br>  Olimdzhon Tukhtarov  (Tajikistan) <br>  Ting-Cheng Hsu (Taiwan) <br>  Chia-Ray Lee (Taiwan) <br>  Yu-Fan Tseng (Taiwan) <br>  Lerchen Zhong (United States of America) <br>  Henry Jiang (United States of America) <br>  Elbek Zohidjonov (Uzbekistan) <br>  Rasulbek Gafforov (Uzbekistan) <br> 
+     </details>
+
+      <details>
+        <summary> Show Bronze Awards</summary> 
+       Ignacio Javier Naguil (Argentina) <br>  Tao Wong (Australia) <br>  Kevin (Hangzhi) Liu (Australia) <br>  Liam Celinski (Australia) <br>  Joseph Zhu (Australia) <br>  Yoana Mladenova (Bulgaria) <br>  Nikolay Lyubenov (Bulgaria) <br>  Ilia Vassilev (Bulgaria) <br>  Simona Gagarova (Bulgaria) <br>  Alessandro Mathias Machado (Brazil) <br>  Bruno Machado Feltran (Brazil) <br>  Erick Akira Koga (Brazil) <br>  Vinícius Pimentel Nunes Portella De Macêdo (Brazil) <br>  Yuxin Fu (Canada) <br>  Christopher Li (Canada) <br>  Ansh Agarwal (Canada) <br>  Perry Dai (Canada) <br>  Alberto Lobo-Guerrero (Colombia) <br>  Gabriel Santiago (Colombia) <br>  Juan Camilo Melgarejo (Colombia) <br>  Kwan Yu Chan (Hong Kong) <br>  Lincoln Liu (Hong Kong) <br>  Long Sze (Hong Kong) <br>  Hui Hin Chui (Hong Kong) <br>  Himanish Basu (India) <br>  Abel Mathew (India) <br>  Sanjana Chacko (India) <br>  Shreya Mundhada (India) <br>  Mohseni Radan (Islamic Republic of Iran) <br>  Memari Abkooh Mohammadsajjad (Islamic Republic of Iran) <br>  Khosheghbal Bardiya (Islamic Republic of Iran) <br>  Tajallaei Parsia  (Islamic Republic of Iran) <br>  Shinjiro Hamakawa (Japan) <br>  Naoto Wakasugi (Japan) <br>  Kazuho Anzai (Japan) <br>  Syogo Ando (Japan) <br>  Amir Sakhipov (Kazakhstan) <br>  Zhaksylyk Sherkhan (Kazakhstan) <br>  Altynbek Erasyl (Kazakhstan) <br>  Beiganov Batyrkhan (Kazakhstan) <br>  Nursultan Eshperov (Kyrgyzstan) <br>  Maksim Bocharov (Kyrgyzstan) <br>  Nurdoolot Kaparov (Kyrgyzstan) <br>  Jaewon Lim (Republic of Korea) <br>  Wooju Ham (Republic of Korea) <br>  Seunghoon Kim (Republic of Korea) <br>  Hyewon Yoon (Republic of Korea) <br>  Kin Nam Lao (Macau) <br>  Hamza Achak (Morocco) <br>  Mateo Iván Latapi Acosta (Mexico) <br>  Javier Caram Quirós (Mexico) <br>  Iker Torres Terrazas (Mexico) <br>  Diego Francisco Martín Zárate (Mexico) <br>  Amin-Erdene Munkhbayar (Mongolia) <br>  Misheel Ankhbayar (Mongolia) <br>  Tuvshindalai Boldbaatar (Mongolia) <br>  Khuslen Davaadorj (Mongolia) <br>  Tenuunsaikhan  Batlkhagva (Mongolia) <br>  Isaac Hew Kai Sheng (Malaysia) <br>  Kong Hoi Mun (Malaysia) <br>  Brandon Choo Tze How (Malaysia) <br>  Kang Wenn Yew (Malaysia) <br>  Ray Shi (New Zealand) <br>  Fabrizio Franco Laguna Hurtado (Peru) <br>  Héctor Medrano Quispe (Peru) <br>  Zafhid Alphiery Quiñones Loa (Peru) <br>  Renato Gaitán García (Peru) <br>  Jerome Austin Te (Philippines) <br>  Ahmed Alkhalawi (Saudi Arabia) <br>  Yousif  Bakheet (Saudi Arabia) <br>  Abdulsalam Alsulami (Saudi Arabia) <br>  Muath Alqahtani (Saudi Arabia) <br>  Ahmad Alshehri (Saudi Arabia) <br>  Elyas Alfaraj (Saudi Arabia) <br>  Akash Thiagarajan (Singapore) <br>  Zixiang Gao (Singapore) <br>  Juntao Zhang (Singapore) <br>  Haohan Ryker Xu (Singapore) <br>  Mahmoud Mohammed Asad (Syria) <br>  Mohammed Mouzahem (Syria) <br>  Shafik Bara (Syria) <br>  Kiattipoom Sicharoen (Thailand) <br>  Dawn Sawangsap (Thailand) <br>  Pun Tresattayapan (Thailand) <br>  Aphiwit Channarong (Thailand) <br>  Allaberdiyev Hamza (Turkmenistan) <br>  Meylismyradov Maliksha (Turkmenistan) <br>  Ataballyyev Jelil (Turkmenistan) <br>  Bo Cheng Huang (Taiwan) <br>  Yi-Hsun Chen (Taiwan) <br>  Alice Chen (Taiwan) <br>  Hsuan-Yu Lin (Taiwan) <br>  Jiahe Liu (United States of America) <br>  Ritwin Narra (United States of America) <br>  Liam Reddy (United States of America) <br>  Alexander Wang (United States of America) <br>  Ozodbek Akhtamov (Uzbekistan) <br>  Behruzbek Elmurodov (Uzbekistan) <br>  Ashrafjon  Ravshanov  (Uzbekistan) <br> 
+      </details>
+
+      <details>
+        <summary> Show Honorable Mentions </summary> 
+       Facundo Mauri (Argentina)<br>  Lola Muriel Ruffolo (Argentina)<br>  Jazmín Zhang (Argentina)<br>  Bautista Machillari (Argentina)<br>  Facundo Aram Kechichian (Argentina)<br>  Polar Xiong (Australia)<br>  Amber Li (Australia)<br>  Matthew Wang (Australia)<br>  Nikolay Drenchev (Bulgaria)<br>  Viktor Avramski (Bulgaria)<br>  Bogdan Lyutskanov (Bulgaria)<br>  Marco Aurelio Nogueira D&#39;Emidio (Brazil)<br>  David Li Chiun Liu (Brazil)<br>  Enzo Holanda Sampaio (Brazil)<br>  Leo Wu (Canada)<br>  Zhekai Shen (Canada)<br>  Raymond Ouyang (Canada)<br>  Paula Andrea Duque (Colombia)<br>  Samuel Pertuz (Colombia)<br>  Xingyu Zhu (Hong Kong)<br>  Yan Ching Ho (Hong Kong)<br>  Sebastian Chase (Hong Kong)<br>  Aharshi Roy (India)<br>  Aarav Gupta (India)<br>  Shresth Suraiya (India)<br>  Azizedin Arsha (Islamic Republic of Iran)<br>  Nikravesh Parham (Islamic Republic of Iran)<br>  Asadi Rayan (Islamic Republic of Iran)<br>  Yusuke Hamamoto (Japan)<br>  Masaki Ito (Japan)<br>  Ryunosuke Hara (Japan)<br>  Kuralov Adi (Kazakhstan)<br>  Ansatov Arnur (Kazakhstan)<br>  Eldar Ussenov (Kazakhstan)<br>  Nazar Kirgizbaev (Kyrgyzstan)<br>  Timur Akeneev (Kyrgyzstan)<br>  Aidin Asankadyrov (Kyrgyzstan)<br>  Sultan Musakhodzhaev (Kyrgyzstan)<br>  Kanimet Busurmankulov (Kyrgyzstan)<br>  Seiit Ryskulov (Kyrgyzstan)<br>  Seongjin Shim (Republic of Korea)<br>  Seojun Lee (Republic of Korea)<br>  Hyeonjun Lee (Republic of Korea)<br>  Shuhe Shen (Macau)<br>  Hou U Li (Macau)<br>  Haoxiang Ye (Macau)<br>  Iat In Chan (Macau)<br>  Sin Hang Tang (Macau)<br>  Sami Moussaoui (Morocco)<br>  Yasser El Moussaed (Morocco)<br>  Yahya Elouafi (Morocco)<br>  Emiliano Hernández Barranco (Mexico)<br>  Leonardo Melgar Rubí (Mexico)<br>  Emmanuel Buenrostro Briseño (Mexico)<br>  Munkhbadar Bagakhuu (Mongolia)<br>  Munkhtur Erdenebat (Mongolia)<br>  Belgutei Bayar (Mongolia)<br>  Chia Ming Han (Malaysia)<br>  Yeoh Yi Shuen (Malaysia)<br>  Goh Jun Thean (Malaysia)<br>  Alston Yam (New Zealand)<br>  Gwang Ho Kim (New Zealand)<br>  Bella Chen (New Zealand)<br>  Jesús Tasayco Pachas (Peru)<br>  Josué Bautista Villanueva (Peru)<br>  Leandro José Alvarado Bravo (Peru)<br>  Mateo Inigo Espocia (Philippines)<br>  Mark Justin Villafuerte (Philippines)<br>  Abdullah Alamer (Saudi Arabia)<br>  Mohamed Alghamdi (Saudi Arabia)<br>  Fatimah Buali (Saudi Arabia)<br>  Yousef  Alkhalawi (Saudi Arabia)<br>  Tianhao Vincent Wu (Singapore)<br>  Jinze Xue (Singapore)<br>  Yaoqi Zhao (Singapore)<br>  Tawfiq Alshekh Houd (Syria)<br>  Joud Tabsi (Syria)<br>  Mohammed Nour  Abu Ras (Syria)<br>  Youssef  Habib (Syria)<br>  Mohammed Naasan  (Syria)<br>  Siraphop Khawplad (Thailand)<br>  Ethan Chen (Thailand)<br>  Aekkawin Wisitkiatchai (Thailand)<br>  nan<br>  Sanjar Rashiov (Tajikistan)<br>  Muhammadidris Saimuhudinzoda (Tajikistan)<br>  Muhammadikbol Mahmadov (Tajikistan)<br>  Osim Sadulloev (Tajikistan)<br>  Ruslanov Myrat (Turkmenistan)<br>  Akmyradov Begench (Turkmenistan)<br>  Hommatdurdyyev Selim (Turkmenistan)<br>  Hudayberenov Hudaýguly (Turkmenistan)<br>  Nobatova Kumush (Turkmenistan)<br>  Agamyradov Rahym (Turkmenistan)<br>  Jumadurdyyev Babanazar (Turkmenistan)<br>  Yu-Hung Hsueh (Taiwan)<br>  Wen Da Kuang (Taiwan)<br>  Wei-Cheng Chuang (Taiwan)<br>  Oron Wang (United States of America)<br>  Qiao Zhang (United States of America)<br>  Andrew Carratu (United States of America)<br>  Abdulaziz Radjabov (Uzbekistan)<br>  Bekhruzbek Erkinov (Uzbekistan)<br>  Sardor Urazaliyev (Uzbekistan)<br>  Mels Satimov (Uzbekistan)<br> 
+      </details>
+
+      <hr>
+
+      <h4> Statistics by problem </h4>
+
+      <hr>
+      
+      <div class="row">
+        
+        <div class="col-md-6 mt-4">
+        <h4>Problem 1</h4>
+          <div class="d-flex">
+            <ul class="list-group list-aims mx-auto justify-content-center">
+                <li class='list-group-item'> Mean score $\mu=5.37$</li>
+                <li class='list-group-item'> Standard deviation $\sigma=2.83$</li>
+            </ul>
+          </div>
+          
+          <img class="w-100" src="/static/data/histogram_p1_2025.png">
+          
+        </div>
+        
+        <div class="col-md-6 mt-4">
+        <h4>Problem 2</h4>
+          <div class="d-flex">
+            <ul class="list-group list-aims mx-auto justify-content-center">
+                <li class='list-group-item'> Mean score $\mu=4.84$</li>
+                <li class='list-group-item'> Standard deviation $\sigma=2.87$</li>
+            </ul>
+          </div>
+          
+          <img class="w-100" src="/static/data/histogram_p2_2025.png">
+          
+        </div>
+        
+        <div class="col-md-6 mt-4">
+        <h4>Problem 3</h4>
+          <div class="d-flex">
+            <ul class="list-group list-aims mx-auto justify-content-center">
+                <li class='list-group-item'> Mean score $\mu=3.26$</li>
+                <li class='list-group-item'> Standard deviation $\sigma=3.33$</li>
+            </ul>
+          </div>
+          
+          <img class="w-100" src="/static/data/histogram_p3_2025.png">
+          
+        </div>
+        
+        <div class="col-md-6 mt-4">
+        <h4>Problem 4</h4>
+          <div class="d-flex">
+            <ul class="list-group list-aims mx-auto justify-content-center">
+                <li class='list-group-item'> Mean score $\mu=1.16$</li>
+                <li class='list-group-item'> Standard deviation $\sigma=2.33$</li>
+            </ul>
+          </div>
+          
+          <img class="w-100" src="/static/data/histogram_p4_2025.png">
+          
+        </div>
+        
+        <div class="col-md-6 mt-4">
+        <h4>Problem 5</h4>
+          <div class="d-flex">
+            <ul class="list-group list-aims mx-auto justify-content-center">
+                <li class='list-group-item'> Mean score $\mu=0.21$</li>
+                <li class='list-group-item'> Standard deviation $\sigma=0.82$</li>
+            </ul>
+          </div>
+          
+          <img class="w-100" src="/static/data/histogram_p5_2025.png">
+          
+        </div>
+        
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer class="container-fluid text-center small">
+  <p>Web developer: <a href="http://www.nekomath.com"> Leonardo Martinez </a> <br> Contribute @ GitHub: <a href="https://github.com/leomtz/apmowebsite"> leomtz/apmowebsite </a>  </p>
+</footer>
+
+</body>
+</html>

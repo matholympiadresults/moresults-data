@@ -1,6 +1,28 @@
 # MOResults Data
 
-Math Olympiad data processing tools.
+Math Olympiad data processing and preservation.
+
+## Why This Exists
+
+Math olympiad results are scattered across various websites that often disappear after a few years. Competition organizers change, domains expire, and valuable historical data is lost forever. This repository aims to preserve this information by:
+
+1. **Archiving raw data** - Original HTML, PDF, and CSV files from official sources
+2. **Structuring the data** - Parsed into consistent JSON formats
+3. **Building a unified database** - All competitions in one queryable format
+
+## Philosophy
+
+The data pipeline has three stages with different purposes:
+
+| Stage | Purpose | Frequency |
+|-------|---------|-----------|
+| **download** | Fetch raw files from source websites | Once per competition (archived) |
+| **parse** | Convert raw files to structured JSON | Re-run when parser improves |
+| **ingest** | Combine into unified database | Re-run when schema changes |
+
+Raw data (`data/<source>/raw/`) is the source of truth and should never be modified. If a parser has bugs, fix the parser and re-run `parse` + `ingest`. This separation ensures we never lose original data even as our processing improves.
+
+**On storing data in git:** Yes, git isn't ideal for data storage - it increases bundle size and wasn't designed for this. But we're optimizing for simplicity and pragmatism over perfection. The data changes slowly (a few competitions per year), the total size is manageable (~50MB), and keeping everything in one repo means no external dependencies, no broken links, no expired cloud storage. Clone the repo and you have everything.
 
 ## Installation
 
