@@ -6,7 +6,6 @@ This catches unintended parser changes that would alter output.
 
 import json
 import os
-import shutil
 from pathlib import Path
 
 import pytest
@@ -43,10 +42,7 @@ def get_data_dir() -> Path:
 @pytest.fixture(scope="module")
 def data_dir() -> Path:
     """Fixture providing the data directory."""
-    d = get_data_dir()
-    if not d.exists():
-        pytest.skip("Data directory not found")
-    return d
+    return get_data_dir()
 
 
 @pytest.mark.parametrize("source_name", list(SOURCES.keys()))
@@ -60,24 +56,9 @@ def test_parse_regression(source_name: str, data_dir: Path, tmp_path_factory):
     """
     adapter = SOURCES[source_name]
 
-    # Check if source has any parsed data
-    parsed_base = adapter.get_parsed_base_dir(data_dir)
-    if not parsed_base.exists():
-        pytest.skip(f"No parsed data for {source_name}")
-
     parsed_years = adapter.find_available_parsed_years(data_dir)
-    if not parsed_years:
-        pytest.skip(f"No parsed years for {source_name}")
-
-    # Check if raw data exists
-    raw_base = adapter.get_raw_base_dir(data_dir)
-    if not raw_base.exists():
-        pytest.skip(f"No raw data for {source_name}")
-
     raw_years = adapter.find_available_raw_years(data_dir)
     years_to_test = [y for y in parsed_years if y in raw_years]
-    if not years_to_test:
-        pytest.skip(f"No years with both raw and parsed data for {source_name}")
 
     # Create temp directory structure
     tmp_base = tmp_path_factory.mktemp(f"regression_{source_name}")
@@ -85,15 +66,13 @@ def test_parse_regression(source_name: str, data_dir: Path, tmp_path_factory):
     tmp_data_dir.mkdir()
 
     # Symlink raw data to temp directory
+    raw_base = adapter.get_raw_base_dir(data_dir)
     tmp_raw_base = tmp_data_dir / source_name / "raw"
     tmp_raw_base.parent.mkdir(parents=True, exist_ok=True)
     os.symlink(raw_base, tmp_raw_base)
 
     # Parse to temp directory
-    try:
-        adapter.parse_raw(tmp_data_dir, years=years_to_test, force=True)
-    except NotImplementedError:
-        pytest.skip(f"parse_raw not implemented for {source_name}")
+    adapter.parse_raw(tmp_data_dir, years=years_to_test, force=True)
 
     # Compare each parsed year
     mismatches = []
