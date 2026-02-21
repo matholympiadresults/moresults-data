@@ -20,8 +20,11 @@ SPECIAL_URLS = {
 # Missing: 2012 (no data sources found yet)
 AVAILABLE_YEARS = list(range(2007, 2012)) + [2013, 2014] + list(range(2015, 2026))
 
-# Team competition data is only available for 2015+ (excluding 2020 - COVID online only)
-TEAM_AVAILABLE_YEARS = list(range(2015, 2020)) + list(range(2021, 2026))
+# Team competition data: 2007-2011 and 2013-2014 from skmo.sk, 2015+ from memo-official.org
+# Missing: 2012 (no data), 2020 (COVID online only)
+TEAM_AVAILABLE_YEARS = (
+    list(range(2007, 2012)) + [2013, 2014] + list(range(2015, 2020)) + list(range(2021, 2026))
+)
 
 
 class DownloadError(Exception):
@@ -124,6 +127,28 @@ def download_team_year(year: int, output_dir: Path, force: bool = False) -> Path
     output_file = output_dir / get_team_raw_filename()
 
     if output_file.exists() and not force:
+        return output_file
+
+    # For years <= 2014, download from skmo.sk via archive.org
+    if year <= 2014:
+        from data_processing.sources.memo.downloader.skmo_downloader import (
+            ARCHIVE_URL_TEMPLATE,
+            year_to_rocnik,
+        )
+
+        rocnik = year_to_rocnik(year)
+        url = ARCHIVE_URL_TEMPLATE.format(rocnik=rocnik)
+
+        try:
+            response = requests.get(url, timeout=60)
+            response.raise_for_status()
+        except requests.RequestException as e:
+            raise DownloadError(f"Failed to download MEMO team {year}: {e}") from e
+
+        output_dir.mkdir(parents=True, exist_ok=True)
+        # skmo.sk pages use windows-1250 encoding
+        response.encoding = "windows-1250"
+        output_file.write_text(response.text, encoding="utf-8")
         return output_file
 
     # For 2015, team data is on the same page as individual results

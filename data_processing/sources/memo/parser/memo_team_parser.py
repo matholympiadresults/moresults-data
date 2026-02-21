@@ -203,12 +203,168 @@ def parse_team_html_standard(html: str, year: int) -> list[TeamResult]:
     return results
 
 
+def parse_team_html_skmo(html: str, year: int) -> list[TeamResult]:
+    """Parse MEMO team results from skmo.sk format (2007-2014).
+
+    The skmo.sk page has multiple tables with class="poradie".
+    The team table is identified by having "team competition" in the first row.
+
+    Format variations:
+    - 2007-2008: 4 team problems
+    - 2009+: 8 team problems
+    - 2010: No prize/award column
+    - 2014: Uses '-' for 0 scores
+    - Tied ranks shown as empty rank cells
+    """
+    soup = BeautifulSoup(html, "html.parser")
+    results = []
+
+    # Find team table: class="poradie" table whose first row contains "team competition"
+    tables = soup.find_all("table", class_="poradie")
+    team_table = None
+    for table in tables:
+        rows = table.find_all("tr")
+        if rows:
+            first_row_text = rows[0].get_text(strip=True).lower()
+            if "team competition" in first_row_text:
+                team_table = table
+                break
+
+    if not team_table:
+        raise TeamParserError(f"Could not find team results table in HTML for year {year}")
+
+    rows = team_table.find_all("tr")
+
+    # Row 0 is the title row ("team competition"), row 1 has actual column headers
+    # Find the column header row (the one with multiple th cells)
+    header_row = None
+    for row in rows:
+        header_cells = row.find_all("th")
+        if len(header_cells) > 2:
+            header_row = row
+            break
+
+    if not header_row:
+        raise TeamParserError(f"Could not find column header row for team table, year {year}")
+
+    header_cells = header_row.find_all("th")
+    header_texts = [th.get_text(strip=True).lower() for th in header_cells]
+
+    # Header format: "", "country", problem cols ("1.", "2.", ...), "∑", optionally "prize"
+    has_prize = any("prize" in h or "priz" in h for h in header_texts)
+
+    # num_problems = total columns - rank - country - sum - (prize if present)
+    num_cols = len(header_cells)
+    num_problems = num_cols - 3 - (1 if has_prize else 0)
+
+    if num_problems not in (4, 8):
+        raise TeamParserError(
+            f"Year {year}: Unexpected number of team problems: {num_problems} "
+            f"(header: {header_texts})"
+        )
+
+    # Track current rank for tied ranks
+    current_rank: int | None = None
+
+    for row_idx, row in enumerate(rows):
+        cells = row.find_all("td")
+        if len(cells) == 0:
+            continue
+
+        expected_cells = 3 + num_problems + (1 if has_prize else 0)
+        if len(cells) != expected_cells:
+            continue  # Skip malformed rows
+
+        # Extract rank (cell 0) - can be empty for tied ranks
+        rank_text = cells[0].get_text(strip=True).rstrip(".")
+        if rank_text:
+            try:
+                current_rank = int(rank_text)
+            except ValueError:
+                continue
+
+        # Extract country (cell 1)
+        country = cells[1].get_text(strip=True)
+        if not country:
+            raise TeamParserError(f"Year {year}, row {row_idx}: Empty country name")
+
+        # Extract problem scores (cells 2 to 2+num_problems-1)
+        problem_scores = []
+        for i in range(num_problems):
+            score_text = cells[2 + i].get_text(strip=True)
+            # Handle '-' as 0 (used in 2014)
+            if score_text == "-":
+                score_text = "0"
+            if not score_text:
+                raise TeamParserError(
+                    f"Year {year}, row {row_idx}: Empty score for T-{i + 1}, country {country}"
+                )
+            try:
+                score = int(score_text)
+            except ValueError as err:
+                raise TeamParserError(
+                    f"Year {year}, row {row_idx}: Invalid score '{score_text}' for T-{i + 1}"
+                ) from err
+            if score < 0 or score > 8:
+                raise TeamParserError(
+                    f"Year {year}, row {row_idx}: Score {score} out of range [0-8] for T-{i + 1}"
+                )
+            problem_scores.append(score)
+
+        # Extract total (cell after problem scores)
+        total_text = cells[2 + num_problems].get_text(strip=True)
+        if not total_text:
+            raise TeamParserError(f"Year {year}, row {row_idx}: Empty total for {country}")
+        try:
+            total = int(total_text)
+        except ValueError as err:
+            raise TeamParserError(
+                f"Year {year}, row {row_idx}: Invalid total '{total_text}' for {country}"
+            ) from err
+
+        # Extract award if prize column exists
+        award = None
+        if has_prize:
+            award_text = cells[2 + num_problems + 1].get_text(strip=True)
+            award = _normalize_team_award(award_text)
+
+        results.append(
+            TeamResult(
+                country=country,
+                problem_scores=problem_scores,
+                total=total,
+                rank=current_rank,
+                award=award,
+            )
+        )
+
+    return results
+
+
+def _normalize_team_award(award_text: str) -> str | None:
+    """Normalize team award text to standard format."""
+    if not award_text:
+        return None
+
+    award_lower = award_text.lower()
+    if "gold" in award_lower:
+        return "Gold"
+    if "silver" in award_lower:
+        return "Silver"
+    if "bronze" in award_lower:
+        return "Bronze"
+
+    return None
+
+
 def parse_team_html(html: str, year: int) -> list[TeamResult]:
     """Parse team HTML and extract team results.
 
     Dispatches to the appropriate parser based on year.
     """
-    if year == 2015:
+    if year <= 2014:
+        return parse_team_html_skmo(html, year)
+    elif year == 2015:
         return parse_team_html_2015(html, year)
     else:
         return parse_team_html_standard(html, year)
