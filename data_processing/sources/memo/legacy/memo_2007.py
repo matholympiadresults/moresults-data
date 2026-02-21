@@ -6,7 +6,6 @@ Downloads and parses results from the 1st MEMO (Eisenstadt, Austria).
 The data is stored in an XLS file on kag.upol.cz.
 """
 
-import json
 from pathlib import Path
 
 import requests
@@ -271,6 +270,6 @@ def parse_2007(raw_dir: Path, output_dir: Path, force: bool = False) -> Path:
 
     output_dir.mkdir(parents=True, exist_ok=True)
     with open(output_file, "w", encoding="utf-8") as f:
-        json.dump(year_results.model_dump(), f, indent=2, ensure_ascii=False)
+        f.write(year_results.model_dump_json(indent=2))
 
     return output_file

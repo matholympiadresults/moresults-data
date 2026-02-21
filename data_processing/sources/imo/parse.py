@@ -5,7 +5,6 @@ Parses raw HTML pages into structured data.
 This is the second stage of the data pipeline: download -> parse -> ingest.
 """
 
-import json
 import re
 from pathlib import Path
 
@@ -398,7 +397,7 @@ def save_json(data: IMOYearResults, output_path: Path) -> None:
     """Save parsed results to JSON file."""
     output_path.parent.mkdir(parents=True, exist_ok=True)
     with open(output_path, "w", encoding="utf-8") as f:
-        json.dump(data.model_dump(), f, indent=2, ensure_ascii=False)
+        f.write(data.model_dump_json(indent=2))
 
 
 def load_html(input_path: Path) -> str:

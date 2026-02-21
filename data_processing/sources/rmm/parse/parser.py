@@ -4,7 +4,6 @@ RMM HTML Parser
 Parses raw HTML from rmms.lbi.ro into structured data format.
 """
 
-import json
 from pathlib import Path
 
 from bs4 import BeautifulSoup
@@ -280,7 +279,7 @@ def parse_year(html: str, year: int) -> RMMYearResults:
 def save_json(data: RMMYearResults, filepath: Path) -> None:
     """Save results to JSON file."""
     with open(filepath, "w", encoding="utf-8") as f:
-        json.dump(data.model_dump(), f, indent=2, ensure_ascii=False)
+        f.write(data.model_dump_json(indent=2))
 
 
 def load_html(filepath: Path) -> str:

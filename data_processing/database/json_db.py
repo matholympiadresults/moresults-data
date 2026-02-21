@@ -42,7 +42,7 @@ def save_database(db: Database, path: Path = DEFAULT_DB_PATH) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
 
     with open(path, "w", encoding="utf-8") as f:
-        json.dump(db.model_dump(mode="json"), f, indent=2, default=str)
+        f.write(db.model_dump_json(indent=2))
 
 
 def get_or_create_country(

@@ -5,7 +5,6 @@ BalcanMO Results Scraper
 Scrapes Balkan Mathematical Olympiad individual results from various sources.
 """
 
-import json
 from pathlib import Path
 
 from .models import BMOYearResults, ContestantResult, ValidationResult
@@ -78,7 +77,7 @@ def validate_totals(results: list[ContestantResult]) -> list[dict]:
 def save_json(data: BMOYearResults, filepath: str) -> None:
     """Save results to JSON file."""
     with open(filepath, "w", encoding="utf-8") as f:
-        json.dump(data.model_dump(), f, indent=2, ensure_ascii=False)
+        f.write(data.model_dump_json(indent=2))
 
 
 def scrape_year(year: int, raw_data_dir: Path, force: bool = False) -> BMOYearResults:
@@ -156,7 +155,7 @@ if __name__ == "__main__":
         year = int(sys.argv[1])
         raw_dir = Path(sys.argv[2])
         result = scrape_year(year, raw_dir)
-        print(json.dumps(result.model_dump(), indent=2, ensure_ascii=False))
+        print(result.model_dump_json(indent=2))
     else:
         print(
             "Usage: python -m data_processing.sources.bmo.scraper.bmo_scraper <year> <raw_data_dir>"
