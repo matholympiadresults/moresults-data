@@ -85,10 +85,49 @@ class BalticWayAdapter(SourceAdapter):
         years: list[int] | None,
         force: bool,
     ) -> None:
-        """Parse raw results into structured JSON (not yet implemented)."""
+        """Parse raw HTML/PDF results into structured JSON."""
         if years is not None and len(years) == 0:
             return
-        raise NotImplementedError("Baltic Way parser not yet implemented")
+
+        from data_processing.sources.balticway.parser import ParserError, parse_year
+
+        if years is None:
+            target_years = AVAILABLE_YEARS
+        else:
+            target_years = [y for y in years if y in AVAILABLE_YEARS]
+
+        if not target_years:
+            click.echo("No valid years specified for Baltic Way")
+            click.echo(f"Available years: {AVAILABLE_YEARS[0]}-{AVAILABLE_YEARS[-1]}")
+            return
+
+        success_count = 0
+        skip_count = 0
+        fail_count = 0
+
+        for year in target_years:
+            raw_dir = self.get_raw_dir(source_dir, year)
+            parsed_dir = self.get_parsed_dir(source_dir, year)
+            output_file = parsed_dir / "scoreboard.json"
+
+            if output_file.exists() and not force:
+                click.echo(f"  {year}: Skipped (already exists)")
+                skip_count += 1
+                continue
+
+            try:
+                parse_year(year, raw_dir, parsed_dir, force=force)
+                click.echo(f"  {year}: Parsed")
+                success_count += 1
+            except FileNotFoundError:
+                click.echo(f"  {year}: Raw file not found (run download first)", err=True)
+                fail_count += 1
+            except ParserError as e:
+                click.echo(f"  {year}: {e}", err=True)
+                fail_count += 1
+
+        click.echo()
+        click.echo(f"Done: {success_count} parsed, {skip_count} skipped, {fail_count} failed")
 
     def ingest(
         self,
@@ -96,9 +135,7 @@ class BalticWayAdapter(SourceAdapter):
         output_path: Path,
         years: list[int] | None,
     ) -> None:
-        """Ingest parsed Baltic Way data into the database.
+        """Ingest parsed Baltic Way data into the database."""
+        from data_processing.sources.balticway.ingester import ingest_balticway_data
 
-        No-op: Baltic Way has no parsed data yet, so ingest-all skips it
-        (the parsed directory doesn't exist).
-        """
-        raise NotImplementedError("Baltic Way ingester not yet implemented")
+        ingest_balticway_data(source_dir, output_path, years)
