@@ -4,7 +4,7 @@ from pathlib import Path
 
 import click
 
-from ..sources import get_all_sources, get_source
+from ..sources import get_source, ingest_all_sources
 
 
 @click.command()
@@ -79,27 +79,7 @@ def ingest(source: str, data_dir: Path, output: Path, year: tuple[int, ...]):
 def ingest_all(data_dir: Path, output: Path):
     """Ingest data from all sources into the database.
 
+    Deletes any existing database and re-ingests all parsed data from scratch.
     Reads parsed data from <data-dir>/<source>/parsed/<year>/ for each source.
     """
-    for adapter in get_all_sources():
-        parsed_base = adapter.get_parsed_base_dir(data_dir)
-
-        if not parsed_base.exists():
-            click.echo(f"\nSkipping {adapter.display_name}: {parsed_base} not found")
-            continue
-
-        click.echo(f"\n{'=' * 50}")
-        click.echo(f"Ingesting {adapter.display_name}")
-        click.echo(f"{'=' * 50}")
-        click.echo(f"Parsed directory: {parsed_base}/<year>/")
-        click.echo()
-
-        try:
-            adapter.ingest(data_dir, output, None)
-        except NotImplementedError as e:
-            click.echo(f"Error: {e}", err=True)
-        except ValueError as e:
-            click.echo(f"Error: {e}", err=True)
-
-    click.echo()
-    click.echo(f"Database saved to {output}")
+    ingest_all_sources(data_dir, output, verbose=True)
