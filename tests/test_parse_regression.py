@@ -44,18 +44,15 @@ def test_parse_regression(source_name: str, data_dir: Path, tmp_path_factory):
     raw_years = adapter.find_available_raw_years(data_dir)
     years_to_test = [y for y in parsed_years if y in raw_years]
 
-    # Create temp directory structure
+    # Create temp directory with symlinked raw data.
+    # Parsers expect: data_dir/<source>/raw/ (input) and data_dir/<source>/parsed/ (output)
+    # By symlinking raw/, we read from real data but write parsed output to temp.
     tmp_base = tmp_path_factory.mktemp(f"regression_{source_name}")
     tmp_data_dir = tmp_base / "data"
-    tmp_data_dir.mkdir()
-
-    # Symlink raw data to temp directory
-    raw_base = adapter.get_raw_base_dir(data_dir)
     tmp_raw_base = tmp_data_dir / source_name / "raw"
     tmp_raw_base.parent.mkdir(parents=True, exist_ok=True)
-    os.symlink(raw_base, tmp_raw_base)
+    os.symlink(adapter.get_raw_base_dir(data_dir), tmp_raw_base)
 
-    # Parse to temp directory
     adapter.parse_raw(tmp_data_dir, years=years_to_test, force=True)
 
     # Compare each parsed year
