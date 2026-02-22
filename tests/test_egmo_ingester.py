@@ -1,20 +1,20 @@
-"""Tests for data_processing/sources/EGMO/ingester/egmo_ingester.py."""
+"""Tests for sigma/sources/EGMO/ingester/egmo_ingester.py."""
 
 import json
 
-from data_processing.database import create_empty_database, get_or_create_country
-from data_processing.schemas import Award, Source
-from data_processing.sources.egmo.downloader import (
+from sigma.database import create_empty_database, get_or_create_country
+from sigma.schemas import Award, Source
+from sigma.sources.egmo.downloader import (
     FIRST_EGMO_YEAR,
     edition_to_year,
 )
-from data_processing.sources.egmo.ingester.egmo_ingester import (
+from sigma.sources.egmo.ingester.egmo_ingester import (
     convert_award,
     create_competition,
     ingest_results,
     load_results_from_file,
 )
-from data_processing.sources.egmo.parser.models import (
+from sigma.sources.egmo.parser.models import (
     ContestantResult,
     EGMOYearResults,
     ValidationResult,

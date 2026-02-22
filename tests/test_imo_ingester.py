@@ -1,6 +1,6 @@
-"""Tests for data_processing/sources/IMO/ingester/imo_ingester.py."""
+"""Tests for sigma/sources/IMO/ingester/imo_ingester.py."""
 
-from data_processing.sources.imo.ingester.imo_ingester import sanitize_name
+from sigma.sources.imo.ingester.imo_ingester import sanitize_name
 
 
 class TestSanitizeName:

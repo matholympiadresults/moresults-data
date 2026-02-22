@@ -23,7 +23,7 @@ uv run ruff format .
 
 ## Project Structure
 
-- `data_processing/` - Python data processing modules
+- `sigma/` - Python data processing modules
   - `sources/` - Data ingesters for various olympiads (APMO, BMO, EGMO, IMO, MEMO, PAMO, RMM)
   - `database/` - JSON database utilities
   - `matching/` - Person matching logic

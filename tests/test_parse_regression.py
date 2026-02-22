@@ -10,7 +10,7 @@ from pathlib import Path
 
 import pytest
 
-from data_processing.cli.sources import SOURCES
+from sigma.cli.sources import SOURCES
 
 
 def find_json_files(directory: Path) -> list[Path]:

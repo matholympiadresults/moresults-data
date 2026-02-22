@@ -1,10 +1,10 @@
-"""Tests for data_processing/database/json_db.py."""
+"""Tests for sigma/database/json_db.py."""
 
 import json
 from datetime import UTC, datetime
 
-from data_processing.database import create_empty_database, load_database, save_database
-from data_processing.schemas import (
+from sigma.database import create_empty_database, load_database, save_database
+from sigma.schemas import (
     Award,
     Competition,
     Country,
