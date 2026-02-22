@@ -47,6 +47,7 @@ The data flows through three stages:
 ### Available Sources
 
 - `apmo` - Asian Pacific Mathematics Olympiad
+- `balticway` - Baltic Way Mathematical Team Competition
 - `bmo` - Balkan Mathematical Olympiad
 - `egmo` - European Girls' Mathematical Olympiad
 - `imo` - International Mathematical Olympiad
