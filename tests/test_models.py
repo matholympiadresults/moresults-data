@@ -1,8 +1,8 @@
-"""Tests for data_processing/schemas/models.py."""
+"""Tests for sigma/schemas/models.py."""
 
 from datetime import UTC, datetime
 
-from data_processing.schemas import (
+from sigma.schemas import (
     Award,
     Competition,
     CompetitionType,

@@ -1,11 +1,11 @@
-"""Tests for data_processing/matching/person_matcher.py."""
+"""Tests for sigma/matching/person_matcher.py."""
 
 import pytest
 
-from data_processing.database import create_empty_database
-from data_processing.matching import PersonMatcher
-from data_processing.matching.person_matcher import capitalize_name, compute_initials
-from data_processing.schemas import Country, Person, Source
+from sigma.database import create_empty_database
+from sigma.matching import PersonMatcher
+from sigma.matching.person_matcher import capitalize_name, compute_initials
+from sigma.schemas import Country, Person, Source
 
 
 class TestCapitalizeName:

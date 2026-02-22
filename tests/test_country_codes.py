@@ -1,9 +1,9 @@
-"""Tests for data_processing/country_codes.py."""
+"""Tests for sigma/country_codes.py."""
 
 import pytest
 from pydantic import BaseModel, ValidationError
 
-from data_processing.country_codes import (
+from sigma.country_codes import (
     COUNTRY_NAMES,
     VALID_ISO_CODES,
     ISOCountryCode,

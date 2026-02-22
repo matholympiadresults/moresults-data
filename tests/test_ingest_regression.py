@@ -9,7 +9,7 @@ from pathlib import Path
 
 import pytest
 
-from data_processing.cli.sources import ingest_all_sources
+from sigma.cli.sources import ingest_all_sources
 
 
 def get_data_dir() -> Path:

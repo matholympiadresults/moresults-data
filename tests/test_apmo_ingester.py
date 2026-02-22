@@ -1,21 +1,21 @@
-"""Tests for data_processing/sources/apmo/ingester/apmo_ingester.py."""
+"""Tests for sigma/sources/apmo/ingester/apmo_ingester.py."""
 
 import json
 
-from data_processing.database import create_empty_database, get_or_create_country
-from data_processing.schemas import Award, Source
-from data_processing.sources.apmo.ingester.apmo_ingester import (
+from sigma.database import create_empty_database, get_or_create_country
+from sigma.schemas import Award, Source
+from sigma.sources.apmo.ingester.apmo_ingester import (
     apmo_year_to_edition,
     convert_award,
     create_competition,
     ingest_scoreboard,
     load_scoreboard_from_file,
 )
-from data_processing.sources.apmo.parser import (
+from sigma.sources.apmo.parser import (
     APMOScoreboard,
     Contestant,
 )
-from data_processing.sources.apmo.parser.models import (
+from sigma.sources.apmo.parser.models import (
     Award as APMOAward,
 )
 
