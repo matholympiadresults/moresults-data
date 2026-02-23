@@ -151,16 +151,23 @@ def _parse_table(table, year: int, is_online: bool) -> list[ContestantResult]:
             score_start_idx = 4
         else:
             # Standard format: Name (cell 1)
-            name_text = cells[1].get_text(strip=True)
+            # RMM lists names as "Surname GivenName(s)" - swap to "GivenName(s) Surname"
+            raw_name = cells[1].get_text(strip=True)
             country_cell_idx = 2
             score_start_idx = 3
 
-        if not name_text.strip():
+        if not name_text.strip() if is_split_name_format else not raw_name.strip():
             continue
 
         # Check if official team member (marked with *)
-        is_official_team = name_text.endswith("*")
-        name = name_text.rstrip("*").strip()
+        if is_split_name_format:
+            is_official_team = name_text.endswith("*")
+            name = name_text.rstrip("*").strip()
+        else:
+            is_official_team = raw_name.endswith("*")
+            raw_name = raw_name.rstrip("*").strip()
+            parts = raw_name.split(None, 1)
+            name = f"{parts[1]} {parts[0]}" if len(parts) == 2 else raw_name
 
         # Extract country code
         country = cells[country_cell_idx].get_text(strip=True)
