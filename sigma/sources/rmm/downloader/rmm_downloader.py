@@ -15,7 +15,7 @@ BASE_URL_TEMPLATE = "https://rmms.lbi.ro/rmm{year}/index.php?id=results_math"
 RMM_START_YEAR = 2008
 
 # Available years (may need updating as new competitions happen)
-AVAILABLE_YEARS = list(range(2008, 2026))
+AVAILABLE_YEARS = list(range(2008, 2027))
 
 
 class DownloadError(Exception):

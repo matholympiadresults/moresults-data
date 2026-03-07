@@ -44,6 +44,19 @@ sigma compare <(git show HEAD~1:data/olympiad_data.json) data/olympiad_data.json
 sigma compare <(git show HEAD~1:data/olympiad_data.json) data/olympiad_data.json -v
 ```
 
+## Adding a New Year of Data
+
+When a new competition year becomes available:
+
+1. **Update the year range** in the source's downloader (e.g. `sigma/sources/rmm/downloader/rmm_downloader.py`) — bump the `AVAILABLE_YEARS` range upper bound.
+2. **Download, parse, and rebuild**:
+   ```bash
+   sigma download <source> -d data/ --year <year>
+   sigma parse <source> -d data/ --year <year>
+   sigma ingest-all -d data/ -o data/olympiad_data.json
+   ```
+3. **Verify** with `sigma info <source> <year> -d data/` and compare the database.
+
 ## Package Manager
 
 - Python: `uv` (see `pyproject.toml`)

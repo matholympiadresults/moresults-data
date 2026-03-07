@@ -124,6 +124,29 @@ sigma ingest-all -d data/ -o data/olympiad_data.json
 sigma summary data/olympiad_data.json
 ```
 
+### Adding a New Year
+
+When a new competition year becomes available, three steps are needed:
+
+1. **Update the year range** — Each source has an `AVAILABLE_YEARS` list in its downloader module (e.g. `sigma/sources/rmm/downloader/rmm_downloader.py`). Bump the upper bound of the `range()` to include the new year.
+
+2. **Download and parse the new year**:
+   ```bash
+   sigma download <source> -d data/ --year <year>
+   sigma parse <source> -d data/ --year <year>
+   ```
+
+3. **Rebuild the full database** (always use `ingest-all`, not single-source ingest, for commits):
+   ```bash
+   sigma ingest-all -d data/ -o data/olympiad_data.json
+   ```
+
+4. **Verify** the results:
+   ```bash
+   sigma info <source> <year> -d data/
+   sigma compare <(git show HEAD:data/olympiad_data.json) data/olympiad_data.json
+   ```
+
 ## Development
 
 ```bash
