@@ -42,43 +42,43 @@ class TestNameSwapPre2018:
     """Before 2018, names are 'First Last' and should be kept as-is."""
 
     def test_simple_name(self):
-        table = _make_table(_make_row("1", "Joe Benton"))
+        table = _make_table(_make_row("1", "Foo Bar"))
         results = _parse_table(table, 2017, is_online=False)
-        assert results[0].name == "Joe Benton"
+        assert results[0].name == "Foo Bar"
 
     def test_all_caps_name(self):
-        table = _make_table(_make_row("1", "HARVEY YAU"))
+        table = _make_table(_make_row("1", "FOO BAR"))
         results = _parse_table(table, 2015, is_online=False)
-        assert results[0].name == "HARVEY YAU"
+        assert results[0].name == "FOO BAR"
 
     def test_multi_word_name(self):
-        table = _make_table(_make_row("1", "KYU HYEON CHOI"))
+        table = _make_table(_make_row("1", "FOO BAR BAZ"))
         results = _parse_table(table, 2017, is_online=False)
-        assert results[0].name == "KYU HYEON CHOI"
+        assert results[0].name == "FOO BAR BAZ"
 
 
 class TestNameSwapPost2018:
     """From 2018 onwards, names are 'Last First' and should be swapped."""
 
     def test_simple_swap(self):
-        table = _make_table(_make_row("1", "SINGHAL MIHIR"))
+        table = _make_table(_make_row("1", "BAR FOO"))
         results = _parse_table(table, 2018, is_online=False)
-        assert results[0].name == "MIHIR SINGHAL"
+        assert results[0].name == "FOO BAR"
 
     def test_swap_mixed_case(self):
-        table = _make_table(_make_row("1", "Wang Alexander"))
+        table = _make_table(_make_row("1", "Bar Foo"))
         results = _parse_table(table, 2023, is_online=False)
-        assert results[0].name == "Alexander Wang"
+        assert results[0].name == "Foo Bar"
 
     def test_swap_multi_word_given_name(self):
-        table = _make_table(_make_row("1", "Simon László Bence"))
+        table = _make_table(_make_row("1", "Baz Foo Bar"))
         results = _parse_table(table, 2024, is_online=False)
-        assert results[0].name == "László Bence Simon"
+        assert results[0].name == "Foo Bar Baz"
 
     def test_single_word_name_unchanged(self):
-        table = _make_table(_make_row("1", "Mononym"))
+        table = _make_table(_make_row("1", "Foo"))
         results = _parse_table(table, 2020, is_online=False)
-        assert results[0].name == "Mononym"
+        assert results[0].name == "Foo"
 
     def test_hyphenated_family_name_with_spaces(self):
         """Family names with ' - ' should stay together when swapped."""
@@ -87,7 +87,7 @@ class TestNameSwapPost2018:
         assert results[0].name == "ZAR FOO - BAR"
 
     def test_official_team_marker_stripped(self):
-        table = _make_table(_make_row("1", "Anghel David-Andrei*"))
+        table = _make_table(_make_row("1", "Bar Foo-Baz*"))
         results = _parse_table(table, 2023, is_online=False)
-        assert results[0].name == "David-Andrei Anghel"
+        assert results[0].name == "Foo-Baz Bar"
         assert results[0].is_official_team is True
