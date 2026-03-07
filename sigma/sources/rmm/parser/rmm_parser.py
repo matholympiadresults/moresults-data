@@ -162,6 +162,16 @@ def _parse_table(table, year: int, is_online: bool) -> list[ContestantResult]:
         is_official_team = name_text.endswith("*")
         name = name_text.rstrip("*").strip()
 
+        # From 2018 onwards, names in the standard format are "Last First"
+        # instead of "First Last" (used up to 2017). Swap them back.
+        if not is_split_name_format and year >= 2018:
+            # Protect " - " in hyphenated names (e.g. "FOO - BAR ZAR")
+            placeholder = "\x00"
+            swappable = name.replace(" - ", placeholder)
+            parts = swappable.split(None, 1)
+            if len(parts) == 2:
+                name = f"{parts[1]} {parts[0]}".replace(placeholder, " - ")
+
         # Extract country code
         country = cells[country_cell_idx].get_text(strip=True)
         if not country:
