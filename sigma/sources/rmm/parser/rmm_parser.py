@@ -8,7 +8,43 @@ from pathlib import Path
 
 from bs4 import BeautifulSoup
 
+from sigma.country_codes import VALID_ISO_CODES
+
 from .models import ContestantResult, RMMYearResults, ValidationResult
+
+# RMM-specific country codes that aren't standard ISO codes.
+# These get normalized to ISO codes during ingestion.
+KNOWN_RMM_CODES: frozenset[str] = frozenset(
+    {
+        "-",  # Online contestants (no country)
+        "brz",  # Brazil (legacy)
+        "bul",  # Bulgaria (legacy)
+        "rom",  # Romania (legacy)
+        "unk",  # United Kingdom
+        "sofia",  # Sofia, Bulgaria
+        "varna",  # Varna, Bulgaria
+        "irkutsk",  # Irkutsk, Russia
+        "roub",  # Romania B team
+        "romb",  # Romania B team (alt)
+        "romf",  # Romania F team (girls)
+        "rouf",  # Romania F team (alt)
+        "blrb",  # Belarus B team
+        "hunb",  # Hungary B team
+        "geob",  # Georgia B team
+        "itab",  # Italy B team
+        "ukrb",  # Ukraine B team
+        "svnb",  # Slovenia B team
+        "nldb",  # Netherlands B team
+        "turb",  # Turkey B team
+        "ksvb",  # Kosovo B team
+        "suib",  # Switzerland B team
+        "tbt",  # The Baltic Team
+        "tnd",  # The Nordic Team
+        "vianu",  # Tudor Vianu school team
+    }
+)
+
+_ALL_KNOWN_CODES = VALID_ISO_CODES | KNOWN_RMM_CODES
 
 
 class ParseError(Exception):
@@ -184,6 +220,12 @@ def _parse_table(table, year: int, is_online: bool) -> list[ContestantResult]:
         country_code = country.split()[0] if " " in country else country
         # Strip trailing digits (e.g., "CHN1" -> "CHN", "ROMB1" -> "ROMB")
         country_code = country_code.rstrip("0123456789").upper()
+
+        # Validate country code is known
+        if country_code.lower() not in _ALL_KNOWN_CODES:
+            raise ParseError(
+                f"Year {year}, row {row_idx}: Unknown country code {country_code!r} for {name}"
+            )
 
         # Extract problem scores (P1-P6)
         problem_scores = []

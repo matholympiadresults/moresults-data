@@ -54,11 +54,55 @@ RMM_CODE_MAPPING: dict[str, str] = {
     "ksvb": "xkx",
     "suib": "che",
     "turb": "tur",
-    # Special teams that can't be mapped to a country
-    "tbt": "unknown",  # Tibet
-    "tnd": "unknown",  # The Nordic Team (combined team)
+    # Special teams (resolved per-contestant via COMBINED_TEAM_MEMBERS)
     "vianu": "unknown",  # Tudor Vianu National College (school team)
 }
+
+# Combined team (TND/TBT) members mapped to their actual country.
+# Keyed by (year, lowercase name).
+COMBINED_TEAM_MEMBERS: dict[tuple[int, str], str] = {
+    # TND - The Nordic Team
+    (2020, "andreas alberg"): "nor",
+    (2020, "fredrik ekholm"): "swe",
+    (2020, "jingdan hua"): "dnk",
+    (2020, "daniel arone"): "fin",
+    (2021, "andreas alberg"): "nor",
+    (2021, "manja rönngren"): "swe",
+    (2021, "magnus olsen"): "dnk",
+    (2021, "juho arala"): "fin",
+    (2023, "daniel pham nguyen"): "dnk",
+    (2023, "benedikt vilji magnússon"): "isl",
+    (2023, "aino aulanko"): "fin",
+    (2023, "mikael häglund"): "swe",
+    (2024, "daniil akimov"): "fin",
+    (2024, "vistisen maia reffs"): "dnk",
+    (2024, "vebjorn holm-gjerde"): "nor",
+    (2024, "mingdao zou"): "swe",
+    (2025, "ruiming zhang"): "swe",
+    (2025, "andreas arnfred nielsen"): "dnk",
+    (2025, "zhongyi li"): "fin",
+    (2025, "lénárd dániel virág"): "fin",
+    (2025, "justin jia"): "nor",
+    (2025, "jiachen mi"): "swe",
+    (2026, "skomantas urbonas"): "nor",
+    (2026, "theo karlin"): "swe",
+    (2026, "ohto katila"): "fin",
+    (2026, "ziyi xiao"): "dnk",
+    (2026, "vladyslav levchenko"): "swe",
+    # TBT - The Baltic Team
+    (2025, "kiryl krutsko"): "ltu",
+    (2025, "armands tidrikis"): "lva",
+    (2025, "bronislav shatil"): "est",
+    (2025, "kaarel toomet"): "est",
+    (2026, "kaarel toomet"): "est",
+    (2026, "petr shvab"): "lva",
+    (2026, "kristjan lepp"): "est",
+    (2026, "adomas juodis"): "ltu",
+    (2026, "luka vladimirovs"): "lva",
+    (2026, "pijus piekus"): "ltu",
+}
+
+COMBINED_TEAM_CODES = {"tbt", "tnd"}
 
 
 def normalize_country_code(raw_code: str) -> str:
@@ -170,9 +214,18 @@ def ingest_year_results(
         if contestant.country == "-":
             continue
 
-        # Normalize country code first to check if it's a secondary Romanian team
+        # Resolve combined team members (TBT/TND) to their actual country
         raw_code = contestant.country
-        country_code = normalize_country_code(raw_code)
+        if raw_code.lower() in COMBINED_TEAM_CODES:
+            key = (year_results.year, contestant.name.lower())
+            if key not in COMBINED_TEAM_MEMBERS:
+                raise ValueError(
+                    f"Unknown combined team member: {contestant.name} "
+                    f"({raw_code}) in {year_results.year}"
+                )
+            country_code = COMBINED_TEAM_MEMBERS[key]
+        else:
+            country_code = normalize_country_code(raw_code)
 
         # Skip Romanian secondary teams unless explicitly included
         if not include_all_romanian_teams and raw_code.lower() in ROMANIAN_SECONDARY_TEAMS:
