@@ -101,6 +101,15 @@ sigma info egmo 2024 -d data/
 
 # Show database summary
 sigma summary data/olympiad_data.json
+
+# Compare two database versions
+sigma compare old.json new.json
+
+# Compare with verbose output (shows individual added/removed keys)
+sigma compare old.json new.json -v
+
+# Compare database across git commits
+sigma compare <(git show HEAD~1:data/olympiad_data.json) data/olympiad_data.json
 ```
 
 ### Full Example
