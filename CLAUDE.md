@@ -32,6 +32,18 @@ uv run ruff format .
 - `tests/` - Python tests
 - `data/` - Raw data files (gitignored, generated at runtime)
 
+## Comparing Database Changes
+
+After modifying data or ingesters, compare the database before and after:
+
+```bash
+# Compare current DB against previous git commit
+sigma compare <(git show HEAD~1:data/olympiad_data.json) data/olympiad_data.json
+
+# Verbose mode to see individual added/removed keys
+sigma compare <(git show HEAD~1:data/olympiad_data.json) data/olympiad_data.json -v
+```
+
 ## Package Manager
 
 - Python: `uv` (see `pyproject.toml`)

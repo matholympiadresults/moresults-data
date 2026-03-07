@@ -2,6 +2,7 @@
 
 import click
 
+from .commands.compare import compare
 from .commands.download import download
 from .commands.info import info
 from .commands.ingest import ingest, ingest_all
@@ -33,6 +34,7 @@ def cli():
     pass
 
 
+cli.add_command(compare)
 cli.add_command(download)
 cli.add_command(parse)
 cli.add_command(ingest)
