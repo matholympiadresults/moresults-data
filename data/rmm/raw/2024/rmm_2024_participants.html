@@ -1,0 +1,1407 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<html>
+<head>
+	<title>RMM 2024 - Romanian Master of Mathematics 2024</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name = "description" content = "RMM - 15th Romanian Master of Mathematics 2024"/>
+	<meta name = "keywords" content = "rmm,rmms, math contest, concurs de mate, international contest, romanian contest, concurs international, colegiul national de informatica tudor vianu, vianu, romania"/>
+	<meta name = "author" content = "Silviu Vasile"/>
+	<meta name = "copyright" content = "CNITV"/>
+	<meta name = "robots" content = "all"/>
+	<meta name = "language" content = "eng"/>
+	<link rel="Shortcut icon" href="fav.png">
+	<link rel="image_src" href="https://rmm.lbi.ro/fav.png" />
+	<script type="text/javascript" src="js/prototype.js"></script>
+<script type="text/javascript" src="js/scriptaculous.js?load=effects,builder"></script>
+<script type="text/javascript" src="js/lightbox.js"></script>
+
+	<link rel="stylesheet" href="css/lightbox.css" type="text/css" media="screen" />
+	
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script type="text/javascript" src="_js/s3Slider.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#slider1').s3Slider({
+				timeOut: 4000 
+			});
+		});
+
+	</script>
+<script type="text/javascript">
+function toggle_conf(id) {
+
+		if(document.getElementById(id).style.display=='block')
+			{
+			document.getElementById(id).style.display='none';
+			document.getElementById(id).style.visibility='hidden';
+			}
+		else 
+			{
+			document.getElementById(id).style.display='block';
+			document.getElementById(id).style.visibility='visible';
+                     }
+    
+	}
+function genereaza_cod(form) {
+	var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
+	var string_length = 8;
+	var randomstring = "";
+	for (var i=0; i<string_length; i++) {
+		var rnum = Math.floor(Math.random() * chars.length);
+		randomstring += chars.substring(rnum,rnum+1);
+	}
+		
+	form.cod_mail.value=randomstring;
+	
+	return true;
+}
+</script>
+	<!--<link rel = "shortcut icon" href ="" type = "image/bmp"/>
+	<link rel = "home" href = "" title = "RMM - website"/> !-->
+</head>
+<body>
+	<link rel = "stylesheet" type = "text/css" href = "_style/style_banner.css" />
+	<link rel = "stylesheet" type = "text/css" href = "_style/style.css" />
+	<script type = "text/javascript" src = "_javascript/javascript.js"></script>
+	
+	
+	<table id = "header" align = "center" cellpadding = "5px" cellspacing = "0px">
+	<tr>
+		<td id = "banner_header">
+		</td>
+	</tr>
+	<tr>
+		<td align = "right">	
+		<a class = "link" href = "index.php?id=contact">Contact</a> | 
+<a class= "link" > Last editions :</a>
+<a class = "link" href = "https://rmms.lbi.ro/rmm">1st</a> | 
+<a class = "link" href = "https://rmms.lbi.ro/rmm2">2nd</a> | 
+<a class = "link" href = "https://rmms.lbi.ro/rms">3rd</a> | 
+<a class = "link" href = "https://rmms.lbi.ro/rmm2011">4th</a> | 
+<a class = "link" href = "https://rmms.lbi.ro/rmm2012">5th</a> |  
+<a class = "link" href = "https://rmms.lbi.ro/rmm2013">6th</a> | 
+<a class = "link" href = "https://rmms.lbi.ro/rmm2015">7th</a> | 
+<a class = "link" href = "https://rmms.lbi.ro/rmm2016">8th</a> | 
+<a class = "link" href = "https://rmms.lbi.ro/rmm2017">9th</a> | 
+<a class = "link" href = "https://rmms.lbi.ro/rmm2018">10th</a> | 
+<a class = "link" href = "https://rmms.lbi.ro/rmm2019">11th</a> | 
+<a class = "link" href = "https://rmms.lbi.ro/rmm2020">12th</a> |
+<a class = "link" href = "https://rmms.lbi.ro/rmm2021">13th</a> |
+<a class = "link" href = "https://rmms.lbi.ro/rmm2023">14th</a> 
+		</td>
+	</tr>
+</table>	<div id="tot">
+	<div id="slider1">
+        <ul id="slider1Content">
+             <li class="slider1Image">
+                <a href=""><img src="_banner/img1.jpg" alt="1" /></a>
+                <span class="left"></span></li>
+            <li class="slider1Image">
+                <a href=""><img src="_banner/img2.jpg" alt="2" /></a>
+                <span class="right"></span></li>
+            <li class="slider1Image">
+                <a href=""><img src="_banner/img3.jpg" alt="3" /></a>
+                <span class="right"></span></li>
+            <li class="slider1Image">
+                <a href=""><img src="_banner/img4.jpg" alt="4" /></a>
+                <span class="right"></span></li>
+			<div class="clear slider1Image"></div>	
+        </ul>
+    </div>
+	</div>
+	
+	
+	<table id = "middle" align = "center" cellpadding = "0px" cellspacing = "0px" valign = "top">
+		<tr>
+			<td valign = "top" align = "left">	
+				
+				<!--continutul din stanga-->
+				<table id = "left_content" cellpadding = "0px" cellspacing = "0px">
+					<tr>
+						<td>
+							<table class = "tab" cellpadding = "0px" cellspacing = "0px">
+								<tr>
+									<td>
+										<h2 class = "title_tab">Partner</h2>
+										<p class = "text" style="padding:10px;">The official partner in organizing and conducting competition</p>
+										<a href="http://imar.ro/"><img src="images/imar.png" width="160px" height="160px" border="0"></img></a>
+									</td>
+								</tr>	
+							</table>
+						
+							<table class = "tab" cellpadding = "0px" cellspacing = "0px">
+								<tr>
+									<td>
+										<h2 class = "title_tab"> RMM 2024 </h2>
+									</td>
+								</tr>
+								<tr><td class = "tab_link"><a class = "cell_link" href="/rmm2024/index.php?id=home" title = "RMM Home">Home</a></td></tr><tr><td class = "tab_link"><a class = "cell_link" href="/rmm2024/index.php?id=news" title = "RMM News">News</a></td></tr>			
+							</table>
+							
+							<table class = "tab" cellpadding = "0px" cellspacing = "0px">
+								<tr>
+									<td>
+										<h2 class = "title_tab"> RMM Organization </h2>
+									</td>
+								</tr>
+								<tr><td class = "tab_link"><a class = "cell_link" href="/rmm2024/index.php?id=regulation" title = "RMM Regulation">Regulation</a></td></tr><tr><td class = "tab_link"><a class = "cell_link" href="/rmm2024/index.php?id=committee" title = "RMM Committees">Committees</a></td></tr><tr><td class = "tab_link"><a class = "cell_link" style="color:#FF0000;" href="/rmm2024/index.php?id=program" title = "RMM Programme">Programme</a></td></tr><tr><td class = "tab_link"><a class = "cell_link" style="color:#FF0000;" href="/rmm2024/index.php?id=locations_maps" title = "RMM Key locations">Key locations</a></td></tr>			
+							</table>
+							
+							<table class = "tab" cellpadding = "0px" cellspacing = "0px">
+								<tr>
+									<td>
+										<h2 class = "title_tab"> RMM Contest </h2>
+									</td>
+								</tr>
+								<tr><td class = "tab_link"><a class = "cell_link" href="/rmm2024/index.php?id=participants_math" title = "RMM Participants">Participants</a></td></tr><tr><td class = "tab_link"><a class = "cell_link" style="color:#FF0000;" href="/rmm2024/index.php?id=results_math" title = "RMM Results">Results</a></td></tr><tr><td class = "tab_link"><a class = "cell_link" style="color:#FF0000;" href="/rmm2024/index.php?id=problems_math" title = "RMM Problems">Problems</a></td></tr>			
+							</table>
+							
+							
+							<table class = "tab" cellpadding = "0px" cellspacing = "0px">
+								<tr>
+									<td>
+										<h2 class = "title_tab"> General Information </h2>
+									</td>
+								</tr>
+								<tr>
+									<td class = "tab_link">
+										<a class = "cell_link" href = "https://en.wikipedia.org/wiki/Romania" target = "_blank" title = "RMM About Romania">About Romania</a>
+									</td>
+								</tr>
+								<tr>
+									<td class = "tab_link">
+										<a class = "cell_link" href = "https://en.wikipedia.org/wiki/Bucharest" target = "_blank" title = "RMM About Bucharest">About Bucharest</a>
+									</td>
+								</tr>
+								<tr>
+									<td class = "tab_link">
+										<a class = "cell_link" href = "https://www.romaniatourism.com/" target = "_blank" title = "RMM Tourist Guide">Tourist Guide</a>
+									</td>
+								</tr>
+							</table>						
+						</td>
+					</tr>
+				</table>
+				
+			</td>
+			
+			<td valign = "top" align = "right">
+				<!--continutul din mijloc-->
+				<table id = "right_content" cellpadding = "0px" cellspacing = "0px">
+					<tr>
+						<td>
+							
+	
+	
+<h2 class = "title_content">This is the list of currently registered participants:<br></h2>
+<p class = "text">
+				  			</p>
+
+<table id = "content" cellpadding = "0px" cellspacing = "0px">
+	
+		
+	<tr>
+		<td>
+			<h2 class = "title_content">
+<img oh="40" ow="64" src="./_images/_flags/BGR.gif" style="vertical-align: middle;" height="40" width="64">Republic of Bulgaria</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text"><b>Republic of Bulgaria team</b>:<br/><br/>Name: <b>Marin Hristov</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/hristov__marin.jpg" width="100" /> 1) <br/>20 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Maria Drencheva</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/drencheva__maria.jpg" width="100" /> 2) <br/>20 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Bilyana Dimitrova</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/dimitrova__bilyana.jpg" width="100" /> 3) <br/>21 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Boris Gachevski</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/gachevski__boris.jpg" width="100" /> 4) <br/>20 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Vesselin Markovich</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/markovich__vesselin.jpg" width="100" /> 5) <br/>20 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Andrey Stefanov</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/stefanov__andrey.jpg" width="100" /> 6) <br/>18 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Bozhidar Dimitrov</b> (Deputy Leader<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/dimitrov__bozhidar.jpg" width="100" />) <br/>21 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Stanislav Harizanov</b> (Leader<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/harizanov__stanislav.jpg" width="100" />) <br/>42 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+<img oh="40" ow="64" src="./_images/_flags/CHN.gif" style="vertical-align: middle;" height="40" width="64">People's Republic of China</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text"><b>People's Republic of China team</b>:<br/><br/>Name: <b>Zhenqian PENG</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/peng__zhenqian.jpg" width="100" /> 1) <br/>16 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Mochen HE</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/he__mochen.jpg" width="100" /> 2) <br/>18 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Haokun WANG</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/wang__haokun.jpg" width="100" /> 3) <br/>18 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Qian XU</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/xu__qian.jpg" width="100" /> 4) <br/>19 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Yanting SONG</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/song__yanting.jpg" width="100" /> 5) <br/>17 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Hansong LI</b> (Leader<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/li__hansong.jpg" width="100" />) <br/>34 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+<img oh="40" ow="64" src="./_images/_flags/FRA.gif" style="vertical-align: middle;" height="40" width="64">French Republic</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text"><b>French Republic team</b>:<br/><br/>Name: <b>Anatole Bouton</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/bouton__anatole.jpg" width="100" /> 1) <br/>18 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Serge Bidallier</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/bidallier__serge.jpg" width="100" /> 2) <br/>19 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Pierre-Akin Dürrüoglu</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/anonymous-m.jpg" width="100" /> 3) <br/>17 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Oscar Fischler</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/fischler__oscar.jpg" width="100" /> 4) <br/>19 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Auguste Ramondou</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/ramondou__auguste.jpg" width="100" /> 5) <br/>20 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Solal Pivron--Djeddi</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/pivron--djeddi__solal.jpg" width="100" /> 6) <br/>18 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Aurélien Fourré</b> (Deputy Leader<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/fourre__aurelien.jpg" width="100" />) <br/>22 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Martin Rakovsky</b> (Leader<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/rakovsky__martin.jpg" width="100" />) <br/>25 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+<img oh="40" ow="64" src="./_images/_flags/HUN.gif" style="vertical-align: middle;" height="40" width="64">Hungary</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text"><b>Hungary team</b>:<br/><br/>Name: <b>László Bence Simon</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/simon__laszlo bence.jpg" width="100" /> 1) <br/>20 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Ábel Szakács</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/szakacs__abel.jpg" width="100" /> 2) <br/>17 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Bernát Tarján</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/tarjan__bernat.jpg" width="100" /> 3) <br/>20 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Boldizsár Varga</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/varga__boldizsar.jpg" width="100" /> 4) <br/>20 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Márton Borbényi</b> (Deputy Leader<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/borbenyi__marton.jpg" width="100" />) <br/>27 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Dániel Lenger</b> (Leader<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/lenger__daniel.jpg" width="100" />) <br/>33 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+<img oh="40" ow="64" src="./_images/_flags/ISR.gif" style="vertical-align: middle;" height="40" width="64">State of Israel</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text"><b>State of Israel team</b>:<br/><br/>Name: <b>Raz Dvora</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/dvora__raz.jpg" width="100" /> 1) <br/>19 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Hayim David Shamir</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/shamir__hayim david.jpg" width="100" /> 2) <br/>19 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Itamar Nir</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/nir__itamar.jpg" width="100" /> 3) <br/>20 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Nadav Dan Tamari</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/tamari__nadav dan.jpg" width="100" /> 4) <br/>18 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Alon Tanay</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/tanay_alon.jpg" width="100" /> 5) <br/>19 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Omer Marcus</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/marcus__omer.jpg" width="100" /> 6) <br/>19 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Netta Ilani</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/ilani__netta.jpg" width="100" /> 7) <br/>19 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Yotam Budnik</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/budnik__yotam.jpg" width="100" /> 8) <br/>17 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Daniel Kaner</b> (Deputy Leader<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/kaner__daniel.jpg" width="100" />) <br/>27 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Dan Carmon</b> (Leader<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/carmon__dan.jpg" width="100" />) <br/>35 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Ofer Bogoslavsky</b> (Observer A<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/bogoslavsky__ofer.jpg" width="100" />) <br/>21 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+<img oh="40" ow="64" src="./_images/_flags/ITA.gif" style="vertical-align: middle;" height="40" width="64">Italian Republic</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text"><b>Italian Republic team</b>:<br/><br/>Name: <b>Edoardo Balistri</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/balistri__eduardo.jpg" width="100" /> 1) <br/>19 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Lorenzo Bastioni</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/bastioni__lorenzo.jpg" width="100" /> 2) <br/>20 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Raffaele Botticella</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/botticella__raffaele.jpg" width="100" /> 3) <br/>20 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Enrico Zonta</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/zonta__enrico.jpg" width="100" /> 4) <br/>20 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Bernardo Tarini</b> (Deputy Leader<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/tarini__bernardo.jpg" width="100" />) <br/>25 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Massimo Gobbino</b> (Leader<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/gobbino__massimo.jpg" width="100" />) <br/>58 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+<img oh="40" ow="64" src="./_images/_flags/ROU.gif" style="vertical-align: middle;" height="40" width="64">Romania</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text"><b>Romania team</b>:<br/><br/>Name: <b>David-Andrei Anghel</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/anghel__david-andrei.jpg" width="100" /> 1) <br/>21 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Andrei Giovani Chiriță</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/chirita__andrei giovani.jpg" width="100" /> 2) <br/>20 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Pavel Ciurea</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/ciurea__pavel.jpg" width="100" /> 3) <br/>19 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Vlad-Titus Spătaru</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/spataru__vlad.jpg" width="100" /> 4) <br/>20 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Aida Mitroi</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/mitroi__aida.jpg" width="100" /> 5) <br/>18 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>David Ghibu</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/ghibu__david.jpg" width="100" /> 6) <br/>19 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Lucian-Gabriel Țurea</b> (Deputy Leader<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/Turea__lucian-gabriel.jpg" width="100" />) <br/>37 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Mihai Chiș</b> (Leader<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/chis__mihai.jpg" width="100" />) <br/>57 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+<img oh="40" ow="64" src="./_images/_flags/ROU B.gif" style="vertical-align: middle;" height="40" width="64">Romania (B)</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text"><b>Romania (B) team</b>:<br/><br/>Name: <b>Andrei Vila</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/vila__andrei.jpg" width="100" /> 1) <br/>19 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>David-Vlad Mărghidan </b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/marghidan__david-vlad.jpg" width="100" /> 2) <br/>17 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Emanuel Mazăre </b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/mazare__emanuel.jpg" width="100" /> 3) <br/>18 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Ionuț-Gabriel Stan</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/stan__ionut-gabriel.jpg" width="100" /> 4) <br/>19 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Edward Torac-Toma</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/torac-toma__edward.jpg" width="100" /> 5) <br/>20 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Gabriela-Mădălina Pîrvulescu</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/pirvulescu__gabriela-madalina.jpg" width="100" /> 6) <br/>20 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Flavian Georgescu</b> (Leader<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/georgescu__flavian.jpg" width="100" />) <br/>37 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+<img oh="40" ow="64" src="./_images/_flags/SRB.gif" style="vertical-align: middle;" height="40" width="64">Republic of Serbia</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text"><b>Republic of Serbia team</b>:<br/><br/>Name: <b>Gvozden Lapčević</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/lapcevic__gvozden.jpg" width="100" /> 1) <br/>20 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Stefan Šebez</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/sebez__stefan.jpg" width="100" /> 2) <br/>18 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Novak Despotović</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/despotovic__novak.jpg" width="100" /> 3) <br/>18 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Nina Šušić</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/susic__nina.jpg" width="100" /> 4) <br/>16 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Miljan Knežević</b> (Leader<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/knezevic__miljan.jpg" width="100" />) <br/>52 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+<img oh="40" ow="64" src="./_images/_flags/TND.gif" style="vertical-align: middle;" height="40" width="64">Nordic Team</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text"><b>Nordic Team team</b>:<br/><br/>Name: <b>Mingdao Zou</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/zou__mingdao.jpg" width="100" /> 1) <br/>21 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Daniil Akimov</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/akimov__daniil.jpg" width="100" /> 2) <br/>19 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Maia Reffs Vistisen</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/reffs vistisen__maia.jpg" width="100" /> 3) <br/>20 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Vebjorn Holm-Gjerde</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/holm-gjerde__vebjorn.jpg" width="100" /> 4) <br/>20 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Daniel Pham Nguyen</b> (Deputy Leader<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/anonymous-m.jpg" width="100" />) <br/>22 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Andreas Alberg</b> (Leader<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/alberg__andreas.jpg" width="100" />) <br/>22 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+<img oh="40" ow="64" src="./_images/_flags/UKR.gif" style="vertical-align: middle;" height="40" width="64">Ukraine</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text"><b>Ukraine team</b>:<br/><br/>Name: <b>Daniil Shvaiko</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/shvaiko__daniil.jpg" width="100" /> 1) <br/>18 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Oles Hordiichuk</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/hordiichuk__oles.jpg" width="100" /> 2) <br/>17 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Alisa Potomkina</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/potomkina__alisa.jpg" width="100" /> 3) <br/>18 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Denys Hafych</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/hafych__denys.jpg" width="100" /> 4) <br/>19 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Stepan Semyrenskyi</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/semyrenskyi__stepan.jpg" width="100" /> 5) <br/>18 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Mykhailo Sydorenko</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/sydorenko__mykhailo.jpg" width="100" /> 6) <br/>17 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Stepan Feduniak</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/feduniak__stepan.jpg" width="100" /> 7) <br/>19 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Maksym Torianyk</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/torianyk__maksym.jpg" width="100" /> 8) <br/>18 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Volodymyr Pryhunov</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/pryhunov__volodymyr.jpg" width="100" /> 9) <br/>16 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Mykhailo Barkulov</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/barkulov__mykhailo.jpg" width="100" /> 10) <br/>18 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Maryna Chigidina</b> (Deputy Leader<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/chigidina__maryna.jpg" width="100" />) <br/>21 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Nhok Tkhai Shon Ngo</b> (Leader<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/ngo__nhok tkhai shon.jpg" width="100" />) <br/>24 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Karyna Nechyporuk</b> (Observer A<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/nechyporuk__karyna.jpg" width="100" />) <br/>23 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+<img oh="40" ow="64" src="./_images/_flags/UNK.gif" style="vertical-align: middle;" height="40" width="64">United Kingdom</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text"><b>United Kingdom team</b>:<br/><br/>Name: <b>Aanya Goyal</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/goyal__aanya.jpg" width="100" /> 1) <br/>18 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Samuel Griffiths</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/griffiths__samuel.jpg" width="100" /> 2) <br/>18 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Zijie Guan</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/guan__zijie.jpg" width="100" /> 3) <br/>18 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Isaac King</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/king__isaac.jpg" width="100" /> 4) <br/>20 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Samuel Sturge</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/sturge__samuel.jpg" width="100" /> 5) <br/>20 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Haolin Zhao</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/zhao__haolin.jpg" width="100" /> 6) <br/>20 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Harvey Yau</b> (Deputy Leader<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/yau__harvey.jpg" width="100" />) <br/>26 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Anđela Šarković</b> (Leader<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/sarkovic__andela.jpg" width="100" />) <br/>30 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Mary Teresa Fyfe</b> (Observer C<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/fyfe__mary teresa.jpg" width="100" />) <br/>76 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+<img oh="40" ow="64" src="./_images/_flags/USA.gif" style="vertical-align: middle;" height="40" width="64">United States of America</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text"><b>United States of America team</b>:<br/><br/>Name: <b>Linus Tang</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/tang__linus.jpg" width="100" /> 1) <br/>20 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Krishna Pothapragada</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/pothapragada__krishna.jpg" width="100" /> 2) <br/>19 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Hannah Fox</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/fox__hannah.jpg" width="100" /> 3) <br/>18 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Allen Wang</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/wang__allen.jpg" width="100" /> 4) <br/>20 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Qiao Zhang</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/zhang__qiao.jpg" width="100" /> 5) <br/>18 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Andrew Carratu</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/carratu__andrew.jpg" width="100" /> 6) <br/>19 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Carl Schildkraut</b> (Deputy Leader<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/schildkraut__carl.jpg" width="100" />) <br/>24 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Michael Ren</b> (Leader<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/ren__michael.jpg" width="100" />) <br/>26 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+<img oh="40" ow="64" src="./_images/_flags/VIANU.gif" style="vertical-align: middle;" height="40" width="64">VIANU</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text"><b>VIANU team</b>:<br/><br/>Name: <b>Tudor Grecu</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/grecu__tudor.jpg" width="100" /> 1) <br/>18 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Mircea Rebengiuc</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/rebengiuc__mircea.jpg" width="100" /> 2) <br/>18 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Ecaterina Ștefănescu</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/stefanescu__ecaterina.jpg" width="100" /> 3) <br/>19 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Cosmina Ghițescu</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/ghitescu__cosmina.jpg" width="100" /> 4) <br/>19 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Nicolas-Andrei Manasia</b> (Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/manasia__nicolas-andrei.jpg" width="100" /> 5) <br/>19 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Octavian-Ionuț Joița</b> (Deputy Leader<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/joita__octavian.jpg" width="100" />) <br/>22 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Ștefan Bârcă</b> (Leader<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/barca__stefan.jpg" width="100" />) <br/>21 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+<img oh="40" ow="64" src="./_images/_flags/HCON.gif" style="vertical-align: middle;" height="40" width="64">Individual online participation</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Mohammadzadeh Amirhossein</b> (Online Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/amirhossein__mohammadzadeh.jpg" width="100" />) <br/>20 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Ivan Chasovskikh</b> (Online Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/chasovskikh__ivan.jpg" width="100" />) <br/>18 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Alex Chui</b> (Online Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/chui__alex.jpg" width="100" />) <br/>17 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Parnia Dabbagh</b> (Online Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/dabbagh__parnia.jpg" width="100" />) <br/>19 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Tseren Frantsuzov</b> (Online Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/frantsuzov__tseren.jpg" width="100" />) <br/>20 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Mikhail Iugov</b> (Online Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/iugov__mikhail.jpg" width="100" />) <br/>19 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Ratibor Koptilin</b> (Online Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/koptilin__ratibor.jpg" width="100" />) <br/>18 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Najafi Saberi</b> (Online Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/saberi__najafi.jpg" width="100" />) <br/>20 years old</p></p></td></tr>	
+	<tr>
+		<td>
+			<h2 class = "title_content">
+</h2>
+		</td>
+	</tr>
+	<tr>
+		<td id = "inside_content">
+			<p class = "text">
+<p class = "text">Name: <b>Ilia Yazdani</b> (Online Contestant<img style="float: right; margin: 0px 0px 15px 15px;" src="./files/staff/pictures/yazdani__ilya.jpg" width="100" />) <br/>20 years old</p></p></td></tr></table>						</td>
+					</tr>
+				</table>					
+				
+			</td>		
+		</tr>
+	</table>
+	
+	
+<table id = "footer" align = "center" cellpadding = "5px" cellspacing = "0px">
+	<tr>
+		<td id = "banner_footer" align = "center">
+			<div id = "copyright">&copy; Copyright 2008 - 2026 RMM<br><a href="https://lbi.ro/">www.lbi.ro</a></div>
+		</td>
+	</tr>
+</table>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28634819-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>	
+
+</body>
+</html>

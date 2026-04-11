@@ -75,7 +75,7 @@ COMBINED_TEAM_MEMBERS: dict[tuple[int, str], str] = {
     (2023, "aino aulanko"): "fin",
     (2023, "mikael häglund"): "swe",
     (2024, "daniil akimov"): "fin",
-    (2024, "vistisen maia reffs"): "dnk",
+    (2024, "maia reffs vistisen"): "dnk",
     (2024, "vebjorn holm-gjerde"): "nor",
     (2024, "mingdao zou"): "swe",
     (2025, "ruiming zhang"): "swe",

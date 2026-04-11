@@ -5,9 +5,9 @@ from pathlib import Path
 
 import click
 
-from sigma.sources.rmm.downloader import AVAILABLE_YEARS, download_year
+from sigma.sources.rmm.downloader import AVAILABLE_YEARS, download_participants, download_year
 from sigma.sources.rmm.downloader.rmm_downloader import DownloadError
-from sigma.sources.rmm.parser import ParseError, parse_year
+from sigma.sources.rmm.parser import ParseError, parse_participants_html, parse_year
 from sigma.sources.rmm.parser.rmm_parser import load_html, save_json
 
 from .base import SourceAdapter
@@ -58,9 +58,18 @@ class RMMAdapter(SourceAdapter):
 
             try:
                 download_year(year, year_dir, force)
-                click.echo(f"  {year}: Downloaded")
-                success += 1
+                click.echo(f"  {year}: Downloaded results")
                 time.sleep(1)  # Be nice to the server
+                # Also download participants page
+                participants_file = year_dir / f"rmm_{year}_participants.html"
+                if not participants_file.exists() or force:
+                    try:
+                        download_participants(year, year_dir, force)
+                        click.echo(f"  {year}: Downloaded participants")
+                        time.sleep(1)
+                    except DownloadError:
+                        click.echo(f"  {year}: No participants page available")
+                success += 1
             except DownloadError as e:
                 click.echo(f"  {year}: {e}", err=True)
                 failed += 1
@@ -110,7 +119,13 @@ class RMMAdapter(SourceAdapter):
             try:
                 parsed_year_dir.mkdir(parents=True, exist_ok=True)
                 html = load_html(html_file)
-                data = parse_year(html, year)
+                # Load participants page if available (for multi-word name resolution)
+                participants = None
+                participants_file = raw_year_dir / f"rmm_{year}_participants.html"
+                if participants_file.exists():
+                    participants_html = load_html(participants_file)
+                    participants = parse_participants_html(participants_html)
+                data = parse_year(html, year, participants)
                 save_json(data, output_file)
                 click.echo(f"  {year}: Parsed {data.total_contestants} contestants")
                 success += 1

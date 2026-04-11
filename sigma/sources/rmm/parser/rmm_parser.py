@@ -4,6 +4,7 @@ RMM HTML Parser
 Parses raw HTML from rmms.lbi.ro into structured data format.
 """
 
+import re
 from pathlib import Path
 
 from bs4 import BeautifulSoup
@@ -11,6 +12,7 @@ from bs4 import BeautifulSoup
 from sigma.country_codes import VALID_ISO_CODES
 
 from .models import ContestantResult, RMMYearResults, ValidationResult
+from .participants_parser import resolve_multiword_name
 
 # RMM-specific country codes that aren't standard ISO codes.
 # These get normalized to ISO codes during ingestion.
@@ -53,12 +55,19 @@ class ParseError(Exception):
     pass
 
 
-def parse_html(html: str, year: int) -> list[ContestantResult]:
+def parse_html(
+    html: str,
+    year: int,
+    participants: dict[tuple[str, int], str] | None = None,
+) -> list[ContestantResult]:
     """Parse the HTML and extract contestant results from both tables.
 
     Args:
         html: Raw HTML content
         year: The competition year (for error messages)
+        participants: Optional mapping of (country_code, contestant_num) to name
+            from the participants page. Used to fix multi-word name ordering for
+            years 2018+ where the results page uses "Last First" format.
 
     Returns:
         List of contestant results
@@ -109,7 +118,7 @@ def parse_html(html: str, year: int) -> list[ContestantResult]:
             continue
 
         # Parse the table
-        table_results = _parse_table(table, year, is_online)
+        table_results = _parse_table(table, year, is_online, participants)
         results.extend(table_results)
 
     if not results:
@@ -134,7 +143,12 @@ def _detect_table_format(table) -> int:
     return 11  # Default to standard format
 
 
-def _parse_table(table, year: int, is_online: bool) -> list[ContestantResult]:
+def _parse_table(
+    table,
+    year: int,
+    is_online: bool,
+    participants: dict[tuple[str, int], str] | None = None,
+) -> list[ContestantResult]:
     """Parse a single results table.
 
     Handles two formats:
@@ -198,26 +212,16 @@ def _parse_table(table, year: int, is_online: bool) -> list[ContestantResult]:
         is_official_team = name_text.endswith("*")
         name = name_text.rstrip("*").strip()
 
-        # From 2018 onwards, names in the standard format are "Last First"
-        # instead of "First Last" (used up to 2017). Swap them back.
-        if not is_split_name_format and year >= 2018:
-            # Protect " - " in hyphenated names (e.g. "FOO - BAR ZAR")
-            placeholder = "\x00"
-            swappable = name.replace(" - ", placeholder)
-            parts = swappable.split(None, 1)
-            if len(parts) == 2:
-                name = f"{parts[1]} {parts[0]}".replace(placeholder, " - ")
-
-        # Extract country code
-        country = cells[country_cell_idx].get_text(strip=True)
-        if not country:
+        # Extract country code (needed before name swap for participants lookup)
+        country_raw = cells[country_cell_idx].get_text(strip=True)
+        if not country_raw:
             raise ParseError(f"Year {year}, row {row_idx}: Empty country for {name}")
         # Extract just the country code:
         # - "CHN 1" -> "CHN" (newer format with space)
         # - "CHN1" -> "CHN" (older format without space)
         # - "-" stays as "-" (online contestants)
         # - "VIANU" / "Vianu1" -> "VIANU" (special team names)
-        country_code = country.split()[0] if " " in country else country
+        country_code = country_raw.split()[0] if " " in country_raw else country_raw
         # Strip trailing digits (e.g., "CHN1" -> "CHN", "ROMB1" -> "ROMB")
         country_code = country_code.rstrip("0123456789").upper()
 
@@ -226,6 +230,34 @@ def _parse_table(table, year: int, is_online: bool) -> list[ContestantResult]:
             raise ParseError(
                 f"Year {year}, row {row_idx}: Unknown country code {country_code!r} for {name}"
             )
+
+        # Extract contestant number from country column (e.g., "HUN 1" -> 1)
+        contestant_num: int | None = None
+        num_match = re.search(r"(\d+)$", country_raw)
+        if num_match:
+            contestant_num = int(num_match.group(1))
+
+        # From 2018 onwards, names in the standard format are "Last First"
+        # instead of "First Last" (used up to 2017). Swap them back.
+        if not is_split_name_format and year >= 2018:
+            # For names with >2 words, the simple swap can get the boundary wrong
+            # (e.g., "MACHADO NETO FRANCISCO" -> "NETO FRANCISCO MACHADO" instead of
+            # "FRANCISCO MACHADO NETO"). Use the participants page name if available.
+            word_count = len(name.split())
+            resolved = None
+            if word_count > 2 and participants:
+                resolved = resolve_multiword_name(name, participants, country_code, contestant_num)
+
+            if resolved is not None:
+                name = resolved
+            else:
+                # Default swap: split on first whitespace
+                # Protect " - " in hyphenated names (e.g. "FOO - BAR ZAR")
+                placeholder = "\x00"
+                swappable = name.replace(" - ", placeholder)
+                parts = swappable.split(None, 1)
+                if len(parts) == 2:
+                    name = f"{parts[1]} {parts[0]}".replace(placeholder, " - ")
 
         # Extract problem scores (P1-P6)
         problem_scores = []
@@ -297,12 +329,17 @@ def _validate_totals(results: list[ContestantResult]) -> list[dict]:
     return mismatches
 
 
-def parse_year(html: str, year: int) -> RMMYearResults:
+def parse_year(
+    html: str,
+    year: int,
+    participants: dict[tuple[str, int], str] | None = None,
+) -> RMMYearResults:
     """Parse HTML for a single year and return structured data.
 
     Args:
         html: Raw HTML content
         year: The competition year
+        participants: Optional participants page data for multi-word name resolution
 
     Returns:
         Structured year results
@@ -310,7 +347,7 @@ def parse_year(html: str, year: int) -> RMMYearResults:
     Raises:
         ParseError: If parsing fails
     """
-    results = parse_html(html, year)
+    results = parse_html(html, year, participants)
 
     if not results:
         raise ParseError(f"No results found for year {year}. The year may not have data yet.")
