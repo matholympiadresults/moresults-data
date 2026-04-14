@@ -18,6 +18,7 @@ from ..parser.models import EGMOYearResults
 # EGMO B-team codes (4-letter codes ending in 'b')
 EGMO_B_TEAM_CODES = {
     "blrb",
+    "frab",
     "geob",
     "hunb",
     "itab",
@@ -47,6 +48,7 @@ EGMO_CODE_MAPPING: dict[str, str] = {
     "saf": "zaf",  # South Africa
     # B-team codes -> base country
     "blrb": "blr",
+    "frab": "fra",
     "geob": "geo",
     "hunb": "hun",
     "itab": "ita",
