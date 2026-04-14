@@ -11,16 +11,27 @@ from .parsers.base import BaseParser
 from .parsers.html_2018 import Parser2018
 from .parsers.html_2023 import Parser2023
 from .parsers.html_2024 import Parser2024
-from .parsers.pdf_parser import PDFParser
-
-# Years that use PDF sources (imported from downloader for parser routing)
-_PDF_YEARS = {2020, 2021, 2022, 2025}
+from .parsers.pdf_2020 import Parser2020
+from .parsers.pdf_2021 import Parser2021
+from .parsers.pdf_2022 import Parser2022
+from .parsers.pdf_2025 import Parser2025
 
 
 class ParseError(Exception):
     """Raised when parsing fails unexpectedly."""
 
     pass
+
+
+_PARSER_MAP: dict[int, type[BaseParser]] = {
+    2018: Parser2018,
+    2020: Parser2020,
+    2021: Parser2021,
+    2022: Parser2022,
+    2023: Parser2023,
+    2024: Parser2024,
+    2025: Parser2025,
+}
 
 
 def get_parser(year: int) -> BaseParser:
@@ -35,21 +46,12 @@ def get_parser(year: int) -> BaseParser:
     Raises:
         ValueError: If no parser is available for the year
     """
-    if year in _PDF_YEARS:
-        return PDFParser(year)
-
-    parser_map = {
-        2018: Parser2018,
-        2023: Parser2023,
-        2024: Parser2024,
-    }
-
-    if year not in parser_map:
+    if year not in _PARSER_MAP:
         from ..downloader import AVAILABLE_YEARS
 
         raise ValueError(f"No parser available for year {year}. Available years: {AVAILABLE_YEARS}")
 
-    return parser_map[year](year)
+    return _PARSER_MAP[year](year)
 
 
 def validate_totals(results: list[ContestantResult]) -> list[dict]:

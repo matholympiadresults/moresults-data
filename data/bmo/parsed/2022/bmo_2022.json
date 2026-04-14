@@ -5,7 +5,7 @@
   "total_contestants": 77,
   "results": [
     {
-      "name": "Kirilov Borislav",
+      "name": "Borislav Kirilov",
       "country": "BULGARIA",
       "problem_scores": [
         10,
@@ -15,10 +15,12 @@
       ],
       "total": 38,
       "rank": 1,
-      "award": "Gold"
+      "award": "Gold",
+      "given_name": "Borislav",
+      "family_name": "Kirilov"
     },
     {
-      "name": "Moldovan Andrei",
+      "name": "Andrei Moldovan",
       "country": "ROMANIA",
       "problem_scores": [
         10,
@@ -28,10 +30,12 @@
       ],
       "total": 34,
       "rank": 2,
-      "award": "Gold"
+      "award": "Gold",
+      "given_name": "Andrei",
+      "family_name": "Moldovan"
     },
     {
-      "name": "Fotiadis Prodromos",
+      "name": "Prodromos Fotiadis",
       "country": "GREECE",
       "problem_scores": [
         10,
@@ -41,10 +45,12 @@
       ],
       "total": 31,
       "rank": 3,
-      "award": "Gold"
+      "award": "Gold",
+      "given_name": "Prodromos",
+      "family_name": "Fotiadis"
     },
     {
-      "name": "Lignos Orestis",
+      "name": "Orestis Lignos",
       "country": "GREECE",
       "problem_scores": [
         10,
@@ -54,10 +60,12 @@
       ],
       "total": 31,
       "rank": 3,
-      "award": "Gold"
+      "award": "Gold",
+      "given_name": "Orestis",
+      "family_name": "Lignos"
     },
     {
-      "name": "Spirovski Nikola",
+      "name": "Nikola Spirovski",
       "country": "NORTH MACEDONIA",
       "problem_scores": [
         10,
@@ -67,10 +75,12 @@
       ],
       "total": 31,
       "rank": 3,
-      "award": "Gold"
+      "award": "Gold",
+      "given_name": "Nikola",
+      "family_name": "Spirovski"
     },
     {
-      "name": "Anghel David-Andrei",
+      "name": "David-Andrei Anghel",
       "country": "ROMANIA",
       "problem_scores": [
         10,
@@ -80,10 +90,12 @@
       ],
       "total": 31,
       "rank": 3,
-      "award": "Gold"
+      "award": "Gold",
+      "given_name": "David-Andrei",
+      "family_name": "Anghel"
     },
     {
-      "name": "Kopchev Martin",
+      "name": "Martin Kopchev",
       "country": "BULGARIA",
       "problem_scores": [
         10,
@@ -93,10 +105,12 @@
       ],
       "total": 30,
       "rank": 7,
-      "award": "Silver"
+      "award": "Silver",
+      "given_name": "Martin",
+      "family_name": "Kopchev"
     },
     {
-      "name": "Chiriță Andrei-Giovani",
+      "name": "Andrei-Giovani Chiriță",
       "country": "ROMANIA",
       "problem_scores": [
         10,
@@ -106,10 +120,12 @@
       ],
       "total": 30,
       "rank": 7,
-      "award": "Silver"
+      "award": "Silver",
+      "given_name": "Andrei-Giovani",
+      "family_name": "Chiriță"
     },
     {
-      "name": "Dragomirescu Robert",
+      "name": "Robert Dragomirescu",
       "country": "ROMANIA",
       "problem_scores": [
         10,
@@ -119,10 +135,12 @@
       ],
       "total": 30,
       "rank": 7,
-      "award": "Silver"
+      "award": "Silver",
+      "given_name": "Robert",
+      "family_name": "Dragomirescu"
     },
     {
-      "name": "Vukelić Mateja",
+      "name": "Mateja Vukelić",
       "country": "SERBIA",
       "problem_scores": [
         10,
@@ -132,10 +150,12 @@
       ],
       "total": 29,
       "rank": 10,
-      "award": "Silver"
+      "award": "Silver",
+      "given_name": "Mateja",
+      "family_name": "Vukelić"
     },
     {
-      "name": "Abbasov Toghrul",
+      "name": "Toghrul Abbasov",
       "country": "AZERBAIJAN",
       "problem_scores": [
         10,
@@ -145,10 +165,12 @@
       ],
       "total": 28,
       "rank": 11,
-      "award": "Silver"
+      "award": "Silver",
+      "given_name": "Toghrul",
+      "family_name": "Abbasov"
     },
     {
-      "name": "Cernatinschi Dan",
+      "name": "Dan Cernatinschi",
       "country": "REPUBLIC OF MOLDOVA",
       "problem_scores": [
         10,
@@ -158,10 +180,12 @@
       ],
       "total": 27,
       "rank": 12,
-      "award": "Silver"
+      "award": "Silver",
+      "given_name": "Dan",
+      "family_name": "Cernatinschi"
     },
     {
-      "name": "Yurkevich Miron",
+      "name": "Miron Yurkevich",
       "country": "KAZAKHSTAN",
       "problem_scores": [
         10,
@@ -171,10 +195,12 @@
       ],
       "total": 27,
       "rank": 12,
-      "award": "Silver"
+      "award": "Silver",
+      "given_name": "Miron",
+      "family_name": "Yurkevich"
     },
     {
-      "name": "Stanković Boris",
+      "name": "Boris Stanković",
       "country": "BOSNIA AND HERZEGOVINA",
       "problem_scores": [
         10,
@@ -184,10 +210,12 @@
       ],
       "total": 25,
       "rank": 14,
-      "award": "Silver"
+      "award": "Silver",
+      "given_name": "Boris",
+      "family_name": "Stanković"
     },
     {
-      "name": "Liampas Panagiotis",
+      "name": "Panagiotis Liampas",
       "country": "GREECE",
       "problem_scores": [
         10,
@@ -197,10 +225,12 @@
       ],
       "total": 25,
       "rank": 14,
-      "award": "Silver"
+      "award": "Silver",
+      "given_name": "Panagiotis",
+      "family_name": "Liampas"
     },
     {
-      "name": "Ursu Valeriu",
+      "name": "Valeriu Ursu",
       "country": "REPUBLIC OF MOLDOVA",
       "problem_scores": [
         10,
@@ -210,10 +240,12 @@
       ],
       "total": 25,
       "rank": 14,
-      "award": "Silver"
+      "award": "Silver",
+      "given_name": "Valeriu",
+      "family_name": "Ursu"
     },
     {
-      "name": "Aldubaisi Mohammed",
+      "name": "Mohammed Aldubaisi",
       "country": "SAUDI ARABIA",
       "problem_scores": [
         10,
@@ -223,10 +255,12 @@
       ],
       "total": 25,
       "rank": 14,
-      "award": "Silver"
+      "award": "Silver",
+      "given_name": "Mohammed",
+      "family_name": "Aldubaisi"
     },
     {
-      "name": "Gillott Benjamin",
+      "name": "Benjamin Gillott",
       "country": "UNITED KINGDOM",
       "problem_scores": [
         10,
@@ -236,10 +270,12 @@
       ],
       "total": 25,
       "rank": 14,
-      "award": "Silver"
+      "award": "Silver",
+      "given_name": "Benjamin",
+      "family_name": "Gillott"
     },
     {
-      "name": "Gasparini Massimo",
+      "name": "Massimo Gasparini",
       "country": "ITALY",
       "problem_scores": [
         10,
@@ -249,10 +285,12 @@
       ],
       "total": 24,
       "rank": 19,
-      "award": "Silver"
+      "award": "Silver",
+      "given_name": "Massimo",
+      "family_name": "Gasparini"
     },
     {
-      "name": "Gualdi Pietro",
+      "name": "Pietro Gualdi",
       "country": "ITALY",
       "problem_scores": [
         10,
@@ -262,10 +300,12 @@
       ],
       "total": 24,
       "rank": 19,
-      "award": "Silver"
+      "award": "Silver",
+      "given_name": "Pietro",
+      "family_name": "Gualdi"
     },
     {
-      "name": "Alghamdi Muath",
+      "name": "Muath Alghamdi",
       "country": "SAUDI ARABIA",
       "problem_scores": [
         10,
@@ -275,10 +315,12 @@
       ],
       "total": 24,
       "rank": 19,
-      "award": "Silver"
+      "award": "Silver",
+      "given_name": "Muath",
+      "family_name": "Alghamdi"
     },
     {
-      "name": "Petrakis Emmanouil",
+      "name": "Emmanouil Petrakis",
       "country": "GREECE",
       "problem_scores": [
         10,
@@ -288,10 +330,12 @@
       ],
       "total": 23,
       "rank": 22,
-      "award": "Silver"
+      "award": "Silver",
+      "given_name": "Emmanouil",
+      "family_name": "Petrakis"
     },
     {
-      "name": "Port Dragoș",
+      "name": "Dragoș Port",
       "country": "REPUBLIC OF MOLDOVA",
       "problem_scores": [
         10,
@@ -301,10 +345,12 @@
       ],
       "total": 23,
       "rank": 22,
-      "award": "Silver"
+      "award": "Silver",
+      "given_name": "Dragoș",
+      "family_name": "Port"
     },
     {
-      "name": "Davkov Damjan",
+      "name": "Damjan Davkov",
       "country": "NORTH MACEDONIA",
       "problem_scores": [
         10,
@@ -314,10 +360,12 @@
       ],
       "total": 23,
       "rank": 22,
-      "award": "Silver"
+      "award": "Silver",
+      "given_name": "Damjan",
+      "family_name": "Davkov"
     },
     {
-      "name": "Alkhayat Marwan",
+      "name": "Marwan Alkhayat",
       "country": "SAUDI ARABIA",
       "problem_scores": [
         10,
@@ -327,10 +375,12 @@
       ],
       "total": 23,
       "rank": 22,
-      "award": "Silver"
+      "award": "Silver",
+      "given_name": "Marwan",
+      "family_name": "Alkhayat"
     },
     {
-      "name": "Li Sida",
+      "name": "Sida Li",
       "country": "UNITED KINGDOM",
       "problem_scores": [
         10,
@@ -340,10 +390,12 @@
       ],
       "total": 23,
       "rank": 22,
-      "award": "Silver"
+      "award": "Silver",
+      "given_name": "Sida",
+      "family_name": "Li"
     },
     {
-      "name": "MacGillivray Eleanor",
+      "name": "Eleanor MacGillivray",
       "country": "UNITED KINGDOM",
       "problem_scores": [
         10,
@@ -353,10 +405,12 @@
       ],
       "total": 23,
       "rank": 22,
-      "award": "Silver"
+      "award": "Silver",
+      "given_name": "Eleanor",
+      "family_name": "MacGillivray"
     },
     {
-      "name": "Stojanovski Jan",
+      "name": "Jan Stojanovski",
       "country": "NORTH MACEDONIA",
       "problem_scores": [
         10,
@@ -366,10 +420,12 @@
       ],
       "total": 22,
       "rank": 28,
-      "award": "Silver"
+      "award": "Silver",
+      "given_name": "Jan",
+      "family_name": "Stojanovski"
     },
     {
-      "name": "Țolu Diana",
+      "name": "Diana Țolu",
       "country": "ROMANIA",
       "problem_scores": [
         10,
@@ -379,10 +435,12 @@
       ],
       "total": 22,
       "rank": 28,
-      "award": "Silver"
+      "award": "Silver",
+      "given_name": "Diana",
+      "family_name": "Țolu"
     },
     {
-      "name": "Huseynov Jalil",
+      "name": "Jalil Huseynov",
       "country": "AZERBAIJAN",
       "problem_scores": [
         10,
@@ -392,10 +450,12 @@
       ],
       "total": 22,
       "rank": 28,
-      "award": "Silver"
+      "award": "Silver",
+      "given_name": "Jalil",
+      "family_name": "Huseynov"
     },
     {
-      "name": "Calogero Giacomo",
+      "name": "Giacomo Calogero",
       "country": "ITALY",
       "problem_scores": [
         10,
@@ -405,10 +465,12 @@
       ],
       "total": 22,
       "rank": 28,
-      "award": "Silver"
+      "award": "Silver",
+      "given_name": "Giacomo",
+      "family_name": "Calogero"
     },
     {
-      "name": "Zauytkhan Adilet",
+      "name": "Adilet Zauytkhan",
       "country": "KAZAKHSTAN",
       "problem_scores": [
         10,
@@ -418,10 +480,12 @@
       ],
       "total": 22,
       "rank": 28,
-      "award": "Silver"
+      "award": "Silver",
+      "given_name": "Adilet",
+      "family_name": "Zauytkhan"
     },
     {
-      "name": "Alaithan Hadi",
+      "name": "Hadi Alaithan",
       "country": "SAUDI ARABIA",
       "problem_scores": [
         10,
@@ -431,10 +495,12 @@
       ],
       "total": 22,
       "rank": 28,
-      "award": "Silver"
+      "award": "Silver",
+      "given_name": "Hadi",
+      "family_name": "Alaithan"
     },
     {
-      "name": "Albaik Mahdi",
+      "name": "Mahdi Albaik",
       "country": "SAUDI ARABIA",
       "problem_scores": [
         10,
@@ -444,10 +510,12 @@
       ],
       "total": 22,
       "rank": 28,
-      "award": "Silver"
+      "award": "Silver",
+      "given_name": "Mahdi",
+      "family_name": "Albaik"
     },
     {
-      "name": "Imamović Haris",
+      "name": "Haris Imamović",
       "country": "BOSNIA AND HERZEGOVINA",
       "problem_scores": [
         10,
@@ -457,10 +525,12 @@
       ],
       "total": 21,
       "rank": 35,
-      "award": "Bronze"
+      "award": "Bronze",
+      "given_name": "Haris",
+      "family_name": "Imamović"
     },
     {
-      "name": "Mujkić Benjamin",
+      "name": "Benjamin Mujkić",
       "country": "BOSNIA AND HERZEGOVINA",
       "problem_scores": [
         10,
@@ -470,10 +540,12 @@
       ],
       "total": 21,
       "rank": 35,
-      "award": "Bronze"
+      "award": "Bronze",
+      "given_name": "Benjamin",
+      "family_name": "Mujkić"
     },
     {
-      "name": "Tagarev Ivan",
+      "name": "Ivan Tagarev",
       "country": "BULGARIA",
       "problem_scores": [
         10,
@@ -483,10 +555,12 @@
       ],
       "total": 21,
       "rank": 35,
-      "award": "Bronze"
+      "award": "Bronze",
+      "given_name": "Ivan",
+      "family_name": "Tagarev"
     },
     {
-      "name": "Sclearuc Marius",
+      "name": "Marius Sclearuc",
       "country": "REPUBLIC OF MOLDOVA",
       "problem_scores": [
         10,
@@ -496,10 +570,12 @@
       ],
       "total": 21,
       "rank": 35,
-      "award": "Bronze"
+      "award": "Bronze",
+      "given_name": "Marius",
+      "family_name": "Sclearuc"
     },
     {
-      "name": "Lecoiu Radu-Andrei",
+      "name": "Radu-Andrei Lecoiu",
       "country": "ROMANIA",
       "problem_scores": [
         10,
@@ -509,10 +585,12 @@
       ],
       "total": 21,
       "rank": 35,
-      "award": "Bronze"
+      "award": "Bronze",
+      "given_name": "Radu-Andrei",
+      "family_name": "Lecoiu"
     },
     {
-      "name": "De Petri Daniele",
+      "name": "Petri Daniele De",
       "country": "ITALY",
       "problem_scores": [
         10,
@@ -522,10 +600,12 @@
       ],
       "total": 21,
       "rank": 35,
-      "award": "Bronze"
+      "award": "Bronze",
+      "given_name": "Petri Daniele",
+      "family_name": "De"
     },
     {
-      "name": "Abu Adilet",
+      "name": "Adilet Abu",
       "country": "KAZAKHSTAN",
       "problem_scores": [
         10,
@@ -535,10 +615,12 @@
       ],
       "total": 21,
       "rank": 35,
-      "award": "Bronze"
+      "award": "Bronze",
+      "given_name": "Adilet",
+      "family_name": "Abu"
     },
     {
-      "name": "Kavanagh Thomas",
+      "name": "Thomas Kavanagh",
       "country": "UNITED KINGDOM",
       "problem_scores": [
         10,
@@ -548,10 +630,12 @@
       ],
       "total": 21,
       "rank": 35,
-      "award": "Bronze"
+      "award": "Bronze",
+      "given_name": "Thomas",
+      "family_name": "Kavanagh"
     },
     {
-      "name": "Tzachristas Georgios",
+      "name": "Georgios Tzachristas",
       "country": "GREECE",
       "problem_scores": [
         10,
@@ -561,10 +645,12 @@
       ],
       "total": 20,
       "rank": 43,
-      "award": "Bronze"
+      "award": "Bronze",
+      "given_name": "Georgios",
+      "family_name": "Tzachristas"
     },
     {
-      "name": "Tasikj Aleksij",
+      "name": "Aleksij Tasikj",
       "country": "NORTH MACEDONIA",
       "problem_scores": [
         10,
@@ -574,10 +660,12 @@
       ],
       "total": 20,
       "rank": 43,
-      "award": "Bronze"
+      "award": "Bronze",
+      "given_name": "Aleksij",
+      "family_name": "Tasikj"
     },
     {
-      "name": "Lapčević Gvozden",
+      "name": "Gvozden Lapčević",
       "country": "SERBIA",
       "problem_scores": [
         10,
@@ -587,10 +675,12 @@
       ],
       "total": 20,
       "rank": 43,
-      "award": "Bronze"
+      "award": "Bronze",
+      "given_name": "Gvozden",
+      "family_name": "Lapčević"
     },
     {
-      "name": "Sartori Luca",
+      "name": "Luca Sartori",
       "country": "ITALY",
       "problem_scores": [
         10,
@@ -600,10 +690,12 @@
       ],
       "total": 20,
       "rank": 43,
-      "award": "Bronze"
+      "award": "Bronze",
+      "given_name": "Luca",
+      "family_name": "Sartori"
     },
     {
-      "name": "Zonta Enrico",
+      "name": "Enrico Zonta",
       "country": "ITALY",
       "problem_scores": [
         10,
@@ -613,10 +705,12 @@
       ],
       "total": 20,
       "rank": 43,
-      "award": "Bronze"
+      "award": "Bronze",
+      "given_name": "Enrico",
+      "family_name": "Zonta"
     },
     {
-      "name": "Sam Fetullakh",
+      "name": "Fetullakh Sam",
       "country": "KAZAKHSTAN",
       "problem_scores": [
         10,
@@ -626,10 +720,12 @@
       ],
       "total": 20,
       "rank": 43,
-      "award": "Bronze"
+      "award": "Bronze",
+      "given_name": "Fetullakh",
+      "family_name": "Sam"
     },
     {
-      "name": "Alramadan Ali",
+      "name": "Ali Alramadan",
       "country": "SAUDI ARABIA",
       "problem_scores": [
         10,
@@ -639,10 +735,12 @@
       ],
       "total": 20,
       "rank": 43,
-      "award": "Bronze"
+      "award": "Bronze",
+      "given_name": "Ali",
+      "family_name": "Alramadan"
     },
     {
-      "name": "Hristov Marin",
+      "name": "Marin Hristov",
       "country": "BULGARIA",
       "problem_scores": [
         10,
@@ -652,10 +750,12 @@
       ],
       "total": 19,
       "rank": 50,
-      "award": "Bronze"
+      "award": "Bronze",
+      "given_name": "Marin",
+      "family_name": "Hristov"
     },
     {
-      "name": "Stijepić Novak",
+      "name": "Novak Stijepić",
       "country": "SERBIA",
       "problem_scores": [
         10,
@@ -665,10 +765,12 @@
       ],
       "total": 19,
       "rank": 50,
-      "award": "Bronze"
+      "award": "Bronze",
+      "given_name": "Novak",
+      "family_name": "Stijepić"
     },
     {
-      "name": "Jafarzade Amin",
+      "name": "Amin Jafarzade",
       "country": "AZERBAIJAN",
       "problem_scores": [
         10,
@@ -678,10 +780,12 @@
       ],
       "total": 19,
       "rank": 50,
-      "award": "Bronze"
+      "award": "Bronze",
+      "given_name": "Amin",
+      "family_name": "Jafarzade"
     },
     {
-      "name": "Noman Iliyas",
+      "name": "Iliyas Noman",
       "country": "BULGARIA",
       "problem_scores": [
         10,
@@ -691,10 +795,12 @@
       ],
       "total": 18,
       "rank": 53,
-      "award": "Bronze"
+      "award": "Bronze",
+      "given_name": "Iliyas",
+      "family_name": "Noman"
     },
     {
-      "name": "Adelina Andrei",
+      "name": "Andrei Adelina",
       "country": "REPUBLIC OF MOLDOVA",
       "problem_scores": [
         10,
@@ -704,10 +810,12 @@
       ],
       "total": 18,
       "rank": 53,
-      "award": "Bronze"
+      "award": "Bronze",
+      "given_name": "Andrei",
+      "family_name": "Adelina"
     },
     {
-      "name": "Engi Igor",
+      "name": "Igor Engi",
       "country": "SERBIA",
       "problem_scores": [
         10,
@@ -717,10 +825,12 @@
       ],
       "total": 18,
       "rank": 53,
-      "award": "Bronze"
+      "award": "Bronze",
+      "given_name": "Igor",
+      "family_name": "Engi"
     },
     {
-      "name": "Georgeles Georgios",
+      "name": "Georgios Georgeles",
       "country": "GREECE",
       "problem_scores": [
         10,
@@ -730,10 +840,12 @@
       ],
       "total": 16,
       "rank": 56,
-      "award": "Bronze"
+      "award": "Bronze",
+      "given_name": "Georgios",
+      "family_name": "Georgeles"
     },
     {
-      "name": "Nikolova Kalina",
+      "name": "Kalina Nikolova",
       "country": "BULGARIA",
       "problem_scores": [
         10,
@@ -743,10 +855,12 @@
       ],
       "total": 15,
       "rank": 57,
-      "award": "Bronze"
+      "award": "Bronze",
+      "given_name": "Kalina",
+      "family_name": "Nikolova"
     },
     {
-      "name": "Dobloug Axel",
+      "name": "Axel Dobloug",
       "country": "CYPRUS",
       "problem_scores": [
         10,
@@ -756,10 +870,12 @@
       ],
       "total": 15,
       "rank": 57,
-      "award": "Bronze"
+      "award": "Bronze",
+      "given_name": "Axel",
+      "family_name": "Dobloug"
     },
     {
-      "name": "Garayeva Fidan",
+      "name": "Fidan Garayeva",
       "country": "AZERBAIJAN",
       "problem_scores": [
         10,
@@ -769,10 +885,12 @@
       ],
       "total": 15,
       "rank": 57,
-      "award": "Bronze"
+      "award": "Bronze",
+      "given_name": "Fidan",
+      "family_name": "Garayeva"
     },
     {
-      "name": "Musazade Elcin",
+      "name": "Elcin Musazade",
       "country": "AZERBAIJAN",
       "problem_scores": [
         10,
@@ -782,10 +900,12 @@
       ],
       "total": 15,
       "rank": 57,
-      "award": "Bronze"
+      "award": "Bronze",
+      "given_name": "Elcin",
+      "family_name": "Musazade"
     },
     {
-      "name": "Baishuak Raiymbek",
+      "name": "Raiymbek Baishuak",
       "country": "KAZAKHSTAN",
       "problem_scores": [
         10,
@@ -795,10 +915,12 @@
       ],
       "total": 14,
       "rank": 61,
-      "award": "Bronze"
+      "award": "Bronze",
+      "given_name": "Raiymbek",
+      "family_name": "Baishuak"
     },
     {
-      "name": "Liperi Klevis",
+      "name": "Klevis Liperi",
       "country": "ALBANIA",
       "problem_scores": [
         10,
@@ -808,10 +930,12 @@
       ],
       "total": 13,
       "rank": 62,
-      "award": "Bronze"
+      "award": "Bronze",
+      "given_name": "Klevis",
+      "family_name": "Liperi"
     },
     {
-      "name": "Dimitrić Marko",
+      "name": "Marko Dimitrić",
       "country": "BOSNIA AND HERZEGOVINA",
       "problem_scores": [
         10,
@@ -821,10 +945,12 @@
       ],
       "total": 13,
       "rank": 62,
-      "award": "Bronze"
+      "award": "Bronze",
+      "given_name": "Marko",
+      "family_name": "Dimitrić"
     },
     {
-      "name": "Fehrić Mirnes",
+      "name": "Mirnes Fehrić",
       "country": "BOSNIA AND HERZEGOVINA",
       "problem_scores": [
         10,
@@ -834,10 +960,12 @@
       ],
       "total": 13,
       "rank": 62,
-      "award": "Bronze"
+      "award": "Bronze",
+      "given_name": "Mirnes",
+      "family_name": "Fehrić"
     },
     {
-      "name": "Ivanović Vasilije",
+      "name": "Vasilije Ivanović",
       "country": "SERBIA",
       "problem_scores": [
         10,
@@ -847,10 +975,12 @@
       ],
       "total": 13,
       "rank": 62,
-      "award": "Bronze"
+      "award": "Bronze",
+      "given_name": "Vasilije",
+      "family_name": "Ivanović"
     },
     {
-      "name": "Dautov Zhan",
+      "name": "Zhan Dautov",
       "country": "KAZAKHSTAN",
       "problem_scores": [
         10,
@@ -860,10 +990,12 @@
       ],
       "total": 13,
       "rank": 62,
-      "award": "Bronze"
+      "award": "Bronze",
+      "given_name": "Zhan",
+      "family_name": "Dautov"
     },
     {
-      "name": "Chatzikostas Panagiotis",
+      "name": "Panagiotis Chatzikostas",
       "country": "CYPRUS",
       "problem_scores": [
         10,
@@ -873,10 +1005,12 @@
       ],
       "total": 12,
       "rank": 67,
-      "award": "Bronze"
+      "award": "Bronze",
+      "given_name": "Panagiotis",
+      "family_name": "Chatzikostas"
     },
     {
-      "name": "Pantelić Vukašin",
+      "name": "Vukašin Pantelić",
       "country": "SERBIA",
       "problem_scores": [
         10,
@@ -886,10 +1020,12 @@
       ],
       "total": 12,
       "rank": 67,
-      "award": "Bronze"
+      "award": "Bronze",
+      "given_name": "Vukašin",
+      "family_name": "Pantelić"
     },
     {
-      "name": "Chatzichristofi Filippos Athos",
+      "name": "Filippos Athos Chatzichristofi",
       "country": "CYPRUS",
       "problem_scores": [
         10,
@@ -899,10 +1035,12 @@
       ],
       "total": 12,
       "rank": 67,
-      "award": "Bronze"
+      "award": "Bronze",
+      "given_name": "Filippos Athos",
+      "family_name": "Chatzichristofi"
     },
     {
-      "name": "Vučić Marko",
+      "name": "Marko Vučić",
       "country": "BOSNIA AND HERZEGOVINA",
       "problem_scores": [
         10,
@@ -912,10 +1050,12 @@
       ],
       "total": 11,
       "rank": 70,
-      "award": "Honourable Mention"
+      "award": "Honourable Mention",
+      "given_name": "Marko",
+      "family_name": "Vučić"
     },
     {
-      "name": "Mahdessian Ara",
+      "name": "Ara Mahdessian",
       "country": "CYPRUS",
       "problem_scores": [
         10,
@@ -925,10 +1065,12 @@
       ],
       "total": 11,
       "rank": 70,
-      "award": "Honourable Mention"
+      "award": "Honourable Mention",
+      "given_name": "Ara",
+      "family_name": "Mahdessian"
     },
     {
-      "name": "Tsiannis Kyriakos",
+      "name": "Kyriakos Tsiannis",
       "country": "CYPRUS",
       "problem_scores": [
         10,
@@ -938,10 +1080,12 @@
       ],
       "total": 11,
       "rank": 70,
-      "award": "Honourable Mention"
+      "award": "Honourable Mention",
+      "given_name": "Kyriakos",
+      "family_name": "Tsiannis"
     },
     {
-      "name": "Purice Victor",
+      "name": "Victor Purice",
       "country": "REPUBLIC OF MOLDOVA",
       "problem_scores": [
         10,
@@ -951,10 +1095,12 @@
       ],
       "total": 11,
       "rank": 70,
-      "award": "Honourable Mention"
+      "award": "Honourable Mention",
+      "given_name": "Victor",
+      "family_name": "Purice"
     },
     {
-      "name": "Ilieva Jasna",
+      "name": "Jasna Ilieva",
       "country": "NORTH MACEDONIA",
       "problem_scores": [
         10,
@@ -964,10 +1110,12 @@
       ],
       "total": 11,
       "rank": 70,
-      "award": "Honourable Mention"
+      "award": "Honourable Mention",
+      "given_name": "Jasna",
+      "family_name": "Ilieva"
     },
     {
-      "name": "Suklevski Blazhe",
+      "name": "Blazhe Suklevski",
       "country": "NORTH MACEDONIA",
       "problem_scores": [
         10,
@@ -977,10 +1125,12 @@
       ],
       "total": 11,
       "rank": 70,
-      "award": "Honourable Mention"
+      "award": "Honourable Mention",
+      "given_name": "Blazhe",
+      "family_name": "Suklevski"
     },
     {
-      "name": "Makridou Danae",
+      "name": "Danae Makridou",
       "country": "CYPRUS",
       "problem_scores": [
         10,
@@ -990,10 +1140,12 @@
       ],
       "total": 11,
       "rank": 70,
-      "award": "Honourable Mention"
+      "award": "Honourable Mention",
+      "given_name": "Danae",
+      "family_name": "Makridou"
     },
     {
-      "name": "Lam Hei",
+      "name": "Hei Lam",
       "country": "UNITED KINGDOM",
       "problem_scores": [
         0,
@@ -1003,7 +1155,9 @@
       ],
       "total": 11,
       "rank": 70,
-      "award": "Honourable Mention"
+      "award": "Honourable Mention",
+      "given_name": "Hei",
+      "family_name": "Lam"
     }
   ],
   "validation": {
