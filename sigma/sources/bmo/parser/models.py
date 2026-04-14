@@ -12,6 +12,8 @@ class ContestantResult(BaseModel):
     total: int
     rank: int | None  # None when tied with previous rank
     award: str | None  # Gold, Silver, Bronze, Honourable Mention
+    given_name: str | None = None
+    family_name: str | None = None
 
 
 class ValidationResult(BaseModel):

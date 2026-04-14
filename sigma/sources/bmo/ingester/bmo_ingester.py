@@ -200,6 +200,8 @@ def ingest_year_results(db: Database, year_results: BMOYearResults) -> dict:
             country_id=country.id,
             source=Source.BMO,
             source_contestant_id=None,  # BMO doesn't provide unique contestant IDs
+            given_name=contestant.given_name,
+            family_name=contestant.family_name,
         )
 
         if match_result.is_new:
