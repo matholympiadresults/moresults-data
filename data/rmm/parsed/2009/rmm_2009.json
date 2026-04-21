@@ -1,0 +1,865 @@
+{
+  "year": 2009,
+  "total_contestants": 57,
+  "results": [
+    {
+      "name": "Svetozar Zlatkov Stankov",
+      "country": "BUL",
+      "problem_scores": [
+        7,
+        4,
+        7,
+        5
+      ],
+      "total": 23,
+      "rank": 3,
+      "award": "GOLD",
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "Evgeni Simeonov Dimitrov",
+      "country": "BUL",
+      "problem_scores": [
+        7,
+        3,
+        0,
+        0
+      ],
+      "total": 10,
+      "rank": 40,
+      "award": null,
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "Lyuboslav Nikolaev Panchev",
+      "country": "BUL",
+      "problem_scores": [
+        7,
+        3,
+        0,
+        0
+      ],
+      "total": 10,
+      "rank": 40,
+      "award": null,
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "Borislav Atanasov Valkov",
+      "country": "BUL",
+      "problem_scores": [
+        3,
+        0,
+        0,
+        0
+      ],
+      "total": 3,
+      "rank": 56,
+      "award": null,
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "Zhihao Tang",
+      "country": "CHN",
+      "problem_scores": [
+        7,
+        7,
+        6,
+        7
+      ],
+      "total": 27,
+      "rank": 1,
+      "award": "GOLD",
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "Jiahao Chen",
+      "country": "CHN",
+      "problem_scores": [
+        7,
+        4,
+        6,
+        7
+      ],
+      "total": 24,
+      "rank": 2,
+      "award": "GOLD",
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "Yan Xuan",
+      "country": "CHN",
+      "problem_scores": [
+        7,
+        3,
+        6,
+        7
+      ],
+      "total": 23,
+      "rank": 3,
+      "award": "GOLD",
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "Feng Ruan",
+      "country": "CHN",
+      "problem_scores": [
+        7,
+        6,
+        7,
+        1
+      ],
+      "total": 21,
+      "rank": 8,
+      "award": "SILVER",
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "Hongyi Li",
+      "country": "CHN",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        7
+      ],
+      "total": 14,
+      "rank": 22,
+      "award": "BRONZE",
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "Liangyu Zhu",
+      "country": "CHN",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        3
+      ],
+      "total": 10,
+      "rank": 40,
+      "award": null,
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "Peter Leach",
+      "country": "GBR",
+      "problem_scores": [
+        6,
+        4,
+        0,
+        5
+      ],
+      "total": 15,
+      "rank": 17,
+      "award": "BRONZE",
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "Nathan Brown",
+      "country": "GBR",
+      "problem_scores": [
+        2,
+        7,
+        0,
+        1
+      ],
+      "total": 10,
+      "rank": 40,
+      "award": null,
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "Craig Newbold",
+      "country": "GBR",
+      "problem_scores": [
+        5,
+        5,
+        0,
+        0
+      ],
+      "total": 10,
+      "rank": 40,
+      "award": null,
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "Luke Betts",
+      "country": "GBR",
+      "problem_scores": [
+        7,
+        3,
+        0,
+        0
+      ],
+      "total": 10,
+      "rank": 40,
+      "award": null,
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "Tim Hennock",
+      "country": "GBR",
+      "problem_scores": [
+        7,
+        1,
+        0,
+        2
+      ],
+      "total": 10,
+      "rank": 40,
+      "award": null,
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "Andrew Hyer",
+      "country": "GBR",
+      "problem_scores": [
+        5,
+        3,
+        0,
+        0
+      ],
+      "total": 8,
+      "rank": 50,
+      "award": null,
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "Pietro Vertechi",
+      "country": "ITA",
+      "problem_scores": [
+        7,
+        3,
+        3,
+        5
+      ],
+      "total": 18,
+      "rank": 11,
+      "award": "SILVER",
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "Andrea Fogari",
+      "country": "ITA",
+      "problem_scores": [
+        7,
+        1,
+        7,
+        1
+      ],
+      "total": 16,
+      "rank": 15,
+      "award": "SILVER",
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "Luca Ghidelli",
+      "country": "ITA",
+      "problem_scores": [
+        7,
+        3,
+        0,
+        1
+      ],
+      "total": 11,
+      "rank": 34,
+      "award": "BRONZE",
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "Kirill Kuzmin",
+      "country": "ITA",
+      "problem_scores": [
+        4,
+        0,
+        7,
+        0
+      ],
+      "total": 11,
+      "rank": 34,
+      "award": "BRONZE",
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "Giovanni Paolini",
+      "country": "ITA",
+      "problem_scores": [
+        7,
+        4,
+        0,
+        0
+      ],
+      "total": 11,
+      "rank": 34,
+      "award": "BRONZE",
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "Leonardo Patimo",
+      "country": "ITA",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        2
+      ],
+      "total": 9,
+      "rank": 49,
+      "award": null,
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "Tudor Pădurariu",
+      "country": "ROMA",
+      "problem_scores": [
+        7,
+        4,
+        5,
+        1
+      ],
+      "total": 17,
+      "rank": 13,
+      "award": "SILVER",
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "Filip Chindea",
+      "country": "ROMA",
+      "problem_scores": [
+        7,
+        7,
+        1,
+        0
+      ],
+      "total": 15,
+      "rank": 17,
+      "award": "BRONZE",
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "Andrei Deneanu",
+      "country": "ROMA",
+      "problem_scores": [
+        7,
+        4,
+        2,
+        1
+      ],
+      "total": 14,
+      "rank": 22,
+      "award": "BRONZE",
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "Andrei Cozma",
+      "country": "ROMA",
+      "problem_scores": [
+        7,
+        6,
+        0,
+        0
+      ],
+      "total": 13,
+      "rank": 27,
+      "award": "BRONZE",
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "Ömer Cerrahoğlu",
+      "country": "ROMA",
+      "problem_scores": [
+        7,
+        5,
+        0,
+        0
+      ],
+      "total": 12,
+      "rank": 29,
+      "award": "BRONZE",
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "Andra Constantinescu",
+      "country": "ROMA",
+      "problem_scores": [
+        7,
+        4,
+        1,
+        0
+      ],
+      "total": 12,
+      "rank": 29,
+      "award": "BRONZE",
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "Mădălina Persu",
+      "country": "ROMB",
+      "problem_scores": [
+        7,
+        7,
+        2,
+        0
+      ],
+      "total": 16,
+      "rank": 15,
+      "award": "SILVER",
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "Marius Tiba",
+      "country": "ROMB",
+      "problem_scores": [
+        7,
+        7,
+        0,
+        0
+      ],
+      "total": 14,
+      "rank": 22,
+      "award": "BRONZE",
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "Victor Pădureanu",
+      "country": "ROMB",
+      "problem_scores": [
+        7,
+        4,
+        1,
+        1
+      ],
+      "total": 13,
+      "rank": 27,
+      "award": "BRONZE",
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "Octav Drăgoi",
+      "country": "ROMB",
+      "problem_scores": [
+        5,
+        0,
+        7,
+        0
+      ],
+      "total": 12,
+      "rank": 29,
+      "award": "BRONZE",
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "Francisc Bozgan",
+      "country": "ROMB",
+      "problem_scores": [
+        5,
+        3,
+        2,
+        0
+      ],
+      "total": 10,
+      "rank": 40,
+      "award": null,
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "Ştefan Ivanovici",
+      "country": "ROMB",
+      "problem_scores": [
+        7,
+        1,
+        0,
+        0
+      ],
+      "total": 8,
+      "rank": 50,
+      "award": null,
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "Konstantin Tyshchuk",
+      "country": "RUS",
+      "problem_scores": [
+        7,
+        6,
+        7,
+        1
+      ],
+      "total": 21,
+      "rank": 8,
+      "award": "SILVER",
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "Fedor Ivlev",
+      "country": "RUS",
+      "problem_scores": [
+        7,
+        3,
+        7,
+        0
+      ],
+      "total": 17,
+      "rank": 13,
+      "award": "SILVER",
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "Mikhail Bochkarev",
+      "country": "RUS",
+      "problem_scores": [
+        7,
+        0,
+        7,
+        1
+      ],
+      "total": 15,
+      "rank": 17,
+      "award": "BRONZE",
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "Nikita Ustinov",
+      "country": "RUS",
+      "problem_scores": [
+        7,
+        3,
+        0,
+        1
+      ],
+      "total": 11,
+      "rank": 34,
+      "award": "BRONZE",
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "Oleg Tsarkov",
+      "country": "RUS",
+      "problem_scores": [
+        4,
+        0,
+        2,
+        0
+      ],
+      "total": 6,
+      "rank": 54,
+      "award": null,
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "Teodor von Burg",
+      "country": "SRB",
+      "problem_scores": [
+        7,
+        5,
+        6,
+        5
+      ],
+      "total": 23,
+      "rank": 3,
+      "award": "GOLD",
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "Dušan Milijančević",
+      "country": "SRB",
+      "problem_scores": [
+        7,
+        7,
+        7,
+        1
+      ],
+      "total": 22,
+      "rank": 7,
+      "award": "SILVER",
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "Aleksandar Vasiljković",
+      "country": "SRB",
+      "problem_scores": [
+        7,
+        7,
+        0,
+        1
+      ],
+      "total": 15,
+      "rank": 17,
+      "award": "BRONZE",
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "Luka Milićević",
+      "country": "SRB",
+      "problem_scores": [
+        6,
+        5,
+        2,
+        1
+      ],
+      "total": 14,
+      "rank": 22,
+      "award": "BRONZE",
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "Stevan Gajović",
+      "country": "SRB",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        5
+      ],
+      "total": 12,
+      "rank": 29,
+      "award": "BRONZE",
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "Jelena Marković",
+      "country": "SRB",
+      "problem_scores": [
+        7,
+        1,
+        3,
+        0
+      ],
+      "total": 11,
+      "rank": 34,
+      "award": "BRONZE",
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "Wenyu Cao",
+      "country": "USA",
+      "problem_scores": [
+        7,
+        3,
+        6,
+        7
+      ],
+      "total": 23,
+      "rank": 3,
+      "award": "GOLD",
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "Sergei Bernstein",
+      "country": "USA",
+      "problem_scores": [
+        7,
+        7,
+        0,
+        5
+      ],
+      "total": 19,
+      "rank": 10,
+      "award": "SILVER",
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "Qinxuan Pan",
+      "country": "USA",
+      "problem_scores": [
+        7,
+        4,
+        0,
+        7
+      ],
+      "total": 18,
+      "rank": 11,
+      "award": "SILVER",
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "John Berman",
+      "country": "USA",
+      "problem_scores": [
+        7,
+        7,
+        0,
+        1
+      ],
+      "total": 15,
+      "rank": 17,
+      "award": "BRONZE",
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "David Rush",
+      "country": "USA",
+      "problem_scores": [
+        7,
+        4,
+        0,
+        0
+      ],
+      "total": 11,
+      "rank": 34,
+      "award": "BRONZE",
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "Toan Duc Phan",
+      "country": "USA",
+      "problem_scores": [
+        3,
+        3,
+        1,
+        0
+      ],
+      "total": 7,
+      "rank": 52,
+      "award": null,
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "Andrei Ciupan",
+      "country": "VIANU",
+      "problem_scores": [
+        7,
+        3,
+        4,
+        0
+      ],
+      "total": 14,
+      "rank": 22,
+      "award": "BRONZE",
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "Horia Mania",
+      "country": "VIANU",
+      "problem_scores": [
+        1,
+        4,
+        7,
+        0
+      ],
+      "total": 12,
+      "rank": 29,
+      "award": "BRONZE",
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "Radu Bumbăcea",
+      "country": "VIANU",
+      "problem_scores": [
+        7,
+        3,
+        0,
+        0
+      ],
+      "total": 10,
+      "rank": 40,
+      "award": null,
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "Dragoş Dumitrescu",
+      "country": "VIANU",
+      "problem_scores": [
+        7,
+        0,
+        0,
+        0
+      ],
+      "total": 7,
+      "rank": 52,
+      "award": null,
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "Alexandru Milu",
+      "country": "VIANU",
+      "problem_scores": [
+        1,
+        3,
+        0,
+        0
+      ],
+      "total": 4,
+      "rank": 55,
+      "award": null,
+      "is_official_team": false,
+      "is_online": false
+    },
+    {
+      "name": "Mihnea Andrei",
+      "country": "VIANU",
+      "problem_scores": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "total": 1,
+      "rank": 57,
+      "award": null,
+      "is_official_team": false,
+      "is_online": false
+    }
+  ],
+  "validation": {
+    "all_totals_match": true,
+    "mismatches": []
+  }
+}

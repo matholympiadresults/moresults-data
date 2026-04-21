@@ -91,3 +91,57 @@ class TestNameSwapPost2018:
         results = _parse_table(table, 2023, is_online=False)
         assert results[0].name == "Foo-Baz Bar"
         assert results[0].is_official_team is True
+
+
+class TestEarlyYearParsers:
+    """2008-2010 editions used different file formats."""
+
+    def test_2008_html_uses_four_problems_and_resolves_country_names(self):
+        from pathlib import Path
+
+        from sigma.sources.rmm.parser import parse_2008_html
+        from sigma.sources.rmm.parser.rmm_parser import load_html
+
+        path = Path(__file__).parent.parent / "data/rmm/raw/2008/rmm_2008.html"
+        data = parse_2008_html(load_html(path))
+        assert data.year == 2008
+        assert data.total_contestants == 34
+        assert data.validation.all_totals_match
+        assert all(len(r.problem_scores) == 4 for r in data.results)
+        first = data.results[0]
+        assert first.name == "Jakub Konieczny"
+        assert first.country == "POL"
+        assert first.award == "GOLD"
+        yakutsk = [r for r in data.results if r.country == "YAKUTSK"]
+        assert len(yakutsk) == 3
+
+    def test_2009_xls_swaps_name_order_and_handles_particles(self):
+        from pathlib import Path
+
+        from sigma.sources.rmm.parser import parse_2009_xls
+
+        path = Path(__file__).parent.parent / "data/rmm/raw/2009/rmm_2009.xls"
+        data = parse_2009_xls(path)
+        assert data.year == 2009
+        assert data.validation.all_totals_match
+        assert all(len(r.problem_scores) == 4 for r in data.results)
+        names = {r.name for r in data.results}
+        assert "Teodor von Burg" in names  # leading "von" particle kept with surname
+        assert "Svetozar Zlatkov Stankov" in names
+        # DNS rows (empty-name "(contestant)") must be dropped.
+        assert not any("contestant" in n.lower() for n in names)
+
+    def test_2010_xls_reorders_names_and_strips_female_marker(self):
+        from pathlib import Path
+
+        from sigma.sources.rmm.parser import parse_2010_xls
+
+        path = Path(__file__).parent.parent / "data/rmm/raw/2010/rmm_2010.xls"
+        data = parse_2010_xls(path)
+        assert data.year == 2010
+        assert data.total_contestants == 71
+        assert data.validation.all_totals_match
+        assert all(len(r.problem_scores) == 6 for r in data.results)
+        names = {r.name for r in data.results}
+        assert "Teodor von Burg" in names  # "Burg Teodor von" reordered
+        assert "Barbosa Alves Deborah" in names  # ♀ marker stripped, swap applied

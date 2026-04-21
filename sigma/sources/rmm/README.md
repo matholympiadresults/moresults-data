@@ -5,8 +5,12 @@ Data processing pipeline for the Romanian Masters of Mathematics competition.
 ## Data Source
 
 - URL: `https://rmms.lbi.ro/rmm{YYYY}/index.php?id=results_math`
-- Years available: 2012-2013, 2015-2021, 2023-present
-- Missing years: 2008-2010, 2011, 2014, 2022 (not available online)
+- Years available online: 2011, 2012-2013, 2015-2021, 2023-present
+- Years available offline only (place files under `data/rmm/raw/{year}/`):
+  - 2008: `rmm_2008.html` — original results page (4 problems, split-name HTML)
+  - 2009: `rmm_2009.xls` — 2nd edition Excel (4 problems)
+  - 2010: `rmm_2010.xls` — 3rd edition Excel (6 problems, "Individual" sheet)
+- Missing years: 2014, 2022 (not available)
 
 ## Usage
 
@@ -61,8 +65,8 @@ sigma ingest rmm -d data/ -o data/olympiad_data.json --year 2024 --year 2025
 
 ## Competition Format
 
-- 6 problems (P1-P6)
-- Maximum 7 points per problem (42 total)
+- 4 problems in 2008-2009 (P1-P4), 6 problems from 2010 onwards (P1-P6)
+- Maximum 7 points per problem
 - Awards: GOLD, SILVER, BRONZE, HON. MEN. (Honorable Mention)
 
 ## Country Codes
@@ -111,8 +115,11 @@ RMM uses various country codes, some of which are non-standard:
 | TND | The Nordic Team (combined Nordic countries) |
 | UNK | United Kingdom |
 | VIANU | Colegiul National "Tudor Vianu" (Romanian school team) |
+| VIANU2 | Tudor Vianu secondary school team (2010) |
+| ROMA | Romania A Team (2009, ingested as main ROU) |
 | ROMB / ROUB | Romania B Team |
 | ROMF | Romania F Team (girls team) |
+| YAKUTSK | Yakutsk regional delegation (2008, mapped to RUS) |
 
 ## Notes
 

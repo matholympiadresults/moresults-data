@@ -7,10 +7,21 @@ import click
 
 from sigma.sources.rmm.downloader import AVAILABLE_YEARS, download_participants, download_year
 from sigma.sources.rmm.downloader.rmm_downloader import DownloadError
-from sigma.sources.rmm.parser import ParseError, parse_participants_html, parse_year
+from sigma.sources.rmm.parser import (
+    ParseError,
+    parse_2008_html,
+    parse_2009_xls,
+    parse_2010_xls,
+    parse_participants_html,
+    parse_year,
+)
 from sigma.sources.rmm.parser.rmm_parser import load_html, save_json
 
 from .base import SourceAdapter
+
+# Years 2008-2010 are not available online; the raw files must be
+# placed manually in data/rmm/raw/{year}/ before parsing.
+OFFLINE_ONLY_YEARS = {2008, 2009, 2010}
 
 # RMM started in 2008
 FIRST_RMM_YEAR = 2008
@@ -41,6 +52,9 @@ class RMMAdapter(SourceAdapter):
             years = [y for y in self.get_available_years() if y in AVAILABLE_YEARS]
         else:
             years = [y for y in years if y in AVAILABLE_YEARS]
+
+        # 2008-2010 data is only available offline — skip download attempts.
+        years = [y for y in years if y not in OFFLINE_ONLY_YEARS]
 
         click.echo(f"Downloading {len(years)} years")
 
@@ -104,12 +118,7 @@ class RMMAdapter(SourceAdapter):
         for year in years_to_parse:
             raw_year_dir = self.get_raw_dir(source_dir, year)
             parsed_year_dir = self.get_parsed_dir(source_dir, year)
-            html_file = raw_year_dir / f"rmm_{year}.html"
             output_file = parsed_year_dir / f"rmm_{year}.json"
-
-            if not html_file.exists():
-                click.echo(f"  {year}: No HTML file found, skipping")
-                continue
 
             if output_file.exists() and not force:
                 click.echo(f"  {year}: Already parsed, skipping")
@@ -118,14 +127,10 @@ class RMMAdapter(SourceAdapter):
 
             try:
                 parsed_year_dir.mkdir(parents=True, exist_ok=True)
-                html = load_html(html_file)
-                # Load participants page if available (for multi-word name resolution)
-                participants = None
-                participants_file = raw_year_dir / f"rmm_{year}_participants.html"
-                if participants_file.exists():
-                    participants_html = load_html(participants_file)
-                    participants = parse_participants_html(participants_html)
-                data = parse_year(html, year, participants)
+                data = self._parse_single_year(year, raw_year_dir)
+                if data is None:
+                    click.echo(f"  {year}: No raw file found, skipping")
+                    continue
                 save_json(data, output_file)
                 click.echo(f"  {year}: Parsed {data.total_contestants} contestants")
                 success += 1
@@ -134,6 +139,33 @@ class RMMAdapter(SourceAdapter):
                 failed += 1
 
         click.echo(f"Done: {success} successful, {failed} failed")
+
+    def _parse_single_year(self, year: int, raw_year_dir: Path):
+        """Dispatch to the right parser based on year / file type."""
+        html_file = raw_year_dir / f"rmm_{year}.html"
+        xls_file = raw_year_dir / f"rmm_{year}.xls"
+
+        if year == 2008:
+            if not html_file.exists():
+                return None
+            return parse_2008_html(load_html(html_file))
+        if year == 2009:
+            if not xls_file.exists():
+                return None
+            return parse_2009_xls(xls_file)
+        if year == 2010:
+            if not xls_file.exists():
+                return None
+            return parse_2010_xls(xls_file)
+
+        if not html_file.exists():
+            return None
+        html = load_html(html_file)
+        participants = None
+        participants_file = raw_year_dir / f"rmm_{year}_participants.html"
+        if participants_file.exists():
+            participants = parse_participants_html(load_html(participants_file))
+        return parse_year(html, year, participants)
 
     def ingest(
         self,
