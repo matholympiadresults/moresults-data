@@ -22,7 +22,7 @@ RMM_START_YEAR = 2008
 
 # Romanian secondary teams (B team, F team, school teams)
 # These are excluded by default, only ROU (main team) is ingested
-ROMANIAN_SECONDARY_TEAMS = {"roub", "rouf", "vianu"}
+ROMANIAN_SECONDARY_TEAMS = {"roub", "rouf", "vianu", "vianu2"}
 
 # B-team codes: 4-letter codes ending in 'b' that represent B-teams
 # Excludes valid 3-letter ISO codes that happen to end in 'b' (srb, alb, uzb)
@@ -34,11 +34,13 @@ RMM_CODE_MAPPING: dict[str, str] = {
     "brz": "bra",  # Brazil
     "bul": "bgr",  # Bulgaria
     "rom": "rou",  # Romania
+    "roma": "rou",  # Romania A team (2009)
     "unk": "gbr",  # United Kingdom
     # Regional/school teams
     "sofia": "bgr",  # Sofia, Bulgaria
     "varna": "bgr",  # Varna, Bulgaria
     "irkutsk": "rus",  # Irkutsk, Russia
+    "yakutsk": "rus",  # Yakutsk, Russia (2008)
     # B-team codes -> base country
     "roub": "rou",
     "romb": "rou",
@@ -56,6 +58,7 @@ RMM_CODE_MAPPING: dict[str, str] = {
     "turb": "tur",
     # Special teams (resolved per-contestant via COMBINED_TEAM_MEMBERS)
     "vianu": "unknown",  # Tudor Vianu National College (school team)
+    "vianu2": "unknown",  # Tudor Vianu secondary team (2010)
 }
 
 # Combined team (TND/TBT) members mapped to their actual country.
@@ -165,13 +168,15 @@ def create_competition(db: Database, year_results: RMMYearResults) -> Competitio
     if competition_id in db.competitions:
         return db.competitions[competition_id]
 
+    # 2008 and 2009 used 4 problems; 2010 onwards used 6.
+    num_problems = len(year_results.results[0].problem_scores) if year_results.results else 6
     competition = Competition(
         id=competition_id,
         source=Source.RMM,
         year=year,
         edition=rmm_year_to_edition(year),
         host_country_id=None,  # Would need additional data to determine host
-        num_problems=6,  # RMM has 6 problems
+        num_problems=num_problems,
         max_score_per_problem=7,
     )
     db.competitions[competition_id] = competition
