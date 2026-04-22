@@ -1,0 +1,1662 @@
+{
+  "year": 2014,
+  "source_url": "local:balkan-mo-2014",
+  "source_type": "pdf",
+  "total_contestants": 110,
+  "results": [
+    {
+      "name": "Gent Gjika",
+      "country": "ALB1",
+      "problem_scores": [
+        10,
+        3,
+        0,
+        4
+      ],
+      "total": 17,
+      "rank": 75,
+      "award": null,
+      "given_name": "Gent",
+      "family_name": "Gjika"
+    },
+    {
+      "name": "Boriana Gjura",
+      "country": "ALB2",
+      "problem_scores": [
+        10,
+        10,
+        4,
+        1
+      ],
+      "total": 25,
+      "rank": 51,
+      "award": null,
+      "given_name": "Boriana",
+      "family_name": "Gjura"
+    },
+    {
+      "name": "Gledis Kallço",
+      "country": "ALB3",
+      "problem_scores": [
+        1,
+        10,
+        3,
+        4
+      ],
+      "total": 18,
+      "rank": 73,
+      "award": null,
+      "given_name": "Gledis",
+      "family_name": "Kallço"
+    },
+    {
+      "name": "Antonino Sota",
+      "country": "ALB4",
+      "problem_scores": [
+        9,
+        0,
+        10,
+        0
+      ],
+      "total": 19,
+      "rank": 71,
+      "award": null,
+      "given_name": "Antonino",
+      "family_name": "Sota"
+    },
+    {
+      "name": "Enis Barbullushi",
+      "country": "ALB5",
+      "problem_scores": [
+        10,
+        0,
+        0,
+        3
+      ],
+      "total": 13,
+      "rank": 89,
+      "award": null,
+      "given_name": "Enis",
+      "family_name": "Barbullushi"
+    },
+    {
+      "name": "Geri Shehu",
+      "country": "ALB6",
+      "problem_scores": [
+        1,
+        2,
+        0,
+        0
+      ],
+      "total": 3,
+      "rank": 106,
+      "award": null,
+      "given_name": "Geri",
+      "family_name": "Shehu"
+    },
+    {
+      "name": "Stanislav Chobanov",
+      "country": "BGR1",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        8
+      ],
+      "total": 38,
+      "rank": 13,
+      "award": null,
+      "given_name": "Stanislav",
+      "family_name": "Chobanov"
+    },
+    {
+      "name": "Nguyen Chi Dung",
+      "country": "BGR2",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        8
+      ],
+      "total": 38,
+      "rank": 13,
+      "award": null,
+      "given_name": "Nguyen Chi",
+      "family_name": "Dung"
+    },
+    {
+      "name": "Mark Andonov",
+      "country": "BGR3",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        9
+      ],
+      "total": 39,
+      "rank": 10,
+      "award": null,
+      "given_name": "Mark",
+      "family_name": "Andonov"
+    },
+    {
+      "name": "Lyuben Lichev",
+      "country": "BGR4",
+      "problem_scores": [
+        10,
+        10,
+        4,
+        4
+      ],
+      "total": 28,
+      "rank": 47,
+      "award": null,
+      "given_name": "Lyuben",
+      "family_name": "Lichev"
+    },
+    {
+      "name": "Viktor Radivchev",
+      "country": "BGR5",
+      "problem_scores": [
+        10,
+        10,
+        2,
+        10
+      ],
+      "total": 32,
+      "rank": 28,
+      "award": null,
+      "given_name": "Viktor",
+      "family_name": "Radivchev"
+    },
+    {
+      "name": "Yordan Yordanov",
+      "country": "BGR6",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        6
+      ],
+      "total": 36,
+      "rank": 15,
+      "award": null,
+      "given_name": "Yordan",
+      "family_name": "Yordanov"
+    },
+    {
+      "name": "Marios Voskou",
+      "country": "CYP1",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        0
+      ],
+      "total": 30,
+      "rank": 41,
+      "award": null,
+      "given_name": "Marios",
+      "family_name": "Voskou"
+    },
+    {
+      "name": "Andreas Economou",
+      "country": "CYP2",
+      "problem_scores": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "total": 6,
+      "rank": 103,
+      "award": null,
+      "given_name": "Andreas",
+      "family_name": "Economou"
+    },
+    {
+      "name": "Stelios Stylianou",
+      "country": "CYP3",
+      "problem_scores": [
+        10,
+        2,
+        2,
+        3
+      ],
+      "total": 17,
+      "rank": 75,
+      "award": null,
+      "given_name": "Stelios",
+      "family_name": "Stylianou"
+    },
+    {
+      "name": "Paraskevi Mylona",
+      "country": "CYP4",
+      "problem_scores": [
+        6,
+        2,
+        1,
+        4
+      ],
+      "total": 13,
+      "rank": 89,
+      "award": null,
+      "given_name": "Paraskevi",
+      "family_name": "Mylona"
+    },
+    {
+      "name": "Angelos Pelecanos",
+      "country": "CYP5",
+      "problem_scores": [
+        2,
+        2,
+        0,
+        10
+      ],
+      "total": 14,
+      "rank": 85,
+      "award": null,
+      "given_name": "Angelos",
+      "family_name": "Pelecanos"
+    },
+    {
+      "name": "Christodoulos Chatzimiltis",
+      "country": "CYP6",
+      "problem_scores": [
+        9,
+        8,
+        0,
+        2
+      ],
+      "total": 19,
+      "rank": 71,
+      "award": null,
+      "given_name": "Christodoulos",
+      "family_name": "Chatzimiltis"
+    },
+    {
+      "name": "Nestor Chachamis",
+      "country": "HEL1",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        2
+      ],
+      "total": 32,
+      "rank": 28,
+      "award": null,
+      "given_name": "Nestor",
+      "family_name": "Chachamis"
+    },
+    {
+      "name": "Panagiotis Dimakis",
+      "country": "HEL2",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        10
+      ],
+      "total": 40,
+      "rank": 1,
+      "award": null,
+      "given_name": "Panagiotis",
+      "family_name": "Dimakis"
+    },
+    {
+      "name": "Petros Ntounis",
+      "country": "HEL3",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        2
+      ],
+      "total": 32,
+      "rank": 28,
+      "award": null,
+      "given_name": "Petros",
+      "family_name": "Ntounis"
+    },
+    {
+      "name": "Michail Sarantis",
+      "country": "HEL4",
+      "problem_scores": [
+        10,
+        5,
+        0,
+        0
+      ],
+      "total": 15,
+      "rank": 82,
+      "award": null,
+      "given_name": "Michail",
+      "family_name": "Sarantis"
+    },
+    {
+      "name": "Athinagoras Stylianos",
+      "country": "HEL5",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        10
+      ],
+      "total": 40,
+      "rank": 1,
+      "award": null,
+      "given_name": "Athinagoras",
+      "family_name": "Stylianos"
+    },
+    {
+      "name": "Antonios Zitridis",
+      "country": "HEL6",
+      "problem_scores": [
+        10,
+        2,
+        10,
+        1
+      ],
+      "total": 23,
+      "rank": 56,
+      "award": null,
+      "given_name": "Antonios",
+      "family_name": "Zitridis"
+    },
+    {
+      "name": "Bojan Serafimov",
+      "country": "MKD1",
+      "problem_scores": [
+        10,
+        3,
+        10,
+        10
+      ],
+      "total": 33,
+      "rank": 23,
+      "award": null,
+      "given_name": "Bojan",
+      "family_name": "Serafimov"
+    },
+    {
+      "name": "Jovan Tasev",
+      "country": "MKD2",
+      "problem_scores": [
+        9,
+        2,
+        2,
+        1
+      ],
+      "total": 14,
+      "rank": 85,
+      "award": null,
+      "given_name": "Jovan",
+      "family_name": "Tasev"
+    },
+    {
+      "name": "Teodora Bujaroska",
+      "country": "MKD3",
+      "problem_scores": [
+        1,
+        2,
+        0,
+        4
+      ],
+      "total": 7,
+      "rank": 101,
+      "award": null,
+      "given_name": "Teodora",
+      "family_name": "Bujaroska"
+    },
+    {
+      "name": "Stefan Nikoloski",
+      "country": "MKD4",
+      "problem_scores": [
+        10,
+        10,
+        1,
+        2
+      ],
+      "total": 23,
+      "rank": 56,
+      "award": null,
+      "given_name": "Stefan",
+      "family_name": "Nikoloski"
+    },
+    {
+      "name": "Andrej Ilievski",
+      "country": "MKD5",
+      "problem_scores": [
+        3,
+        2,
+        2,
+        0
+      ],
+      "total": 7,
+      "rank": 101,
+      "award": null,
+      "given_name": "Andrej",
+      "family_name": "Ilievski"
+    },
+    {
+      "name": "Bozidar Stevanoski",
+      "country": "MKD6",
+      "problem_scores": [
+        10,
+        4,
+        2,
+        1
+      ],
+      "total": 17,
+      "rank": 75,
+      "award": null,
+      "given_name": "Bozidar",
+      "family_name": "Stevanoski"
+    },
+    {
+      "name": "Vladimir Cucu",
+      "country": "MDA1",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        1
+      ],
+      "total": 31,
+      "rank": 36,
+      "award": null,
+      "given_name": "Vladimir",
+      "family_name": "Cucu"
+    },
+    {
+      "name": "Daniel Griza",
+      "country": "MDA2",
+      "problem_scores": [
+        10,
+        10,
+        0,
+        3
+      ],
+      "total": 23,
+      "rank": 56,
+      "award": null,
+      "given_name": "Daniel",
+      "family_name": "Griza"
+    },
+    {
+      "name": "Dionisie Nipomici",
+      "country": "MDA3",
+      "problem_scores": [
+        9,
+        3,
+        4,
+        10
+      ],
+      "total": 26,
+      "rank": 50,
+      "award": null,
+      "given_name": "Dionisie",
+      "family_name": "Nipomici"
+    },
+    {
+      "name": "Alexei Rusu",
+      "country": "MDA4",
+      "problem_scores": [
+        10,
+        2,
+        1,
+        4
+      ],
+      "total": 17,
+      "rank": 75,
+      "award": null,
+      "given_name": "Alexei",
+      "family_name": "Rusu"
+    },
+    {
+      "name": "Nicolae Şapoval",
+      "country": "MDA5",
+      "problem_scores": [
+        10,
+        10,
+        4,
+        9
+      ],
+      "total": 33,
+      "rank": 23,
+      "award": null,
+      "given_name": "Nicolae",
+      "family_name": "Şapoval"
+    },
+    {
+      "name": "Mihail Tarigradschi",
+      "country": "MDA6",
+      "problem_scores": [
+        10,
+        2,
+        1,
+        4
+      ],
+      "total": 17,
+      "rank": 75,
+      "award": null,
+      "given_name": "Mihail",
+      "family_name": "Tarigradschi"
+    },
+    {
+      "name": "Olja Krstović",
+      "country": "MNE1",
+      "problem_scores": [
+        10,
+        10,
+        0,
+        0
+      ],
+      "total": 20,
+      "rank": 67,
+      "award": null,
+      "given_name": "Olja",
+      "family_name": "Krstović"
+    },
+    {
+      "name": "Anđela Marković",
+      "country": "MNE2",
+      "problem_scores": [
+        10,
+        0,
+        0,
+        0
+      ],
+      "total": 10,
+      "rank": 98,
+      "award": null,
+      "given_name": "Anđela",
+      "family_name": "Marković"
+    },
+    {
+      "name": "Milica Dašić",
+      "country": "MNE3",
+      "problem_scores": [
+        1,
+        2,
+        0,
+        3
+      ],
+      "total": 6,
+      "rank": 103,
+      "award": null,
+      "given_name": "Milica",
+      "family_name": "Dašić"
+    },
+    {
+      "name": "Nikola Raičević",
+      "country": "MNE4",
+      "problem_scores": [
+        10,
+        2,
+        0,
+        0
+      ],
+      "total": 12,
+      "rank": 94,
+      "award": null,
+      "given_name": "Nikola",
+      "family_name": "Raičević"
+    },
+    {
+      "name": "Stefan Şpătaru",
+      "country": "ROU1",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        10
+      ],
+      "total": 40,
+      "rank": 1,
+      "award": null,
+      "given_name": "Stefan",
+      "family_name": "Şpătaru"
+    },
+    {
+      "name": "Paul-Gabriel Muscă",
+      "country": "ROU2",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        4
+      ],
+      "total": 34,
+      "rank": 17,
+      "award": null,
+      "given_name": "Paul-Gabriel",
+      "family_name": "Muscă"
+    },
+    {
+      "name": "Marius-Ioan Bocanu",
+      "country": "ROU3",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        4
+      ],
+      "total": 34,
+      "rank": 17,
+      "award": null,
+      "given_name": "Marius-Ioan",
+      "family_name": "Bocanu"
+    },
+    {
+      "name": "Teodor-Andrei Andronache",
+      "country": "ROU4",
+      "problem_scores": [
+        5,
+        10,
+        10,
+        3
+      ],
+      "total": 28,
+      "rank": 47,
+      "award": null,
+      "given_name": "Teodor-Andrei",
+      "family_name": "Andronache"
+    },
+    {
+      "name": "Viorel-Andrei Bud",
+      "country": "ROU5",
+      "problem_scores": [
+        9,
+        10,
+        10,
+        4
+      ],
+      "total": 33,
+      "rank": 23,
+      "award": null,
+      "given_name": "Viorel-Andrei",
+      "family_name": "Bud"
+    },
+    {
+      "name": "Ioan-Laurenţiu Ploscaru",
+      "country": "ROU6",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        10
+      ],
+      "total": 40,
+      "rank": 1,
+      "award": null,
+      "given_name": "Ioan-Laurenţiu",
+      "family_name": "Ploscaru"
+    },
+    {
+      "name": "Ahmet Yasin Alp",
+      "country": "TUR1",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        2
+      ],
+      "total": 32,
+      "rank": 28,
+      "award": null,
+      "given_name": "Ahmet Yasin",
+      "family_name": "Alp"
+    },
+    {
+      "name": "Osman Akar",
+      "country": "TUR2",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        10
+      ],
+      "total": 40,
+      "rank": 1,
+      "award": null,
+      "given_name": "Osman",
+      "family_name": "Akar"
+    },
+    {
+      "name": "Mehmet Efe Akengin",
+      "country": "TUR3",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        4
+      ],
+      "total": 34,
+      "rank": 17,
+      "award": null,
+      "given_name": "Mehmet Efe",
+      "family_name": "Akengin"
+    },
+    {
+      "name": "Emre Girgin",
+      "country": "TUR4",
+      "problem_scores": [
+        10,
+        null,
+        10,
+        10
+      ],
+      "total": 30,
+      "rank": 41,
+      "award": null,
+      "given_name": "Emre",
+      "family_name": "Girgin"
+    },
+    {
+      "name": "Halil İbrahim Güllük",
+      "country": "TUR5",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        4
+      ],
+      "total": 34,
+      "rank": 17,
+      "award": null,
+      "given_name": "Halil İbrahim",
+      "family_name": "Güllük"
+    },
+    {
+      "name": "Enes Kocabey",
+      "country": "TUR6",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        6
+      ],
+      "total": 36,
+      "rank": 15,
+      "award": null,
+      "given_name": "Enes",
+      "family_name": "Kocabey"
+    },
+    {
+      "name": "Žarko Randjelović",
+      "country": "SRB1",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        10
+      ],
+      "total": 40,
+      "rank": 1,
+      "award": null,
+      "given_name": "Žarko",
+      "family_name": "Randjelović"
+    },
+    {
+      "name": "Andjela Šarković",
+      "country": "SRB2",
+      "problem_scores": [
+        4,
+        10,
+        0,
+        9
+      ],
+      "total": 23,
+      "rank": 56,
+      "award": null,
+      "given_name": "Andjela",
+      "family_name": "Šarković"
+    },
+    {
+      "name": "Dušan Drobnjak",
+      "country": "SRB3",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        10
+      ],
+      "total": 40,
+      "rank": 1,
+      "award": null,
+      "given_name": "Dušan",
+      "family_name": "Drobnjak"
+    },
+    {
+      "name": "Maksim Stokić",
+      "country": "SRB4",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        0
+      ],
+      "total": 30,
+      "rank": 41,
+      "award": null,
+      "given_name": "Maksim",
+      "family_name": "Stokić"
+    },
+    {
+      "name": "Ivan Tanasijević",
+      "country": "SRB5",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        10
+      ],
+      "total": 40,
+      "rank": 1,
+      "award": null,
+      "given_name": "Ivan",
+      "family_name": "Tanasijević"
+    },
+    {
+      "name": "Luka Vukelić",
+      "country": "SRB6",
+      "problem_scores": [
+        10,
+        2,
+        1,
+        1
+      ],
+      "total": 14,
+      "rank": 85,
+      "award": null,
+      "given_name": "Luka",
+      "family_name": "Vukelić"
+    },
+    {
+      "name": "Ismat Aghayev",
+      "country": "AZE1",
+      "problem_scores": [
+        10,
+        2,
+        5,
+        1
+      ],
+      "total": 18,
+      "rank": 73,
+      "award": null,
+      "given_name": "Ismat",
+      "family_name": "Aghayev"
+    },
+    {
+      "name": "Farid Hasanov",
+      "country": "AZE2",
+      "problem_scores": [
+        9,
+        10,
+        5,
+        0
+      ],
+      "total": 24,
+      "rank": 54,
+      "award": null,
+      "given_name": "Farid",
+      "family_name": "Hasanov"
+    },
+    {
+      "name": "Mahammad Shirinov",
+      "country": "AZE3",
+      "problem_scores": [
+        0,
+        2,
+        10,
+        0
+      ],
+      "total": 12,
+      "rank": 94,
+      "award": null,
+      "given_name": "Mahammad",
+      "family_name": "Shirinov"
+    },
+    {
+      "name": "Mehdi Maharramov",
+      "country": "AZE4",
+      "problem_scores": [
+        10,
+        10,
+        0,
+        3
+      ],
+      "total": 23,
+      "rank": 56,
+      "award": null,
+      "given_name": "Mehdi",
+      "family_name": "Maharramov"
+    },
+    {
+      "name": "Farman Dumanov",
+      "country": "AZE5",
+      "problem_scores": [
+        10,
+        0,
+        10,
+        0
+      ],
+      "total": 20,
+      "rank": 67,
+      "award": null,
+      "given_name": "Farman",
+      "family_name": "Dumanov"
+    },
+    {
+      "name": "Isa Bayramov",
+      "country": "AZE6",
+      "problem_scores": [
+        10,
+        2,
+        0,
+        0
+      ],
+      "total": 12,
+      "rank": 94,
+      "award": null,
+      "given_name": "Isa",
+      "family_name": "Bayramov"
+    },
+    {
+      "name": "Violeta Naydenova",
+      "country": "BGRB1",
+      "problem_scores": [
+        10,
+        4,
+        10,
+        9
+      ],
+      "total": 33,
+      "rank": 23,
+      "award": null,
+      "given_name": "Violeta",
+      "family_name": "Naydenova"
+    },
+    {
+      "name": "Alexander Tenev",
+      "country": "BGRB2",
+      "problem_scores": [
+        0,
+        5,
+        10,
+        0
+      ],
+      "total": 15,
+      "rank": 82,
+      "award": null,
+      "given_name": "Alexander",
+      "family_name": "Tenev"
+    },
+    {
+      "name": "Tsvetomir Mihaylov",
+      "country": "BGRB3",
+      "problem_scores": [
+        9,
+        2,
+        0,
+        0
+      ],
+      "total": 11,
+      "rank": 97,
+      "award": null,
+      "given_name": "Tsvetomir",
+      "family_name": "Mihaylov"
+    },
+    {
+      "name": "Petar Gaydarov",
+      "country": "BGRB4",
+      "problem_scores": [
+        10,
+        10,
+        0,
+        10
+      ],
+      "total": 30,
+      "rank": 41,
+      "award": null,
+      "given_name": "Petar",
+      "family_name": "Gaydarov"
+    },
+    {
+      "name": "Denitsa Markova",
+      "country": "BGRB5",
+      "problem_scores": [
+        10,
+        10,
+        2,
+        10
+      ],
+      "total": 32,
+      "rank": 28,
+      "award": null,
+      "given_name": "Denitsa",
+      "family_name": "Markova"
+    },
+    {
+      "name": "Pavlena Nenova",
+      "country": "BGRB6",
+      "problem_scores": [
+        10,
+        10,
+        2,
+        10
+      ],
+      "total": 32,
+      "rank": 28,
+      "award": null,
+      "given_name": "Pavlena",
+      "family_name": "Nenova"
+    },
+    {
+      "name": "Alberto Alfarano",
+      "country": "ITA1",
+      "problem_scores": [
+        5,
+        10,
+        7,
+        9
+      ],
+      "total": 31,
+      "rank": 36,
+      "award": null,
+      "given_name": "Alberto",
+      "family_name": "Alfarano"
+    },
+    {
+      "name": "Francesco Ballini",
+      "country": "ITA2",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        9
+      ],
+      "total": 39,
+      "rank": 10,
+      "award": null,
+      "given_name": "Francesco",
+      "family_name": "Ballini"
+    },
+    {
+      "name": "Federica Cecchetto",
+      "country": "ITA3",
+      "problem_scores": [
+        10,
+        10,
+        7,
+        4
+      ],
+      "total": 31,
+      "rank": 36,
+      "award": null,
+      "given_name": "Federica",
+      "family_name": "Cecchetto"
+    },
+    {
+      "name": "Alessandro Fiorindo",
+      "country": "ITA4",
+      "problem_scores": [
+        10,
+        10,
+        1,
+        4
+      ],
+      "total": 25,
+      "rank": 51,
+      "award": null,
+      "given_name": "Alessandro",
+      "family_name": "Fiorindo"
+    },
+    {
+      "name": "Giovanni Italiano",
+      "country": "ITA5",
+      "problem_scores": [
+        3,
+        10,
+        0,
+        0
+      ],
+      "total": 13,
+      "rank": 89,
+      "award": null,
+      "given_name": "Giovanni",
+      "family_name": "Italiano"
+    },
+    {
+      "name": "Dario Rancati",
+      "country": "ITA6",
+      "problem_scores": [
+        10,
+        3,
+        7,
+        0
+      ],
+      "total": 20,
+      "rank": 67,
+      "award": null,
+      "given_name": "Dario",
+      "family_name": "Rancati"
+    },
+    {
+      "name": "Akhan Ismailov",
+      "country": "KAZ1",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        4
+      ],
+      "total": 34,
+      "rank": 17,
+      "award": null,
+      "given_name": "Akhan",
+      "family_name": "Ismailov"
+    },
+    {
+      "name": "Sergazy Kalmurzayev",
+      "country": "KAZ2",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        10
+      ],
+      "total": 40,
+      "rank": 1,
+      "award": null,
+      "given_name": "Sergazy",
+      "family_name": "Kalmurzayev"
+    },
+    {
+      "name": "Alisher Tortay",
+      "country": "KAZ3",
+      "problem_scores": [
+        9,
+        2,
+        10,
+        4
+      ],
+      "total": 25,
+      "rank": 51,
+      "award": null,
+      "given_name": "Alisher",
+      "family_name": "Tortay"
+    },
+    {
+      "name": "Kuandyk Altynkhanov",
+      "country": "KAZ4",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        0
+      ],
+      "total": 30,
+      "rank": 41,
+      "award": null,
+      "given_name": "Kuandyk",
+      "family_name": "Altynkhanov"
+    },
+    {
+      "name": "Amir Dargulov",
+      "country": "KAZ5",
+      "problem_scores": [
+        10,
+        10,
+        8,
+        0
+      ],
+      "total": 28,
+      "rank": 47,
+      "award": null,
+      "given_name": "Amir",
+      "family_name": "Dargulov"
+    },
+    {
+      "name": "Danyar Kamal",
+      "country": "KAZ6",
+      "problem_scores": [
+        9,
+        2,
+        10,
+        3
+      ],
+      "total": 24,
+      "rank": 54,
+      "award": null,
+      "given_name": "Danyar",
+      "family_name": "Kamal"
+    },
+    {
+      "name": "Kairat Eshbolotov",
+      "country": "KGZ1",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        3
+      ],
+      "total": 33,
+      "rank": 23,
+      "award": null,
+      "given_name": "Kairat",
+      "family_name": "Eshbolotov"
+    },
+    {
+      "name": "Islam Akhmatov",
+      "country": "KGZ2",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 0,
+      "rank": 109,
+      "award": null,
+      "given_name": "Islam",
+      "family_name": "Akhmatov"
+    },
+    {
+      "name": "Ermek Aitygulov",
+      "country": "KGZ3",
+      "problem_scores": [
+        0,
+        0,
+        10,
+        0
+      ],
+      "total": 10,
+      "rank": 98,
+      "award": null,
+      "given_name": "Ermek",
+      "family_name": "Aitygulov"
+    },
+    {
+      "name": "Azamat Kydyraliev",
+      "country": "KGZ4",
+      "problem_scores": [
+        0,
+        0,
+        2,
+        0
+      ],
+      "total": 2,
+      "rank": 107,
+      "award": null,
+      "given_name": "Azamat",
+      "family_name": "Kydyraliev"
+    },
+    {
+      "name": "Alzubair Mohamed Habibulah",
+      "country": "SAU1",
+      "problem_scores": [
+        10,
+        10,
+        8,
+        3
+      ],
+      "total": 31,
+      "rank": 36,
+      "award": null,
+      "given_name": "Alzubair Mohamed",
+      "family_name": "Habibulah"
+    },
+    {
+      "name": "Ibraheem Abdulhafeedh Khan",
+      "country": "SAU2",
+      "problem_scores": [
+        5,
+        8,
+        2,
+        0
+      ],
+      "total": 15,
+      "rank": 82,
+      "award": null,
+      "given_name": "Ibraheem Abdulhafeedh",
+      "family_name": "Khan"
+    },
+    {
+      "name": "Mahdi Abdulmohsen Alshaikh",
+      "country": "SAU3",
+      "problem_scores": [
+        9,
+        7,
+        0,
+        0
+      ],
+      "total": 16,
+      "rank": 80,
+      "award": null,
+      "given_name": "Mahdi Abdulmohsen",
+      "family_name": "Alshaikh"
+    },
+    {
+      "name": "Shaden Naif Alshammari",
+      "country": "SAU4",
+      "problem_scores": [
+        1,
+        3,
+        1,
+        0
+      ],
+      "total": 5,
+      "rank": 105,
+      "award": null,
+      "given_name": "Shaden Naif",
+      "family_name": "Alshammari"
+    },
+    {
+      "name": "Omar Tawfig Alrabiah",
+      "country": "SAU5",
+      "problem_scores": [
+        10,
+        10,
+        0,
+        0
+      ],
+      "total": 20,
+      "rank": 67,
+      "award": null,
+      "given_name": "Omar Tawfig",
+      "family_name": "Alrabiah"
+    },
+    {
+      "name": "Ammar Ali Alqatari",
+      "country": "SAU6",
+      "problem_scores": [
+        10,
+        2,
+        1,
+        0
+      ],
+      "total": 13,
+      "rank": 89,
+      "award": null,
+      "given_name": "Ammar Ali",
+      "family_name": "Alqatari"
+    },
+    {
+      "name": "Abdulvosit Ismailov",
+      "country": "TJK1",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        1
+      ],
+      "total": 31,
+      "rank": 36,
+      "award": null,
+      "given_name": "Abdulvosit",
+      "family_name": "Ismailov"
+    },
+    {
+      "name": "Farukh Karimov",
+      "country": "TJK2",
+      "problem_scores": [
+        10,
+        3,
+        10,
+        0
+      ],
+      "total": 23,
+      "rank": 56,
+      "award": null,
+      "given_name": "Farukh",
+      "family_name": "Karimov"
+    },
+    {
+      "name": "Kalomidin Klychev",
+      "country": "TJK3",
+      "problem_scores": [
+        10,
+        3,
+        10,
+        0
+      ],
+      "total": 23,
+      "rank": 56,
+      "award": null,
+      "given_name": "Kalomidin",
+      "family_name": "Klychev"
+    },
+    {
+      "name": "Rustami Ubaydillo",
+      "country": "TJK4",
+      "problem_scores": [
+        10,
+        5,
+        1,
+        0
+      ],
+      "total": 16,
+      "rank": 80,
+      "award": null,
+      "given_name": "Rustami",
+      "family_name": "Ubaydillo"
+    },
+    {
+      "name": "Nasimjon Madmurodov",
+      "country": "TJK5",
+      "problem_scores": [
+        10,
+        1,
+        10,
+        0
+      ],
+      "total": 21,
+      "rank": 64,
+      "award": null,
+      "given_name": "Nasimjon",
+      "family_name": "Madmurodov"
+    },
+    {
+      "name": "Dovlet Ovlyagulyyev",
+      "country": "TKM1",
+      "problem_scores": [
+        10,
+        3,
+        10,
+        9
+      ],
+      "total": 32,
+      "rank": 28,
+      "award": null,
+      "given_name": "Dovlet",
+      "family_name": "Ovlyagulyyev"
+    },
+    {
+      "name": "Alshir Soyunjov",
+      "country": "TKM2",
+      "problem_scores": [
+        10,
+        10,
+        1,
+        0
+      ],
+      "total": 21,
+      "rank": 64,
+      "award": null,
+      "given_name": "Alshir",
+      "family_name": "Soyunjov"
+    },
+    {
+      "name": "Perman Iljanov",
+      "country": "TKM3",
+      "problem_scores": [
+        10,
+        10,
+        1,
+        2
+      ],
+      "total": 23,
+      "rank": 56,
+      "award": null,
+      "given_name": "Perman",
+      "family_name": "Iljanov"
+    },
+    {
+      "name": "Dovran Nurgeldiyev",
+      "country": "TKM4",
+      "problem_scores": [
+        10,
+        10,
+        1,
+        0
+      ],
+      "total": 21,
+      "rank": 64,
+      "award": null,
+      "given_name": "Dovran",
+      "family_name": "Nurgeldiyev"
+    },
+    {
+      "name": "Mekan Hallayev",
+      "country": "TKM5",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 0,
+      "rank": 109,
+      "award": null,
+      "given_name": "Mekan",
+      "family_name": "Hallayev"
+    },
+    {
+      "name": "Bary Berdiyev",
+      "country": "TKM6",
+      "problem_scores": [
+        0,
+        2,
+        0,
+        0
+      ],
+      "total": 2,
+      "rank": 107,
+      "award": null,
+      "given_name": "Bary",
+      "family_name": "Berdiyev"
+    },
+    {
+      "name": "Joe Benton",
+      "country": "UNK1",
+      "problem_scores": [
+        10,
+        2,
+        10,
+        10
+      ],
+      "total": 32,
+      "rank": 28,
+      "award": null,
+      "given_name": "Joe",
+      "family_name": "Benton"
+    },
+    {
+      "name": "Liam Hughes",
+      "country": "UNK2",
+      "problem_scores": [
+        0,
+        10,
+        0,
+        0
+      ],
+      "total": 10,
+      "rank": 98,
+      "award": null,
+      "given_name": "Liam",
+      "family_name": "Hughes"
+    },
+    {
+      "name": "Neel Nanda",
+      "country": "UNK3",
+      "problem_scores": [
+        0,
+        10,
+        0,
+        3
+      ],
+      "total": 13,
+      "rank": 89,
+      "award": null,
+      "given_name": "Neel",
+      "family_name": "Nanda"
+    },
+    {
+      "name": "Linden Ralph",
+      "country": "UNK4",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        4
+      ],
+      "total": 34,
+      "rank": 17,
+      "award": null,
+      "given_name": "Linden",
+      "family_name": "Ralph"
+    },
+    {
+      "name": "Kasia Warburton",
+      "country": "UNK5",
+      "problem_scores": [
+        0,
+        10,
+        0,
+        4
+      ],
+      "total": 14,
+      "rank": 85,
+      "award": null,
+      "given_name": "Kasia",
+      "family_name": "Warburton"
+    },
+    {
+      "name": "Harvey Yau",
+      "country": "UNK6",
+      "problem_scores": [
+        10,
+        10,
+        0,
+        10
+      ],
+      "total": 30,
+      "rank": 41,
+      "award": null,
+      "given_name": "Harvey",
+      "family_name": "Yau"
+    },
+    {
+      "name": "Shokhrukh Ibragimov",
+      "country": "UZB1",
+      "problem_scores": [
+        10,
+        10,
+        10,
+        9
+      ],
+      "total": 39,
+      "rank": 10,
+      "award": null,
+      "given_name": "Shokhrukh",
+      "family_name": "Ibragimov"
+    }
+  ],
+  "validation": {
+    "all_totals_match": true,
+    "mismatches": []
+  }
+}

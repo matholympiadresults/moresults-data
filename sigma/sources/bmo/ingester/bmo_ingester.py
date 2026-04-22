@@ -22,7 +22,7 @@ from sigma.sources.bmo.parser.models import (
 BMO_START_YEAR = 1984
 
 # B-team codes specific to BMO
-B_TEAM_CODES = {"turb", "romb", "srbb", "mkdb", "mdab"}
+B_TEAM_CODES = {"turb", "romb", "srbb", "mkdb", "mdab", "bgrb", "albb", "helb"}
 
 # BMO-specific country code mappings
 BMO_CODE_MAPPING: dict[str, str] = {
@@ -49,12 +49,16 @@ BMO_CODE_MAPPING: dict[str, str] = {
     "yac": "rus",  # Yakutia / Sakha, Russia (2005 invited regional team)
     "azb": "aze",  # Azerbaijan (alternative code used in 2007)
     "brn": "cze",  # Brno (Czech regional team, 2006/2009 invited)
+    "kta": "qat",  # Qatar observers (2017, Qatari contestants with Al-* family names)
     # B-team codes
     "turb": "tur",  # Turkey B
     "romb": "rou",  # Romania B
     "srbb": "srb",  # Serbia B
     "mkdb": "mkd",  # Macedonia B
     "mdab": "mda",  # Moldova B (host bonus team)
+    "bgrb": "bgr",  # Bulgaria B (2014 host bonus team)
+    "albb": "alb",  # Albania B (2016 host bonus team)
+    "helb": "grc",  # Greece B (2015 host bonus team)
 }
 
 # BMO country name mappings
