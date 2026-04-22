@@ -14,11 +14,23 @@ assuming the i-th ``<li>`` contestant corresponds to the i-th score row
 
 Medals are not shown per contestant. We recover them from the four tier
 aggregate files (``gold.htm`` / ``silver.htm`` / ``bronze.htm`` /
-``mentions.htm``) which list the codes in each tier. A handful of
-contestants are missing from every tier despite having a medal-worthy
-score (e.g. TKM6 Ruslan Myratgeldiyev scored 33 but isn't listed
-anywhere) — for those we fall back to threshold-based assignment using
-the cutoffs derived from the lowest score in each tier.
+``mentions.htm``) which list the codes in each tier. Two known failure
+modes of the source require a score-threshold fallback:
+
+  - Some contestants are missing from every tier despite a medal-worthy
+    score (e.g. TKM6 Ruslan Myratgeldiyev scored 33 but isn't listed
+    anywhere).
+  - Some contestants appear in the wrong tier because the aggregate
+    pages were generated from an earlier score snapshot that differs
+    from the final per-country totals (e.g. TKM2 Bazarbay Halmedov is
+    in mentions.htm with total 11, but sgtrm.htm shows the corrected
+    13 which is Bronze-range).
+
+For both cases we derive a cutoff per tier from the lowest total in
+each tier file, then take the **better** of (tier-page award,
+threshold-based award). Tier-page wins when it's the higher tier or
+when the score is below any cutoff; threshold wins when the final
+score puts the contestant above the tier-page's assignment.
 
 Code quirks handled:
 
@@ -262,18 +274,31 @@ def _load_award_lookup(
     return lookup, tier_min
 
 
+_TIER_RANK = {"Gold": 4, "Silver": 3, "Bronze": 2, "Honourable Mention": 1}
+
+
 def _threshold_award(total: int, tier_min: dict[str, int]) -> str | None:
     """Assign an award from the score thresholds derived from the tier files.
 
-    Used only as a fallback when the per-code lookup doesn't resolve a
-    medal — i.e. the source dropped the contestant from every tier page
-    despite a medal-worthy score.
+    Used both when the per-code lookup misses entirely (source dropped
+    the contestant) and to upgrade a tier-page assignment that was made
+    from a stale score snapshot (e.g. TKM2 at 11 → HM in mentions.htm
+    but 13 → Bronze in sgtrm.htm).
     """
     for award in ("Gold", "Silver", "Bronze", "Honourable Mention"):
         cutoff = tier_min.get(award)
         if cutoff is not None and total >= cutoff:
             return award
     return None
+
+
+def _best_award(tier_page: str | None, threshold: str | None) -> str | None:
+    """Return whichever of the two inputs is the higher tier."""
+    if tier_page is None:
+        return threshold
+    if threshold is None:
+        return tier_page
+    return tier_page if _TIER_RANK[tier_page] >= _TIER_RANK[threshold] else threshold
 
 
 class Parser2015(BaseParser):
@@ -336,7 +361,10 @@ class Parser2015(BaseParser):
                     continue
                 seen.add(key)
 
-                award = award_lookup.get(canonical) or _threshold_award(total, tier_min)
+                award = _best_award(
+                    award_lookup.get(canonical),
+                    _threshold_award(total, tier_min),
+                )
 
                 results.append(
                     ContestantResult(

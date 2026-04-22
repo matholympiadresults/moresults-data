@@ -6,7 +6,9 @@ each ``<tr>`` in the ranking table has nine ``<td>`` cells:
   Rank | Name and Surname | Code | P1 | P2 | P3 | P4 | Total | Medal
 
 Medal values appear inline per row as ``GOLD`` / ``SILVER`` / ``BRONZE`` or
-empty for unawarded contestants (there were no Honourable Mentions in 2017).
+empty. The source doesn't record Honourable Mentions, but by the usual BMO
+jury rule any unawarded contestant who fully solved at least one problem
+(scored 10 on some P1..P4) gets an HM — we backfill those here.
 
 Country codes include North Macedonia's two host squads: ``MKDAn`` for the
 main team (mapped to ``MKD`` by `BMO_CODE_MAPPING`) and ``MKDBn`` for the B
@@ -39,6 +41,8 @@ from .code_utils import canonical_team_code, country_base, split_name
 from .pdf_common import normalize_award, parse_int, parse_score
 
 _SURNAME_FIRST_COUNTRIES = {"GRE", "KAZ", "KGZ", "MDA"}
+
+_FULL_SOLVE_SCORE = 10
 
 
 class Parser2017(BaseParser):
@@ -86,6 +90,10 @@ class Parser2017(BaseParser):
             )
 
             award = normalize_award(cells[8]) if len(cells) > 8 else None
+            if award is None and any(s == _FULL_SOLVE_SCORE for s in problem_scores):
+                # BMO jury rule: a fully solved problem earns an Honourable
+                # Mention even when the total doesn't reach the Bronze cutoff.
+                award = "Honourable Mention"
 
             key = (name, canonical)
             if key in seen:
