@@ -1,26 +1,58 @@
 """BMO raw data downloader.
 
 Downloads raw HTML and PDF files from various Balkan Mathematical Olympiad sources.
+Some older years are bundled locally (pass-through) because the originals have
+vanished from the web or were only ever shared as spreadsheets/multi-file HTML
+site dumps.
 """
 
 from pathlib import Path
 
 import requests
 
-# Available years with their parser types
-# Note: 2015 is excluded because the source only has contestant codes, not names
-AVAILABLE_YEARS = [2018, 2020, 2021, 2022, 2023, 2024, 2025]
+# Available years with their parser types.
+# Excluded years are documented in sigma/sources/bmo/README.md (missing
+# contestant names, missing per-problem scores, etc.).
+AVAILABLE_YEARS = [
+    2005,
+    2008,
+    2009,
+    2010,
+    2011,
+    2018,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+]
 
 # Years that use PDF sources
-PDF_YEARS = {2020, 2021, 2022, 2025}
+PDF_YEARS = {2008, 2009, 2010, 2020, 2021, 2022, 2025}
 
-# Source URLs by year
+# Years with pass-through downloaders. Raw files are bundled in the repo under
+# data/bmo/raw/<year>/ and are NOT fetched over the network.
+LOCAL_YEARS: dict[int, str] = {
+    2005: "BalkanResults.xls",
+    2009: "RESULTS_BMO_2009.pdf",
+    2010: "Official_Results_BMO_2010.pdf",
+    2011: "results.html",
+}
+
+# Source URLs by year (informational, stored alongside parsed results).
 YEAR_SOURCES: dict[int, str] = {
+    # Bundled / pass-through
+    2005: "local:balkan-mo-2005",
+    2009: "local:balkan-mo-2009",
+    2010: "local:balkan-mo-2010-official-pdf",
+    2011: "local:balkan-mo-2011",
     # HTML sources
     2018: "https://bmo2018.dms.rs/results/",
     2023: "https://bmo2023.tubitak.gov.tr/results",
     2024: "https://bmo2024.org/results/",
     # PDF sources
+    2008: "https://matematickitalent.mk/uploads/books/i77ZsGyCqEeVJ_JkreZPuw.pdf",
     2025: "https://bmo2025.pmf.unsa.ba/wp-content/uploads/2025/04/BMO2025-Official-Results.pdf",
     2022: "https://cdn.b3web.xyz/web/cms/optimizedBMO2022results_Medals.pdf1652185269.pdf",
     2021: "https://cdn.b3web.xyz/web/cms/optimizedBMO2021-Medalsforwebsite.pdf1631272290.pdf",
@@ -44,12 +76,22 @@ def get_source_url(year: int) -> str:
 
 
 def get_source_type(year: int) -> str:
-    """Get the source type ('html' or 'pdf') for a given year."""
-    return "pdf" if year in PDF_YEARS else "html"
+    """Get the source type ('html', 'pdf', or 'xls') for a given year."""
+    if year == 2005:
+        return "xls"
+    if year in PDF_YEARS:
+        return "pdf"
+    return "html"
 
 
 def get_raw_filename(year: int) -> str:
-    """Get the filename for storing raw data."""
+    """Get the primary filename for the year's raw data.
+
+    For multi-file years (e.g. 2008's per-country HTML dump), this returns the
+    canonical "index" file; parsers use `raw_file.parent` to locate siblings.
+    """
+    if year in LOCAL_YEARS:
+        return LOCAL_YEARS[year]
     ext = "pdf" if year in PDF_YEARS else "html"
     return f"bmo_{year}_raw.{ext}"
 
@@ -57,19 +99,31 @@ def get_raw_filename(year: int) -> str:
 def download_raw(year: int, raw_data_dir: Path, force: bool = False) -> Path:
     """Download raw data for a given year.
 
+    For LOCAL_YEARS this is a pass-through — the caller is expected to have the
+    raw files already present in `raw_data_dir` (shipped inside the repo).
+
     Args:
         year: The competition year
         raw_data_dir: Directory to store raw data files
         force: If True, re-download even if file exists
 
     Returns:
-        Path to the downloaded file
+        Path to the primary raw file for the year
 
     Raises:
-        DownloadError: If download fails
+        DownloadError: If download fails or a bundled file is missing
     """
-    url = get_source_url(year)
     output_file = raw_data_dir / get_raw_filename(year)
+
+    if year in LOCAL_YEARS:
+        if not output_file.exists():
+            raise DownloadError(
+                f"Bundled raw data for BMO {year} not found at {output_file}. "
+                f"These files are shipped with the repo; check your checkout."
+            )
+        return output_file
+
+    url = get_source_url(year)
 
     if output_file.exists() and not force:
         return output_file

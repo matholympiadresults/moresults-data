@@ -22,22 +22,39 @@ from sigma.sources.bmo.parser.models import (
 BMO_START_YEAR = 1984
 
 # B-team codes specific to BMO
-B_TEAM_CODES = {"turb"}
+B_TEAM_CODES = {"turb", "romb", "srbb", "mkdb", "mdab"}
 
 # BMO-specific country code mappings
 BMO_CODE_MAPPING: dict[str, str] = {
     # IOC -> ISO
+    "bul": "bgr",  # Bulgaria (IOC)
     "gre": "grc",  # Greece
     "hel": "grc",  # Greece (Hellas)
     "cyp": "cyp",  # Cyprus
     "kyp": "cyp",  # Cyprus alternate
     "fyr": "mkd",  # FYR Macedonia
+    "fyrom": "mkd",  # Former Yugoslav Republic of Macedonia (2011 spelling)
+    "frm": "mkd",  # FYR Macedonia (2007 spelling)
+    "mcd": "mkd",  # Macedonia (2006 Cyprus spelling)
+    "mkda": "mkd",  # Macedonia A team (main)
+    "mon": "mne",  # Montenegro (2008 abbreviation)
     "unk": "gbr",  # United Kingdom
+    "unkirl": "gbr",  # UK + Ireland combined team (2008)
     "alg": "dza",  # Algeria
     "sui": "che",  # Switzerland
     "mas": "mys",  # Malaysia
+    "rom": "rou",  # Romania (IOC)
+    "mld": "mda",  # Moldova (older code)
+    "mng": "mne",  # Montenegro (pre-2010 code; note: not Mongolia in BMO context)
+    "yac": "rus",  # Yakutia / Sakha, Russia (2005 invited regional team)
+    "azb": "aze",  # Azerbaijan (alternative code used in 2007)
+    "brn": "cze",  # Brno (Czech regional team, 2006/2009 invited)
     # B-team codes
     "turb": "tur",  # Turkey B
+    "romb": "rou",  # Romania B
+    "srbb": "srb",  # Serbia B
+    "mkdb": "mkd",  # Macedonia B
+    "mdab": "mda",  # Moldova B (host bonus team)
 }
 
 # BMO country name mappings

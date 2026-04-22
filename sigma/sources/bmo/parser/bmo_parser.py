@@ -8,13 +8,18 @@ from pathlib import Path
 from ..downloader import get_source_type, get_source_url
 from .models import BMOYearResults, ContestantResult, ValidationResult
 from .parsers.base import BaseParser
+from .parsers.html_2011 import Parser2011
 from .parsers.html_2018 import Parser2018
 from .parsers.html_2023 import Parser2023
 from .parsers.html_2024 import Parser2024
+from .parsers.pdf_2008 import Parser2008
+from .parsers.pdf_2009 import Parser2009
+from .parsers.pdf_2010 import Parser2010
 from .parsers.pdf_2020 import Parser2020
 from .parsers.pdf_2021 import Parser2021
 from .parsers.pdf_2022 import Parser2022
 from .parsers.pdf_2025 import Parser2025
+from .parsers.xls_2005 import Parser2005
 
 
 class ParseError(Exception):
@@ -24,6 +29,11 @@ class ParseError(Exception):
 
 
 _PARSER_MAP: dict[int, type[BaseParser]] = {
+    2005: Parser2005,
+    2008: Parser2008,
+    2009: Parser2009,
+    2010: Parser2010,
+    2011: Parser2011,
     2018: Parser2018,
     2020: Parser2020,
     2021: Parser2021,
