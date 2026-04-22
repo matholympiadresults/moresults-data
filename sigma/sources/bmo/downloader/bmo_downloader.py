@@ -19,7 +19,12 @@ AVAILABLE_YEARS = [
     2009,
     2010,
     2011,
+    2014,
+    2015,
+    2016,
+    2017,
     2018,
+    2019,
     2020,
     2021,
     2022,
@@ -29,7 +34,7 @@ AVAILABLE_YEARS = [
 ]
 
 # Years that use PDF sources
-PDF_YEARS = {2008, 2009, 2010, 2020, 2021, 2022, 2025}
+PDF_YEARS = {2008, 2009, 2010, 2014, 2016, 2020, 2021, 2022, 2025}
 
 # Years with pass-through downloaders. Raw files are bundled in the repo under
 # data/bmo/raw/<year>/ and are NOT fetched over the network.
@@ -38,6 +43,11 @@ LOCAL_YEARS: dict[int, str] = {
     2009: "RESULTS_BMO_2009.pdf",
     2010: "Official_Results_BMO_2010.pdf",
     2011: "results.html",
+    2014: "individual-results.pdf",
+    2015: "sgalb.htm",
+    2016: "bmo2016_results.pdf",
+    2017: "results-total.html",
+    2019: "results.html",
 }
 
 # Source URLs by year (informational, stored alongside parsed results).
@@ -47,6 +57,11 @@ YEAR_SOURCES: dict[int, str] = {
     2009: "local:balkan-mo-2009",
     2010: "local:balkan-mo-2010-official-pdf",
     2011: "local:balkan-mo-2011",
+    2014: "local:balkan-mo-2014",
+    2015: "local:balkan-mo-2015",
+    2016: "local:balkan-mo-2016",
+    2017: "local:balkan-mo-2017",
+    2019: "local:balkan-mo-2019",
     # HTML sources
     2018: "https://bmo2018.dms.rs/results/",
     2023: "https://bmo2023.tubitak.gov.tr/results",
