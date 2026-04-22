@@ -27,6 +27,7 @@ class Source(str, Enum):
     BMO = "BMO"
     PAMO = "PAMO"
     BALTICWAY = "BALTICWAY"
+    JBMO = "JBMO"
 
 
 class Award(str, Enum):
