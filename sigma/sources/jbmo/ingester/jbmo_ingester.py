@@ -24,6 +24,7 @@ JBMO_START_YEAR = 1997
 # JBMO-specific country code mappings
 JBMO_CODE_MAPPING: dict[str, str] = {
     # IOC -> ISO
+    "bul": "bgr",  # Bulgaria (old IOC code)
     "gre": "grc",  # Greece
     "hel": "grc",  # Greece (Hellas)
     "cyp": "cyp",  # Cyprus
@@ -34,8 +35,12 @@ JBMO_CODE_MAPPING: dict[str, str] = {
     "mas": "mys",  # Malaysia
     "phi": "phl",  # Philippines
     "rom": "rou",  # Romania (old IOC code)
+    "val": "rou",  # Romania guest team (Valachie) - JBMO 2010
+    "rez": "rou",  # Romania reserve contestants - JBMO 2010
+    "alt": "rou",  # Romania alternative team - JBMO 2016
     # B-team codes
     "mda(b)": "mda",  # Moldova B
+    "rou(b)": "rou",  # Romania B
     "tur(b)": "tur",  # Turkey B
     "mkd-b": "mkd",  # North Macedonia B
     "b&h": "bih",  # Bosnia & Herzegovina B
@@ -54,6 +59,7 @@ JBMO_NAME_MAPPING: dict[str, str] = {
     "roumania": "rou",
     "bulgaria": "bgr",
     "serbia": "srb",
+    "serbia b": "srb",  # Serbia B-team - JBMO 2015
     "croatia": "hrv",
     "montenegro": "mne",
     "north macedonia": "mkd",
@@ -186,7 +192,7 @@ JBMO_NAME_MAPPING: dict[str, str] = {
 }
 
 # B-team codes specific to JBMO
-B_TEAM_CODES: set[str] = {"mda(b)", "tur(b)", "mkd-b", "b&h"}
+B_TEAM_CODES: set[str] = {"mda(b)", "rou(b)", "tur(b)", "mkd-b", "b&h"}
 
 
 def normalize_country_code(raw_code: str) -> str:
@@ -201,6 +207,8 @@ def normalize_country_code(raw_code: str) -> str:
     Raises:
         ValueError: If the code cannot be normalized
     """
+    # Normalize whitespace (collapse newlines and multiple spaces)
+    raw_code = re.sub(r"\s+", " ", raw_code).strip()
     # Strip trailing numbers/spaces (e.g., "ROU 1" -> "ROU", "BGR 2" -> "BGR")
     stripped = re.sub(r"\s*\d+$", "", raw_code).strip()
     code = stripped.lower()
@@ -222,6 +230,7 @@ def normalize_country_code(raw_code: str) -> str:
 
 def is_b_team(raw_code: str) -> bool:
     """Check if a country code represents a B-team."""
+    raw_code = re.sub(r"\s+", " ", raw_code).strip()
     stripped = re.sub(r"\s*\d+$", "", raw_code).strip()
     code = stripped.lower()
 
