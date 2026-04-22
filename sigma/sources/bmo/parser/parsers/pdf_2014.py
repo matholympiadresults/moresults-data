@@ -5,8 +5,14 @@ The 3-page PDF is a single sorted ranking table with columns:
   Rank | Code | Name | Total | P1 | P2 | P3 | P4
 
 Note the column order: Total precedes the per-problem scores, and there is
-**no Medal/Award column** — awards cannot be derived from this source, so
-every ``ContestantResult`` has ``award=None``.
+**no Medal/Award column** in the source PDF. The BMO 2014 jury cutoffs are
+known separately, so we compute awards from the scores:
+
+  - Gold: total >= 40 (a perfect 40)
+  - Silver: total >= 33
+  - Bronze: total >= 19
+  - Honourable Mention: any single problem scored 10 (a fully solved problem)
+    but total below the Bronze cutoff.
 
 Names are Given-Surname for every delegation except CYP, which is printed
 Surname-Given (e.g. "Voskou Marios", "Economou Andreas"). We flip the CYP
@@ -21,6 +27,24 @@ from .code_utils import canonical_team_code, country_base, split_name
 from .pdf_common import iter_pdf_rows, parse_int, parse_score
 
 _SURNAME_FIRST_COUNTRIES = {"CYP"}
+
+_GOLD_CUTOFF = 40
+_SILVER_CUTOFF = 33
+_BRONZE_CUTOFF = 19
+_FULL_SOLVE_SCORE = 10
+
+
+def _derive_award(total: int, problem_scores: list[int | None]) -> str | None:
+    """Assign an award from the 2014 jury's score cutoffs."""
+    if total >= _GOLD_CUTOFF:
+        return "Gold"
+    if total >= _SILVER_CUTOFF:
+        return "Silver"
+    if total >= _BRONZE_CUTOFF:
+        return "Bronze"
+    if any(s == _FULL_SOLVE_SCORE for s in problem_scores):
+        return "Honourable Mention"
+    return None
 
 
 class Parser2014(BaseParser):
@@ -61,7 +85,7 @@ class Parser2014(BaseParser):
                     problem_scores=problem_scores,
                     total=total,
                     rank=parse_int(row[0]),
-                    award=None,
+                    award=_derive_award(total, problem_scores),
                     given_name=given_name,
                     family_name=family_name,
                 )

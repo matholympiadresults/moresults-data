@@ -14,8 +14,11 @@ assuming the i-th ``<li>`` contestant corresponds to the i-th score row
 
 Medals are not shown per contestant. We recover them from the four tier
 aggregate files (``gold.htm`` / ``silver.htm`` / ``bronze.htm`` /
-``mentions.htm``) which list the codes in each tier. Any contestant whose
-code is absent from all four tables gets ``award=None``.
+``mentions.htm``) which list the codes in each tier. A handful of
+contestants are missing from every tier despite having a medal-worthy
+score (e.g. TKM6 Ruslan Myratgeldiyev scored 33 but isn't listed
+anywhere) — for those we fall back to threshold-based assignment using
+the cutoffs derived from the lowest score in each tier.
 
 Code quirks handled:
 
@@ -222,20 +225,30 @@ def _iter_award_rows(
 def _load_award_lookup(
     dir_path: Path,
     code_totals: dict[str, int],
-) -> dict[str, str]:
-    """Map each contestant code to its award.
+) -> tuple[dict[str, str], dict[str, int]]:
+    """Map each contestant code to its award, and derive per-tier cutoffs.
 
     Some tier tables contain a stray row where the organiser forgot the
     contestant number (e.g. ``MDA`` instead of ``MDA4`` in ``gold.htm``).
     For those we fall back to matching the aggregate-row total against
     ``code_totals`` (the per-code totals from the score tables) within the
     same country prefix.
+
+    Returns ``(code -> award, award -> min_total_in_tier)``. The cutoff
+    dict is used by the caller to backfill awards for contestants the
+    source forgot to list in any tier.
     """
     lookup: dict[str, str] = {}
+    tier_min: dict[str, int] = {}
     for award, code, total in _iter_award_rows(dir_path):
+        normalised = normalize_award(award) or award
+        if total is not None:
+            prev = tier_min.get(normalised)
+            if prev is None or total < prev:
+                tier_min[normalised] = total
         canonical = canonical_team_code(_preclean_code(code))
         if re.match(r"^[A-Z]+\d+$", canonical):
-            lookup.setdefault(canonical, normalize_award(award) or award)
+            lookup.setdefault(canonical, normalised)
             continue
         # Unnumbered code -- e.g. bare "MDA". Resolve by country + total.
         prefix = re.match(r"^[A-Z]+$", canonical)
@@ -244,9 +257,23 @@ def _load_award_lookup(
             # that isn't already awarded a higher tier.
             for c_code, c_total in code_totals.items():
                 if c_code.startswith(canonical) and c_total == total and c_code not in lookup:
-                    lookup[c_code] = normalize_award(award) or award
+                    lookup[c_code] = normalised
                     break
-    return lookup
+    return lookup, tier_min
+
+
+def _threshold_award(total: int, tier_min: dict[str, int]) -> str | None:
+    """Assign an award from the score thresholds derived from the tier files.
+
+    Used only as a fallback when the per-code lookup doesn't resolve a
+    medal — i.e. the source dropped the contestant from every tier page
+    despite a medal-worthy score.
+    """
+    for award in ("Gold", "Silver", "Bronze", "Honourable Mention"):
+        cutoff = tier_min.get(award)
+        if cutoff is not None and total >= cutoff:
+            return award
+    return None
 
 
 class Parser2015(BaseParser):
@@ -268,7 +295,7 @@ class Parser2015(BaseParser):
                 for canonical, _problem_scores, total in rows:
                     code_totals[canonical] = total
 
-        award_lookup = _load_award_lookup(dir_path, code_totals)
+        award_lookup, tier_min = _load_award_lookup(dir_path, code_totals)
 
         results: list[ContestantResult] = []
         seen: set[tuple[str, str]] = set()
@@ -309,6 +336,8 @@ class Parser2015(BaseParser):
                     continue
                 seen.add(key)
 
+                award = award_lookup.get(canonical) or _threshold_award(total, tier_min)
+
                 results.append(
                     ContestantResult(
                         name=name,
@@ -316,7 +345,7 @@ class Parser2015(BaseParser):
                         problem_scores=problem_scores,
                         total=total,
                         rank=None,
-                        award=award_lookup.get(canonical),
+                        award=award,
                         given_name=given_name,
                         family_name=family_name,
                     )
