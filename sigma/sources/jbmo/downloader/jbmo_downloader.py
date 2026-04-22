@@ -6,16 +6,32 @@ website with different formats, so each has its own download module.
 
 from pathlib import Path
 
-from .downloaders import dl_2021, dl_2023, dl_2024
+from .downloaders import (
+    dl_2010,
+    dl_2012,
+    dl_2013,
+    dl_2014,
+    dl_2015,
+    dl_2016,
+    dl_2021,
+    dl_2023,
+    dl_2024,
+)
 
 # Available years (only those with usable data)
-AVAILABLE_YEARS = [2021, 2023, 2024]
+AVAILABLE_YEARS = [2010, 2012, 2013, 2014, 2015, 2016, 2021, 2023, 2024]
 
 # Years that use PDF sources (primary file)
-PDF_YEARS = {2023}
+PDF_YEARS = {2010, 2023}
 
 # Per-year downloader modules
 _DOWNLOADERS = {
+    2010: dl_2010,
+    2012: dl_2012,
+    2013: dl_2013,
+    2014: dl_2014,
+    2015: dl_2015,
+    2016: dl_2016,
     2021: dl_2021,
     2023: dl_2023,
     2024: dl_2024,
