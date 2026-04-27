@@ -6,6 +6,7 @@ from .apmo import APMOAdapter
 from .balticway import BalticWayAdapter
 from .bmo import BMOAdapter
 from .egmo import EGMOAdapter
+from .emo import EMOAdapter
 from .imo import IMOAdapter
 from .jbmo import JBMOAdapter
 from .memo import MEMOAdapter
@@ -17,6 +18,7 @@ SOURCES = {
     "balticway": BalticWayAdapter(),
     "bmo": BMOAdapter(),
     "egmo": EGMOAdapter(),
+    "emo": EMOAdapter(),
     "imo": IMOAdapter(),
     "jbmo": JBMOAdapter(),
     "memo": MEMOAdapter(),

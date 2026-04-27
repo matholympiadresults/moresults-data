@@ -28,6 +28,7 @@ class Source(str, Enum):
     PAMO = "PAMO"
     BALTICWAY = "BALTICWAY"
     JBMO = "JBMO"
+    EMO = "EMO"
 
 
 class Award(str, Enum):

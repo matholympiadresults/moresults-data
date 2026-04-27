@@ -10,7 +10,9 @@ from ..sources import get_source
 @click.command()
 @click.argument(
     "source",
-    type=click.Choice(["apmo", "balticway", "bmo", "egmo", "imo", "jbmo", "memo", "pamo", "rmm"]),
+    type=click.Choice(
+        ["apmo", "balticway", "bmo", "egmo", "emo", "imo", "jbmo", "memo", "pamo", "rmm"]
+    ),
 )
 @click.option(
     "-d",
