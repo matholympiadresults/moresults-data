@@ -133,13 +133,23 @@ def normalize_country_code(raw_code: str) -> str:
     raise ValueError(f"Unknown RMM country code: {raw_code!r}")
 
 
-def is_b_team(raw_code: str) -> bool:
-    """Check if a country code represents a B-team.
+def get_team_label(raw_code: str) -> str | None:
+    """Extract team label from raw country code.
 
-    Only returns True for known B-team codes (4+ letter codes ending in 'b').
-    Does NOT flag valid ISO codes like 'srb' (Serbia) as B-teams.
+    Returns None for the country's primary team. Returns a label like "B", "F",
+    or "VIANU" for known secondary teams. Does NOT flag valid ISO codes like
+    'srb' (Serbia) as B-teams.
     """
-    return raw_code.lower() in B_TEAM_CODES
+    code = raw_code.lower()
+    if code in B_TEAM_CODES:
+        return "B"
+    if code == "rouf":
+        return "F"
+    if code == "vianu":
+        return "VIANU"
+    if code == "vianu2":
+        return "VIANU2"
+    return None
 
 
 def rmm_year_to_edition(year: int) -> int:
@@ -239,7 +249,7 @@ def ingest_year_results(
 
         # Get or create country
         country = get_or_create_country(db, country_code)
-        secondary_team = is_b_team(raw_code)
+        team_label = get_team_label(raw_code)
 
         # Match or create person (RMM doesn't have separate given/family names or source IDs)
         match_result = matcher.match_or_create(
@@ -261,7 +271,7 @@ def ingest_year_results(
             competition_id=competition.id,
             person_id=match_result.person_id,
             country_id=country.id,
-            is_secondary_team=secondary_team,
+            team_label=team_label,
             problem_scores=contestant.problem_scores,
             total=contestant.total,
             rank=contestant.rank,

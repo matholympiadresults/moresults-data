@@ -228,24 +228,27 @@ def normalize_country_code(raw_code: str) -> str:
     raise ValueError(f"Unknown JBMO country code: {raw_code!r}")
 
 
-def is_b_team(raw_code: str) -> bool:
-    """Check if a country code represents a B-team."""
+def get_team_label(raw_code: str) -> str | None:
+    """Extract team label from raw country code.
+
+    Returns None for the country's primary team, "B" for known B-teams.
+    """
     raw_code = re.sub(r"\s+", " ", raw_code).strip()
     stripped = re.sub(r"\s*\d+$", "", raw_code).strip()
     code = stripped.lower()
 
     if code in B_TEAM_CODES:
-        return True
+        return "B"
 
     # Check for " - B" or " B" suffix in names
     if raw_code.lower().endswith(" - b") or raw_code.lower().endswith(" b"):
-        return True
+        return "B"
 
     # Check for "-B" suffix (e.g., "MKD-B")
     if stripped.lower().endswith("-b"):
-        return True
+        return "B"
 
-    return False
+    return None
 
 
 def jbmo_year_to_edition(year: int) -> int:
@@ -311,7 +314,7 @@ def ingest_year_results(db: Database, year_results: JBMOYearResults) -> dict:
             raw_country = contestant.country
             country_code = normalize_country_code(raw_country)
             country = get_or_create_country(db, country_code)
-            secondary_team = is_b_team(raw_country)
+            team_label = get_team_label(raw_country)
         except ValueError as e:
             print(f"Warning: {e}, skipping contestant {contestant.name}")
             continue
@@ -338,7 +341,7 @@ def ingest_year_results(db: Database, year_results: JBMOYearResults) -> dict:
             competition_id=competition.id,
             person_id=match_result.person_id,
             country_id=country.id,
-            is_secondary_team=secondary_team,
+            team_label=team_label,
             problem_scores=contestant.problem_scores,
             total=contestant.total,
             rank=contestant.rank,
