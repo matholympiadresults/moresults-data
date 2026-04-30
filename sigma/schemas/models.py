@@ -84,7 +84,9 @@ class Participation(BaseModel):
     country_id: str | None = (
         None  # Country represented (may differ from person's primary), None for individual participants
     )
-    is_secondary_team: bool = False  # True if competing for B-team, school team, etc.
+    team_label: str | None = (
+        None  # Team identifier when not the country's primary team (e.g., "B", "F", "VIANU"); None means primary
+    )
 
     # Scores
     problem_scores: list[int | None]  # Array of scores (None for missing)
