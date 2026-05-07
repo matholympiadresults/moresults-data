@@ -14,6 +14,7 @@ Years available online (`sigma download bmo ...` fetches these):
 - 2023: `https://bmo2023.tubitak.gov.tr/results` (HTML)
 - 2024: `https://bmo2024.org/results/` (HTML)
 - 2025: `https://bmo2025.pmf.unsa.ba/.../BMO2025-Official-Results.pdf` (PDF)
+- 2026: `https://hms.gr/43bmo2026/pdf/BMO2026_all_countries_contestant.pdf` (PDF, scores keyed only by country code) merged with the 25 per-delegation `team*.html` rosters from `https://hms.gr/43bmo2026/team/`. The PDF has no contestant names; the parser pairs the i-th `<li>` in each delegation's *Contestant* row with code `<COUNTRY><i>`.
 
 Years available offline only (raw files bundled under `data/bmo/raw/<year>/`):
 
@@ -107,3 +108,4 @@ country.
 - 2014 has no Medal column in the source PDF — awards are stored as `None` for every contestant.
 - 2015 is reconstructed from a fragmented HTML site: scores come from `sg<country>.htm`, names from the matching `team<country>.htm` (by `<li>` position), and medals from the aggregate tier pages. The naming between `sg` and `team` files is not consistent (e.g. `sgmng`/`teammont`, `sgbih`/`teamboz`, `sgunk`/`teamuk`).
 - 2017's HTML tags a stray "MKD3" code for one contestant where the rest of the delegation uses "MKDA<n>" / "MKDB<n>"; both map to Macedonia either way.
+- 2026's Hellas-B (`teamHellasGest.html`) page lists 7 names; the first ("Konstantinos Argyropoulos") is duplicated from the main Hellas team. We follow the source order verbatim — HELB1 is taken as the first listed name and HELB6 is the sixth, leaving the seventh entry unmatched to any score.

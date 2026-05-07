@@ -24,6 +24,7 @@ from .parsers.pdf_2020 import Parser2020
 from .parsers.pdf_2021 import Parser2021
 from .parsers.pdf_2022 import Parser2022
 from .parsers.pdf_2025 import Parser2025
+from .parsers.pdf_2026 import Parser2026
 from .parsers.xls_2005 import Parser2005
 
 
@@ -51,6 +52,7 @@ _PARSER_MAP: dict[int, type[BaseParser]] = {
     2023: Parser2023,
     2024: Parser2024,
     2025: Parser2025,
+    2026: Parser2026,
 }
 
 
