@@ -170,7 +170,7 @@
       "family_name": "Meylismyradov"
     },
     {
-      "name": "Uzb1",
+      "name": "Azizbek Mamajonov",
       "country": "UZB1",
       "problem_scores": [
         10,
@@ -181,11 +181,11 @@
       "total": 31,
       "rank": 8,
       "award": "Gold",
-      "given_name": null,
-      "family_name": null
+      "given_name": "Azizbek",
+      "family_name": "Mamajonov"
     },
     {
-      "name": "Uzb4",
+      "name": "Javohir Anvarov",
       "country": "UZB4",
       "problem_scores": [
         10,
@@ -196,11 +196,11 @@
       "total": 31,
       "rank": 8,
       "award": "Gold",
-      "given_name": null,
-      "family_name": null
+      "given_name": "Javohir",
+      "family_name": "Anvarov"
     },
     {
-      "name": "Uzb6",
+      "name": "Umarbek Ubaydullaev",
       "country": "UZB6",
       "problem_scores": [
         10,
@@ -211,11 +211,11 @@
       "total": 31,
       "rank": 8,
       "award": "Gold",
-      "given_name": null,
-      "family_name": null
+      "given_name": "Umarbek",
+      "family_name": "Ubaydullaev"
     },
     {
-      "name": "Uzb3",
+      "name": "Elshod Uralov",
       "country": "UZB3",
       "problem_scores": [
         9,
@@ -226,8 +226,8 @@
       "total": 30,
       "rank": 15,
       "award": "Gold",
-      "given_name": null,
-      "family_name": null
+      "given_name": "Elshod",
+      "family_name": "Uralov"
     },
     {
       "name": "Anango Prabhat",
@@ -260,7 +260,7 @@
       "family_name": "Alsulami"
     },
     {
-      "name": "Uzb2",
+      "name": "Elbek Zohidjonov",
       "country": "UZB2",
       "problem_scores": [
         10,
@@ -271,8 +271,8 @@
       "total": 28,
       "rank": 17,
       "award": "Gold",
-      "given_name": null,
-      "family_name": null
+      "given_name": "Elbek",
+      "family_name": "Zohidjonov"
     },
     {
       "name": "Dino Ahić",
@@ -365,7 +365,7 @@
       "family_name": "Yazgan"
     },
     {
-      "name": "Alb1",
+      "name": "Marius Gjika",
       "country": "ALB1",
       "problem_scores": [
         10,
@@ -376,8 +376,8 @@
       "total": 25,
       "rank": 25,
       "award": "Silver",
-      "given_name": null,
-      "family_name": null
+      "given_name": "Marius",
+      "family_name": "Gjika"
     },
     {
       "name": "David-Vlad Marghidan",
@@ -395,7 +395,7 @@
       "family_name": "Marghidan"
     },
     {
-      "name": "Srb6",
+      "name": "Vladimir Lukić",
       "country": "SRB6",
       "problem_scores": [
         10,
@@ -406,8 +406,8 @@
       "total": 25,
       "rank": 25,
       "award": "Silver",
-      "given_name": null,
-      "family_name": null
+      "given_name": "Vladimir",
+      "family_name": "Lukić"
     },
     {
       "name": "Tuğra Özbey Eratlı",
@@ -485,7 +485,7 @@
       "family_name": "Berkoutakis"
     },
     {
-      "name": "Srb4",
+      "name": "Nina Šušić",
       "country": "SRB4",
       "problem_scores": [
         9,
@@ -496,8 +496,8 @@
       "total": 24,
       "rank": 32,
       "award": "Silver",
-      "given_name": null,
-      "family_name": null
+      "given_name": "Nina",
+      "family_name": "Šušić"
     },
     {
       "name": "Andrej Krčmar",
@@ -590,7 +590,7 @@
       "family_name": "Rouvas"
     },
     {
-      "name": "Srb5",
+      "name": "Vanja Jelovac",
       "country": "SRB5",
       "problem_scores": [
         10,
@@ -601,8 +601,8 @@
       "total": 21,
       "rank": 38,
       "award": "Silver",
-      "given_name": null,
-      "family_name": null
+      "given_name": "Vanja",
+      "family_name": "Jelovac"
     },
     {
       "name": "Mustafa Dortluoğlu",
@@ -845,7 +845,7 @@
       "family_name": "Zhgenti"
     },
     {
-      "name": "Kgz2",
+      "name": "Ariet Akimov",
       "country": "KGZ2",
       "problem_scores": [
         8,
@@ -856,8 +856,8 @@
       "total": 19,
       "rank": 54,
       "award": "Bronze",
-      "given_name": null,
-      "family_name": null
+      "given_name": "Ariet",
+      "family_name": "Akimov"
     },
     {
       "name": "Hoi Mun Kong",
@@ -905,7 +905,7 @@
       "family_name": "Mitroi"
     },
     {
-      "name": "Kgz3",
+      "name": "Sultan Musakhodzhaev",
       "country": "KGZ3",
       "problem_scores": [
         7,
@@ -916,8 +916,8 @@
       "total": 18,
       "rank": 60,
       "award": "Bronze",
-      "given_name": null,
-      "family_name": null
+      "given_name": "Sultan",
+      "family_name": "Musakhodzhaev"
     },
     {
       "name": "Yunus Orazov",
@@ -1040,7 +1040,7 @@
       "family_name": "Beiganov"
     },
     {
-      "name": "Kgz1",
+      "name": "Arlan Sayat",
       "country": "KGZ1",
       "problem_scores": [
         5,
@@ -1051,8 +1051,8 @@
       "total": 16,
       "rank": 66,
       "award": "Bronze",
-      "given_name": null,
-      "family_name": null
+      "given_name": "Arlan",
+      "family_name": "Sayat"
     },
     {
       "name": "Aleksandar Bangachev",
@@ -1070,7 +1070,7 @@
       "family_name": "Bangachev"
     },
     {
-      "name": "Srb2",
+      "name": "Stefan Šebez",
       "country": "SRB2",
       "problem_scores": [
         4,
@@ -1081,8 +1081,8 @@
       "total": 15,
       "rank": 71,
       "award": "Bronze",
-      "given_name": null,
-      "family_name": null
+      "given_name": "Stefan",
+      "family_name": "Šebez"
     },
     {
       "name": "Emily Shi",
@@ -1130,7 +1130,7 @@
       "family_name": "Dobrev"
     },
     {
-      "name": "Srb1",
+      "name": "Petar Banović",
       "country": "SRB1",
       "problem_scores": [
         5,
@@ -1141,8 +1141,8 @@
       "total": 14,
       "rank": 75,
       "award": "Bronze",
-      "given_name": null,
-      "family_name": null
+      "given_name": "Petar",
+      "family_name": "Banović"
     },
     {
       "name": "Petros Dagres",
@@ -1205,7 +1205,7 @@
       "family_name": "Yerkebulanuly"
     },
     {
-      "name": "Alb2",
+      "name": "Jamarbër Rushitaj",
       "country": "ALB2",
       "problem_scores": [
         10,
@@ -1216,8 +1216,8 @@
       "total": 12,
       "rank": 81,
       "award": "Bronze",
-      "given_name": null,
-      "family_name": null
+      "given_name": "Jamarbër",
+      "family_name": "Rushitaj"
     },
     {
       "name": "Alexandros Louka",
@@ -1310,7 +1310,7 @@
       "family_name": "Ansatov"
     },
     {
-      "name": "Kgz5",
+      "name": "Nurakhmed Dooronbekov",
       "country": "KGZ5",
       "problem_scores": [
         1,
@@ -1321,8 +1321,8 @@
       "total": 12,
       "rank": 81,
       "award": "Bronze",
-      "given_name": null,
-      "family_name": null
+      "given_name": "Nurakhmed",
+      "family_name": "Dooronbekov"
     },
     {
       "name": "Robertas Juknevičius",
@@ -1400,7 +1400,7 @@
       "family_name": "Tasikj"
     },
     {
-      "name": "Srb3",
+      "name": "Pavle Damjanović",
       "country": "SRB3",
       "problem_scores": [
         10,
@@ -1411,8 +1411,8 @@
       "total": 11,
       "rank": 92,
       "award": "Bronze",
-      "given_name": null,
-      "family_name": null
+      "given_name": "Pavle",
+      "family_name": "Damjanović"
     },
     {
       "name": "Tunar Hasanzada",
@@ -1475,7 +1475,7 @@
       "family_name": "Sherozia"
     },
     {
-      "name": "Kgz4",
+      "name": "Timur Akeneev",
       "country": "KGZ4",
       "problem_scores": [
         10,
@@ -1486,8 +1486,8 @@
       "total": 11,
       "rank": 92,
       "award": "Bronze",
-      "given_name": null,
-      "family_name": null
+      "given_name": "Timur",
+      "family_name": "Akeneev"
     },
     {
       "name": "Avan Zenn Ee Lim",
@@ -1730,7 +1730,7 @@
       "family_name": "Paulavičius"
     },
     {
-      "name": "Uzb5",
+      "name": "Rasulbek Gafforov",
       "country": "UZB5",
       "problem_scores": [
         5,
@@ -1741,8 +1741,8 @@
       "total": 8,
       "rank": 112,
       "award": null,
-      "given_name": null,
-      "family_name": null
+      "given_name": "Rasulbek",
+      "family_name": "Gafforov"
     },
     {
       "name": "Noah Studnia",
@@ -1820,7 +1820,7 @@
       "family_name": "Pitskhelauri"
     },
     {
-      "name": "Kgz6",
+      "name": "Daniel Tologonov",
       "country": "KGZ6",
       "problem_scores": [
         6,
@@ -1831,8 +1831,8 @@
       "total": 6,
       "rank": 120,
       "award": null,
-      "given_name": null,
-      "family_name": null
+      "given_name": "Daniel",
+      "family_name": "Tologonov"
     },
     {
       "name": "Sanan Mahmudlu",
@@ -1940,7 +1940,7 @@
       "family_name": "Efstathiadis"
     },
     {
-      "name": "Alb5",
+      "name": "Noel Kolemarko",
       "country": "ALB5",
       "problem_scores": [
         1,
@@ -1951,8 +1951,8 @@
       "total": 2,
       "rank": 130,
       "award": null,
-      "given_name": null,
-      "family_name": null
+      "given_name": "Noel",
+      "family_name": "Kolemarko"
     },
     {
       "name": "Omiros Neofytides",
@@ -2045,7 +2045,7 @@
       "family_name": "Argyropoulos"
     },
     {
-      "name": "Alb3",
+      "name": "Sigi Zalla",
       "country": "ALB3",
       "problem_scores": [
         1,
@@ -2056,11 +2056,11 @@
       "total": 1,
       "rank": 137,
       "award": null,
-      "given_name": null,
-      "family_name": null
+      "given_name": "Sigi",
+      "family_name": "Zalla"
     },
     {
-      "name": "Alb4",
+      "name": "Orest Sherko",
       "country": "ALB4",
       "problem_scores": [
         0,
@@ -2071,11 +2071,11 @@
       "total": 1,
       "rank": 137,
       "award": null,
-      "given_name": null,
-      "family_name": null
+      "given_name": "Orest",
+      "family_name": "Sherko"
     },
     {
-      "name": "Alb6",
+      "name": "Darli Bruzja",
       "country": "ALB6",
       "problem_scores": [
         1,
@@ -2086,8 +2086,8 @@
       "total": 1,
       "rank": 137,
       "award": null,
-      "given_name": null,
-      "family_name": null
+      "given_name": "Darli",
+      "family_name": "Bruzja"
     },
     {
       "name": "Alexis Hadjigeorgiou",

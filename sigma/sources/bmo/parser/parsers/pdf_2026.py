@@ -21,7 +21,7 @@ from bs4 import BeautifulSoup
 
 from ..models import ContestantResult
 from .base import BaseParser
-from .code_utils import canonical_team_code, country_base, split_name
+from .code_utils import canonical_team_code, split_name
 from .pdf_common import (
     iter_pdf_rows,
     normalize_award,
@@ -82,15 +82,16 @@ def _parse_team_roster(path: Path) -> list[str]:
     if table is None:
         return []
 
+    # The 2026 pages aren't always well-formed: at least one
+    # (``teamKyrgyzstan.html``) puts the *Contestant* ``<td>`` outside
+    # any ``<tr>``, so iterating ``<tr>`` rows misses it. Walking every
+    # ``<td>`` directly avoids that and still works for the regular pages.
+    cells = table.find_all(["td", "th"])
     contestant_cell = None
-    for tr in table.find_all("tr"):
-        cells = tr.find_all(["td", "th"])
-        for idx, cell in enumerate(cells):
-            label = cell.get_text(" ", strip=True).lower()
-            if label == "contestant" and idx + 1 < len(cells):
-                contestant_cell = cells[idx + 1]
-                break
-        if contestant_cell is not None:
+    for idx, cell in enumerate(cells):
+        label = cell.get_text(" ", strip=True).lower()
+        if label == "contestant" and idx + 1 < len(cells):
+            contestant_cell = cells[idx + 1]
             break
 
     if contestant_cell is None:
@@ -102,6 +103,18 @@ def _parse_team_roster(path: Path) -> list[str]:
         if text:
             names.append(text)
     return names
+
+
+# Strip a trailing contestant number from a canonical code (e.g. ``ALB5``
+# → ``ALB``, ``HELB3`` → ``HELB``). We can't reuse ``country_base`` from
+# code_utils because it also strips a B-team marker, which clobbers
+# legitimate ISO codes ending in B (``ALB``, ``SRB``).
+_PREFIX_RE = re.compile(r"^([A-Z]+?)(\d+)?$")
+
+
+def _team_prefix(canonical: str) -> str:
+    m = _PREFIX_RE.match(canonical)
+    return m.group(1) if m else canonical
 
 
 def _parse_score_rows(raw_file: Path) -> list[tuple[str, list[int | None], int, str | None]]:
@@ -142,11 +155,7 @@ class Parser2026(BaseParser):
 
         for raw_code, problem_scores, total, award in _parse_score_rows(raw_file):
             canonical = canonical_team_code(raw_code)
-            prefix = country_base(canonical)
-            # Re-derive the prefix preserving a trailing 'B' for HELB so we
-            # pick the secondary roster (country_base strips the 'B' marker).
-            if canonical.startswith("HELB"):
-                prefix = "HELB"
+            prefix = _team_prefix(canonical)
 
             idx_match = re.search(r"(\d+)$", canonical)
             idx = int(idx_match.group(1)) - 1 if idx_match else None
@@ -159,7 +168,7 @@ class Parser2026(BaseParser):
 
             name, given_name, family_name = split_name(
                 raw_name,
-                surname_first=country_base(canonical) in _SURNAME_FIRST_COUNTRIES,
+                surname_first=prefix in _SURNAME_FIRST_COUNTRIES,
             )
 
             key = (name, canonical)
