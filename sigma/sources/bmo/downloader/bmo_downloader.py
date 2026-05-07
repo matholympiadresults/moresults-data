@@ -31,10 +31,11 @@ AVAILABLE_YEARS = [
     2023,
     2024,
     2025,
+    2026,
 ]
 
 # Years that use PDF sources
-PDF_YEARS = {2008, 2009, 2010, 2014, 2016, 2020, 2021, 2022, 2025}
+PDF_YEARS = {2008, 2009, 2010, 2014, 2016, 2020, 2021, 2022, 2025, 2026}
 
 # Years with pass-through downloaders. Raw files are bundled in the repo under
 # data/bmo/raw/<year>/ and are NOT fetched over the network.
@@ -72,7 +73,42 @@ YEAR_SOURCES: dict[int, str] = {
     2022: "https://cdn.b3web.xyz/web/cms/optimizedBMO2022results_Medals.pdf1652185269.pdf",
     2021: "https://cdn.b3web.xyz/web/cms/optimizedBMO2021-Medalsforwebsite.pdf1631272290.pdf",
     2020: "https://bmo2020.ssmr.ro/sites/bmo2020.ssmr.ro/files/results_bmov.pdf",
+    2026: "https://hms.gr/43bmo2026/pdf/BMO2026_all_countries_contestant.pdf",
 }
+
+# Auxiliary team-roster pages for 2026. The official site publishes scores
+# only as a code-keyed PDF (BMO2026_all_countries_contestant.pdf), so we
+# fetch each delegation's team-page HTML and pair the i-th contestant in
+# the page with code <COUNTRY><i>. Filename in the raw dir → URL path
+# under https://hms.gr/43bmo2026/.
+BMO_2026_TEAM_FILES: dict[str, str] = {
+    "teamAlbania.html": "team/teamAlbania.html",
+    "teamBosnia.html": "team/teamBosnia.html",
+    "teamBulgaria.html": "team/teamBulgaria.html",
+    "teamCyprus.html": "team/teamCyprus.html",
+    "teamHellas.html": "team/teamHellas.html",
+    "teamMoldova.html": "team/teamMoldova.html",
+    "teamMontenegro.html": "team/teamMontenegro.html",
+    "teamNorth_Macedonia.html": "team/teamNorth_Macedonia.html",
+    "teamRomania.html": "team/teamRomania.html",
+    "teamserbia.html": "team/teamserbia.html",
+    "teamTurkey.html": "team/teamTurkey.html",
+    "teamalgeria.html": "team/teamalgeria.html",
+    "teamazerbaijan.html": "team/teamazerbaijan.html",
+    "teamGeorgia.html": "team/teamGeorgia.html",
+    "teamfrance.html": "team/teamfrance.html",
+    "teamHellasGest.html": "team/teamHellasGest.html",
+    "teamitalia.html": "team/teamitalia.html",
+    "teamkazakstan.html": "team/teamkazakstan.html",
+    "teamKyrgyzstan.html": "team/teamKyrgyzstan.html",
+    "teamLithuania.html": "team/teamLithuania.html",
+    "teamMalaysia.html": "team/teamMalaysia.html",
+    "teamSaudi_Arabia.html": "team/teamSaudi_Arabia.html",
+    "teamTurkmenistan.html": "team/teamTurkmenistan.html",
+    "teamUnited_Kingdom.html": "team/teamUnited Kingdom.html",
+    "teamUzbekistan.html": "team/teamUzbekistan.html",
+}
+BMO_2026_BASE_URL = "https://hms.gr/43bmo2026/"
 
 
 class DownloadError(Exception):
@@ -161,4 +197,22 @@ def download_raw(year: int, raw_data_dir: Path, force: bool = False) -> Path:
     except Exception as e:
         raise DownloadError(f"Failed to download data for year {year}: {e}") from e
 
+    if year == 2026:
+        _download_2026_team_pages(raw_data_dir, force=force)
+
     return output_file
+
+
+def _download_2026_team_pages(raw_data_dir: Path, *, force: bool) -> None:
+    """Fetch the per-country team rosters that pair with the 2026 scores PDF."""
+    for filename, path in BMO_2026_TEAM_FILES.items():
+        target = raw_data_dir / filename
+        if target.exists() and not force:
+            continue
+        url = BMO_2026_BASE_URL + path
+        try:
+            response = requests.get(url, timeout=30)
+            response.raise_for_status()
+            target.write_text(response.text, encoding="utf-8")
+        except Exception as e:
+            raise DownloadError(f"Failed to download {url}: {e}") from e
