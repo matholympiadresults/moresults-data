@@ -97,6 +97,17 @@ NUM_PROBLEMS_BY_YEAR: dict[int, int] = {
 # Sentinel for unknown persons
 UNKNOWN_PERSON = "UNKNOWN_PERSON"
 
+# Name overrides keyed by (year, country_code, parsed_name).
+# Used to canonicalize spellings that differ from how the same person
+# is recorded in other olympiad sources.
+_NAME_CORRECTIONS: dict[tuple[int, str, str], str] = {
+    # ROU's Ioan-Laurenţiu Ploscaru — IMO lists him without the hyphen.
+    (2014, "ROU", "Ioan Laurenţiu Ploscaru"): "Ioan-Laurenţiu Ploscaru",
+    (2016, "ROU", "Ioan Laurenţiu Ploscaru"): "Ioan-Laurenţiu Ploscaru",
+    # IRN's Taha Miranzadeh — IMO 2017 splits the family name into two words.
+    (2017, "IRN", "Taha Miran Zadeh"): "Taha Miranzadeh",
+}
+
 
 class ParseError(Exception):
     """Raised when parsing fails unexpectedly."""
@@ -207,6 +218,9 @@ def parse_html(html: str, year: int) -> list[ContestantResult]:
             country_code = country_cell.get_text(strip=True)
             if not country_code:
                 raise ParseError(f"Year {year}, row {row_idx}: Empty country code for {name}")
+
+        if name is not None:
+            name = _NAME_CORRECTIONS.get((year, country_code, name), name)
 
         # Extract problem scores (cells 2 to 2+num_problems)
         score_values: list[int | None] = []

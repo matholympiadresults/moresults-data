@@ -30,20 +30,34 @@ def _extract_country_code(contestant_text: str) -> str:
     return contestant_text
 
 
-def _split_name(full_name: str) -> tuple[str, str]:
-    """Split a Western-order name into (given_name, family_name).
+# Names the source lists in family-first order. Mapped to the corrected
+# (full_name, given_name, family_name) in Western order.
+_NAME_ORDER_OVERRIDES: dict[str, tuple[str, str, str]] = {
+    "Su Zilin": ("Zilin Su", "Zilin", "Su"),
+    "Abduvaliev Bekten": ("Bekten Abduvaliev", "Bekten", "Abduvaliev"),
+    "Elistratov Daniil": ("Daniil Elistratov", "Daniil", "Elistratov"),
+}
+
+
+def _split_name(full_name: str) -> tuple[str, str, str]:
+    """Split a Western-order name into (full_name, given_name, family_name).
 
     The last word is treated as the family name and all preceding words
     as the given name.  For example:
-        "Nina Šušić"          -> ("Nina", "Šušić")
-        "Umut Kağan Yazgan"   -> ("Umut Kağan", "Yazgan")
+        "Nina Šušić"          -> ("Nina Šušić", "Nina", "Šušić")
+        "Umut Kağan Yazgan"   -> ("Umut Kağan Yazgan", "Umut Kağan", "Yazgan")
+
+    A handful of entries the source lists in family-first order are
+    corrected via `_NAME_ORDER_OVERRIDES`.
     """
+    if full_name in _NAME_ORDER_OVERRIDES:
+        return _NAME_ORDER_OVERRIDES[full_name]
     parts = full_name.split()
     if len(parts) < 2:
-        return "", full_name
+        return full_name, "", full_name
     given_name = " ".join(parts[:-1])
     family_name = parts[-1]
-    return given_name, family_name
+    return full_name, given_name, family_name
 
 
 def _parse_score(text: str) -> int | None:
@@ -82,7 +96,7 @@ class Parser2024(BaseParser):
             if not full_name:
                 continue
 
-            given_name, family_name = _split_name(full_name)
+            full_name, given_name, family_name = _split_name(full_name)
 
             # Columns 3-6: P1-P4
             problem_scores = [_parse_score(cells[3 + i].get_text(strip=True)) for i in range(4)]

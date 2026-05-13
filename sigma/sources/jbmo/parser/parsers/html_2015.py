@@ -22,6 +22,13 @@ from .base import BaseParser
 # Matches a numeric rank value (used to identify data rows).
 _RANK_RE = re.compile(r"^\d+$")
 
+# Source-typo corrections, keyed by (given_name, family_name) as parsed.
+# Value is the corrected (given_name, family_name).
+_NAME_CORRECTIONS: dict[tuple[str, str], tuple[str, str]] = {
+    # MKD's Nadezhda Ilieva — JBMO 2015 source drops the silent 'h'.
+    ("Nadezda", "Ilieva"): ("Nadezhda", "Ilieva"),
+}
+
 
 def _parse_score(text: str) -> int | None:
     """Parse a problem score, returning None on failure."""
@@ -62,6 +69,10 @@ class Parser2015(BaseParser):
 
             if not given_name and not family_name:
                 continue
+
+            correction = _NAME_CORRECTIONS.get((given_name, family_name))
+            if correction is not None:
+                given_name, family_name = correction
 
             full_name = f"{given_name} {family_name}".strip()
 

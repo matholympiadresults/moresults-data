@@ -290,6 +290,22 @@
       "rank": 18
     },
     {
+      "country_name": "Islamic Republic of Iran",
+      "country_code": "IRN",
+      "given_name": "Mohammadreza",
+      "family_name": "Attaranzadeh",
+      "problem_scores": [
+        7,
+        7,
+        7,
+        7,
+        0
+      ],
+      "total": 28,
+      "award": "Gold Medal",
+      "rank": 18
+    },
+    {
       "country_name": "Canada",
       "country_code": "CAN",
       "given_name": "Warren",
@@ -388,30 +404,14 @@
     {
       "country_name": "Kazakhstan",
       "country_code": "KAZ",
-      "given_name": "Sharel",
-      "family_name": "Margulan",
+      "given_name": "Margulan",
+      "family_name": "Sharel",
       "problem_scores": [
         7,
         7,
         7,
         0,
         7
-      ],
-      "total": 28,
-      "award": "Gold Medal",
-      "rank": 18
-    },
-    {
-      "country_name": "Islamic Republic of Iran",
-      "country_code": "IRN",
-      "given_name": "Attaranzadeh",
-      "family_name": "Mohammadreza",
-      "problem_scores": [
-        7,
-        7,
-        7,
-        7,
-        0
       ],
       "total": 28,
       "award": "Gold Medal",
@@ -596,8 +596,8 @@
     {
       "country_name": "Malaysia",
       "country_code": "MYS",
-      "given_name": "Ho",
-      "family_name": "Janson",
+      "given_name": "Janson",
+      "family_name": "Ho",
       "problem_scores": [
         7,
         7,
@@ -816,22 +816,6 @@
       "total": 23,
       "award": "Bronze Medal",
       "rank": 46
-    },
-    {
-      "country_name": "Macedonia",
-      "country_code": "MKD",
-      "given_name": "Tasikj",
-      "family_name": "Aleksij",
-      "problem_scores": [
-        7,
-        7,
-        7,
-        0,
-        1
-      ],
-      "total": 22,
-      "award": "Silver Medal",
-      "rank": 52
     },
     {
       "country_name": "Kazakhstan",
@@ -1132,6 +1116,22 @@
         7,
         1,
         0
+      ],
+      "total": 22,
+      "award": "Silver Medal",
+      "rank": 52
+    },
+    {
+      "country_name": "Macedonia",
+      "country_code": "MKD",
+      "given_name": "Aleksij",
+      "family_name": "Tasikj",
+      "problem_scores": [
+        7,
+        7,
+        7,
+        0,
+        1
       ],
       "total": 22,
       "award": "Silver Medal",
@@ -2322,6 +2322,22 @@
       "rank": 145
     },
     {
+      "country_name": "Turkmenistan",
+      "country_code": "TKM",
+      "given_name": "Hamza",
+      "family_name": "Allaberdiyev",
+      "problem_scores": [
+        7,
+        7,
+        0,
+        2,
+        0
+      ],
+      "total": 16,
+      "award": "Bronze Medal",
+      "rank": 145
+    },
+    {
       "country_name": "Saudi Arabia",
       "country_code": "SAU",
       "given_name": "Yousif",
@@ -2331,22 +2347,6 @@
         7,
         1,
         1,
-        0
-      ],
-      "total": 16,
-      "award": "Bronze Medal",
-      "rank": 145
-    },
-    {
-      "country_name": "Turkmenistan",
-      "country_code": "TKM",
-      "given_name": "Allaberdiyev",
-      "family_name": "Hamza",
-      "problem_scores": [
-        7,
-        7,
-        0,
-        2,
         0
       ],
       "total": 16,
@@ -5138,22 +5138,6 @@
       "rank": 303
     },
     {
-      "country_name": "Macedonia",
-      "country_code": "MKD",
-      "given_name": "Tasikj",
-      "family_name": "Andrej",
-      "problem_scores": [
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "total": 0,
-      "award": null,
-      "rank": 322
-    },
-    {
       "country_name": "Ecuador",
       "country_code": "ECU",
       "given_name": "Esteban",
@@ -5286,6 +5270,22 @@
       "country_code": "TJK",
       "given_name": "Farkhod",
       "family_name": "Sokhibnazarov",
+      "problem_scores": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 0,
+      "award": null,
+      "rank": 322
+    },
+    {
+      "country_name": "Macedonia",
+      "country_code": "MKD",
+      "given_name": "Andrej",
+      "family_name": "Tasikj",
       "problem_scores": [
         0,
         0,

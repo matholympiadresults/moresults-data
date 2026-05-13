@@ -48,6 +48,17 @@ KNOWN_RMM_CODES: frozenset[str] = frozenset(
 
 _ALL_KNOWN_CODES = VALID_ISO_CODES | KNOWN_RMM_CODES
 
+# Name overrides keyed by (year, country_code, parsed_name). Value is the
+# corrected name in Western "Given Family" order. Applied after the
+# year-based "Last First" swap, so the key is the post-swap name.
+_NAME_CORRECTIONS: dict[tuple[int, str, str], str] = {
+    # ROU's Ioan-Laurenţiu Ploscaru — RMM sources omit "Ioan" and the
+    # hyphen, and 2013 lists him family-first ("Ploscaru Ioan").
+    (2013, "ROMB", "Ploscaru Ioan"): "Ioan-Laurenţiu Ploscaru",
+    (2015, "ROU", "LAURENTIU PLOSCARU"): "Ioan-Laurenţiu Ploscaru",
+    (2016, "ROU", "Laurentiu Ploscaru"): "Ioan-Laurenţiu Ploscaru",
+}
+
 
 class ParseError(Exception):
     """Raised when parsing fails unexpectedly."""
@@ -258,6 +269,8 @@ def _parse_table(
                 parts = swappable.split(None, 1)
                 if len(parts) == 2:
                     name = f"{parts[1]} {parts[0]}".replace(placeholder, " - ")
+
+        name = _NAME_CORRECTIONS.get((year, country_code, name), name)
 
         # Extract problem scores (P1-P6)
         problem_scores = []

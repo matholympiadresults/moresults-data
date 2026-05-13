@@ -81,6 +81,15 @@ from .pdf_common import normalize_award, parse_int, parse_score
 
 _SURNAME_FIRST_COUNTRIES = {"CYP", "HEL", "HELB", "ITA", "ROU"}
 
+# Raw roster overrides keyed by (country_base, raw_roster_text).
+# Value is the corrected raw name (in the country's roster order).
+# Used when the source roster gives an incomplete or shortened form.
+_ROSTER_NAME_OVERRIDES: dict[tuple[str, str], str] = {
+    # ROU lists "Ploscaru Laurenţiu" but the contestant's canonical name
+    # (used in IMO/JBMO/other BMOs) is "Ioan-Laurenţiu Ploscaru".
+    ("ROU", "Ploscaru Laurenţiu"): "Ploscaru Ioan-Laurenţiu",
+}
+
 # sg<key> -> team<other> where the team filename stem differs.
 _SG_TO_TEAM_STEM: dict[str, str] = {
     "alb": "alb",
@@ -350,6 +359,8 @@ class Parser2015(BaseParser):
                     # Fall back to the code when the roster is missing or
                     # shorter than the score table.
                     raw_name = canonical
+
+                raw_name = _ROSTER_NAME_OVERRIDES.get((country_base(canonical), raw_name), raw_name)
 
                 name, given_name, family_name = split_name(
                     raw_name,
