@@ -35,11 +35,38 @@ def _clean(text: str) -> str:
     return _WS_RE.sub(" ", text).strip()
 
 
-def _split_name(full_name: str) -> tuple[str | None, str | None]:
+# Names whose default "last token = family" split is wrong. Mapped to
+# the corrected (full_name, given_name, family_name) in Western order.
+_NAME_ORDER_OVERRIDES: dict[str, tuple[str, str, str]] = {
+    "Su Zilin": ("Zilin Su", "Zilin", "Su"),
+    "Marcu Iulian": ("Iulian Marcu", "Iulian", "Marcu"),
+    "Duca Lilian": ("Lilian Duca", "Lilian", "Duca"),
+    "Tanas Nikolai": ("Nikolai Tanas", "Nikolai", "Tanas"),
+    "Solari Gordei": ("Gordei Solari", "Gordei", "Solari"),
+    "Khakimov Eldorbek": ("Eldorbek Khakimov", "Eldorbek", "Khakimov"),
+    "Rakhmonkulov Dostonbek": ("Dostonbek Rakhmonkulov", "Dostonbek", "Rakhmonkulov"),
+    "Mamajonov Azizbek": ("Azizbek Mamajonov", "Azizbek", "Mamajonov"),
+    "Radjabov Abdulaziz": ("Abdulaziz Radjabov", "Abdulaziz", "Radjabov"),
+    "Umarov Nurbek": ("Nurbek Umarov", "Nurbek", "Umarov"),
+    "Tokhirov Fayzulloh": ("Fayzulloh Tokhirov", "Fayzulloh", "Tokhirov"),
+    # Chinese-Malaysian name: English given + family + Chinese given. The
+    # source lists it as "Jadon Lim Hao En"; canonical form is "Jadon Hao En Lim".
+    "Jadon Lim Hao En": ("Jadon Hao En Lim", "Jadon Hao En", "Lim"),
+}
+
+
+def _split_name(full_name: str) -> tuple[str, str | None, str | None]:
+    """Return (corrected_full_name, given_name, family_name).
+
+    Most rows are in "Given Surname" order; a handful the source lists
+    in family-first order are corrected via `_NAME_ORDER_OVERRIDES`.
+    """
+    if full_name in _NAME_ORDER_OVERRIDES:
+        return _NAME_ORDER_OVERRIDES[full_name]
     tokens = full_name.strip().split()
     if len(tokens) < 2:
-        return None, None
-    return " ".join(tokens[:-1]), tokens[-1]
+        return full_name, None, None
+    return full_name, " ".join(tokens[:-1]), tokens[-1]
 
 
 # Matches a participant block label like "ALB 1 Eol Myshketa" or "MKD-B 3 …".
@@ -163,7 +190,7 @@ class Parser2025(BaseParser):
             if name is None:
                 raise ValueError(f"No name found in participants page for {country} {num}")
 
-            given_name, family_name = _split_name(name)
+            name, given_name, family_name = _split_name(name)
             award = self.normalize_award(_award_for(total, scores, cutoffs))
 
             results.append(

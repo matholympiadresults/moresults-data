@@ -49,7 +49,27 @@ def parse_int(value: str) -> int | None:
         return None
 
 
-def parse_country_results(html: str, country_code: str, country_name: str) -> list[Contestant]:
+# Source-typo corrections, keyed by (year, country_code, family_name, given_name).
+# Maps to the corrected (family_name, given_name) for the same person.
+# Verified by comparing against other years from the same country.
+_NAME_CORRECTIONS: dict[tuple[int, str, str, str], tuple[str, str]] = {
+    # APMO 2022 MKD page misspells Tasikj as Tasicj; all other years use Tasikj.
+    (2022, "MKD", "Tasicj", "Aleksij"): ("Tasikj", "Aleksij"),
+    # APMO 2024 IRN page drops the trailing 'h' from Attaranzadeh.
+    (2024, "IRN", "Attaranzade", "Mohammadreza"): ("Attaranzadeh", "Mohammadreza"),
+    # APMO 2025 has given/family columns swapped on these country pages.
+    (2025, "MKD", "Aleksij", "Tasikj"): ("Tasikj", "Aleksij"),
+    (2025, "MKD", "Andrej", "Tasikj"): ("Tasikj", "Andrej"),
+    (2025, "IRN", "Mohammadreza", "Attaranzadeh"): ("Attaranzadeh", "Mohammadreza"),
+    (2025, "MYS", "Janson", "Ho"): ("Ho", "Janson"),
+    (2025, "TKM", "Hamza", "Allaberdiyev"): ("Allaberdiyev", "Hamza"),
+    (2025, "KAZ", "Margulan", "Sharel"): ("Sharel", "Margulan"),
+}
+
+
+def parse_country_results(
+    html: str, country_code: str, country_name: str, year: int
+) -> list[Contestant]:
     """Parse contestant results from a country report page."""
     soup = BeautifulSoup(html, "html.parser")
     contestants = []
@@ -84,6 +104,10 @@ def parse_country_results(html: str, country_code: str, country_name: str) -> li
             rank = parse_int(cells[0].get_text(strip=True))
             family_name = cells[1].get_text(strip=True)
             given_name = cells[2].get_text(strip=True)
+
+            correction = _NAME_CORRECTIONS.get((year, country_code, family_name, given_name))
+            if correction is not None:
+                family_name, given_name = correction
 
             # Problem scores P1-P5 (columns 3-7)
             problem_scores = []
@@ -183,7 +207,7 @@ def parse_raw_year(year: int, raw_dir: Path) -> APMOScoreboard:
 
         try:
             country_html = country_path.read_text(encoding="utf-8")
-            contestants = parse_country_results(country_html, country_code, country_name)
+            contestants = parse_country_results(country_html, country_code, country_name, year)
             all_contestants.extend(contestants)
         except Exception as e:
             print(f"  Warning: Failed to parse {country_name} ({country_code}): {e}")
