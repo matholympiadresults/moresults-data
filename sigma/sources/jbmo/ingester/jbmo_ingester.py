@@ -41,6 +41,7 @@ JBMO_CODE_MAPPING: dict[str, str] = {
     # B-team codes
     "mda(b)": "mda",  # Moldova B
     "rou(b)": "rou",  # Romania B
+    "roub": "rou",  # Romania B (JBMO 2026 spelling)
     "tur(b)": "tur",  # Turkey B
     "mkd-b": "mkd",  # North Macedonia B
     "b&h": "bih",  # Bosnia & Herzegovina B
@@ -192,7 +193,7 @@ JBMO_NAME_MAPPING: dict[str, str] = {
 }
 
 # B-team codes specific to JBMO
-B_TEAM_CODES: set[str] = {"mda(b)", "rou(b)", "tur(b)", "mkd-b", "b&h"}
+B_TEAM_CODES: set[str] = {"mda(b)", "rou(b)", "roub", "tur(b)", "mkd-b", "b&h"}
 
 
 def normalize_country_code(raw_code: str) -> str:

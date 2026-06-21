@@ -16,6 +16,7 @@ from .parsers.html_2016 import Parser2016
 from .parsers.html_2021 import Parser2021
 from .parsers.html_2024 import Parser2024
 from .parsers.html_2025 import Parser2025
+from .parsers.html_2026 import Parser2026
 from .parsers.pdf_2010 import Parser2010
 from .parsers.pdf_2023 import Parser2023
 
@@ -37,6 +38,7 @@ _PARSER_MAP: dict[int, type[BaseParser]] = {
     2023: Parser2023,
     2024: Parser2024,
     2025: Parser2025,
+    2026: Parser2026,
 }
 
 

@@ -17,10 +17,11 @@ from .downloaders import (
     dl_2023,
     dl_2024,
     dl_2025,
+    dl_2026,
 )
 
 # Available years (only those with usable data)
-AVAILABLE_YEARS = [2010, 2012, 2013, 2014, 2015, 2016, 2021, 2023, 2024, 2025]
+AVAILABLE_YEARS = [2010, 2012, 2013, 2014, 2015, 2016, 2021, 2023, 2024, 2025, 2026]
 
 # Years that use PDF sources (primary file)
 PDF_YEARS = {2010, 2023}
@@ -37,6 +38,7 @@ _DOWNLOADERS = {
     2023: dl_2023,
     2024: dl_2024,
     2025: dl_2025,
+    2026: dl_2026,
 }
 
 
