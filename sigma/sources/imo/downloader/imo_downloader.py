@@ -11,7 +11,14 @@ from pathlib import Path
 import click
 import requests
 
-BASE_URL = "https://www.imo-official.org/year_individual_r.aspx"
+# Legacy results endpoint (old website, used for years before the 2025 redesign).
+LEGACY_BASE_URL = "https://www.imo-official.org/year_individual_r.aspx"
+
+# New results endpoint, introduced with the 2025 website redesign.
+NEW_BASE_URL = "https://www.imo-official.org/results/individual/year"
+
+# First year served by the redesigned website / parsed by the new-format parser.
+NEW_FORMAT_START_YEAR = 2025
 
 # IMO has been held since 1959 (except 1980)
 FIRST_IMO_YEAR = 1959
@@ -21,6 +28,18 @@ class DownloadError(Exception):
     """Raised when download fails."""
 
     pass
+
+
+def build_url(year: int) -> str:
+    """Return the results-page URL for a given year.
+
+    The website was redesigned in 2025 with a new URL scheme and HTML format.
+    Years from :data:`NEW_FORMAT_START_YEAR` onward use the new endpoint; older
+    years keep using the legacy ``.aspx`` endpoint.
+    """
+    if year >= NEW_FORMAT_START_YEAR:
+        return f"{NEW_BASE_URL}/{year}/"
+    return f"{LEGACY_BASE_URL}?year={year}"
 
 
 def download_year(year: int, timeout: int = 30) -> str:
@@ -37,7 +56,7 @@ def download_year(year: int, timeout: int = 30) -> str:
     Raises:
         DownloadError: If the download fails
     """
-    url = f"{BASE_URL}?year={year}"
+    url = build_url(year)
     try:
         response = requests.get(url, timeout=timeout)
         response.raise_for_status()

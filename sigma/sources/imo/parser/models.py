@@ -20,7 +20,9 @@ class ContestantResult(BaseModel):
 
     contestant_id: int | None
     name: str | None
-    country_code: str
+    # None for individual participants who compete without a country (the new
+    # website leaves the country cell blank; the legacy site used C01-C99 codes).
+    country_code: str | None
     scores: ProblemScores
     total: int
     rank: int | None
