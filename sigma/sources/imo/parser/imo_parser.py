@@ -94,8 +94,19 @@ NUM_PROBLEMS_BY_YEAR: dict[int, int] = {
     1962: 7,
 }
 
+# First year served by the redesigned website (new HTML format).
+NEW_FORMAT_START_YEAR = 2025
+
 # Sentinel for unknown persons
 UNKNOWN_PERSON = "UNKNOWN_PERSON"
+
+# Maps the award-circle CSS modifier used on the new website to the award label.
+_V2_AWARD_BY_CLASS: dict[str, str] = {
+    "data-table__award-circle--gold": "Gold medal",
+    "data-table__award-circle--silver": "Silver medal",
+    "data-table__award-circle--bronze": "Bronze medal",
+    "data-table__award-circle--hm": "Honourable mention",
+}
 
 # Name overrides keyed by (year, country_code, parsed_name).
 # Used to canonicalize spellings that differ from how the same person
@@ -119,6 +130,10 @@ def parse_html(html: str, year: int) -> list[ContestantResult]:
     """
     Parse the HTML and extract contestant results.
 
+    Dispatches to the format matching the year: the website was redesigned in
+    2025 with a new HTML layout, so years from ``NEW_FORMAT_START_YEAR`` onward
+    use the new parser while older years use the legacy parser.
+
     Args:
         html: Raw HTML content
         year: The IMO year (used for year-specific validation rules)
@@ -129,6 +144,13 @@ def parse_html(html: str, year: int) -> list[ContestantResult]:
     Raises:
         ParseError: If unexpected data is encountered
     """
+    if year >= NEW_FORMAT_START_YEAR:
+        return _parse_html_v2(html, year)
+    return _parse_html_legacy(html, year)
+
+
+def _parse_html_legacy(html: str, year: int) -> list[ContestantResult]:
+    """Parse the legacy ``.aspx`` results page (years before the 2025 redesign)."""
     soup = BeautifulSoup(html, "html.parser")
     results = []
 
@@ -291,6 +313,166 @@ def parse_html(html: str, year: int) -> list[ContestantResult]:
         # Award can be empty
         award_text = cells[award_idx].get_text(strip=True)
         award = award_text if award_text else None
+
+        results.append(
+            ContestantResult(
+                contestant_id=contestant_id,
+                name=name,
+                country_code=country_code,
+                scores=scores,
+                total=total,
+                rank=rank,
+                award=award,
+            )
+        )
+
+    return results
+
+
+def _v2_parse_award(cell) -> str | None:
+    """Extract the award label from a new-format award cell.
+
+    The cell holds a coloured circle whose CSS modifier class encodes the medal
+    (gold/silver/bronze/hm); no circle means no award.
+    """
+    circle = cell.find("span", class_="data-table__award-circle")
+    if not circle:
+        return None
+    for cls in circle.get("class", []):
+        if cls in _V2_AWARD_BY_CLASS:
+            return _V2_AWARD_BY_CLASS[cls]
+    return None
+
+
+def _parse_html_v2(html: str, year: int) -> list[ContestantResult]:
+    """Parse the redesigned results page (2025 onward).
+
+    Column layout differs from the legacy site: name, country, rank, award,
+    total, then P1..PN (the legacy site put the problem scores before the total,
+    rank and award).
+    """
+    soup = BeautifulSoup(html, "html.parser")
+
+    table = soup.find("table", class_="data-table")
+    if not table:
+        raise ParseError(f"Could not find results table in HTML for year {year}")
+
+    body = table.find("tbody") or table
+    rows = body.find_all("tr")
+
+    num_problems = NUM_PROBLEMS_BY_YEAR.get(year, 6)
+    max_score = MAX_SCORE_BY_YEAR.get(year, 7)
+    # name, country, rank, award, total, then one cell per problem
+    expected_cells = 5 + num_problems
+
+    results = []
+    for row_idx, row in enumerate(rows):
+        cells = row.find_all("td")
+        if len(cells) == 0:
+            continue
+        if len(cells) != expected_cells:
+            raise ParseError(
+                f"Year {year}, row {row_idx}: Expected {expected_cells} cells, got {len(cells)}."
+            )
+
+        # Contestant name and id (link to /results/contestant/<id>/).
+        contestant_link = cells[0].find("a", href=re.compile(r"/results/contestant/\d+/"))
+        if contestant_link:
+            href = contestant_link.get("href", "")
+            id_match = re.search(r"/contestant/(\d+)/", href)
+            if not id_match:
+                raise ParseError(
+                    f"Year {year}, row {row_idx}: Could not extract contestant ID from href: {href}"
+                )
+            contestant_id = int(id_match.group(1))
+            name = " ".join(contestant_link.get_text().split())
+            if not name:
+                if year not in ALLOW_EMPTY_NAMES_YEARS:
+                    raise ParseError(f"Year {year}, row {row_idx}: Empty contestant name")
+                name = None
+        else:
+            # No contestant link: an unknown/anonymised person (allowed only for
+            # certain historical years).
+            if year not in ALLOW_UNKNOWN_PERSON_YEARS:
+                raise ParseError(f"Year {year}, row {row_idx}: Found row with no contestant link.")
+            contestant_id = None
+            name = UNKNOWN_PERSON
+
+        # Country code (ISO span). Absent for individual participants who compete
+        # without a country: stored as None.
+        iso_span = cells[1].find("span", class_="data-table__country-iso")
+        country_code = iso_span.get_text(strip=True) if iso_span else None
+        if country_code == "":
+            country_code = None
+
+        if name is not None and country_code is not None:
+            name = _NAME_CORRECTIONS.get((year, country_code, name), name)
+
+        # Rank.
+        rank_text = cells[2].get_text(strip=True)
+        if not rank_text:
+            if year not in ALLOW_EMPTY_RANKS_YEARS:
+                raise ParseError(f"Year {year}, row {row_idx}: Empty rank for contestant {name}")
+            rank = None
+        else:
+            try:
+                rank = int(rank_text)
+            except ValueError as err:
+                raise ParseError(
+                    f"Year {year}, row {row_idx}: Invalid rank '{rank_text}' for contestant {name}"
+                ) from err
+
+        # Award.
+        award = _v2_parse_award(cells[3])
+
+        # Total.
+        total_text = cells[4].get_text(strip=True)
+        if not total_text:
+            raise ParseError(f"Year {year}, row {row_idx}: Empty total for contestant {name}")
+        try:
+            total = int(total_text)
+        except ValueError as err:
+            raise ParseError(
+                f"Year {year}, row {row_idx}: Invalid total '{total_text}' for contestant {name}"
+            ) from err
+
+        # Problem scores (cells 5 .. 5+num_problems).
+        score_values: list[int | None] = []
+        for i in range(num_problems):
+            score_text = cells[5 + i].get_text(strip=True)
+            if not score_text:
+                if year not in ALLOW_EMPTY_SCORES_YEARS:
+                    raise ParseError(
+                        f"Year {year}, row {row_idx}: Empty score for P{i + 1}, contestant {name}"
+                    )
+                score_values.append(None)
+                continue
+            try:
+                score = int(score_text)
+            except ValueError as err:
+                raise ParseError(
+                    f"Year {year}, row {row_idx}: Invalid score '{score_text}' for P{i + 1}, contestant {name}"
+                ) from err
+            if score < 0 or score > max_score:
+                raise ParseError(
+                    f"Year {year}, row {row_idx}: Score {score} out of range [0-{max_score}] "
+                    f"for P{i + 1}, contestant {name}"
+                )
+            score_values.append(score)
+
+        # Pad with None if fewer than 7 problems.
+        while len(score_values) < 7:
+            score_values.append(None)
+
+        scores = ProblemScores(
+            p1=score_values[0],
+            p2=score_values[1],
+            p3=score_values[2],
+            p4=score_values[3],
+            p5=score_values[4],
+            p6=score_values[5],
+            p7=score_values[6],
+        )
 
         results.append(
             ContestantResult(

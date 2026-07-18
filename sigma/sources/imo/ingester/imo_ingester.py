@@ -80,11 +80,12 @@ def sanitize_name(name: str) -> str:
     return name
 
 
-def normalize_country_code(raw_code: str) -> str | None:
+def normalize_country_code(raw_code: str | None) -> str | None:
     """Normalize IMO country code to ISO 3166-1 alpha-3.
 
     Args:
-        raw_code: Raw country code from IMO data
+        raw_code: Raw country code from IMO data, or None for individual
+            participants who compete without a country (new website format).
 
     Returns:
         Normalized ISO country code (lowercase), or None for individual participants
@@ -92,6 +93,11 @@ def normalize_country_code(raw_code: str) -> str | None:
     Raises:
         ValueError: If the code cannot be normalized
     """
+    # Individual participants: legacy site used C01-C99 codes (handled below),
+    # the redesigned site leaves the country blank (None).
+    if raw_code is None:
+        return None
+
     code = raw_code.upper()
 
     # Check for individual participants (C01-C99)
