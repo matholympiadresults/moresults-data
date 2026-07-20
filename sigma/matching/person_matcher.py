@@ -134,6 +134,19 @@ class PersonMatcher:
             return self.db.people[person_id]
         return None
 
+    @staticmethod
+    def _merge_aliases(person: Person, incoming: list[str] | None) -> None:
+        """Add incoming names to person.aliases, skipping duplicates and the canonical name."""
+        if not incoming:
+            return
+        seen = {normalize_name(a) for a in person.aliases}
+        canonical = normalize_name(person.name)
+        for alias in incoming:
+            key = normalize_name(alias)
+            if key and key != canonical and key not in seen:
+                person.aliases.append(alias)
+                seen.add(key)
+
     def find_by_exact_name(self, name: str, country_id: str) -> MatchCandidate | None:
         """Find a person with exact name match in the same country."""
         name_normalized = normalize_name(name)
@@ -154,6 +167,7 @@ class PersonMatcher:
         source_contestant_id: str | None = None,
         given_name: str | None = None,
         family_name: str | None = None,
+        aliases: list[str] | None = None,
     ) -> MatchResult:
         """
         Match incoming contestant to existing person or create new.
@@ -162,6 +176,9 @@ class PersonMatcher:
         1. Source ID match (same source + same ID = same person)
         2. Exact name + country match (normalized: lowercase, accents stripped)
         3. Create new person
+
+        Any ``aliases`` supplied are recorded as known name variations on the
+        matched or newly created person (see :meth:`_merge_aliases`).
         """
         source_key = source.value.lower()
 
@@ -169,6 +186,7 @@ class PersonMatcher:
         if source_contestant_id:
             person = self.find_by_source_id(source, source_contestant_id)
             if person:
+                self._merge_aliases(person, aliases)
                 return MatchResult(
                     person_id=person.id,
                     is_new=False,
@@ -183,6 +201,7 @@ class PersonMatcher:
             if source_contestant_id and not person.source_ids.get(source_key):
                 person.source_ids[source_key] = source_contestant_id
                 self._source_id_index[(source_key, source_contestant_id)] = person.id
+            self._merge_aliases(person, aliases)
             return MatchResult(
                 person_id=match.person_id,
                 is_new=False,
@@ -216,6 +235,7 @@ class PersonMatcher:
             aliases=[],
             source_ids=source_ids,
         )
+        self._merge_aliases(new_person, aliases)
         self.db.people[person_id] = new_person
 
         # Update indexes

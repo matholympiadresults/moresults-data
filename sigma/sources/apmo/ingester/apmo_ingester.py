@@ -129,6 +129,7 @@ def ingest_scoreboard(db: Database, scoreboard: APMOScoreboard) -> dict:
             source_contestant_id=None,  # APMO doesn't have unique contestant IDs
             given_name=contestant.given_name,
             family_name=contestant.family_name,
+            aliases=contestant.aliases,
         )
 
         if match_result.is_new:

@@ -23,6 +23,10 @@ class Contestant(BaseModel):
     total: int = Field(..., description="Total score")
     award: Award | None = None
     rank: int | None = None
+    aliases: list[str] = Field(
+        default_factory=list,
+        description="Other names this person is known by (e.g. a romanized name)",
+    )
 
     @property
     def full_name(self) -> str:

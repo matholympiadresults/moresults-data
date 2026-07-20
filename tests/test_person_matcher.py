@@ -295,6 +295,55 @@ class TestMatchOrCreate:
         assert "Exact name" in result.reason
 
 
+class TestAliasHandling:
+    def test_aliases_seeded_on_new_person(self, db_with_countries):
+        matcher = PersonMatcher(db_with_countries)
+        result = matcher.match_or_create(
+            name="Alex Chui",
+            country_id="country-gbr",
+            source=Source.APMO,
+            aliases=["Tsz Fung Chui"],
+        )
+        person = db_with_countries.people[result.person_id]
+        assert person.aliases == ["Tsz Fung Chui"]
+
+    def test_alias_equal_to_canonical_name_is_skipped(self, db_with_countries):
+        matcher = PersonMatcher(db_with_countries)
+        result = matcher.match_or_create(
+            name="Alex Chui",
+            country_id="country-gbr",
+            source=Source.APMO,
+            aliases=["ALEX CHUI", "Tsz Fung Chui"],
+        )
+        person = db_with_countries.people[result.person_id]
+        assert person.aliases == ["Tsz Fung Chui"]
+
+    def test_aliases_merged_on_name_match(self, db_with_people):
+        """An alias supplied on a later name match is added without duplicating."""
+        matcher = PersonMatcher(db_with_people)
+        # js-1 already has alias "J. Smith"
+        matcher.match_or_create(
+            name="John Smith",
+            country_id="country-gbr",
+            source=Source.APMO,
+            aliases=["J. Smith", "Johnny Smith"],
+        )
+        person = db_with_people.people["js-1"]
+        assert person.aliases == ["J. Smith", "Johnny Smith"]
+
+    def test_aliases_merged_on_source_id_match(self, db_with_people):
+        matcher = PersonMatcher(db_with_people)
+        # jd-1 is matched by egmo id 67890
+        matcher.match_or_create(
+            name="Jane Doe",
+            country_id="country-usa",
+            source=Source.EGMO,
+            source_contestant_id="67890",
+            aliases=["Janey Doe"],
+        )
+        assert db_with_people.people["jd-1"].aliases == ["Janey Doe"]
+
+
 class TestMultipleCreations:
     def test_creates_multiple_people(self, db_with_countries):
         matcher = PersonMatcher(db_with_countries)

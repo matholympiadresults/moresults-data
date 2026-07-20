@@ -67,6 +67,19 @@ _NAME_CORRECTIONS: dict[tuple[int, str, str, str], tuple[str, str]] = {
 }
 
 
+# Alias merges: the same person is recorded here under a different name than the
+# canonical form used by other sources (e.g. a romanized name vs. an English one).
+# Unlike _NAME_CORRECTIONS (typo fixes), the original name is a legitimate
+# alternative, so it is preserved as an alias on the merged person and stays
+# searchable. Keyed by (year, country_code, family_name, given_name) as parsed;
+# maps to the canonical (family_name, given_name).
+_NAME_ALIASES: dict[tuple[int, str, str, str], tuple[str, str]] = {
+    # APMO 2021 records Alex Chui (HKG; IMO 2020-2025, later GBR) under his
+    # romanized name "Tsz Fung Chui"; merge into the canonical "Alex Chui".
+    (2021, "HKG", "Chui", "Tsz Fung"): ("Chui", "Alex"),
+}
+
+
 def parse_country_results(
     html: str, country_code: str, country_name: str, year: int
 ) -> list[Contestant]:
@@ -109,6 +122,12 @@ def parse_country_results(
             if correction is not None:
                 family_name, given_name = correction
 
+            aliases: list[str] = []
+            alias_merge = _NAME_ALIASES.get((year, country_code, family_name, given_name))
+            if alias_merge is not None:
+                aliases.append(f"{given_name} {family_name}")
+                family_name, given_name = alias_merge
+
             # Problem scores P1-P5 (columns 3-7)
             problem_scores = []
             for i in range(3, 8):
@@ -127,6 +146,7 @@ def parse_country_results(
                 country_code=country_code,
                 given_name=given_name,
                 family_name=family_name,
+                aliases=aliases,
                 problem_scores=problem_scores,
                 total=total,
                 award=award,
@@ -170,6 +190,7 @@ def compute_global_ranks(contestants: list[Contestant]) -> list[Contestant]:
                 total=contestant.total,
                 award=contestant.award,
                 rank=current_rank,
+                aliases=contestant.aliases,
             )
         )
 
