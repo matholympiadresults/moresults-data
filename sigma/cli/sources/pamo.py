@@ -9,6 +9,7 @@ from sigma.sources.pamo.downloader import (
     AVAILABLE_YEARS,
     DownloadError,
     download_year,
+    get_raw_filename,
 )
 from sigma.sources.pamo.ingester.pamo_ingester import ingest_pamo_data
 from sigma.sources.pamo.parser import ParserError, parse_year
@@ -24,7 +25,7 @@ class PAMOAdapter(SourceAdapter):
     """Adapter for PAMO (Pan African Mathematics Olympiad) data.
 
     Implements the 3-stage pipeline:
-    - download_raw: Downloads raw HTML from pamoofficial.org
+    - download_raw: Downloads raw results data from pamoofficial.org
     - parse_raw: Parses HTML into structured JSON
     - ingest: Loads JSON into the database
     """
@@ -44,7 +45,7 @@ class PAMOAdapter(SourceAdapter):
         years: list[int] | None,
         force: bool,
     ) -> None:
-        """Download raw HTML from pamoofficial.org."""
+        """Download raw results data from pamoofficial.org."""
         if years is None:
             target_years = AVAILABLE_YEARS
         else:
@@ -61,7 +62,7 @@ class PAMOAdapter(SourceAdapter):
 
         for year in target_years:
             raw_dir = self.get_raw_dir(source_dir, year)
-            raw_file = raw_dir / "individual.html"
+            raw_file = raw_dir / get_raw_filename(year)
 
             if raw_file.exists() and not force:
                 click.echo(f"  {year}: Skipped (already exists)")
@@ -88,7 +89,7 @@ class PAMOAdapter(SourceAdapter):
         years: list[int] | None,
         force: bool,
     ) -> None:
-        """Parse raw HTML into structured JSON."""
+        """Parse raw results data into structured JSON."""
         if years is None:
             target_years = AVAILABLE_YEARS
         else:
@@ -118,7 +119,7 @@ class PAMOAdapter(SourceAdapter):
                 click.echo(f"  {year}: Parsed")
                 success_count += 1
             except FileNotFoundError:
-                click.echo(f"  {year}: Raw HTML not found (run download first)", err=True)
+                click.echo(f"  {year}: Raw file not found (run download first)", err=True)
                 fail_count += 1
             except ParserError as e:
                 click.echo(f"  {year}: {e}", err=True)

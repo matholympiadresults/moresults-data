@@ -50,6 +50,7 @@ PAMO_CODE_MAPPING: dict[str, str] = {
     "cam": "cmr",  # Cameroon
     "ivc": "civ",  # Ivory Coast (Côte d'Ivoire)
     "mts": "mus",  # Mauritius (alternative code)
+    "lea": "lbr",  # Liberia
 }
 
 
