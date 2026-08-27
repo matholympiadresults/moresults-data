@@ -49,10 +49,13 @@ def parse_int(value: str) -> int | None:
         return None
 
 
-# Source-typo corrections, keyed by (year, country_code, family_name, given_name).
+# Source name corrections, keyed by (year, country_code, family_name, given_name).
 # Maps to the corrected (family_name, given_name) for the same person.
 # Verified by comparing against other years from the same country.
 _NAME_CORRECTIONS: dict[tuple[int, str, str, str], tuple[str, str]] = {
+    # APMO 2021 records Alex Chui (HKG, IMO 2020-2026) under his romanized name
+    # "Tsz Fung Chui"; other sources use "Alex Chui".
+    (2021, "HKG", "Chui", "Tsz Fung"): ("Chui", "Alex"),
     # APMO 2022 MKD page misspells Tasikj as Tasicj; all other years use Tasikj.
     (2022, "MKD", "Tasicj", "Aleksij"): ("Tasikj", "Aleksij"),
     # APMO 2024 IRN page drops the trailing 'h' from Attaranzadeh.
