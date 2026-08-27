@@ -26,6 +26,26 @@ SOURCES = {
     "rmm": RMMAdapter(),
 }
 
+# Fixed competition ordering for full ingestion. ``ingest_all_sources`` iterates
+# YEAR-first, then walks competitions in this exact order within each year. This
+# makes the person-matching sequence deterministic and stable over time: adding a
+# later year never touches earlier years, and appending a new competition to the
+# end never changes how the competitions before it match within a year.
+# The "memo" adapter ingests individual results then team results, covering both
+# MEMO and MEMO Team.
+INGEST_ORDER = (
+    "rmm",
+    "apmo",
+    "egmo",
+    "emo",
+    "bmo",
+    "jbmo",
+    "pamo",
+    "imo",
+    "memo",
+    "balticway",
+)
+
 
 def get_source(name: str):
     """Get a source adapter by name."""
@@ -45,6 +65,10 @@ def ingest_all_sources(data_dir: Path, output: Path, verbose: bool = True) -> Pa
 
     Deletes any existing database file and re-ingests all parsed data.
 
+    Ingestion is ordered YEAR-first, then by competition in ``INGEST_ORDER``
+    within each year. This fixed traversal keeps person matching deterministic
+    and stable as new years and competitions are added over time.
+
     Args:
         data_dir: Base data directory containing source subdirectories
         output: Path to output database file
@@ -57,22 +81,20 @@ def ingest_all_sources(data_dir: Path, output: Path, verbose: bool = True) -> Pa
     if output.exists():
         output.unlink()
 
-    for adapter in get_all_sources():
-        parsed_base = adapter.get_parsed_base_dir(data_dir)
+    adapters = [SOURCES[name] for name in INGEST_ORDER]
 
-        if not parsed_base.exists():
-            if verbose:
-                print(f"\nSkipping {adapter.display_name}: {parsed_base} not found")
-            continue
+    # Every year that any competition has parsed data for.
+    all_years = sorted(
+        {year for adapter in adapters for year in adapter.find_available_parsed_years(data_dir)}
+    )
 
-        if verbose:
-            print(f"\n{'=' * 50}")
-            print(f"Ingesting {adapter.display_name}")
-            print(f"{'=' * 50}")
-            print(f"Parsed directory: {parsed_base}/<year>/")
-            print()
-
-        adapter.ingest(data_dir, output, None)
+    # Ingest year-by-year, walking competitions in INGEST_ORDER within each year.
+    # Each adapter.ingest loads the existing DB, adds the requested year, and
+    # saves, so these per-year calls accumulate into one database.
+    for year in all_years:
+        for adapter in adapters:
+            if year in adapter.find_available_parsed_years(data_dir):
+                adapter.ingest(data_dir, output, [year])
 
     if verbose:
         print()
