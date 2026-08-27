@@ -104,6 +104,7 @@ COUNTRY_NAMES: dict[str, str] = {
     "xkx": "Kosovo",  # XKX is the unofficial but widely used code
     # L
     "lao": "Laos",
+    "lbr": "Liberia",
     "lby": "Libya",
     "lso": "Lesotho",
     "lie": "Liechtenstein",

@@ -2,9 +2,13 @@
 """
 PAMO Parser
 
-Parses raw HTML pages from pamoofficial.org into structured data.
+Parses raw data from pamoofficial.org into structured data.
+
+Years before the 2026 site redesign come as per-year HTML pages; later years
+come as records from the site-wide students JSON feed.
 """
 
+import json
 import re
 from pathlib import Path
 
@@ -14,6 +18,17 @@ from .models import ContestantResult, PAMOYearResults, ValidationResult
 
 # PAMO started in 1987 (edition 1)
 PAMO_START_YEAR = 1987
+
+# Award labels used by the students JSON feed
+JSON_AWARDS = {
+    "GOLD": "GOLD",
+    "SILVER": "SILVER",
+    "BRONZE": "BRONZE",
+    "HM": "HM",
+    "HONOURABLE MENTION": "HM",
+    "HONORABLE MENTION": "HM",
+    "CERTIFICATE OF RECOGNITION": "HM",
+}
 
 
 class ParserError(Exception):
@@ -214,6 +229,105 @@ def parse_html(html: str, year: int) -> list[ContestantResult]:
     return results
 
 
+def _json_award(value: str | None, year: int, name: str, field: str) -> str | None:
+    """Convert an award label from the students JSON feed to a normalized award."""
+    if not value or not value.strip():
+        return None
+    award = JSON_AWARDS.get(value.strip().upper())
+    if award is None:
+        raise ParserError(f"Year {year}: Unknown {field} {value!r} for contestant {name}")
+    return award
+
+
+def _json_score(value: str | None, year: int, name: str, problem: int) -> int | None:
+    """Convert a problem score from the students JSON feed."""
+    text = (value or "").strip()
+    if not text or text == "-":
+        # Missing score - website data quality issue, record as None
+        return None
+    try:
+        score = int(text)
+    except ValueError as e:
+        raise ParserError(
+            f"Year {year}: Invalid score {text!r} for P{problem}, contestant {name}"
+        ) from e
+    if score < 0 or score > 7:
+        raise ParserError(
+            f"Year {year}: Score {score} out of range [0-7] for P{problem}, contestant {name}"
+        )
+    return score
+
+
+def parse_students_json(raw: str, year: int) -> list[ContestantResult]:
+    """Parse contestant records from the students JSON feed.
+
+    Only official contestants are kept, matching what the legacy per-year HTML
+    pages listed.
+
+    Raises ParserError if unexpected data is encountered.
+    """
+    try:
+        records = json.loads(raw)
+    except json.JSONDecodeError as e:
+        raise ParserError(f"Year {year}: Invalid JSON in raw file: {e}") from e
+
+    if not isinstance(records, list):
+        raise ParserError(f"Year {year}: Expected a list of contestant records")
+
+    results = []
+    current_rank: int | None = None
+
+    for record in records:
+        if str(record.get("YEAR", "")).strip() != str(year):
+            raise ParserError(
+                f"Year {year}: Raw file contains a record for year {record.get('YEAR')!r}"
+            )
+        if record.get("STATUS", "").strip().upper() != "OFFICIAL":
+            continue
+
+        name = (record.get("NAME") or "").strip()
+        if not name:
+            raise ParserError(f"Year {year}: Contestant record without a name: {record!r}")
+
+        country = (record.get("CODE") or "").strip().upper()
+        if not country:
+            raise ParserError(f"Year {year}: Missing country code for contestant {name}")
+
+        rank_text = str(record.get("RANK", "")).strip()
+        if rank_text:
+            try:
+                current_rank = int(rank_text)
+            except ValueError:
+                pass  # Keep previous rank for tied contestants
+
+        problem_scores = [_json_score(record.get(f"P{i}"), year, name, i) for i in range(1, 7)]
+
+        total_text = str(record.get("TOTAL", "")).strip()
+        try:
+            total = int(total_text)
+        except ValueError as e:
+            raise ParserError(
+                f"Year {year}: Invalid total {total_text!r} for contestant {name}"
+            ) from e
+
+        results.append(
+            ContestantResult(
+                name=name,
+                country=country,
+                problem_scores=problem_scores,
+                total=total,
+                rank=current_rank,
+                award=_json_award(record.get("AWARD"), year, name, "award"),
+                pamo_g_award=_json_award(record.get("PAMOG"), year, name, "PAMO-G award"),
+            )
+        )
+
+    if not results:
+        raise ParserError(f"Could not find any official results for year {year}")
+
+    return results
+
+
 def validate_totals(results: list[ContestantResult]) -> list[dict]:
     """Validate that totals match sum of individual scores. Returns mismatches."""
     mismatches = []
@@ -242,11 +356,11 @@ def save_json(data: PAMOYearResults, filepath: Path) -> None:
 
 def parse_year(year: int, raw_dir: Path, output_dir: Path, force: bool = False) -> Path:
     """
-    Parse raw HTML for a single year and save as structured JSON.
+    Parse raw data for a single year and save as structured JSON.
 
     Args:
         year: The year to parse
-        raw_dir: Directory containing raw HTML file (year subdirectory)
+        raw_dir: Directory containing the raw file (year subdirectory)
         output_dir: Directory to save parsed JSON (year subdirectory)
         force: If True, re-parse even if output file exists
 
@@ -255,21 +369,27 @@ def parse_year(year: int, raw_dir: Path, output_dir: Path, force: bool = False) 
 
     Raises:
         ParserError: If parsing fails
-        FileNotFoundError: If raw HTML file doesn't exist
+        FileNotFoundError: If the raw file doesn't exist
     """
-    from sigma.sources.pamo.downloader.pamo_downloader import get_raw_filename
+    from sigma.sources.pamo.downloader.pamo_downloader import (
+        NEW_FORMAT_START_YEAR,
+        get_raw_filename,
+    )
 
-    raw_file = raw_dir / get_raw_filename()
+    raw_file = raw_dir / get_raw_filename(year)
     output_file = output_dir / get_parsed_filename()
 
     if output_file.exists() and not force:
         return output_file
 
     if not raw_file.exists():
-        raise FileNotFoundError(f"Raw HTML file not found: {raw_file}")
+        raise FileNotFoundError(f"Raw file not found: {raw_file}")
 
-    html = raw_file.read_text(encoding="utf-8")
-    results = parse_html(html, year)
+    raw = raw_file.read_text(encoding="utf-8")
+    if year >= NEW_FORMAT_START_YEAR:
+        results = parse_students_json(raw, year)
+    else:
+        results = parse_html(raw, year)
 
     if not results:
         raise ParserError(f"No results found for year {year}. The year may not have data yet.")
