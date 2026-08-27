@@ -26,6 +26,41 @@ def compute_initials(name: str) -> str:
     return "".join(w[0].lower() for w in words if w)
 
 
+# Delimiters inside a single word after which the next letter starts a new
+# segment that should be capitalized (hyphenated names, dotted initials,
+# apostrophes). Both the ASCII and typographic apostrophe are included.
+_WORD_SEGMENT_DELIMITERS = "-.'’"
+
+
+def _titlecase_word(word: str) -> str:
+    """Capitalize the first letter of each segment within a single word.
+
+    ``word`` is assumed to already be lowercased. Segments are delimited by
+    hyphens, periods and apostrophes, so every part of a compound name is
+    capitalized while diacritics and the delimiters themselves are preserved:
+
+        "sergiu-ionuț" -> "Sergiu-Ionuț"
+        "l.k."         -> "L.K."
+        "o'brien"      -> "O'Brien"
+
+    Python's ``str.capitalize`` lowercases everything after the first letter
+    (turning "SERGIU-IONUȚ" into "Sergiu-ionuț"), and ``str.title`` capitalizes
+    after every apostrophe/digit, so neither is usable here.
+    """
+    result = []
+    capitalize_next = True
+    for ch in word:
+        if ch in _WORD_SEGMENT_DELIMITERS:
+            capitalize_next = True
+            result.append(ch)
+        elif capitalize_next and ch.isalpha():
+            result.append(ch.upper())
+            capitalize_next = False
+        else:
+            result.append(ch)
+    return "".join(result)
+
+
 def capitalize_name(name: str) -> str:
     """Convert a name to proper capitalization.
 
@@ -34,10 +69,12 @@ def capitalize_name(name: str) -> str:
     - all lowercase names -> Title Case
     - Mixed case names preserved (already properly formatted)
     - Common prefixes like "de", "van", "von", "da", "di" stay lowercase
+    - Compound segments (hyphens, dotted initials) each get capitalized
 
     Examples:
         "JANE DOE" -> "Jane Doe"
         "john smith" -> "John Smith"
+        "JEAN-PIERRE DUPONT" -> "Jean-Pierre Dupont"
         "Johannes van der Berg" -> "Johannes van der Berg" (preserved)
         "JOHANNES VAN DER BERG" -> "Johannes van der Berg"
     """
@@ -61,7 +98,7 @@ def capitalize_name(name: str) -> str:
     for i, word in enumerate(words):
         # First word is always capitalized, others check for prefixes
         if i == 0 or word not in lowercase_prefixes:
-            result.append(word.capitalize())
+            result.append(_titlecase_word(word))
         else:
             result.append(word)
 

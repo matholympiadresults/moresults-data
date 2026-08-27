@@ -31,6 +31,23 @@ class TestCapitalizeName:
         assert capitalize_name("VAN MORRISON") == "Van Morrison"
         assert capitalize_name("DE GAULLE") == "De Gaulle"
 
+    def test_hyphenated_segments_each_capitalized(self):
+        """Each part of a hyphenated all-caps name is capitalized (not just the first)."""
+        assert capitalize_name("JEAN-PIERRE DUPONT") == "Jean-Pierre Dupont"
+        assert capitalize_name("SERGIU-IONUȚ NOVAC") == "Sergiu-Ionuț Novac"
+        assert capitalize_name("VILMOS MOLNÁR-SZABÓ") == "Vilmos Molnár-Szabó"
+
+    def test_dotted_initials_preserved(self):
+        """Dotted initials keep each letter capitalized."""
+        assert capitalize_name("EBRIMA L.K. NJIE") == "Ebrima L.K. Njie"
+
+    def test_apostrophe_segments(self):
+        assert capitalize_name("SEAN O'BRIEN") == "Sean O'Brien"
+
+    def test_diacritics_preserved(self):
+        """Diacritics in the tail of a segment are preserved when title-casing."""
+        assert capitalize_name("JESÚS CABALLERO") == "Jesús Caballero"
+
     def test_whitespace_normalization(self):
         assert capitalize_name("  JOHN   SMITH  ") == "John Smith"
 
