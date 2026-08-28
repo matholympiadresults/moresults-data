@@ -25,9 +25,9 @@ from sigma.sources.memo.parser import (
 
 from .base import SourceAdapter
 
-# MEMO editions 1 (2007) and 9-19 (2015-2025) have online results
+# MEMO editions 1 (2007) and 9-20 (2015-2026) have online results
 FIRST_MEMO_YEAR = 2007
-LAST_MEMO_YEAR = 2025
+LAST_MEMO_YEAR = 2026
 
 
 class MEMOAdapter(SourceAdapter):

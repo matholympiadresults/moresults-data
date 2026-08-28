@@ -17,11 +17,11 @@ SPECIAL_URLS = {
 }
 
 # Available years - MEMO started in 2007
-AVAILABLE_YEARS = list(range(2007, 2015)) + list(range(2015, 2026))
+AVAILABLE_YEARS = list(range(2007, 2015)) + list(range(2015, 2027))
 
 # Team competition data: 2007-2014 from skmo.sk, 2015+ from memo-official.org
 # Missing: 2020 (COVID online only)
-TEAM_AVAILABLE_YEARS = list(range(2007, 2015)) + list(range(2015, 2020)) + list(range(2021, 2026))
+TEAM_AVAILABLE_YEARS = list(range(2007, 2015)) + list(range(2015, 2020)) + list(range(2021, 2027))
 
 
 class DownloadError(Exception):
