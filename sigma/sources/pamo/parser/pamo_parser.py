@@ -30,6 +30,14 @@ JSON_AWARDS = {
     "CERTIFICATE OF RECOGNITION": "HM",
 }
 
+# Name overrides keyed by (year, country_code, source_name). Value is the
+# corrected name in Western "Given Family" order.
+_NAME_CORRECTIONS: dict[tuple[int, str, str], str] = {
+    # TUN's Youssef Halim Ajmi is listed family-name-first by PAMO; other
+    # sources (and he himself) use "Youssef Halim Ajmi".
+    (2026, "TUN", "Ajmi Youssef Halim"): "Youssef Halim Ajmi",
+}
+
 
 class ParserError(Exception):
     """Raised when parsing fails unexpectedly."""
@@ -157,6 +165,8 @@ def parse_html(html: str, year: int) -> list[ContestantResult]:
 
         # Extract country code
         country = extract_country_code(cells[country_idx])
+
+        name = _NAME_CORRECTIONS.get((year, country, name), name)
 
         # Extract rank
         rank_text = cells[rank_idx].get_text(strip=True)
@@ -292,6 +302,8 @@ def parse_students_json(raw: str, year: int) -> list[ContestantResult]:
         country = (record.get("CODE") or "").strip().upper()
         if not country:
             raise ParserError(f"Year {year}: Missing country code for contestant {name}")
+
+        name = _NAME_CORRECTIONS.get((year, country, name), name)
 
         rank_text = str(record.get("RANK", "")).strip()
         if rank_text:
