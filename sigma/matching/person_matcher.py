@@ -105,6 +105,23 @@ def capitalize_name(name: str) -> str:
     return " ".join(result)
 
 
+# Spellings a source has since corrected, as {(normalized name, country_id):
+# person_id}.
+#
+# `ingest_all_sources` reloads the database from disk for every (year, source)
+# pair, so a rename made while ingesting one source is invisible to the next one
+# unless it is remembered outside the database. Without that, renaming someone
+# splits them off from any source that still lists the old name. This is process
+# state on purpose: nothing about a superseded spelling is written to the stored
+# data, which only ever carries the current name.
+_superseded_names: dict[tuple[str, str], str] = {}
+
+
+def reset_superseded_names() -> None:
+    """Forget the renames seen so far. Call before a full rebuild."""
+    _superseded_names.clear()
+
+
 @dataclass
 class MatchCandidate:
     """A potential match for a person."""
@@ -155,6 +172,14 @@ class PersonMatcher:
                     self._source_id_index[(source_key, source_id)] = person.id
             self._name_country_index[(normalize_name(person.name), person.country_id)] = person.id
 
+        # Spellings superseded earlier in this run resolve to the same person, so
+        # that renaming someone here does not split them off from a source that
+        # still lists the old name. Seeded second and never over an entry a
+        # canonical name owns: a person's own name beats someone else's old one.
+        for key, person_id in _superseded_names.items():
+            if person_id in self.db.people:
+                self._name_country_index.setdefault(key, person_id)
+
     def _generate_person_id(self, name: str) -> str:
         """Generate a new unique person ID based on name initials."""
         initials = compute_initials(name)
@@ -170,6 +195,46 @@ class PersonMatcher:
         if person_id is not None:
             return self.db.people[person_id]
         return None
+
+    def _adopt_name(
+        self,
+        person: Person,
+        name: str,
+        given_name: str | None,
+        family_name: str | None,
+    ) -> str | None:
+        """Replace `person.name` with a newer spelling from the same source id.
+
+        Sources correct and re-transliterate names between editions while
+        keeping the same contestant id. `ingest-all` walks years in ascending
+        order, so a source-id match carrying a different name is a later
+        edition's spelling and supersedes what we stored.
+
+        Names are compared exactly, so a restored diacritic ("Jamarber" ->
+        "Jamarbër") or a case fix counts as a correction and is picked up.
+
+        The superseded spelling is recorded on the Database, not on the person:
+        it stays resolvable for the rest of the run so that other sources keep
+        matching, but nothing about it is written to the stored data.
+
+        Returns the previous name if it changed, else None.
+        """
+        new_name = capitalize_name(name)
+        if new_name == person.name:
+            return None
+
+        previous_name = person.name
+        person.name = new_name
+        if given_name is not None:
+            person.given_name = capitalize_name(given_name)
+        if family_name is not None:
+            person.family_name = capitalize_name(family_name)
+
+        _superseded_names.setdefault((normalize_name(previous_name), person.country_id), person.id)
+        self._name_country_index.setdefault(
+            (normalize_name(new_name), person.country_id), person.id
+        )
+        return previous_name
 
     def find_by_exact_name(self, name: str, country_id: str) -> MatchCandidate | None:
         """Find a person with exact name match in the same country."""
@@ -196,7 +261,8 @@ class PersonMatcher:
         Match incoming contestant to existing person or create new.
 
         Matching priority:
-        1. Source ID match (same source + same ID = same person)
+        1. Source ID match (same source + same ID = same person). A differing
+           name is adopted as the current spelling; see `_adopt_name`.
         2. Exact name + country match (normalized: lowercase, accents stripped)
         3. Create new person
         """
@@ -206,11 +272,15 @@ class PersonMatcher:
         if source_contestant_id:
             person = self.find_by_source_id(source, source_contestant_id)
             if person:
+                previous_name = self._adopt_name(person, name, given_name, family_name)
+                reason = f"Source ID match ({source.value}: {source_contestant_id})"
+                if previous_name is not None:
+                    reason += f", renamed from '{previous_name}'"
                 return MatchResult(
                     person_id=person.id,
                     is_new=False,
                     confidence=1.0,
-                    reason=f"Source ID match ({source.value}: {source_contestant_id})",
+                    reason=reason,
                 )
 
         # Phase 2: Try exact name + country match
