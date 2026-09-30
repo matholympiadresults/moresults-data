@@ -36,6 +36,10 @@ _NAME_CORRECTIONS: dict[tuple[int, str, str], str] = {
     # TUN's Youssef Halim Ajmi is listed family-name-first by PAMO; other
     # sources (and he himself) use "Youssef Halim Ajmi".
     (2026, "TUN", "Ajmi Youssef Halim"): "Youssef Halim Ajmi",
+    # MOR's Mohammed Ayoub Mebtoul is listed family-name-first by PAMO 2021,
+    # which also drops the double "m" from his given name; his IMO profile
+    # (contestant 30278, IMO 2020 and 2021) spells it "Mohammed Ayoub Mebtoul".
+    (2021, "MOR", "Mebtoul Mohamed Ayoub"): "Mohammed Ayoub Mebtoul",
     # ALG is printed family-name-first on the 2021 and 2024 scoreboards, while
     # the 2023 and 2026 editions use Given-Family for the same delegation. Eight
     # of these are confirmed by an IMO, BMO or EGMO record under the corrected

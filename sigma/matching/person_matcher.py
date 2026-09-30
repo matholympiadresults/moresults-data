@@ -8,8 +8,31 @@ from sigma.schemas import Database, Person, Source
 
 
 def normalize_name(name: str) -> str:
-    """Normalize a name for comparison: lowercase, strip accents, normalize whitespace."""
-    return " ".join(unidecode(name).lower().strip().split())
+    """Normalize a name for comparison.
+
+    Lowercases, strips accents, normalizes whitespace, and folds the two ways
+    sources write abbreviations: periods are dropped, and a run of single-letter
+    words is joined. Sources disagree on both ("Md Fuad Al Alam" vs "Md. Fuad Al
+    Alam", "S M A Nahian" vs "S.M.A Nahian") while never using either to tell two
+    contestants apart, so keeping them splits one person into two records.
+    """
+    words = unidecode(name).lower().replace(".", "").split()
+
+    # Join adjacent single-letter words: ["s", "m", "a", "nahian"] -> ["sma", "nahian"].
+    folded: list[str] = []
+    initials: list[str] = []
+    for word in words:
+        if len(word) == 1:
+            initials.append(word)
+            continue
+        if initials:
+            folded.append("".join(initials))
+            initials = []
+        folded.append(word)
+    if initials:
+        folded.append("".join(initials))
+
+    return " ".join(folded)
 
 
 def compute_initials(name: str) -> str:
