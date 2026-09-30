@@ -55,12 +55,22 @@ _NAME_ORDER_OVERRIDES: dict[str, tuple[str, str, str]] = {
 }
 
 
+# Spelling corrections applied before the order rules. The Turkmen roster is
+# submitted in Turkmen orthography, which writes /v/ as "w"; every other source
+# (JBMO 2024 and his IMO 2026 profile, contestant 36239) spells this name with a
+# "v", and leaving the "w" form in place splits one person into two records.
+_NAME_SPELLING_OVERRIDES: dict[str, str] = {
+    "Hemra Gurbanow": "Hemra Gurbanov",
+}
+
+
 def _split_name(full_name: str) -> tuple[str, str | None, str | None]:
     """Return (corrected_full_name, given_name, family_name).
 
     Most rows are in "Given Surname" order; a handful the source lists
     in family-first order are corrected via `_NAME_ORDER_OVERRIDES`.
     """
+    full_name = _NAME_SPELLING_OVERRIDES.get(full_name, full_name)
     if full_name in _NAME_ORDER_OVERRIDES:
         return _NAME_ORDER_OVERRIDES[full_name]
     tokens = full_name.strip().split()
