@@ -2,6 +2,8 @@
 
 from pathlib import Path
 
+from sigma.matching.person_matcher import reset_superseded_names
+
 from .apmo import APMOAdapter
 from .balticway import BalticWayAdapter
 from .bmo import BMOAdapter
@@ -80,6 +82,10 @@ def ingest_all_sources(data_dir: Path, output: Path, verbose: bool = True) -> Pa
     # Delete existing database to start fresh
     if output.exists():
         output.unlink()
+
+    # Renames carry across the per-(year, source) ingest calls below, which each
+    # reload the database from disk.
+    reset_superseded_names()
 
     adapters = [SOURCES[name] for name in INGEST_ORDER]
 

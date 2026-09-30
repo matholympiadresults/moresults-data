@@ -4,8 +4,12 @@ import pytest
 
 from sigma.database import create_empty_database
 from sigma.matching import PersonMatcher
-from sigma.matching.person_matcher import capitalize_name, compute_initials
-from sigma.schemas import Country, Person, Source
+from sigma.matching.person_matcher import (
+    capitalize_name,
+    compute_initials,
+    reset_superseded_names,
+)
+from sigma.schemas import Country, Database, Person, Source
 
 
 class TestCapitalizeName:
@@ -355,3 +359,106 @@ class TestMultipleCreations:
         assert result1.person_id != result2.person_id
         assert result1.is_new is True
         assert result2.is_new is True
+
+
+class TestAdoptLatestName:
+    """A source-id match carrying a different name supersedes the stored one."""
+
+    @pytest.fixture(autouse=True)
+    def _clean_registry(self):
+        reset_superseded_names()
+        yield
+        reset_superseded_names()
+
+    def test_source_id_match_adopts_the_newer_name(self, db_with_people):
+        matcher = PersonMatcher(db_with_people)
+        result = matcher.match_or_create(
+            "Jonathan Smith", "country-gbr", Source.IMO, source_contestant_id="12345"
+        )
+        assert result.person_id == "js-1"
+        assert result.is_new is False
+        assert db_with_people.people["js-1"].name == "Jonathan Smith"
+        assert "renamed from 'John Smith'" in result.reason
+
+    def test_given_and_family_names_follow(self, db_with_people):
+        matcher = PersonMatcher(db_with_people)
+        matcher.match_or_create(
+            "Jonathan Smythe",
+            "country-gbr",
+            Source.IMO,
+            source_contestant_id="12345",
+            given_name="Jonathan",
+            family_name="Smythe",
+        )
+        person = db_with_people.people["js-1"]
+        assert (person.given_name, person.family_name) == ("Jonathan", "Smythe")
+
+    def test_restored_diacritic_counts_as_a_correction(self, db_with_people):
+        """Names are compared exactly, so an accent fix is adopted."""
+        db_with_people.people["ab-1"] = Person(
+            id="ab-1",
+            name="Adisa Bolic",
+            country_id="country-deu",
+            aliases=[],
+            source_ids={"imo": "555", "egmo": None, "memo": None},
+        )
+        matcher = PersonMatcher(db_with_people)
+        matcher.match_or_create(
+            "Adisa Bolić", "country-deu", Source.IMO, source_contestant_id="555"
+        )
+        assert db_with_people.people["ab-1"].name == "Adisa Bolić"
+
+    def test_identical_name_is_not_a_rename(self, db_with_people):
+        matcher = PersonMatcher(db_with_people)
+        result = matcher.match_or_create(
+            "John Smith", "country-gbr", Source.IMO, source_contestant_id="12345"
+        )
+        assert "renamed" not in result.reason
+        assert db_with_people.people["js-1"].name == "John Smith"
+
+    def test_superseded_name_still_resolves_in_the_same_run(self, db_with_people):
+        """A source with no contestant ids keeps matching the person it knows."""
+        matcher = PersonMatcher(db_with_people)
+        matcher.match_or_create(
+            "Jonathan Smith", "country-gbr", Source.IMO, source_contestant_id="12345"
+        )
+        result = matcher.match_or_create("John Smith", "country-gbr", Source.BMO)
+        assert result.person_id == "js-1"
+        assert result.is_new is False
+
+    def test_superseded_name_survives_a_reloaded_database(self, db_with_people):
+        """ingest-all rebuilds the matcher per source, so the registry must outlive it."""
+        PersonMatcher(db_with_people).match_or_create(
+            "Jonathan Smith", "country-gbr", Source.IMO, source_contestant_id="12345"
+        )
+        reloaded = Database.model_validate(db_with_people.model_dump())
+        result = PersonMatcher(reloaded).match_or_create("John Smith", "country-gbr", Source.BMO)
+        assert result.person_id == "js-1"
+        assert result.is_new is False
+
+    def test_a_persons_own_name_beats_someone_elses_superseded_one(self, db_with_people):
+        """The old spelling never displaces a person who genuinely holds that name."""
+        PersonMatcher(db_with_people).match_or_create(
+            "Jonathan Smith", "country-gbr", Source.IMO, source_contestant_id="12345"
+        )
+        db_with_people.people["js-2"] = Person(
+            id="js-2",
+            name="John Smith",
+            country_id="country-gbr",
+            aliases=[],
+            source_ids={"imo": "99999", "egmo": None, "memo": None},
+        )
+        result = PersonMatcher(db_with_people).match_or_create(
+            "John Smith", "country-gbr", Source.BMO
+        )
+        assert result.person_id == "js-2"
+
+    def test_reset_forgets_previous_renames(self, db_with_people):
+        PersonMatcher(db_with_people).match_or_create(
+            "Jonathan Smith", "country-gbr", Source.IMO, source_contestant_id="12345"
+        )
+        reset_superseded_names()
+        result = PersonMatcher(db_with_people).match_or_create(
+            "John Smith", "country-gbr", Source.BMO
+        )
+        assert result.is_new is True
