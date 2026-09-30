@@ -3,6 +3,7 @@
 Parses raw HTML and PDF files into structured BMOYearResults.
 """
 
+import re
 from pathlib import Path
 
 from ..downloader import get_source_type, get_source_url
@@ -32,6 +33,51 @@ class ParseError(Exception):
     """Raised when parsing fails unexpectedly."""
 
     pass
+
+
+# A contestant number the ingester strips off the country field ("ALG5" -> "ALG").
+_CONTESTANT_NUMBER_RE = re.compile(r"\s*\d+$")
+
+
+def _country_key(country: str) -> str:
+    """Reduce a parsed country field to the bare team code used for corrections."""
+    return _CONTESTANT_NUMBER_RE.sub("", (country or "").strip()).upper()
+
+
+# Name overrides keyed by (year, team code, parsed name). The parsed name is
+# whatever the year's parser emits, i.e. already reordered into "Given Family"
+# for surname-first delegations. Values are the corrected (given, family) pair,
+# canonicalized to how the same person is recorded by other sources (usually
+# IMO), so the person matcher merges the records instead of duplicating them.
+_NAME_CORRECTIONS: dict[tuple[int, str, str], tuple[str, str]] = {
+    # ALG's delegation is transliterated inconsistently from year to year, and
+    # BMO alone gives no contestant ids to match on. All four of these have an
+    # IMO record under the corrected spelling or word order.
+    (2024, "ALG", "Ikbal Mohamed Tebib"): ("Mohamed Ikbal", "Tebib"),
+    (2025, "ALG", "Ikbal Mohamed Tebib"): ("Mohamed Ikbal", "Tebib"),
+    (2025, "ALG", "Kian Aboulghesemi"): ("Kian", "Abolghasemi"),
+    (2025, "ALG", "Abdelillah Hammadi"): ("Abdelilah", "Hammadi"),
+    # "Si Ahmed" is a two-word family name, which the surname-first split in
+    # code_utils cannot know about: it keeps only "Si" and leaves "Ahmed" with
+    # the given names.
+    (2026, "ALG", "Ahmed Abderrahmane Si"): ("Abderrahmane", "Si Ahmed"),
+    # BMO 2023 swaps his two given names round; IMO has him as "Mohamed Wacyl".
+    (2023, "ALG", "Wacyl Mohamed Meddour"): ("Mohamed Wacyl", "Meddour"),
+    # BMO 2024 contracts the middle name that IMO (and BMO 2023) spell out.
+    (2024, "ALG", "Chams Eddine Abdelali Derreche"): ("Chams Eddine", "Abd El Ali Derreche"),
+}
+
+
+def apply_name_corrections(year: int, results: list[ContestantResult]) -> None:
+    """Rewrite names listed in `_NAME_CORRECTIONS`, in place."""
+    for r in results:
+        correction = _NAME_CORRECTIONS.get((year, _country_key(r.country), r.name))
+        if correction is None:
+            continue
+        given_name, family_name = correction
+        r.name = f"{given_name} {family_name}"
+        r.given_name = given_name
+        r.family_name = family_name
 
 
 _PARSER_MAP: dict[int, type[BaseParser]] = {
@@ -125,6 +171,8 @@ def parse_raw(year: int, raw_file: Path) -> BMOYearResults:
 
     if not results:
         raise ParseError(f"No results found for year {year}. The year may not have data yet.")
+
+    apply_name_corrections(year, results)
 
     mismatches = validate_totals(results)
 

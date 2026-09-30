@@ -36,6 +36,33 @@ _NAME_CORRECTIONS: dict[tuple[int, str, str], str] = {
     # TUN's Youssef Halim Ajmi is listed family-name-first by PAMO; other
     # sources (and he himself) use "Youssef Halim Ajmi".
     (2026, "TUN", "Ajmi Youssef Halim"): "Youssef Halim Ajmi",
+    # ALG is printed family-name-first on the 2021 and 2024 scoreboards, while
+    # the 2023 and 2026 editions use Given-Family for the same delegation. Eight
+    # of these are confirmed by an IMO, BMO or EGMO record under the corrected
+    # order; "Fidaelhake Belkhire" has no other record and is inferred from the
+    # five teammates listed alongside him.
+    (2021, "ALG", "Belkhire Fidaelhake"): "Fidaelhake Belkhire",
+    (2021, "ALG", "Mers Wafaa"): "Wafaa Mers",
+    (2021, "ALG", "Kenane Youcef"): "Youcef Kenane",
+    (2021, "ALG", "Guerfi Choubaila"): "Choubaila Guerfi",
+    (2021, "ALG", "Saadi Abdelhamid"): "Abdelhamid Saadi",
+    (2021, "ALG", "Chouikrat Maya"): "Maya Chouikrat",
+    (2024, "ALG", "Ould Ali Raouf"): "Raouf Ould Ali",
+    (2024, "ALG", "Meddah Ahmed Adnane"): "Ahmed Adnane Meddah",
+    (2024, "ALG", "Larinouna Selma"): "Selma Larinouna",
+    (2024, "ALG", "Loullou Hind"): "Hind Loullou",
+    # ALG's sixth 2024 contestant, "Layane Harnane", is deliberately left alone:
+    # PAMO prints that same string in 2024 (family-first) and 2026 (given-first),
+    # so which half is the family name is genuinely ambiguous and no other source
+    # lists him. Reordering the 2024 row would split one person into two.
+    #
+    # ALG's Chams Eddine Abd El Ali Derreche — IMO spells the middle name as
+    # three words; PAMO contracts it differently in each edition.
+    (2023, "ALG", "Chams Eddine Abdali Derreche"): "Chams Eddine Abd El Ali Derreche",
+    (2024, "ALG", "Derreche Chams Eddine Abdelali"): "Chams Eddine Abd El Ali Derreche",
+    # ALG's Meriem Nour El Yakine Doum — PAMO 2023 adds a trailing "e" that the
+    # EGMO 2024 registration data does not have.
+    (2023, "ALG", "Meriem Nour El Yakine Doume"): "Meriem Nour El Yakine Doum",
 }
 
 

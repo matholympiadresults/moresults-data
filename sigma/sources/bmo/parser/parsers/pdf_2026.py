@@ -60,8 +60,9 @@ _TEAM_FILES: dict[str, str] = {
     "UZB": "teamUzbekistan.html",
 }
 
-# Every 2026 delegation prints contestants in Given-Surname order.
-_SURNAME_FIRST_COUNTRIES: set[str] = set()
+# Algeria lists its roster Surname-Given ("Chiaoui Nedjemddine"); every other
+# 2026 delegation prints contestants in Given-Surname order.
+_SURNAME_FIRST_COUNTRIES: set[str] = {"ALG"}
 
 
 def _parse_team_roster(path: Path) -> list[str]:

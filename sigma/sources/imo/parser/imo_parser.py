@@ -117,6 +117,11 @@ _NAME_CORRECTIONS: dict[tuple[int, str, str], str] = {
     (2016, "ROU", "Ioan Laurenţiu Ploscaru"): "Ioan-Laurenţiu Ploscaru",
     # IRN's Taha Miranzadeh — IMO 2017 splits the family name into two words.
     (2017, "IRN", "Taha Miran Zadeh"): "Taha Miranzadeh",
+    # ALG's Nedjemddine Chiaoui — IMO 2025 transliterates the given name with an
+    # "a"; IMO corrected it to "Nedjemddine" for 2026 under the same contestant
+    # id, and BMO 2026 agrees. Ingest runs oldest year first, so without this
+    # the superseded 2025 spelling would become his canonical name.
+    (2025, "ALG", "Nadjemddine Chiaoui"): "Nedjemddine Chiaoui",
 }
 
 
