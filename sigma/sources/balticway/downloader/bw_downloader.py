@@ -6,6 +6,7 @@ URL patterns:
 - 1992-2019: https://www.math.olympiaadid.ut.ee/eng/html/bw/bw{YY}_res.html
 - 2020-2023, 2025: https://www.math.olympiaadid.ut.ee/eng/html/bw/bw{YY}_res.pdf
 - 2024: https://bw2024.olympiaadid.ut.ee/results (external HTML)
+- 2026: https://bw2026.lt/results (see bw_2026_downloader)
 """
 
 from pathlib import Path
@@ -23,7 +24,7 @@ EXTERNAL_YEARS = {
 }
 
 # All years with results available online (1990-1991 have no results links)
-AVAILABLE_YEARS = list(range(1992, 2026))
+AVAILABLE_YEARS = list(range(1992, 2027))
 
 
 class DownloadError(Exception):
@@ -63,6 +64,12 @@ def download_year(year: int, output_dir: Path, force: bool = False) -> Path:
     Raises:
         DownloadError: If download fails
     """
+    # Use dedicated downloader for 2026 (bw2026.lt)
+    if year == 2026:
+        from .bw_2026_downloader import download_2026
+
+        return download_2026(output_dir, force=force)
+
     filename = _get_filename(year)
     output_file = output_dir / filename
 

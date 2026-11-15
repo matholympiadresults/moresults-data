@@ -4,6 +4,7 @@ Parses raw HTML and PDF results pages into structured data.
 
 HTML years: 1992-2019, 2024
 PDF years: 2020-2023, 2025
+2026: see bw_2026_parser
 """
 
 from pathlib import Path
@@ -241,6 +242,12 @@ def parse_year(year: int, raw_dir: Path, output_dir: Path, force: bool = False) 
         ParserError: If parsing fails
         FileNotFoundError: If raw file doesn't exist
     """
+    # Use dedicated parser for 2026 (table embedded in Astro page props)
+    if year == 2026:
+        from .bw_2026_parser import parse_2026
+
+        return parse_2026(raw_dir, output_dir, force=force)
+
     output_file = output_dir / get_parsed_filename()
 
     if output_file.exists() and not force:
